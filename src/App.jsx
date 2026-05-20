@@ -1,5 +1,11 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
+  return null;
+}
 import Navbar from "./components/Navbar";
 
 const LandingPage = lazy(() => import("./components/LandingPage"));
@@ -18,6 +24,7 @@ function Layout() {
   const isAdmin = pathname.startsWith("/admin");
   return (
     <>
+      <ScrollToTop />
       {!isAdmin && <Navbar />}
       <Suspense fallback={<div className="min-h-screen bg-stone-950" />}>
         <Routes>

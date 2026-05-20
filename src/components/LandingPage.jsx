@@ -5,6 +5,7 @@ import {
   Briefcase,
   Search,
   Calendar,
+  BookOpen,
   Instagram,
   Linkedin,
   ArrowRight,
@@ -25,18 +26,28 @@ const features = [
     title: "Direktori Terintegrasi",
     description:
       "Cari dan temukan kontak teman-teman 2018 berdasarkan domisili atau industri.",
+    to: "/directory",
   },
   {
     icon: Calendar,
     title: "Event & Networking",
     description:
       "Update jadwal kumpul angkatan dan reuni agar tidak ada yang ketinggalan.",
+    to: "/events",
   },
   {
     icon: Briefcase,
     title: "Peluang Karir",
     description:
       "Kolaborasi dan referensi pekerjaan antar sesama alumni lintas industri.",
+    to: "/setelah-toga",
+  },
+  {
+    icon: BookOpen,
+    title: "Setelah Toga",
+    description:
+      "Cerita, tips, dan pelajaran nyata dari alumni IKOM 2018 tentang hidup setelah wisuda.",
+    to: "/setelah-toga",
   },
 ];
 
@@ -68,9 +79,9 @@ const spotlights = [
 
 function StatCard({ icon: Icon, value, label }) {
   return (
-    <div className="group flex flex-col items-center gap-3 px-6 py-12 text-center">
+    <div className="group flex flex-col items-center gap-3 px-3 py-10 text-center sm:px-6 sm:py-12">
       <Icon className="h-4 w-4 text-amber-500/50" />
-      <p className="text-5xl font-black tabular-nums tracking-tight text-white sm:text-6xl">
+      <p className="text-3xl font-black tabular-nums tracking-tight text-white sm:text-4xl md:text-5xl">
         {value}
       </p>
       <div className="h-px w-8 bg-amber-500/40" />
@@ -79,9 +90,12 @@ function StatCard({ icon: Icon, value, label }) {
   );
 }
 
-function FeatureCard({ icon: Icon, title, description }) {
+function FeatureCard({ icon: Icon, title, description, to }) {
   return (
-    <div className="group relative overflow-hidden rounded-2xl border border-white/8 bg-stone-900/70 p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-amber-500/25 hover:bg-stone-900 hover:shadow-2xl hover:shadow-amber-500/5">
+    <Link
+      to={to}
+      className="group relative overflow-hidden rounded-2xl border border-white/8 bg-stone-900/70 p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-amber-500/25 hover:bg-stone-900 hover:shadow-2xl hover:shadow-amber-500/5"
+    >
       {/* Hover — amber gradient top line */}
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-amber-500/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
       <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-amber-500/20 bg-amber-500/10 text-amber-400 transition-all duration-300 group-hover:border-amber-500/40 group-hover:bg-amber-500/15 group-hover:text-amber-300">
@@ -89,7 +103,7 @@ function FeatureCard({ icon: Icon, title, description }) {
       </div>
       <h3 className="mb-2 text-base font-semibold text-stone-100">{title}</h3>
       <p className="text-sm leading-relaxed text-stone-500">{description}</p>
-    </div>
+    </Link>
   );
 }
 
@@ -207,10 +221,10 @@ export default function LandingPage() {
               Platform
             </span>
             <h2 className="text-3xl font-bold text-stone-100">
-              Semua yang Kamu Butuhkan
+              Jangan Sampai Kita Kehilangan Satu Sama Lain
             </h2>
             <p className="mt-3 text-base text-stone-500">
-              Fitur lengkap untuk mempererat koneksi angkatan 2018.
+              Setelah wisuda, kehidupan membawa kita ke arah yang berbeda-beda. Platform ini hadir supaya jarak tidak memutus cerita.
             </p>
           </div>
 
