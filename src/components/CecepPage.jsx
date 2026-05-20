@@ -462,9 +462,17 @@ export default function CecepPage() {
 
       {/* ── Hero ──────────────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden bg-stone-950 px-6 py-24 md:py-32">
-        {/* Background glow */}
-        <div className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-[500px] w-[800px] rounded-full bg-amber-500/5 blur-3xl" />
-        <div className="pointer-events-none absolute left-1/4 bottom-0 h-64 w-64 rounded-full bg-amber-600/8 blur-3xl" />
+        {/* Group photo background */}
+        <div
+          className="pointer-events-none absolute inset-0 scale-105 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('/group-bg.jpg')",
+            filter: "brightness(0.18) saturate(0.5)",
+          }}
+        />
+        {/* Dark gradient overlays */}
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-stone-950/70 via-stone-950/10 to-stone-950/90" />
+        <div className="pointer-events-none absolute inset-0 bg-amber-950/15 mix-blend-multiply" />
 
         <div className="relative mx-auto max-w-4xl text-center">
           <span className="mb-6 inline-block rounded-full bg-amber-500/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-amber-400 ring-1 ring-amber-500/30">
