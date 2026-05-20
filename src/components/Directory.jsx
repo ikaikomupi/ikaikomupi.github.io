@@ -31,6 +31,8 @@ export default function Directory() {
   const [filterKota, setFilterKota] = useState(null);
   const [filterIndustri, setFilterIndustri] = useState(null);
   const [sortBy, setSortBy] = useState("nama-az");
+  const [page, setPage] = useState(1);
+  const PAGE_SIZE = 24;
 
   useEffect(() => {
     fetchAlumni()
@@ -62,12 +64,15 @@ export default function Directory() {
     return list;
   }, [allAlumni, search, filterKota, filterIndustri, sortBy]);
 
+  const totalPages = Math.ceil(filtered.length / PAGE_SIZE);
+  const paginated = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
   const hasFilters = search || filterKota || filterIndustri;
 
   function clearFilters() {
     setSearch("");
     setFilterKota(null);
     setFilterIndustri(null);
+    setPage(1);
   }
 
   return (
@@ -78,7 +83,7 @@ export default function Directory() {
         <div
           className="pointer-events-none absolute inset-0 scale-105 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/directory-bg.png')",
+            backgroundImage: "url('/directory-bg.jpg')",
             filter: "brightness(0.28) saturate(0.5)",
           }}
         />
@@ -107,7 +112,7 @@ export default function Directory() {
             <input
               type="text"
               value={search}
-              onChange={(e) => setSearch(e.target.value)}
+              onChange={(e) => { setSearch(e.target.value); setPage(1); }}
               placeholder="Cari nama, role, atau perusahaan..."
               className="w-full rounded-xl border border-stone-200 bg-white py-3 pl-10 pr-4 text-sm text-stone-900 placeholder:text-stone-400 focus:border-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-400/20"
             />
@@ -116,7 +121,7 @@ export default function Directory() {
             <SlidersHorizontal className="h-4 w-4 shrink-0 text-stone-400" />
             <select
               value={sortBy}
-              onChange={(e) => setSortBy(e.target.value)}
+              onChange={(e) => { setSortBy(e.target.value); setPage(1); }}
               className="rounded-xl border border-stone-200 bg-white px-3 py-3 text-sm text-stone-700 focus:border-amber-400 focus:outline-none"
             >
               <option value="nama-az">Nama A–Z</option>
@@ -130,7 +135,7 @@ export default function Directory() {
         <div className="mb-8 flex flex-col gap-3 sm:flex-row">
           <select
             value={filterKota ?? ""}
-            onChange={(e) => setFilterKota(e.target.value || null)}
+            onChange={(e) => { setFilterKota(e.target.value || null); setPage(1); }}
             className="flex-1 rounded-xl border border-stone-200 bg-white px-4 py-3 text-sm text-stone-700 focus:border-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-400/20"
           >
             <option value="">Semua Kota</option>
@@ -139,7 +144,7 @@ export default function Directory() {
 
           <select
             value={filterIndustri ?? ""}
-            onChange={(e) => setFilterIndustri(e.target.value || null)}
+            onChange={(e) => { setFilterIndustri(e.target.value || null); setPage(1); }}
             className="flex-1 rounded-xl border border-stone-200 bg-white px-4 py-3 text-sm text-stone-700 focus:border-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-400/20"
           >
             <option value="">Semua Industri</option>
@@ -176,8 +181,31 @@ export default function Directory() {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {loading
             ? Array.from({ length: 6 }).map((_, i) => <SkeletonCard key={i} />)
-            : filtered.map((a) => <AlumniCard key={a.id} alumni={a} />)}
+            : paginated.map((a) => <AlumniCard key={a.id} alumni={a} />)}
         </div>
+
+        {/* Pagination */}
+        {!loading && totalPages > 1 && (
+          <div className="mt-8 flex items-center justify-center gap-2">
+            <button
+              onClick={() => setPage((p) => Math.max(1, p - 1))}
+              disabled={page === 1}
+              className="rounded-lg border border-stone-200 bg-white px-4 py-2 text-sm font-medium text-stone-700 hover:bg-stone-50 disabled:opacity-40"
+            >
+              ← Sebelumnya
+            </button>
+            <span className="text-sm text-stone-500">
+              {page} / {totalPages}
+            </span>
+            <button
+              onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+              disabled={page === totalPages}
+              className="rounded-lg border border-stone-200 bg-white px-4 py-2 text-sm font-medium text-stone-700 hover:bg-stone-50 disabled:opacity-40"
+            >
+              Berikutnya →
+            </button>
+          </div>
+        )}
 
         {/* Empty state */}
         {!loading && !error && filtered.length === 0 && (

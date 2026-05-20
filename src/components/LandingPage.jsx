@@ -68,23 +68,26 @@ const spotlights = [
 
 function StatCard({ icon: Icon, value, label }) {
   return (
-    <div className="flex flex-col items-center gap-3 rounded-2xl bg-white/8 px-6 py-8 text-center ring-1 ring-white/10 backdrop-blur-sm">
-      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-amber-500/20">
-        <Icon className="h-6 w-6 text-amber-400" />
-      </div>
-      <p className="text-2xl font-bold text-white">{value}</p>
-      <p className="text-sm font-medium text-stone-400">{label}</p>
+    <div className="group flex flex-col items-center gap-3 px-6 py-12 text-center">
+      <Icon className="h-4 w-4 text-amber-500/50" />
+      <p className="text-5xl font-black tabular-nums tracking-tight text-white sm:text-6xl">
+        {value}
+      </p>
+      <div className="h-px w-8 bg-amber-500/40" />
+      <p className="text-xs font-semibold uppercase tracking-widest text-stone-500">{label}</p>
     </div>
   );
 }
 
 function FeatureCard({ icon: Icon, title, description }) {
   return (
-    <div className="group rounded-2xl border border-stone-200 bg-white p-8 shadow-sm transition-shadow hover:shadow-md">
-      <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-amber-50 text-amber-600 transition-colors group-hover:bg-amber-500 group-hover:text-white">
-        <Icon className="h-6 w-6" />
+    <div className="group relative overflow-hidden rounded-2xl border border-white/8 bg-stone-900/70 p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-amber-500/25 hover:bg-stone-900 hover:shadow-2xl hover:shadow-amber-500/5">
+      {/* Hover — amber gradient top line */}
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-amber-500/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+      <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-amber-500/20 bg-amber-500/10 text-amber-400 transition-all duration-300 group-hover:border-amber-500/40 group-hover:bg-amber-500/15 group-hover:text-amber-300">
+        <Icon className="h-5 w-5" />
       </div>
-      <h3 className="mb-2 text-lg font-semibold text-stone-900">{title}</h3>
+      <h3 className="mb-2 text-base font-semibold text-stone-100">{title}</h3>
       <p className="text-sm leading-relaxed text-stone-500">{description}</p>
     </div>
   );
@@ -114,7 +117,7 @@ function SpotlightCard({ name, role, quote, initials }) {
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-stone-50 font-sans antialiased">
+    <div className="min-h-screen bg-stone-950 font-sans antialiased">
 
       {/* ── Hero ──────────────────────────────────────────────────────────── */}
       <section className="relative flex h-screen items-center justify-center overflow-hidden bg-stone-950 px-6 text-center">
@@ -122,7 +125,7 @@ export default function LandingPage() {
         <div
           className="pointer-events-none absolute inset-0 scale-105 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/hero-bg.png')",
+            backgroundImage: "url('/hero-bg.jpg')",
             filter: "brightness(0.35) saturate(0.6)",
           }}
         />
@@ -170,8 +173,10 @@ export default function LandingPage() {
       </section>
 
       {/* ── Stats ─────────────────────────────────────────────────────────── */}
-      <section className="bg-stone-900 px-6 py-12">
-        <div className="mx-auto grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-3">
+      <section className="relative border-y border-white/6 bg-stone-950 px-6">
+        {/* Ambient amber radial glow */}
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_80%_at_50%_50%,rgba(245,158,11,0.06),transparent)]" />
+        <div className="relative mx-auto grid max-w-4xl grid-cols-3 divide-x divide-white/8">
           {stats.map((stat) => (
             <StatCard key={stat.label} {...stat} />
           ))}
@@ -179,18 +184,37 @@ export default function LandingPage() {
       </section>
 
       {/* ── Features ──────────────────────────────────────────────────────── */}
-      <section className="px-6 py-20">
-        <div className="mx-auto max-w-5xl">
-          <div className="mb-12 text-center">
-            <h2 className="mb-3 text-3xl font-bold text-stone-900">
+      <section className="relative overflow-hidden bg-stone-950 px-6 py-24">
+        {/* Dot-grid texture */}
+        <div
+          className="pointer-events-none absolute inset-0 opacity-100"
+          style={{
+            backgroundImage: "radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px)",
+            backgroundSize: "26px 26px",
+          }}
+        />
+        {/* Bottom fade-out over grid */}
+        <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-stone-950 to-transparent" />
+        {/* Amber bloom top-center */}
+        <div
+          className="pointer-events-none absolute -top-32 left-1/2 h-72 w-96 -translate-x-1/2 rounded-full blur-3xl"
+          style={{ background: "rgba(245,158,11,0.07)" }}
+        />
+
+        <div className="relative mx-auto max-w-5xl">
+          <div className="mb-16 text-center">
+            <span className="mb-3 inline-block text-xs font-semibold uppercase tracking-widest text-amber-500">
+              Platform
+            </span>
+            <h2 className="text-3xl font-bold text-stone-100">
               Semua yang Kamu Butuhkan
             </h2>
-            <p className="text-base text-stone-500">
+            <p className="mt-3 text-base text-stone-500">
               Fitur lengkap untuk mempererat koneksi angkatan 2018.
             </p>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((feature) => (
               <FeatureCard key={feature.title} {...feature} />
             ))}
@@ -201,16 +225,21 @@ export default function LandingPage() {
       {/* ── Pesan Ketua Angkatan ──────────────────────────────────────────── */}
       <section className="bg-stone-950 px-6 py-20">
         <div className="mx-auto max-w-5xl">
-          <p className="mb-10 text-center text-xs font-semibold uppercase tracking-widest text-amber-500">
-            Pesan dari Ketua Angkatan 2018
-          </p>
+          {/* Section header */}
+          <div className="mb-12 flex items-center gap-4">
+            <div className="h-px flex-1 bg-white/8" />
+            <span className="text-xs font-semibold uppercase tracking-widest text-stone-500">
+              Pesan dari Ketua Angkatan
+            </span>
+            <div className="h-px flex-1 bg-white/8" />
+          </div>
 
           <div className="flex flex-col items-center gap-10 md:flex-row md:items-start md:gap-16">
             {/* Photo */}
             <div className="relative shrink-0">
               <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-amber-500/40 to-transparent blur-md" />
               <img
-                src="/naufal.png"
+                src="/naufal.jpg"
                 alt="Muhammad Naufal Fadhilah"
                 className="relative h-64 w-52 rounded-2xl object-cover object-top ring-1 ring-white/10"
               />
@@ -222,7 +251,7 @@ export default function LandingPage() {
               <span className="mb-4 block font-serif text-7xl leading-none text-amber-500/30 select-none">
                 "
               </span>
-              <blockquote className="-mt-8 text-justify text-lg font-medium leading-relaxed text-stone-200 md:text-xl">
+              <blockquote className="-mt-8 text-lg font-medium leading-relaxed text-stone-200 md:text-xl">
                 Teman-teman IKOM 2018 yang luar biasa — perjalanan kita bersama
                 tidak berhenti di hari wisuda. Kita sudah membuktikan bahwa dari
                 satu angkatan bisa lahir jurnalis, analis, kreator, pendidik,

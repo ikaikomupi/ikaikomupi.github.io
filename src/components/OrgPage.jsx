@@ -117,7 +117,7 @@ export default function OrgPage() {
         <div
           className="pointer-events-none absolute inset-0 scale-105 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/directory-bg.png')",
+            backgroundImage: "url('/directory-bg.jpg')",
             filter: "brightness(0.2) saturate(0.4)",
           }}
         />
