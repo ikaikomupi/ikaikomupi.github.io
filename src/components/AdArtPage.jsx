@@ -12,9 +12,6 @@ import {
   Megaphone,
   Briefcase,
   Info,
-  Lock,
-  Eye,
-  EyeOff,
   ClipboardList,
   CheckCircle2,
   Target,
@@ -735,9 +732,6 @@ export default function AdArtPage() {
               >
                 <t.icon className="h-3.5 w-3.5" />
                 {t.label}
-                {t.id === "struktur" && !isStrukturUnlocked && (
-                  <Lock className="h-3 w-3 opacity-50" />
-                )}
               </button>
             ))}
           </div>
