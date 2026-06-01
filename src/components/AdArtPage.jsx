@@ -344,7 +344,7 @@ const struktur = {
   },
   inti: [
     { jabatan: "Ketua Umum", nama: "Cecep Abdurrohman Malik Ibrahim", icon: Crown },
-    { jabatan: "Wakil Ketua", nama: "Rizky Abdul Azis", icon: UserCog },
+    { jabatan: "Wakil Ketua", nama: "Rizqi Abdul Azis", icon: UserCog },
     { jabatan: "Sekretaris", nama: "Alanis Rani Rayhana", icon: PenLine },
     { jabatan: "Bendahara", nama: "Den Reza Alfian Farid", icon: Wallet },
   ],
