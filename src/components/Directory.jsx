@@ -93,13 +93,13 @@ export default function Directory() {
 
         <div className="relative">
           <span className="mb-4 inline-block rounded-full bg-amber-500/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-amber-400 ring-1 ring-amber-500/30">
-            Ilmu Komunikasi UPI · Angkatan 2018
+            IKA IKOM UPI
           </span>
           <h1 className="mb-3 text-3xl font-extrabold text-white md:text-5xl">
             Direktori Alumni
           </h1>
           <p className="text-stone-400">
-            Temukan teman-teman Ilmu Komunikasi UPI 2018 di seluruh Indonesia
+            Temukan teman-teman Ilmu Komunikasi UPI di seluruh Indonesia
           </p>
         </div>
       </div>

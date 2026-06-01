@@ -117,7 +117,7 @@ export default function RegisterForm() {
         <div className="mb-8 text-center">
           <h1 className="text-2xl font-extrabold text-stone-900">Daftar Jejaring</h1>
           <p className="mt-1 text-sm text-stone-500">
-            Bergabung ke direktori alumni IKOM UPI 2018
+            Bergabung ke direktori alumni IKOM UPI
           </p>
         </div>
 

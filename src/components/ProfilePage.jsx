@@ -205,7 +205,7 @@ export default function ProfilePage() {
               <p className="font-semibold text-stone-900">
                 Ilmu Komunikasi — Universitas Pendidikan Indonesia
               </p>
-              <p className="text-sm text-stone-500">Angkatan 2018 · Lulus 2022</p>
+              <p className="text-sm text-stone-500">Lulus 2022</p>
             </div>
           </div>
         </section>

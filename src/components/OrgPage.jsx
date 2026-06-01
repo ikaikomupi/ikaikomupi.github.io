@@ -124,13 +124,13 @@ export default function OrgPage() {
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-stone-950/70 via-stone-950/10 to-stone-950" />
         <div className="relative">
           <span className="mb-4 inline-block rounded-full bg-amber-500/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-amber-400 ring-1 ring-amber-500/30">
-            Ilmu Komunikasi UPI · Angkatan 2018
+            IKA IKOM UPI
           </span>
           <h1 className="mb-3 text-3xl font-extrabold text-white md:text-5xl">
             Struktur Organisasi
           </h1>
           <p className="text-stone-400">
-            Kepengurusan angkatan Ilmu Komunikasi UPI 2018
+            Kepengurusan IKA IKOM UPI
           </p>
         </div>
       </div>

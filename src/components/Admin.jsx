@@ -34,7 +34,7 @@ function PasswordGate({ onAuth }) {
             <span className="text-2xl">🛡️</span>
           </div>
           <h1 className="text-xl font-bold text-stone-100">Admin Panel</h1>
-          <p className="mt-1 text-sm text-stone-500">IKA IKOM UPI 2018</p>
+          <p className="mt-1 text-sm text-stone-500">IKA IKOM UPI</p>
         </div>
         <form onSubmit={submit} className="space-y-3">
           <input
@@ -459,7 +459,7 @@ function AdminPanel({ onLogout }) {
         <div className="mx-auto flex max-w-4xl items-center justify-between px-6 py-4">
           <div>
             <h1 className="text-sm font-bold text-stone-100">Admin Panel</h1>
-            <p className="text-xs text-stone-500">IKA IKOM UPI 2018</p>
+            <p className="text-xs text-stone-500">IKA IKOM UPI</p>
           </div>
           <button onClick={onLogout}
             className="flex items-center gap-1.5 rounded-lg border border-white/8 px-3 py-2 text-xs text-stone-400 hover:border-red-500/30 hover:text-red-400 transition-colors">
