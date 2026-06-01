@@ -174,7 +174,7 @@ export default function LandingPage() {
 
         <div className="relative mx-auto max-w-3xl">
           <span className="mb-6 inline-block rounded-full bg-amber-500/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-amber-400 ring-1 ring-amber-500/30">
-            IKA IKOM UPI · Angkatan 2018
+            IKA IKOM UPI
           </span>
 
           <h1 className="mb-5 text-4xl font-extrabold leading-tight tracking-tight text-white md:text-6xl">

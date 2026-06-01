@@ -26,7 +26,6 @@ export default function Navbar() {
             src="/logo-upi.png"
             alt="IKA IKOM UPI"
             className="h-9 w-auto"
-            style={{ filter: "brightness(0) invert(1)" }}
           />
           <span className="text-xs font-bold tracking-widest text-stone-200">IKA IKOM UPI</span>
         </Link>
