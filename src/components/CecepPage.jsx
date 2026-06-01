@@ -263,7 +263,7 @@ const softSkills = ["Public Speaking", "Leadership", "Management", "Negotiating"
 const hardSkills = ["Microsoft Office", "Adobe Premiere Pro", "Adobe Photoshop", "Audacity", "Canva"];
 
 const visi =
-  "Membangun AIKU sebagai wadah alumni yang relevan, inklusif, dan berdampak nyata — bagi anggotanya, almamater, dan masyarakat luas.";
+  "Membangun IKA IKOM UPI 2018 sebagai wadah alumni yang relevan, inklusif, dan berdampak nyata — bagi anggotanya, almamater, dan masyarakat luas.";
 
 const misi = [
   "Mendiagnosis akar masalah vakumnya organisasi secara sistematis sebelum menyusun program kerja.",
@@ -714,14 +714,14 @@ export default function CecepPage() {
         <section className="relative overflow-hidden px-6 pt-28 pb-16 md:pt-36 md:pb-24">
           {/* Faded watermark name */}
           <div aria-hidden className="pointer-events-none absolute -right-10 top-24 select-none font-display text-[10rem] font-semibold leading-none text-white/[0.02] md:text-[18rem]">
-            AIKU
+            IKA IKOM UPI 2018
           </div>
 
           <div className="relative mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
             {/* Left — copy */}
             <div>
               <div className="animate-[fadeUp_0.7s_ease-out_both]">
-                <Eyebrow>Pencalonan Ketua AIKU · Angkatan 2018</Eyebrow>
+                <Eyebrow>Pencalonan Ketua IKA IKOM UPI 2018 · Angkatan 2018</Eyebrow>
               </div>
               <h1 className="mt-7 font-display text-[3.25rem] font-semibold leading-[0.95] tracking-tight text-[#f5efe6] md:text-[5.5rem]">
                 <span className="block animate-[fadeUp_0.7s_ease-out_0.05s_both]">Cecep</span>
@@ -738,7 +738,7 @@ export default function CecepPage() {
               </div>
 
               <p className="mt-7 max-w-xl animate-[fadeUp_0.7s_ease-out_0.28s_both] text-base leading-relaxed text-stone-400 md:text-lg">
-                Membangun AIKU untuk memberikan dampak yang lebih luas — bagi
+                Membangun IKA IKOM UPI 2018 untuk memberikan dampak yang lebih luas — bagi
                 <span className="text-stone-200"> alumni, mahasiswa, dan civitas program studi</span>.
                 Ikatan alumni yang <span className="text-stone-200">menguatkan</span>,
                 <span className="text-stone-200"> berbagi peluang karir</span>, dan
@@ -1156,12 +1156,12 @@ export default function CecepPage() {
                 <img src="/cecep.jpg" alt="Cecep Abdurrohman Malik Ibrahim" className="relative h-24 w-24 rounded-full object-cover object-top ring-1 ring-amber-500/30" />
               </div>
               <blockquote className="font-display text-2xl font-light italic leading-relaxed text-[#f5efe6] md:text-4xl md:leading-[1.3]">
-                "Mari kita bangun AIKU bersama — bukan untuk satu angkatan, tapi untuk semua alumni."
+                "Mari kita bangun IKA IKOM UPI 2018 bersama — bukan untuk satu angkatan, tapi untuk semua alumni."
               </blockquote>
               <div className="mt-10 inline-flex flex-col items-center">
                 <span className="h-px w-12 bg-amber-500/40" />
                 <p className="mt-5 font-display text-xl font-medium text-[#f5efe6]">Cecep Abdurrohman Malik Ibrahim</p>
-                <p className="mt-1 text-sm text-amber-400">Calon Ketua AIKU · Ilmu Komunikasi UPI 2018</p>
+                <p className="mt-1 text-sm text-amber-400">Calon Ketua IKA IKOM UPI 2018 · Ilmu Komunikasi UPI 2018</p>
               </div>
 
               <div className="mt-12 border-t border-white/8 pt-10">

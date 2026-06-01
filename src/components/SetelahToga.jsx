@@ -97,7 +97,7 @@ export default function SetelahToga() {
       <div className="border-b border-white/8 bg-gradient-to-b from-stone-900 to-stone-950 px-6 py-16 text-center">
         <div className="mx-auto max-w-2xl">
           <span className="mb-4 inline-block rounded-full bg-amber-500/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-amber-400">
-            Blog AIKU 2018
+            Blog IKA IKOM UPI 2018
           </span>
           <h1 className="mb-4 text-4xl font-bold text-stone-100">Setelah Toga</h1>
           <p className="text-base leading-relaxed text-stone-400">

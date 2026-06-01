@@ -174,7 +174,7 @@ export default function LandingPage() {
 
         <div className="relative mx-auto max-w-3xl">
           <span className="mb-6 inline-block rounded-full bg-amber-500/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-amber-400 ring-1 ring-amber-500/30">
-            Ilmu Komunikasi UPI · Angkatan 2018
+            IKA IKOM UPI · Angkatan 2018
           </span>
 
           <h1 className="mb-5 text-4xl font-extrabold leading-tight tracking-tight text-white md:text-6xl">
@@ -199,7 +199,7 @@ export default function LandingPage() {
           </div>
 
           <p className="mx-auto mb-10 max-w-xl text-base leading-relaxed text-stone-400 md:text-lg">
-            Wadah resmi jaringan Ilmu Komunikasi UPI 2018. Tetap terhubung
+            Wadah resmi jaringan IKA IKOM UPI 2018. Tetap terhubung
             dengan teman seangkatan, kembangkan karir, dan bangun sinergi
             bersama.
           </p>
@@ -351,7 +351,7 @@ export default function LandingPage() {
       <footer className="bg-stone-950 px-6 py-8">
         <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 sm:flex-row">
           <p className="text-sm text-stone-500">
-            © 2026 IKOM UPI 2018. All rights reserved.
+            © 2026 IKA IKOM UPI 2018. All rights reserved.
           </p>
 
           <div className="flex items-center gap-4">

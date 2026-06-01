@@ -23,14 +23,14 @@ export default function Navbar() {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2.5">
           <img
-            src="/logo.png"
-            alt="IKOM 18"
+            src="/logo-upi.png"
+            alt="IKA IKOM UPI 2018"
             className="h-9 w-auto"
-            style={{ mixBlendMode: "screen" }}
+            style={{ filter: "brightness(0) invert(1)" }}
           />
           <div className="flex flex-col leading-tight">
-            <span className="text-xs font-bold tracking-widest text-stone-200">ILMU KOMUNIKASI</span>
-            <span className="text-xs font-medium tracking-widest text-amber-500">ANGKATAN 2018</span>
+            <span className="text-xs font-bold tracking-widest text-stone-200">IKA IKOM UPI</span>
+            <span className="text-xs font-medium tracking-widest text-amber-500">2018</span>
           </div>
         </Link>
 

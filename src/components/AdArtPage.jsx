@@ -21,24 +21,24 @@ import {
   FileCheck,
 } from "lucide-react";
 
-// ─── DRAFT CONTENT — disahkan dalam Musyawarah Besar AIKU ───────────────────────
+// ─── DRAFT CONTENT — disahkan dalam Musyawarah Besar IKA IKOM UPI 2018 ───────────────────────
 
 const anggaranDasar = [
   {
     bab: "BAB I",
     judul: "Nama, Waktu, dan Kedudukan",
     pasal: [
-      { no: "Pasal 1", ayat: ["Organisasi ini bernama Alumni Ilmu Komunikasi UPI, yang selanjutnya disingkat AIKU."] },
-      { no: "Pasal 2", ayat: ["AIKU ditetapkan untuk jangka waktu yang tidak ditentukan."] },
-      { no: "Pasal 3", ayat: ["AIKU berkedudukan di Kota Bandung, mengikuti domisili Program Studi Ilmu Komunikasi Universitas Pendidikan Indonesia."] },
+      { no: "Pasal 1", ayat: ["Organisasi ini bernama Ikatan Keluarga Alumni Ilmu Komunikasi UPI 2018, yang selanjutnya disingkat IKA IKOM UPI 2018."] },
+      { no: "Pasal 2", ayat: ["IKA IKOM UPI 2018 ditetapkan untuk jangka waktu yang tidak ditentukan."] },
+      { no: "Pasal 3", ayat: ["IKA IKOM UPI 2018 berkedudukan di Kota Bandung, mengikuti domisili Program Studi Ilmu Komunikasi Universitas Pendidikan Indonesia."] },
     ],
   },
   {
     bab: "BAB II",
     judul: "Asas, Sifat, dan Tujuan",
     pasal: [
-      { no: "Pasal 4", judul: "Asas", ayat: ["AIKU berasaskan Pancasila dan Undang-Undang Dasar Negara Republik Indonesia Tahun 1945."] },
-      { no: "Pasal 5", judul: "Sifat", ayat: ["AIKU bersifat independen, kekeluargaan, nirlaba, serta tidak berafiliasi dengan partai politik manapun."] },
+      { no: "Pasal 4", judul: "Asas", ayat: ["IKA IKOM UPI 2018 berasaskan Pancasila dan Undang-Undang Dasar Negara Republik Indonesia Tahun 1945."] },
+      { no: "Pasal 5", judul: "Sifat", ayat: ["IKA IKOM UPI 2018 bersifat independen, kekeluargaan, nirlaba, serta tidak berafiliasi dengan partai politik manapun."] },
       {
         no: "Pasal 6",
         judul: "Tujuan",
@@ -54,7 +54,7 @@ const anggaranDasar = [
     bab: "BAB III",
     judul: "Keanggotaan",
     pasal: [
-      { no: "Pasal 7", ayat: ["Anggota AIKU adalah seluruh lulusan Program Studi Ilmu Komunikasi Universitas Pendidikan Indonesia dari seluruh angkatan."] },
+      { no: "Pasal 7", ayat: ["Anggota IKA IKOM UPI 2018 adalah seluruh lulusan Program Studi Ilmu Komunikasi Universitas Pendidikan Indonesia dari seluruh angkatan."] },
       { no: "Pasal 8", ayat: ["Ketentuan lebih lanjut mengenai hak, kewajiban, dan berakhirnya keanggotaan diatur dalam Anggaran Rumah Tangga."] },
     ],
   },
@@ -65,7 +65,7 @@ const anggaranDasar = [
       {
         no: "Pasal 9",
         ayat: [
-          "Struktur organisasi AIKU terdiri atas: Dewan Pembina, Pengurus Harian, Koordinator Bidang, dan Perwakilan Angkatan.",
+          "Struktur organisasi IKA IKOM UPI 2018 terdiri atas: Dewan Pembina, Pengurus Harian, Koordinator Bidang, dan Perwakilan Angkatan.",
           "Dewan Pembina berfungsi memberikan arahan strategis dan tidak menjalankan kerja operasional harian.",
         ],
       },
@@ -75,7 +75,7 @@ const anggaranDasar = [
     bab: "BAB V",
     judul: "Kepengurusan",
     pasal: [
-      { no: "Pasal 10", ayat: ["Pengurus AIKU dipimpin oleh seorang Ketua Umum yang dipilih melalui Musyawarah Besar."] },
+      { no: "Pasal 10", ayat: ["Pengurus IKA IKOM UPI 2018 dipimpin oleh seorang Ketua Umum yang dipilih melalui Musyawarah Besar."] },
       { no: "Pasal 11", ayat: ["Masa bakti kepengurusan adalah 3 (tiga) tahun, dan Ketua Umum dapat menjabat paling banyak 2 (dua) periode berturut-turut."] },
       { no: "Pasal 12", judul: "Pemberhentian Ketua Umum", ayat: ["Ketua Umum dapat diberhentikan sebelum masa jabatannya berakhir melalui Musyawarah Besar Luar Biasa apabila terbukti tidak dapat menjalankan amanah atau atas permintaan sendiri."] },
       { no: "Pasal 13", judul: "Serah Terima Jabatan", ayat: ["Pengurus yang mengakhiri masa bakti wajib melakukan serah terima kepada kepengurusan baru selambat-lambatnya 30 (tiga puluh) hari setelah pelantikan, mencakup seluruh aset, dokumen, dan data organisasi."] },
@@ -88,7 +88,7 @@ const anggaranDasar = [
       {
         no: "Pasal 14",
         ayat: [
-          "Permusyawaratan dalam AIKU terdiri atas Musyawarah Besar (Mubes), Rapat Kerja, dan Rapat Pengurus.",
+          "Permusyawaratan dalam IKA IKOM UPI 2018 terdiri atas Musyawarah Besar (Mubes), Rapat Kerja, dan Rapat Pengurus.",
           "Musyawarah Besar merupakan forum pengambilan keputusan tertinggi organisasi.",
         ],
       },
@@ -101,8 +101,8 @@ const anggaranDasar = [
       {
         no: "Pasal 15",
         ayat: [
-          "AIKU tidak memungut iuran keanggotaan dalam bentuk apapun.",
-          "Sumber keuangan AIKU berasal dari donasi sukarela yang dibuka secara temporer pada setiap penyelenggaraan acara yang memerlukan biaya, dan hanya berlaku selama kebutuhan acara tersebut.",
+          "IKA IKOM UPI 2018 tidak memungut iuran keanggotaan dalam bentuk apapun.",
+          "Sumber keuangan IKA IKOM UPI 2018 berasal dari donasi sukarela yang dibuka secara temporer pada setiap penyelenggaraan acara yang memerlukan biaya, dan hanya berlaku selama kebutuhan acara tersebut.",
           "Pengelolaan keuangan dilakukan secara transparan dan dilaporkan kepada seluruh anggota setelah setiap acara selesai.",
           "Laporan keuangan diverifikasi oleh sekurang-kurangnya satu anggota pengurus di luar Bendahara sebelum dipublikasikan.",
         ],
@@ -120,7 +120,7 @@ const anggaranDasar = [
     bab: "BAB IX",
     judul: "Pembubaran",
     pasal: [
-      { no: "Pasal 17", ayat: ["Pembubaran AIKU hanya dapat dilakukan melalui Musyawarah Besar Luar Biasa yang diselenggarakan khusus untuk itu."] },
+      { no: "Pasal 17", ayat: ["Pembubaran IKA IKOM UPI 2018 hanya dapat dilakukan melalui Musyawarah Besar Luar Biasa yang diselenggarakan khusus untuk itu."] },
     ],
   },
   {
@@ -162,7 +162,7 @@ const anggaranRumahTangga = [
     bab: "BAB II",
     judul: "Tugas dan Wewenang Pengurus",
     pasal: [
-      { no: "Pasal 3", judul: "Ketua Umum", ayat: ["Memimpin dan mengoordinasikan seluruh kegiatan organisasi serta menjadi penanggung jawab utama AIKU."] },
+      { no: "Pasal 3", judul: "Ketua Umum", ayat: ["Memimpin dan mengoordinasikan seluruh kegiatan organisasi serta menjadi penanggung jawab utama IKA IKOM UPI 2018."] },
       { no: "Pasal 4", judul: "Wakil Ketua", ayat: ["Membantu Ketua Umum dan mewakili Ketua Umum apabila berhalangan."] },
       { no: "Pasal 5", judul: "Sekretaris", ayat: ["Mengelola administrasi, surat-menyurat, notulensi, dan arsip organisasi."] },
       { no: "Pasal 6", judul: "Bendahara", ayat: ["Mengelola keuangan secara transparan dan menyusun laporan keuangan berkala."] },
@@ -265,7 +265,7 @@ const anggaranRumahTangga = [
       {
         no: "Pasal 19",
         ayat: [
-          "AIKU tidak memiliki iuran rutin; tidak ada kewajiban finansial berkala bagi anggota.",
+          "IKA IKOM UPI 2018 tidak memiliki iuran rutin; tidak ada kewajiban finansial berkala bagi anggota.",
           "Donasi dibuka secara temporer hanya untuk acara tertentu yang membutuhkan biaya operasional, dan ditutup setelah acara berlangsung.",
           "Setiap penerimaan dan pengeluaran dalam penyelenggaraan acara wajib dicatat, didokumentasikan, dan dilaporkan kepada anggota setelah acara selesai.",
           "Apabila terdapat sisa dana setelah acara selesai, sisa tersebut dicatat sebagai kas organisasi untuk keperluan operasional berikutnya dan dilaporkan kepada seluruh anggota.",
@@ -278,7 +278,7 @@ const anggaranRumahTangga = [
     bab: "BAB VII",
     judul: "Atribut Organisasi",
     pasal: [
-      { no: "Pasal 20", ayat: ["AIKU memiliki atribut berupa logo dan identitas visual yang ditetapkan oleh pengurus dan disahkan dalam Musyawarah Besar."] },
+      { no: "Pasal 20", ayat: ["IKA IKOM UPI 2018 memiliki atribut berupa logo dan identitas visual yang ditetapkan oleh pengurus dan disahkan dalam Musyawarah Besar."] },
     ],
   },
   {
@@ -294,14 +294,14 @@ const gbho = [
   {
     judul: "Pendahuluan",
     isi: [
-      "Garis Besar Haluan Organisasi (GBHO) merupakan pedoman umum yang menjadi arah penyelenggaraan program kerja AIKU dalam satu periode kepengurusan.",
+      "Garis Besar Haluan Organisasi (GBHO) merupakan pedoman umum yang menjadi arah penyelenggaraan program kerja IKA IKOM UPI 2018 dalam satu periode kepengurusan.",
       "GBHO disusun agar setiap program memiliki orientasi yang jelas, terukur, dan berkelanjutan — bukan sekadar daftar kegiatan.",
     ],
   },
   {
     judul: "Pola Dasar — Visi & Misi",
     isi: [
-      "Visi: Membangun AIKU sebagai wadah alumni yang relevan, inklusif, dan berdampak nyata bagi anggota, almamater, dan masyarakat.",
+      "Visi: Membangun IKA IKOM UPI 2018 sebagai wadah alumni yang relevan, inklusif, dan berdampak nyata bagi anggota, almamater, dan masyarakat.",
       "Misi: memperkuat silaturahmi, mengembangkan profesional dan karir anggota, serta memberikan kontribusi kepada almamater dan masyarakat.",
     ],
   },
@@ -310,7 +310,7 @@ const gbho = [
     isi: [
       "Jangka Pendek (Tahun 1): diagnosis kebutuhan, pembangunan infrastruktur dasar, dan eksekusi quick wins.",
       "Jangka Menengah: penguatan program rutin pengembangan profesional dan kontribusi ke almamater.",
-      "Jangka Panjang: AIKU menjadi organisasi alumni yang mandiri, berkelanjutan, dan berdampak luas.",
+      "Jangka Panjang: IKA IKOM UPI 2018 menjadi organisasi alumni yang mandiri, berkelanjutan, dan berdampak luas.",
     ],
   },
   {
@@ -359,8 +359,8 @@ const sop = [
   {
     bidang: "Program & Acara",
     icon: Users,
-    tujuan: "Merencanakan, mengkoordinasikan, dan mengevaluasi seluruh kegiatan AIKU agar terselenggara secara terstruktur dan berdampak.",
-    ruangLingkup: "Berlaku untuk semua kegiatan resmi AIKU, mulai dari ideasi hingga pelaporan pasca acara.",
+    tujuan: "Merencanakan, mengkoordinasikan, dan mengevaluasi seluruh kegiatan IKA IKOM UPI 2018 agar terselenggara secara terstruktur dan berdampak.",
+    ruangLingkup: "Berlaku untuk semua kegiatan resmi IKA IKOM UPI 2018, mulai dari ideasi hingga pelaporan pasca acara.",
     prosedur: [
       { langkah: "Ideasi & Inisiasi", detail: "Usulkan ide acara disertai latar belakang, tujuan, dan estimasi peserta. Diajukan minimal 8 minggu sebelum tanggal pelaksanaan." },
       { langkah: "Penyusunan Proposal", detail: "Buat proposal lengkap: rundown, kebutuhan SDM, anggaran, dan rencana komunikasi ke anggota. Koordinasikan dengan Bidang Komunikasi & Media untuk promosi." },
@@ -380,7 +380,7 @@ const sop = [
     bidang: "Pengembangan Profesional & Karir",
     icon: Briefcase,
     tujuan: "Memfasilitasi pertumbuhan profesional anggota dan memperluas peluang karir melalui program mentoring, knowledge-sharing, dan job referral.",
-    ruangLingkup: "Mencakup seluruh program yang berkaitan dengan kompetensi profesional, karir, dan pengembangan diri anggota AIKU.",
+    ruangLingkup: "Mencakup seluruh program yang berkaitan dengan kompetensi profesional, karir, dan pengembangan diri anggota IKA IKOM UPI 2018.",
     prosedur: [
       { langkah: "Survey Kebutuhan", detail: "Lakukan survey kebutuhan anggota setiap awal tahun untuk memetakan topik yang relevan dan format yang diinginkan (webinar, mentoring 1-on-1, job fair, dll.)." },
       { langkah: "Penyusunan Kalender Program", detail: "Susun kalender program tahunan berdasarkan hasil survey. Tetapkan minimal 2 program utama per tahun dengan jadwal dan PIC masing-masing." },
@@ -400,13 +400,13 @@ const sop = [
   {
     bidang: "Hubungan Alumni & Antar-Angkatan",
     icon: Network,
-    tujuan: "Menjaga keterhubungan seluruh anggota lintas angkatan, memutakhirkan database alumni, dan memastikan anggota baru (wisudawan) terhubung dengan AIKU.",
+    tujuan: "Menjaga keterhubungan seluruh anggota lintas angkatan, memutakhirkan database alumni, dan memastikan anggota baru (wisudawan) terhubung dengan IKA IKOM UPI 2018.",
     ruangLingkup: "Mencakup pengelolaan data anggota, koordinasi PIC angkatan, dan penjangkauan alumni baru.",
     prosedur: [
       { langkah: "Pemutakhiran Database", detail: "Koordinasikan dengan PIC setiap angkatan untuk memperbarui data anggota (kontak, profesi, domisili) setiap kuartal. Gunakan platform yang ditetapkan organisasi." },
       { langkah: "Koordinasi PIC Angkatan", detail: "Adakan pertemuan rutin dengan seluruh PIC angkatan minimal sekali per semester untuk berbagi informasi dan menyampaikan arahan dari pengurus inti." },
       { langkah: "Penjangkauan Anggota Baru", detail: "Pantau jadwal wisuda Ilmu Komunikasi UPI. Hubungi dan sambut wisudawan baru melalui PIC angkatan atau langsung via kanal resmi dalam 30 hari setelah wisuda." },
-      { langkah: "Fasilitasi Komunikasi Lintas Angkatan", detail: "Kelola dan moderasi grup komunikasi resmi AIKU. Pastikan informasi dari pengurus inti tersebar merata ke seluruh anggota." },
+      { langkah: "Fasilitasi Komunikasi Lintas Angkatan", detail: "Kelola dan moderasi grup komunikasi resmi IKA IKOM UPI 2018. Pastikan informasi dari pengurus inti tersebar merata ke seluruh anggota." },
       { langkah: "Pelaporan Data", detail: "Sampaikan laporan perkembangan database kepada Sekretaris setiap kuartal, termasuk jumlah anggota aktif, angkatan yang belum terjangkau, dan kendalanya." },
     ],
     output: ["Database anggota termutakhir", "Laporan kuartalan data keanggotaan", "Notulensi pertemuan PIC angkatan"],
@@ -419,11 +419,11 @@ const sop = [
   {
     bidang: "Komunikasi & Media",
     icon: Megaphone,
-    tujuan: "Mengelola identitas digital, komunikasi eksternal, dan konten AIKU agar konsisten, relevan, dan memperkuat citra organisasi.",
-    ruangLingkup: "Mencakup semua kanal komunikasi resmi AIKU: media sosial, website, dan materi komunikasi untuk kegiatan.",
+    tujuan: "Mengelola identitas digital, komunikasi eksternal, dan konten IKA IKOM UPI 2018 agar konsisten, relevan, dan memperkuat citra organisasi.",
+    ruangLingkup: "Mencakup semua kanal komunikasi resmi IKA IKOM UPI 2018: media sosial, website, dan materi komunikasi untuk kegiatan.",
     prosedur: [
       { langkah: "Perencanaan Konten", detail: "Susun kalender konten bulanan setiap akhir bulan sebelumnya. Konten mencakup info kegiatan, profil anggota, edukasi, dan konten komunitas. Koordinasikan dengan bidang lain untuk kebutuhan konten mereka." },
-      { langkah: "Produksi Konten", detail: "Buat konten (desain visual, caption, artikel) sesuai panduan identitas visual AIKU. Gunakan tone of voice yang hangat, inklusif, dan profesional." },
+      { langkah: "Produksi Konten", detail: "Buat konten (desain visual, caption, artikel) sesuai panduan identitas visual IKA IKOM UPI 2018. Gunakan tone of voice yang hangat, inklusif, dan profesional." },
       { langkah: "Review & Persetujuan", detail: "Konten yang menyangkut kebijakan organisasi atau pernyataan resmi wajib disetujui Ketua Umum sebelum dipublikasikan. Konten rutin cukup disetujui koordinator bidang." },
       { langkah: "Publikasi", detail: "Publikasikan konten sesuai jadwal kalender. Pastikan keseragaman lintas platform (visual, teks, hashtag)." },
       { langkah: "Monitoring & Respons", detail: "Pantau interaksi di kanal resmi setiap hari. Tanggapi pertanyaan atau komentar publik dalam ≤ 24 jam. Eskalasikan isu sensitif ke Ketua Umum." },
@@ -716,7 +716,7 @@ export default function AdArtPage() {
           <div className="mx-auto max-w-4xl text-center">
             <div className="mx-auto mb-6 flex items-center justify-center gap-3">
               <span className="h-px w-8 bg-amber-500/40" />
-              <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-amber-500/90">Dokumen Organisasi · AIKU</span>
+              <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-amber-500/90">Dokumen Organisasi · IKA IKOM UPI 2018</span>
               <span className="h-px w-8 bg-amber-500/40" />
             </div>
             <h1 className="font-display text-4xl font-semibold leading-[1.05] tracking-tight text-[#f5efe6] md:text-6xl">
@@ -730,7 +730,7 @@ export default function AdArtPage() {
             <div className="mx-auto mt-8 flex max-w-xl items-start gap-3 rounded-2xl border border-amber-500/20 bg-amber-500/[0.06] p-4 text-left">
               <Info className="mt-0.5 h-4 w-4 shrink-0 text-amber-400" />
               <p className="text-xs leading-relaxed text-amber-200/90">
-                <span className="font-semibold">Dokumen ini masih berupa DRAFT usulan.</span> Seluruh isi akan dibahas, disempurnakan, dan disahkan dalam Musyawarah Besar (Mubes) AIKU.
+                <span className="font-semibold">Dokumen ini masih berupa DRAFT usulan.</span> Seluruh isi akan dibahas, disempurnakan, dan disahkan dalam Musyawarah Besar (Mubes) IKA IKOM UPI 2018.
               </p>
             </div>
           </div>
@@ -763,7 +763,7 @@ export default function AdArtPage() {
             {tab === "ad" && (
               <>
                 <h2 className="mb-2 font-display text-3xl font-semibold text-[#f5efe6]">Anggaran Dasar</h2>
-                <p className="mb-4 text-sm text-stone-500">Aturan pokok organisasi AIKU.</p>
+                <p className="mb-4 text-sm text-stone-500">Aturan pokok organisasi IKA IKOM UPI 2018.</p>
                 <LegalDoc data={anggaranDasar} />
               </>
             )}
@@ -784,14 +784,14 @@ export default function AdArtPage() {
             {tab === "sop" && (
               <>
                 <h2 className="mb-2 font-display text-3xl font-semibold text-[#f5efe6]">SOP Bidang</h2>
-                <p className="mb-6 text-sm text-stone-500">Standar operasional prosedur tiap bidang kepengurusan AIKU.</p>
+                <p className="mb-6 text-sm text-stone-500">Standar operasional prosedur tiap bidang kepengurusan IKA IKOM UPI 2018.</p>
                 <SopDoc />
               </>
             )}
             {tab === "struktur" && (
               <>
                 <h2 className="mb-2 font-display text-3xl font-semibold text-[#f5efe6]">Struktur Organisasi</h2>
-                <p className="mb-8 text-sm text-stone-500">Rencana susunan kepengurusan AIKU periode mendatang.</p>
+                <p className="mb-8 text-sm text-stone-500">Rencana susunan kepengurusan IKA IKOM UPI 2018 periode mendatang.</p>
                 <StrukturDoc />
               </>
             )}
