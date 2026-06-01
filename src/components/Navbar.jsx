@@ -22,11 +22,9 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2.5">
-          <img
-            src="/logo-upi.png"
-            alt="IKA IKOM UPI"
-            className="h-9 w-auto"
-          />
+          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white p-1">
+            <img src="/logo-upi.png" alt="IKA IKOM UPI" className="h-full w-auto" />
+          </div>
           <span className="text-xs font-bold tracking-widest text-stone-200">IKA IKOM UPI</span>
         </Link>
 

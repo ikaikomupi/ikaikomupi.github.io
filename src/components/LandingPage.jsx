@@ -16,7 +16,7 @@ import {
 
 const stats = [
   { icon: Users, value: "60+", label: "Teman Terhubung" },
-  { icon: GraduationCap, value: "IKOM", label: "2018" },
+  { icon: GraduationCap, value: "IKOM", label: "UPI" },
   { icon: Briefcase, value: "15+", label: "Sektor Industri" },
 ];
 
@@ -25,7 +25,7 @@ const features = [
     icon: Search,
     title: "Direktori Terintegrasi",
     description:
-      "Cari dan temukan kontak teman-teman 2018 berdasarkan domisili atau industri.",
+      "Cari dan temukan kontak sesama alumni berdasarkan domisili atau industri.",
     to: "/directory",
   },
   {
@@ -46,7 +46,7 @@ const features = [
     icon: BookOpen,
     title: "Setelah Toga",
     description:
-      "Cerita, tips, dan pelajaran nyata dari alumni IKOM 2018 tentang hidup setelah wisuda.",
+      "Cerita, tips, dan pelajaran nyata dari para alumni IKOM UPI tentang hidup setelah wisuda.",
     to: "/setelah-toga",
     featured: true,
   },
@@ -55,23 +55,23 @@ const features = [
 const spotlights = [
   {
     name: "Alanis Rani Rayhana",
-    role: "Alumni IKOM UPI 2018",
+    role: "Alumni IKOM UPI",
     quote:
       "Jadi alumni IKOM UPI bukan cuma soal gelar — tapi tentang cara berpikir kritis yang dibentuk sejak kelas pertama. Itu yang sampai sekarang paling terasa manfaatnya di dunia kerja.",
     initials: "AR",
   },
   {
     name: "Wanda Putri Rachmalita",
-    role: "Alumni IKOM UPI 2018",
+    role: "Alumni IKOM UPI",
     quote:
-      "IKOM 2018 ngajarin saya bahwa komunikasi itu bukan cuma bicara — tapi tentang memahami. Pelajaran itu yang bikin saya bertahan dan berkembang di industri yang terus berubah.",
+      "IKOM UPI ngajarin saya bahwa komunikasi itu bukan cuma bicara — tapi tentang memahami. Pelajaran itu yang bikin saya bertahan dan berkembang di industri yang terus berubah.",
     initials: "WP",
   },
   {
     name: "Den Reza Alfian Farid",
-    role: "Alumni IKOM UPI 2018",
+    role: "Alumni IKOM UPI",
     quote:
-      "Yang paling berharga dari IKOM bukan hanya ilmunya, tapi orangnya. Angkatan 2018 itu penuh orang-orang yang saling menguatkan — dan energi itu masih terasa sampai sekarang.",
+      "Yang paling berharga dari IKOM bukan hanya ilmunya, tapi orangnya. Angkatan kita penuh orang-orang yang saling menguatkan — dan energi itu masih terasa sampai sekarang.",
     initials: "DR",
   },
 ];
@@ -199,7 +199,7 @@ export default function LandingPage() {
           </div>
 
           <p className="mx-auto mb-10 max-w-xl text-base leading-relaxed text-stone-400 md:text-lg">
-            Wadah resmi jaringan IKA IKOM UPI 2018. Tetap terhubung
+            Wadah resmi jaringan IKA IKOM UPI. Tetap terhubung
             dengan teman seangkatan, kembangkan karir, dan bangun sinergi
             bersama.
           </p>
@@ -279,7 +279,7 @@ export default function LandingPage() {
           <div className="mb-12 flex items-center gap-4">
             <div className="h-px flex-1 bg-white/8" />
             <span className="text-xs font-semibold uppercase tracking-widest text-stone-500">
-              Pesan dari Ketua IKA IKOM UPI 2018
+              Pesan dari Ketua IKA IKOM UPI
             </span>
             <div className="h-px flex-1 bg-white/8" />
           </div>
@@ -302,7 +302,7 @@ export default function LandingPage() {
                 "
               </span>
               <blockquote className="-mt-8 text-lg font-medium leading-relaxed text-stone-200 md:text-xl">
-                Mari kita bangun IKA IKOM UPI 2018 bersama — bukan sekadar
+                Mari kita bangun IKA IKOM UPI bersama — bukan sekadar
                 reuni, tapi wadah nyata yang relevan, inklusif, dan berdampak.
                 Bagi sesama alumni, bagi almamater, dan bagi masyarakat luas.
                 Perjalanan kita tidak berhenti di hari wisuda — ini baru
@@ -316,7 +316,7 @@ export default function LandingPage() {
                     Cecep Abdurrohman Malik Ibrahim
                   </p>
                   <p className="text-sm text-amber-400">
-                    Ketua IKA IKOM UPI 2018
+                    Ketua IKA IKOM UPI
                   </p>
                 </div>
               </div>
@@ -349,7 +349,7 @@ export default function LandingPage() {
       <footer className="bg-stone-950 px-6 py-8">
         <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 sm:flex-row">
           <p className="text-sm text-stone-500">
-            © 2026 IKA IKOM UPI 2018. All rights reserved.
+            © 2026 IKA IKOM UPI. All rights reserved.
           </p>
 
           <div className="flex items-center gap-4">
