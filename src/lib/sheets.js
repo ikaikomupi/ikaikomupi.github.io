@@ -235,7 +235,7 @@ export async function fetchAlumni() {
       id: row.id || String(i + 1),
       nama: row.nama || "",
       foto_url: row.foto_url || null,
-      role: row.role || "",
+      role: (row.role || "").replace(/\s*2018\s*/g, " ").trim(),
       perusahaan: row.perusahaan || "",
       industri: row.industri || "",
       kota: row.kota || "",
