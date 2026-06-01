@@ -15,9 +15,9 @@ import {
 // ─── Data ──────────────────────────────────────────────────────────────────────
 
 const stats = [
-  { icon: Users, value: "60+", label: "Teman Terhubung" },
-  { icon: GraduationCap, value: "IKOM", label: "UPI" },
-  { icon: Briefcase, value: "15+", label: "Sektor Industri" },
+  { icon: Users, value: "500+", label: "Alumni Terhubung" },
+  { icon: GraduationCap, value: "10", label: "Angkatan Terhimpun" },
+  { icon: Briefcase, value: "20+", label: "Sektor Industri" },
 ];
 
 const features = [
