@@ -28,7 +28,7 @@ const anggaranDasar = [
     bab: "BAB I",
     judul: "Nama, Waktu, dan Kedudukan",
     pasal: [
-      { no: "Pasal 1", ayat: ["Organisasi ini bernama Ikatan Keluarga Alumni Ilmu Komunikasi UPI 2018, yang selanjutnya disingkat IKA IKOM UPI."] },
+      { no: "Pasal 1", ayat: ["Organisasi ini bernama Ikatan Keluarga Alumni Ilmu Komunikasi UPI, yang selanjutnya disingkat IKA IKOM UPI."] },
       { no: "Pasal 2", ayat: ["IKA IKOM UPI ditetapkan untuk jangka waktu yang tidak ditentukan."] },
       { no: "Pasal 3", ayat: ["IKA IKOM UPI berkedudukan di Kota Bandung, mengikuti domisili Program Studi Ilmu Komunikasi Universitas Pendidikan Indonesia."] },
     ],
