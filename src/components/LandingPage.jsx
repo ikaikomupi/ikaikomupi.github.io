@@ -54,18 +54,18 @@ const features = [
 
 const spotlights = [
   {
-    name: "Alanis Rani Rayhana",
-    role: "Alumni IKOM UPI",
+    name: "Gesha Fadhilah Ramdhan",
+    role: "Alumni IKOM UPI 2020",
     quote:
       "Jadi alumni IKOM UPI bukan cuma soal gelar — tapi tentang cara berpikir kritis yang dibentuk sejak kelas pertama. Itu yang sampai sekarang paling terasa manfaatnya di dunia kerja.",
-    initials: "AR",
+    initials: "GF",
   },
   {
-    name: "Wanda Putri Rachmalita",
-    role: "Alumni IKOM UPI",
+    name: "Rizki Dwi Pangestu",
+    role: "Alumni IKOM UPI 2019",
     quote:
       "IKOM UPI ngajarin saya bahwa komunikasi itu bukan cuma bicara — tapi tentang memahami. Pelajaran itu yang bikin saya bertahan dan berkembang di industri yang terus berubah.",
-    initials: "WP",
+    initials: "RD",
   },
   {
     name: "Den Reza Alfian Farid",
