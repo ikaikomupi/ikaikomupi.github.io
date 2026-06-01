@@ -23,7 +23,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2.5">
           <img
-            src="/logo.png"
+            src="/logo-upi.png"
             alt="IKA IKOM UPI"
             className="h-9 w-auto"
             style={{ filter: "brightness(0) invert(1)" }}
