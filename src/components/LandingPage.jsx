@@ -279,7 +279,7 @@ export default function LandingPage() {
           <div className="mb-12 flex items-center gap-4">
             <div className="h-px flex-1 bg-white/8" />
             <span className="text-xs font-semibold uppercase tracking-widest text-stone-500">
-              Pesan dari Ketua Angkatan
+              Pesan dari Ketua IKA IKOM UPI 2018
             </span>
             <div className="h-px flex-1 bg-white/8" />
           </div>
@@ -289,8 +289,8 @@ export default function LandingPage() {
             <div className="relative shrink-0">
               <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-amber-500/40 to-transparent blur-md" />
               <img
-                src="/naufal.jpg"
-                alt="Muhammad Naufal Fadhilah"
+                src="/cecep.jpg"
+                alt="Cecep Abdurrohman Malik Ibrahim"
                 className="relative h-64 w-52 rounded-2xl object-cover object-top ring-1 ring-white/10"
               />
             </div>
@@ -302,23 +302,21 @@ export default function LandingPage() {
                 "
               </span>
               <blockquote className="-mt-8 text-lg font-medium leading-relaxed text-stone-200 md:text-xl">
-                Teman-teman IKOM 2018 yang luar biasa — perjalanan kita bersama
-                tidak berhenti di hari wisuda. Kita sudah membuktikan bahwa dari
-                satu angkatan bisa lahir jurnalis, analis, kreator, pendidik,
-                pengusaha, dan banyak lagi. Platform ini hadir supaya koneksi kita
-                tetap hidup, kolaborasi terus terjadi, dan tidak ada satu pun dari
-                kita yang melangkah sendirian. Mari jaga silaturahmi dan terus
-                tumbuh bersama.
+                Mari kita bangun IKA IKOM UPI 2018 bersama — bukan sekadar
+                reuni, tapi wadah nyata yang relevan, inklusif, dan berdampak.
+                Bagi sesama alumni, bagi almamater, dan bagi masyarakat luas.
+                Perjalanan kita tidak berhenti di hari wisuda — ini baru
+                permulaan.
               </blockquote>
 
               <div className="mt-8 flex items-center gap-4">
                 <div className="h-px flex-1 bg-white/10" />
                 <div className="text-right">
                   <p className="font-semibold text-white">
-                    Muhammad Naufal Fadhilah
+                    Cecep Abdurrohman Malik Ibrahim
                   </p>
                   <p className="text-sm text-amber-400">
-                    Ketua Angkatan · Ilmu Komunikasi UPI 2018
+                    Ketua IKA IKOM UPI 2018
                   </p>
                 </div>
               </div>
