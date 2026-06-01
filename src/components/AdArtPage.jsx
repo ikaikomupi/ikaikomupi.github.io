@@ -339,12 +339,17 @@ const gbho = [
 ];
 
 const struktur = {
-  pembina: { label: "Dewan Pembina / Penasihat", desc: "Alumni senior & tokoh — arahan strategis, bukan kerja harian", names: [] },
+  pembina: {
+    label: "Dewan Pembina / Penasihat",
+    desc: "Alumni senior & tokoh — arahan strategis, bukan kerja harian",
+    ketua: "Haidar Abdurrahman",
+    anggota: ["Feggy Nurdiansyah", "M. Endriski Agraenzopati H", "Alwan Husni Ramdhani"],
+  },
   inti: [
     { jabatan: "Ketua Umum", nama: "Cecep Abdurrohman Malik Ibrahim", icon: Crown },
-    { jabatan: "Wakil Ketua", nama: "M. Naufal Fadhilah", icon: UserCog },
+    { jabatan: "Wakil Ketua", nama: "Rizky Abdul Azis", icon: UserCog },
     { jabatan: "Sekretaris", nama: "Alanis Rani Rayhana", icon: PenLine },
-    { jabatan: "Bendahara", nama: "—", icon: Wallet },
+    { jabatan: "Bendahara", nama: "Den Reza Alfian Farid", icon: Wallet },
   ],
   bidang: [
     { nama: "Program & Acara", anggota: ["Fathia Islamiyatul S", "Reva Girvan"], icon: Users },
@@ -512,6 +517,14 @@ function StrukturDoc() {
         <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-stone-500">Lapisan Penasihat</span>
         <h3 className="mt-1 font-display text-xl font-medium text-[#f5efe6]">{struktur.pembina.label}</h3>
         <p className="mt-1 text-sm text-stone-400">{struktur.pembina.desc}</p>
+        <div className="mt-3 flex flex-wrap justify-center gap-2">
+          <span className="rounded-full bg-amber-500/15 px-3 py-1 text-xs font-semibold text-amber-400 ring-1 ring-amber-500/30">
+            Ketua: {struktur.pembina.ketua}
+          </span>
+          {struktur.pembina.anggota.map((a) => (
+            <span key={a} className="rounded-full bg-white/5 px-3 py-1 text-xs text-stone-400 ring-1 ring-white/10">{a}</span>
+          ))}
+        </div>
       </div>
 
       <div className="flex justify-center"><div className="h-4 w-px bg-amber-500/30" /></div>
