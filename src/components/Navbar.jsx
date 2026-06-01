@@ -25,7 +25,10 @@ export default function Navbar() {
           <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white p-1">
             <img src="/logo-upi.png" alt="IKA IKOM UPI" className="h-full w-auto" />
           </div>
-          <span className="text-xs font-bold tracking-widest text-stone-200">IKA IKOM UPI</span>
+          <div className="flex flex-col leading-tight">
+            <span className="text-xs font-bold tracking-widest text-stone-200">IKA ILMU KOMUNIKASI</span>
+            <span className="text-[10px] font-medium tracking-widest text-amber-500">UNIVERSITAS PENDIDIKAN INDONESIA</span>
+          </div>
         </Link>
 
         {/* Desktop links */}
