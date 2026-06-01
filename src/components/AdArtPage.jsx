@@ -681,38 +681,11 @@ function SopDoc() {
 
 // ─── Page ────────────────────────────────────────────────────────────────────
 
-const STRUKTUR_PASSWORD = "aiku2026";
-
 export default function AdArtPage() {
   const [tab, setTab] = useState("ad");
-  const [isStrukturUnlocked, setIsStrukturUnlocked] = useState(false);
-  const [showModal, setShowModal] = useState(false);
-  const [passwordInput, setPasswordInput] = useState("");
-  const [passwordError, setPasswordError] = useState(false);
-  const [showPassword, setShowPassword] = useState(false);
 
   function handleTabClick(id) {
-    if (id === "struktur" && !isStrukturUnlocked) {
-      setShowModal(true);
-      setPasswordInput("");
-      setPasswordError(false);
-    } else {
-      setTab(id);
-    }
-  }
-
-  function handlePasswordSubmit(e) {
-    e.preventDefault();
-    if (passwordInput === STRUKTUR_PASSWORD) {
-      setIsStrukturUnlocked(true);
-      setShowModal(false);
-      setTab("struktur");
-      setPasswordInput("");
-      setPasswordError(false);
-    } else {
-      setPasswordError(true);
-      setPasswordInput("");
-    }
+    setTab(id);
   }
 
   return (
@@ -826,59 +799,6 @@ export default function AdArtPage() {
         </footer>
       </div>
 
-      {/* Password Modal */}
-      {showModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm px-6">
-          <div className="w-full max-w-sm rounded-3xl border border-white/10 bg-[#111009] p-8 shadow-2xl">
-            <div className="mb-6 flex flex-col items-center gap-3 text-center">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-500/10 text-amber-400">
-                <Lock className="h-5 w-5" />
-              </div>
-              <h2 className="font-display text-xl font-semibold text-[#f5efe6]">Akses Terbatas</h2>
-              <p className="text-sm text-stone-400">Masukkan password untuk melihat Struktur Organisasi.</p>
-            </div>
-            <form onSubmit={handlePasswordSubmit} className="space-y-4">
-              <div className="relative">
-                <input
-                  type={showPassword ? "text" : "password"}
-                  value={passwordInput}
-                  onChange={(e) => { setPasswordInput(e.target.value); setPasswordError(false); }}
-                  placeholder="Password"
-                  autoFocus
-                  className={`w-full rounded-xl border bg-white/[0.04] px-4 py-3 pr-10 text-sm text-[#f5efe6] placeholder-stone-600 outline-none transition-colors focus:border-amber-500/50 ${
-                    passwordError ? "border-red-500/50" : "border-white/10"
-                  }`}
-                />
-                <button
-                  type="button"
-                  onClick={() => setShowPassword((v) => !v)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-stone-500 hover:text-stone-300"
-                >
-                  {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-                </button>
-              </div>
-              {passwordError && (
-                <p className="text-xs text-red-400">Password salah. Coba lagi.</p>
-              )}
-              <div className="flex gap-3">
-                <button
-                  type="button"
-                  onClick={() => setShowModal(false)}
-                  className="flex-1 rounded-xl border border-white/10 py-2.5 text-sm text-stone-400 transition-colors hover:text-stone-200"
-                >
-                  Batal
-                </button>
-                <button
-                  type="submit"
-                  className="flex-1 rounded-xl bg-amber-500/15 py-2.5 text-sm font-medium text-amber-400 transition-colors hover:bg-amber-500/25"
-                >
-                  Masuk
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
