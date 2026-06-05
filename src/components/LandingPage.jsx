@@ -325,6 +325,49 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* ── Titip Loker ───────────────────────────────────────────────────── */}
+      <section className="relative overflow-hidden bg-stone-900 px-6 py-24">
+        {/* Background image with dark overlay */}
+        <div
+          className="pointer-events-none absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('/group-bg.jpg')",
+            filter: "brightness(0.2) saturate(0.5)",
+          }}
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/30 to-stone-950/60" />
+
+        <div className="relative mx-auto max-w-3xl text-center">
+          <span className="mb-6 inline-block text-xs font-bold uppercase tracking-[0.25em] text-amber-400">
+            Kabar Karir IKA IKOM
+          </span>
+
+          <h2 className="mb-6 text-5xl font-black uppercase leading-none tracking-tight text-white sm:text-7xl">
+            Alumni
+            <br />
+            <span className="text-amber-400">Bantu</span>
+            <br />
+            Alumni
+          </h2>
+
+          <p className="mx-auto mb-10 max-w-md text-base leading-relaxed text-stone-300">
+            Dulu, ada yang buka pintu buat kita.
+            <br />
+            Sekarang, giliran kita buka pintu buat yang lain.
+          </p>
+
+          <a
+            href="https://bit.ly/TitipLokerIKAIKOM"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-xl bg-amber-500 px-8 py-3.5 text-sm font-semibold text-stone-950 shadow-lg shadow-amber-500/20 transition-all hover:-translate-y-0.5 hover:bg-amber-400 hover:shadow-amber-400/30 active:translate-y-0"
+          >
+            Titip Loker Sekarang
+            <ArrowRight className="h-4 w-4" />
+          </a>
+        </div>
+      </section>
+
       {/* ── Alumni Spotlight ──────────────────────────────────────────────── */}
       <section className="bg-amber-50 px-6 py-20">
         <div className="mx-auto max-w-4xl">
@@ -354,7 +397,7 @@ export default function LandingPage() {
 
           <div className="flex items-center gap-4">
             <a
-              href="https://www.instagram.com/ikomupi2018/"
+              href="https://www.instagram.com/ikaikomupi/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
