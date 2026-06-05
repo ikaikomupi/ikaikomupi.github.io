@@ -1,6 +1,18 @@
-import { useState, useEffect } from "react";
-import { fetchEvents } from "../lib/sheets";
+import { useState } from "react";
 import { MapPin, Clock, ExternalLink, Calendar } from "lucide-react";
+
+const DUMMY_EVENTS = [
+  {
+    id: "1",
+    judul: "Alumni Gathering AIKU",
+    kategori: "Gathering",
+    tanggal: "2026-06-01",
+    waktu: "09.00–14.00",
+    lokasi: "Gedung FPIPS Lantai 5",
+    deskripsi: "Alumni gathering dalam rangka penyambutan kepengurusan baru IKA IKOM UPI. Mari hadir dan saling terhubung kembali!",
+    link_daftar: null,
+  },
+];
 
 const KATEGORI = ["Semua", "Reuni", "Gathering", "Webinar", "Workshop"];
 
@@ -112,44 +124,15 @@ function EventCard({ event }) {
   );
 }
 
-function SkeletonCard() {
-  return (
-    <div className="rounded-2xl border border-white/8 bg-stone-900 p-6">
-      <div className="flex items-start gap-5">
-        <div className="h-16 w-14 animate-pulse rounded-xl bg-stone-800" />
-        <div className="flex-1 space-y-2">
-          <div className="h-3 w-16 animate-pulse rounded bg-stone-800" />
-          <div className="h-4 w-2/3 animate-pulse rounded bg-stone-800" />
-          <div className="h-3 w-1/2 animate-pulse rounded bg-stone-800" />
-        </div>
-      </div>
-    </div>
-  );
-}
 
 export default function Events() {
-  const [events, setEvents] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState("Semua");
   const [tab, setTab] = useState("upcoming");
 
-  useEffect(() => {
-    fetchEvents().then((data) => {
-      setEvents(data);
-      setLoading(false);
-    });
-  }, []);
-
   const today = new Date(new Date().toDateString());
 
-  const sorted = [...events].sort(
-    (a, b) => new Date(a.tanggal) - new Date(b.tanggal)
-  );
-
-  const upcoming = sorted.filter((e) => new Date(e.tanggal) >= today);
-  const past = sorted
-    .filter((e) => new Date(e.tanggal) < today)
-    .reverse();
+  const upcoming = DUMMY_EVENTS.filter((e) => new Date(e.tanggal) >= today);
+  const past = DUMMY_EVENTS.filter((e) => new Date(e.tanggal) < today);
 
   const base = tab === "upcoming" ? upcoming : past;
 
@@ -186,8 +169,8 @@ export default function Events() {
         {/* Upcoming / Selesai tabs */}
         <div className="mb-6 flex rounded-xl border border-white/8 bg-stone-900 p-1">
           {[
-            { key: "upcoming", label: `Akan Datang${!loading ? ` (${upcoming.length})` : ""}` },
-            { key: "past", label: `Selesai${!loading ? ` (${past.length})` : ""}` },
+            { key: "upcoming", label: `Akan Datang (${upcoming.length})` },
+            { key: "past", label: `Selesai (${past.length})` },
           ].map(({ key, label }) => (
             <button
               key={key}
@@ -221,11 +204,7 @@ export default function Events() {
         </div>
 
         {/* List */}
-        {loading ? (
-          <div className="space-y-4">
-            {[1, 2, 3].map((i) => <SkeletonCard key={i} />)}
-          </div>
-        ) : filtered.length === 0 ? (
+        {filtered.length === 0 ? (
           <div className="py-20 text-center">
             <Calendar className="mx-auto mb-4 h-12 w-12 text-stone-700" />
             <p className="text-stone-500">

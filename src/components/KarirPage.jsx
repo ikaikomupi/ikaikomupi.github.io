@@ -1,6 +1,21 @@
-import { useState, useEffect } from "react";
-import { fetchLowongan } from "../lib/sheets";
+import { useState } from "react";
 import { Briefcase, MapPin, MessageCircle, Clock, User } from "lucide-react";
+
+const DUMMY_LOWONGAN = [
+  {
+    id: "1",
+    tipe: "Full-time",
+    industri: "Komunikasi",
+    judul: "Contoh: Content Creator",
+    perusahaan: "Perusahaan Alumni",
+    kota: "Bandung",
+    poster_nama: "Alumni IKOM UPI",
+    deadline: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(),
+    deskripsi: "Ini adalah contoh tampilan lowongan. Fitur ini akan segera aktif — lowongan nyata akan dibagikan langsung oleh alumni IKOM UPI.",
+    kontak: null,
+    created_at: new Date().toISOString(),
+  },
+];
 
 const TIPE = ["Semua", "Full-time", "Part-time", "Magang", "Freelance"];
 
@@ -127,37 +142,14 @@ function LowonganCard({ item }) {
   );
 }
 
-function SkeletonCard() {
-  return (
-    <div className="rounded-2xl border border-white/8 bg-stone-900 p-6">
-      <div className="space-y-3">
-        <div className="h-3 w-16 animate-pulse rounded bg-stone-800" />
-        <div className="h-4 w-2/3 animate-pulse rounded bg-stone-800" />
-        <div className="h-3 w-1/3 animate-pulse rounded bg-stone-800" />
-        <div className="h-3 w-1/2 animate-pulse rounded bg-stone-800" />
-      </div>
-    </div>
-  );
-}
 
 export default function KarirPage() {
-  const [lowongan, setLowongan] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState("Semua");
 
-  useEffect(() => {
-    fetchLowongan().then((data) => {
-      setLowongan(data);
-      setLoading(false);
-    });
-  }, []);
-
-  const sorted = [...lowongan].sort(
-    (a, b) => new Date(b.created_at) - new Date(a.created_at)
-  );
-
   const filtered =
-    filter === "Semua" ? sorted : sorted.filter((l) => l.tipe === filter);
+    filter === "Semua"
+      ? DUMMY_LOWONGAN
+      : DUMMY_LOWONGAN.filter((l) => l.tipe === filter);
 
   return (
     <div className="min-h-screen bg-stone-950 pt-16">
@@ -205,11 +197,7 @@ export default function KarirPage() {
         </div>
 
         {/* List */}
-        {loading ? (
-          <div className="space-y-4">
-            {[1, 2, 3].map((i) => <SkeletonCard key={i} />)}
-          </div>
-        ) : filtered.length === 0 ? (
+        {filtered.length === 0 ? (
           <div className="py-20 text-center">
             <Briefcase className="mx-auto mb-4 h-12 w-12 text-stone-700" />
             <p className="text-stone-500">Belum ada lowongan untuk kategori ini.</p>
