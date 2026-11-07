@@ -130,17 +130,17 @@ function FeatureCard({ icon: Icon, title, description, to, featured }) {
 
 function SpotlightCard({ name, role, quote, initials }) {
   return (
-    <div className="flex flex-col gap-5 rounded-2xl border border-stone-200 bg-white p-8 shadow-sm">
+    <div className="flex flex-col gap-5 rounded-2xl border border-white/8 bg-stone-900 p-8 shadow-sm">
       <Quote className="h-8 w-8 text-amber-200" />
-      <p className="flex-1 text-base leading-relaxed text-stone-600">
+      <p className="flex-1 text-base leading-relaxed text-stone-500">
         &ldquo;{quote}&rdquo;
       </p>
       <div className="flex items-center gap-3">
-        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-amber-500 text-sm font-bold text-white">
+        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-amber-500 text-sm font-bold text-[#fff]">
           {initials}
         </div>
         <div>
-          <p className="text-sm font-semibold text-stone-900">{name}</p>
+          <p className="text-sm font-semibold text-stone-100">{name}</p>
           <p className="text-xs text-stone-500">{role}</p>
         </div>
       </div>
@@ -155,7 +155,7 @@ export default function LandingPage() {
     <div className="min-h-screen bg-stone-950 font-sans antialiased">
 
       {/* ── Hero ──────────────────────────────────────────────────────────── */}
-      <section className="relative flex h-screen items-center justify-center overflow-hidden bg-stone-950 px-6 text-center">
+      <section data-theme="dark" className="relative flex h-screen items-center justify-center overflow-hidden bg-stone-950 px-6 text-center">
         {/* Cinematic background image */}
         <div
           className="pointer-events-none absolute inset-0 scale-105 bg-cover bg-center"
@@ -207,7 +207,7 @@ export default function LandingPage() {
           <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link
               to="/directory"
-              className="flex items-center gap-2 rounded-xl bg-amber-500 px-7 py-3.5 text-sm font-semibold text-stone-950 shadow-lg shadow-amber-500/20 transition-all hover:-translate-y-0.5 hover:bg-amber-400 hover:shadow-amber-400/30 active:translate-y-0"
+              className="flex items-center gap-2 rounded-xl bg-amber-500 px-7 py-3.5 text-sm font-semibold text-ink shadow-lg shadow-amber-500/20 transition-all hover:-translate-y-0.5 hover:bg-amber-400 hover:shadow-amber-400/30 active:translate-y-0"
             >
               Eksplor Direktori
               <ArrowRight className="h-4 w-4" />
@@ -326,7 +326,7 @@ export default function LandingPage() {
       </section>
 
       {/* ── Titip Loker ───────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-stone-900 px-6 py-24">
+      <section data-theme="dark" className="relative overflow-hidden bg-stone-900 px-6 py-24">
         {/* Background image with dark overlay */}
         <div
           className="pointer-events-none absolute inset-0 bg-cover bg-center"
@@ -360,7 +360,7 @@ export default function LandingPage() {
             href="https://bit.ly/TitipLokerIKAIKOM"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-xl bg-amber-500 px-8 py-3.5 text-sm font-semibold text-stone-950 shadow-lg shadow-amber-500/20 transition-all hover:-translate-y-0.5 hover:bg-amber-400 hover:shadow-amber-400/30 active:translate-y-0"
+            className="inline-flex items-center gap-2 rounded-xl bg-amber-500 px-8 py-3.5 text-sm font-semibold text-ink shadow-lg shadow-amber-500/20 transition-all hover:-translate-y-0.5 hover:bg-amber-400 hover:shadow-amber-400/30 active:translate-y-0"
           >
             Titip Loker Sekarang
             <ArrowRight className="h-4 w-4" />

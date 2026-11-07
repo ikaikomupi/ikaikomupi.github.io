@@ -29,7 +29,7 @@ export default function AlumniCard({ alumni }) {
   return (
     <button
       onClick={() => navigate(`/profile/${id}`)}
-      className="group flex flex-col items-start gap-4 rounded-2xl border border-stone-200 bg-white p-6 text-left shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+      className="group flex flex-col items-start gap-4 rounded-2xl border border-white/8 bg-stone-900 p-6 text-left shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
     >
       <div className="flex w-full items-center gap-3">
         {foto_url ? (
@@ -40,13 +40,13 @@ export default function AlumniCard({ alumni }) {
           />
         ) : (
           <div
-            className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white ${avatarColor(id)}`}
+            className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-sm font-bold text-[#fff] ${avatarColor(id)}`}
           >
             {getInitials(nama)}
           </div>
         )}
         <div className="min-w-0">
-          <p className="truncate font-semibold text-stone-900 group-hover:text-amber-600">
+          <p className="truncate font-semibold text-stone-100 group-hover:text-amber-400">
             {nama}
           </p>
           <p className="truncate text-xs text-stone-500">{role}</p>
@@ -64,7 +64,7 @@ export default function AlumniCard({ alumni }) {
         </div>
       </div>
 
-      <span className="rounded-full bg-amber-50 px-3 py-1 text-xs font-medium text-amber-700">
+      <span className="rounded-full bg-amber-500/10 px-3 py-1 text-xs font-medium text-amber-400">
         {industri}
       </span>
     </button>

@@ -9,7 +9,7 @@ const STEPS = ["Data Diri", "Pekerjaan", "Kontak & Sosial"];
 function Field({ label, required, children }) {
   return (
     <div className="flex flex-col gap-1.5">
-      <label className="text-sm font-medium text-stone-700">
+      <label className="text-sm font-medium text-stone-300">
         {label}
         {required && <span className="ml-1 text-amber-500">*</span>}
       </label>
@@ -19,7 +19,7 @@ function Field({ label, required, children }) {
 }
 
 const inputCls =
-  "w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-3 text-sm text-stone-900 placeholder:text-stone-400 focus:border-amber-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-400/20";
+  "w-full rounded-xl border border-white/8 bg-stone-950 px-4 py-3 text-sm text-stone-100 placeholder:text-stone-600 focus:border-amber-400 focus:bg-stone-900 focus:outline-none focus:ring-2 focus:ring-amber-400/20";
 
 export default function RegisterForm() {
   const navigate = useNavigate();
@@ -87,12 +87,12 @@ export default function RegisterForm() {
 
   if (done) {
     return (
-      <div className="flex min-h-screen flex-col items-center justify-center gap-6 bg-stone-50 px-6 pt-20 text-center">
-        <div className="flex h-20 w-20 items-center justify-center rounded-full bg-amber-100">
-          <PartyPopper className="h-9 w-9 text-amber-600" />
+      <div className="flex min-h-screen flex-col items-center justify-center gap-6 bg-stone-950 px-6 pt-20 text-center">
+        <div className="flex h-20 w-20 items-center justify-center rounded-full bg-amber-500/15">
+          <PartyPopper className="h-9 w-9 text-amber-400" />
         </div>
         <div>
-          <h2 className="text-2xl font-extrabold text-stone-900">
+          <h2 className="text-2xl font-extrabold text-stone-100">
             Selamat datang, {form.nama.split(" ")[0]}!
           </h2>
           <p className="mt-2 text-stone-500">
@@ -102,7 +102,7 @@ export default function RegisterForm() {
         </div>
         <button
           onClick={() => navigate("/directory")}
-          className="rounded-xl bg-amber-500 px-7 py-3.5 text-sm font-semibold text-stone-950 hover:bg-amber-400"
+          className="rounded-xl bg-amber-500 px-7 py-3.5 text-sm font-semibold text-ink hover:bg-amber-400"
         >
           Lihat Direktori
         </button>
@@ -111,11 +111,11 @@ export default function RegisterForm() {
   }
 
   return (
-    <div className="min-h-screen bg-stone-50 px-6 pt-28 pb-16">
+    <div className="min-h-screen bg-stone-950 px-6 pt-28 pb-16">
       <div className="mx-auto max-w-lg">
         {/* Header */}
         <div className="mb-8 text-center">
-          <h1 className="text-2xl font-extrabold text-stone-900">Daftar Jejaring</h1>
+          <h1 className="text-2xl font-extrabold text-stone-100">Daftar Jejaring</h1>
           <p className="mt-1 text-sm text-stone-500">
             Bergabung ke direktori alumni IKOM UPI
           </p>
@@ -128,17 +128,17 @@ export default function RegisterForm() {
               <div
                 className={`flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold transition-colors ${
                   i < step
-                    ? "bg-amber-500 text-stone-950"
+                    ? "bg-amber-500 text-ink"
                     : i === step
-                    ? "bg-stone-900 text-white"
-                    : "bg-stone-200 text-stone-500"
+                    ? "bg-stone-100 text-stone-950"
+                    : "bg-stone-800 text-stone-500"
                 }`}
               >
                 {i < step ? <Check className="h-4 w-4" /> : i + 1}
               </div>
               <span
                 className={`text-xs ${
-                  i === step ? "font-semibold text-stone-800" : "text-stone-400"
+                  i === step ? "font-semibold text-stone-200" : "text-stone-500"
                 }`}
               >
                 {label}
@@ -148,7 +148,7 @@ export default function RegisterForm() {
         </div>
 
         {/* Form card */}
-        <div className="rounded-2xl border border-stone-200 bg-white p-8 shadow-sm">
+        <div className="rounded-2xl border border-white/8 bg-stone-900 p-8 shadow-sm">
           {/* Step 0 — Data Diri */}
           {step === 0 && (
             <div className="flex flex-col gap-5">
@@ -304,7 +304,7 @@ export default function RegisterForm() {
             {step > 0 ? (
               <button
                 onClick={back}
-                className="flex items-center gap-1.5 rounded-xl border border-stone-200 px-5 py-3 text-sm font-medium text-stone-600 hover:border-stone-300 hover:bg-stone-50"
+                className="flex items-center gap-1.5 rounded-xl border border-white/8 px-5 py-3 text-sm font-medium text-stone-500 hover:border-white/20 hover:bg-white/5"
               >
                 <ChevronLeft className="h-4 w-4" />
                 Kembali
@@ -316,7 +316,7 @@ export default function RegisterForm() {
             {step < STEPS.length - 1 ? (
               <button
                 onClick={next}
-                className="flex items-center gap-1.5 rounded-xl bg-amber-500 px-6 py-3 text-sm font-semibold text-stone-950 hover:bg-amber-400"
+                className="flex items-center gap-1.5 rounded-xl bg-amber-500 px-6 py-3 text-sm font-semibold text-ink hover:bg-amber-400"
               >
                 Lanjut
                 <ChevronRight className="h-4 w-4" />
@@ -325,7 +325,7 @@ export default function RegisterForm() {
               <button
                 onClick={submit}
                 disabled={loading}
-                className="flex items-center gap-2 rounded-xl bg-amber-500 px-6 py-3 text-sm font-semibold text-stone-950 hover:bg-amber-400 disabled:opacity-60"
+                className="flex items-center gap-2 rounded-xl bg-amber-500 px-6 py-3 text-sm font-semibold text-ink hover:bg-amber-400 disabled:opacity-60"
               >
                 {loading ? (
                   <>

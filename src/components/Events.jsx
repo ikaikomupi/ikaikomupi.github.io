@@ -112,7 +112,7 @@ function EventCard({ event }) {
               href={event.link_daftar}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-3 inline-flex items-center gap-1.5 rounded-lg bg-amber-500 px-4 py-2 text-xs font-semibold text-stone-950 hover:bg-amber-400 transition-colors"
+              className="mt-3 inline-flex items-center gap-1.5 rounded-lg bg-amber-500 px-4 py-2 text-xs font-semibold text-ink hover:bg-amber-400 transition-colors"
             >
               Daftar Sekarang
               <ExternalLink className="h-3.5 w-3.5" />
@@ -194,7 +194,7 @@ export default function Events() {
               onClick={() => setFilter(k)}
               className={`rounded-full px-3.5 py-1.5 text-xs font-medium transition-colors ${
                 filter === k
-                  ? "bg-amber-500 text-stone-950"
+                  ? "bg-amber-500 text-ink"
                   : "bg-stone-800 text-stone-400 hover:bg-stone-700 hover:text-white"
               }`}
             >

@@ -686,7 +686,7 @@ export default function AdArtPage() {
   }
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-[#0a0807] font-body text-stone-300 antialiased">
+    <div data-theme="dark" className="relative min-h-screen overflow-hidden bg-[#0a0807] font-body text-stone-300 antialiased">
       {/* Atmosphere */}
       <div className="pointer-events-none fixed inset-0 z-0">
         <div className="absolute -top-40 left-1/2 h-[34rem] w-[44rem] -translate-x-1/2 rounded-full blur-[120px]" style={{ background: "rgba(245,158,11,0.08)" }} />

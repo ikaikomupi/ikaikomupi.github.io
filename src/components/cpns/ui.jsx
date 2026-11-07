@@ -147,7 +147,7 @@ export function PilihKategori({ value, onChange }) {
           onClick={() => onChange(k.id)}
           title={k.desc}
           className={`rounded-full px-3.5 py-1.5 text-xs font-medium transition-colors ${
-            value === k.id ? "bg-amber-500 text-stone-950" : "bg-stone-800 text-stone-400 hover:bg-stone-700 hover:text-white"
+            value === k.id ? "bg-amber-500 text-ink" : "bg-stone-800 text-stone-400 hover:bg-stone-700 hover:text-white"
           }`}
         >
           {k.label}

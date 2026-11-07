@@ -46,7 +46,7 @@ function PasswordGate({ onAuth }) {
             className={`w-full rounded-xl border bg-stone-900 px-4 py-3 text-sm text-stone-100 placeholder-stone-600 outline-none transition focus:border-amber-500/50 focus:ring-1 focus:ring-amber-500/20 ${error ? "border-red-500/50" : "border-white/8"}`}
           />
           {error && <p className="text-xs text-red-400">Password salah.</p>}
-          <button type="submit" className="w-full rounded-xl bg-amber-500 py-3 text-sm font-semibold text-stone-950 hover:bg-amber-400 transition-colors">
+          <button type="submit" className="w-full rounded-xl bg-amber-500 py-3 text-sm font-semibold text-ink hover:bg-amber-400 transition-colors">
             Masuk
           </button>
         </form>
@@ -129,7 +129,7 @@ function AddEventForm({ onClose, onSaved }) {
           </Field>
           <div className="flex gap-3 pt-1">
             <button type="button" onClick={onClose} className="flex-1 rounded-lg border border-white/8 py-2.5 text-sm text-stone-400 hover:bg-white/5 transition-colors">Batal</button>
-            <button type="submit" disabled={saving} className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-amber-500 py-2.5 text-sm font-semibold text-stone-950 hover:bg-amber-400 disabled:opacity-60 transition-colors">
+            <button type="submit" disabled={saving} className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-amber-500 py-2.5 text-sm font-semibold text-ink hover:bg-amber-400 disabled:opacity-60 transition-colors">
               {saving && <Loader className="h-3.5 w-3.5 animate-spin" />}
               {saving ? "Menyimpan..." : "Simpan"}
             </button>
@@ -211,7 +211,7 @@ function AddPostForm({ onClose, onSaved }) {
           </Field>
           <div className="flex gap-3 pt-1">
             <button type="button" onClick={onClose} className="flex-1 rounded-lg border border-white/8 py-2.5 text-sm text-stone-400 hover:bg-white/5 transition-colors">Batal</button>
-            <button type="submit" disabled={saving} className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-amber-500 py-2.5 text-sm font-semibold text-stone-950 hover:bg-amber-400 disabled:opacity-60 transition-colors">
+            <button type="submit" disabled={saving} className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-amber-500 py-2.5 text-sm font-semibold text-ink hover:bg-amber-400 disabled:opacity-60 transition-colors">
               {saving && <Loader className="h-3.5 w-3.5 animate-spin" />}
               {saving ? "Menyimpan..." : "Simpan"}
             </button>
@@ -247,7 +247,7 @@ function EventsTab() {
             <ExternalLink className="h-3.5 w-3.5" /> Buka Sheets
           </a>
           <button onClick={() => setShowForm((v) => !v)}
-            className="flex items-center gap-1.5 rounded-lg bg-amber-500 px-3 py-2 text-xs font-semibold text-stone-950 hover:bg-amber-400 transition-colors">
+            className="flex items-center gap-1.5 rounded-lg bg-amber-500 px-3 py-2 text-xs font-semibold text-ink hover:bg-amber-400 transition-colors">
             <Plus className="h-3.5 w-3.5" /> Tambah Event
           </button>
         </div>
@@ -314,7 +314,7 @@ function BlogTab() {
             <ExternalLink className="h-3.5 w-3.5" /> Buka Sheets
           </a>
           <button onClick={() => setShowForm((v) => !v)}
-            className="flex items-center gap-1.5 rounded-lg bg-amber-500 px-3 py-2 text-xs font-semibold text-stone-950 hover:bg-amber-400 transition-colors">
+            className="flex items-center gap-1.5 rounded-lg bg-amber-500 px-3 py-2 text-xs font-semibold text-ink hover:bg-amber-400 transition-colors">
             <Plus className="h-3.5 w-3.5" /> Tambah Artikel
           </button>
         </div>
@@ -373,7 +373,7 @@ function AlumniTab() {
         <div className="space-y-2">
           {alumni.map((a) => (
             <div key={a.id} className="flex items-center gap-4 rounded-xl border border-white/8 p-3.5">
-              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-amber-500 text-xs font-bold text-stone-950">
+              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-amber-500 text-xs font-bold text-ink">
                 {a.nama?.slice(0, 2).toUpperCase() || "?"}
               </div>
               <div className="flex-1 min-w-0">

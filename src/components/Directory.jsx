@@ -6,19 +6,19 @@ import { INDUSTRIES, KOTA } from "../data/alumni";
 
 function SkeletonCard() {
   return (
-    <div className="flex flex-col gap-4 rounded-2xl border border-stone-200 bg-white p-6">
+    <div className="flex flex-col gap-4 rounded-2xl border border-white/8 bg-stone-900 p-6">
       <div className="flex items-center gap-3">
-        <div className="h-12 w-12 animate-pulse rounded-full bg-stone-200" />
+        <div className="h-12 w-12 animate-pulse rounded-full bg-stone-700" />
         <div className="flex-1 space-y-2">
-          <div className="h-3.5 w-32 animate-pulse rounded bg-stone-200" />
-          <div className="h-3 w-20 animate-pulse rounded bg-stone-100" />
+          <div className="h-3.5 w-32 animate-pulse rounded bg-stone-700" />
+          <div className="h-3 w-20 animate-pulse rounded bg-stone-800" />
         </div>
       </div>
       <div className="space-y-2">
-        <div className="h-3 w-3/4 animate-pulse rounded bg-stone-100" />
-        <div className="h-3 w-1/2 animate-pulse rounded bg-stone-100" />
+        <div className="h-3 w-3/4 animate-pulse rounded bg-stone-800" />
+        <div className="h-3 w-1/2 animate-pulse rounded bg-stone-800" />
       </div>
-      <div className="h-6 w-24 animate-pulse rounded-full bg-stone-100" />
+      <div className="h-6 w-24 animate-pulse rounded-full bg-stone-800" />
     </div>
   );
 }
@@ -76,9 +76,9 @@ export default function Directory() {
   }
 
   return (
-    <div className="min-h-screen bg-stone-50">
+    <div className="min-h-screen bg-stone-950">
       {/* Header */}
-      <div className="relative overflow-hidden bg-stone-950 px-6 pb-20 pt-36 text-center">
+      <div data-theme="dark" className="relative overflow-hidden bg-stone-950 px-6 pb-20 pt-36 text-center">
         {/* Cinematic background */}
         <div
           className="pointer-events-none absolute inset-0 scale-105 bg-cover bg-center"
@@ -98,7 +98,7 @@ export default function Directory() {
           <h1 className="mb-3 text-3xl font-extrabold text-white md:text-5xl">
             Direktori Alumni
           </h1>
-          <p className="text-stone-400">
+          <p className="text-stone-500">
             Temukan teman-teman Ilmu Komunikasi UPI di seluruh Indonesia
           </p>
         </div>
@@ -108,21 +108,21 @@ export default function Directory() {
         {/* Search & Sort bar */}
         <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center">
           <div className="relative flex-1">
-            <Search className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-stone-400" />
+            <Search className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-stone-500" />
             <input
               type="text"
               value={search}
               onChange={(e) => { setSearch(e.target.value); setPage(1); }}
               placeholder="Cari nama, role, atau perusahaan..."
-              className="w-full rounded-xl border border-stone-200 bg-white py-3 pl-10 pr-4 text-sm text-stone-900 placeholder:text-stone-400 focus:border-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-400/20"
+              className="w-full rounded-xl border border-white/8 bg-stone-900 py-3 pl-10 pr-4 text-sm text-stone-100 placeholder:text-stone-600 focus:border-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-400/20"
             />
           </div>
           <div className="flex items-center gap-2">
-            <SlidersHorizontal className="h-4 w-4 shrink-0 text-stone-400" />
+            <SlidersHorizontal className="h-4 w-4 shrink-0 text-stone-500" />
             <select
               value={sortBy}
               onChange={(e) => { setSortBy(e.target.value); setPage(1); }}
-              className="rounded-xl border border-stone-200 bg-white px-3 py-3 text-sm text-stone-700 focus:border-amber-400 focus:outline-none"
+              className="rounded-xl border border-white/8 bg-stone-900 px-3 py-3 text-sm text-stone-300 focus:border-amber-400 focus:outline-none"
             >
               <option value="nama-az">Nama A–Z</option>
               <option value="nama-za">Nama Z–A</option>
@@ -136,7 +136,7 @@ export default function Directory() {
           <select
             value={filterKota ?? ""}
             onChange={(e) => { setFilterKota(e.target.value || null); setPage(1); }}
-            className="flex-1 rounded-xl border border-stone-200 bg-white px-4 py-3 text-sm text-stone-700 focus:border-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-400/20"
+            className="flex-1 rounded-xl border border-white/8 bg-stone-900 px-4 py-3 text-sm text-stone-300 focus:border-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-400/20"
           >
             <option value="">Semua Kota</option>
             {KOTA.map((k) => <option key={k} value={k}>{k}</option>)}
@@ -145,7 +145,7 @@ export default function Directory() {
           <select
             value={filterIndustri ?? ""}
             onChange={(e) => { setFilterIndustri(e.target.value || null); setPage(1); }}
-            className="flex-1 rounded-xl border border-stone-200 bg-white px-4 py-3 text-sm text-stone-700 focus:border-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-400/20"
+            className="flex-1 rounded-xl border border-white/8 bg-stone-900 px-4 py-3 text-sm text-stone-300 focus:border-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-400/20"
           >
             <option value="">Semua Industri</option>
             {INDUSTRIES.map((ind) => <option key={ind} value={ind}>{ind}</option>)}
@@ -157,12 +157,12 @@ export default function Directory() {
           <div className="mb-5 flex items-center justify-between">
             <p className="text-sm text-stone-500">
               Menampilkan{" "}
-              <span className="font-semibold text-stone-800">{filtered.length}</span>{" "}
+              <span className="font-semibold text-stone-200">{filtered.length}</span>{" "}
               dari {allAlumni.length} alumni
             </p>
             <button
               onClick={clearFilters}
-              className="flex items-center gap-1 text-xs text-stone-400 hover:text-amber-600"
+              className="flex items-center gap-1 text-xs text-stone-500 hover:text-amber-400"
             >
               <X className="h-3.5 w-3.5" />
               Reset filter
@@ -172,7 +172,7 @@ export default function Directory() {
 
         {/* Error state */}
         {error && (
-          <div className="rounded-xl bg-red-50 px-6 py-4 text-sm text-red-600">
+          <div className="rounded-xl bg-red-500/10 px-6 py-4 text-sm text-red-400">
             {error}
           </div>
         )}
@@ -190,7 +190,7 @@ export default function Directory() {
             <button
               onClick={() => setPage((p) => Math.max(1, p - 1))}
               disabled={page === 1}
-              className="rounded-lg border border-stone-200 bg-white px-4 py-2 text-sm font-medium text-stone-700 hover:bg-stone-50 disabled:opacity-40"
+              className="rounded-lg border border-white/8 bg-stone-900 px-4 py-2 text-sm font-medium text-stone-300 hover:bg-white/5 disabled:opacity-40"
             >
               ← Sebelumnya
             </button>
@@ -200,7 +200,7 @@ export default function Directory() {
             <button
               onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
               disabled={page === totalPages}
-              className="rounded-lg border border-stone-200 bg-white px-4 py-2 text-sm font-medium text-stone-700 hover:bg-stone-50 disabled:opacity-40"
+              className="rounded-lg border border-white/8 bg-stone-900 px-4 py-2 text-sm font-medium text-stone-300 hover:bg-white/5 disabled:opacity-40"
             >
               Berikutnya →
             </button>
@@ -212,12 +212,12 @@ export default function Directory() {
           <div className="flex flex-col items-center gap-3 py-20 text-center">
             <Search className="h-10 w-10 text-stone-300" />
             <p className="font-semibold text-stone-500">Tidak ada hasil</p>
-            <p className="text-sm text-stone-400">
+            <p className="text-sm text-stone-500">
               Coba ubah kata kunci atau filter kamu
             </p>
             <button
               onClick={clearFilters}
-              className="mt-2 rounded-lg bg-amber-500 px-4 py-2 text-sm font-semibold text-stone-950 hover:bg-amber-400"
+              className="mt-2 rounded-lg bg-amber-500 px-4 py-2 text-sm font-semibold text-ink hover:bg-amber-400"
             >
               Reset filter
             </button>

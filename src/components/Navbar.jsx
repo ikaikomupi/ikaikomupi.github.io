@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import TemaToggle from "./TemaToggle";
 
 const links = [
   { to: "/", label: "Home" },
@@ -22,7 +23,7 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2.5">
-          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white p-1">
+          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#fff] p-1">
             <img src="/logo-upi.png" alt="IKA IKOM UPI" className="h-full w-auto" />
           </div>
           <div className="flex flex-col leading-tight">
@@ -46,16 +47,20 @@ export default function Navbar() {
               {label}
             </Link>
           ))}
+          <TemaToggle className="ml-1" />
         </div>
 
-        {/* Mobile hamburger */}
+        {/* Mobile: tema + hamburger */}
+        <div className="flex items-center gap-1 sm:hidden">
+        <TemaToggle />
         <button
-          className="flex h-9 w-9 items-center justify-center rounded-lg text-stone-400 hover:bg-white/5 hover:text-white sm:hidden"
+          className="flex h-9 w-9 items-center justify-center rounded-lg text-stone-400 hover:bg-white/5 hover:text-white"
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
+        </div>
       </div>
 
       {/* Mobile drawer */}

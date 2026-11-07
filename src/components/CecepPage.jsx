@@ -701,7 +701,7 @@ export default function CecepPage() {
   };
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-[#0a0807] font-body text-stone-300 antialiased">
+    <div data-theme="dark" className="relative min-h-screen overflow-hidden bg-[#0a0807] font-body text-stone-300 antialiased">
       {/* Atmospheric fixed background */}
       <div className="pointer-events-none fixed inset-0 z-0">
         <div className="absolute -top-40 left-1/2 h-[34rem] w-[44rem] -translate-x-1/2 rounded-full blur-[120px]" style={{ background: "rgba(245,158,11,0.10)" }} />
@@ -747,7 +747,7 @@ export default function CecepPage() {
                 <span className="text-stone-200"> kita mulai dari sekarang</span>.
               </p>
               <div className="mt-9 flex animate-[fadeUp_0.7s_ease-out_0.36s_both] flex-wrap items-center gap-3">
-                <a href="#visi" onClick={jump("visi")} className="group inline-flex items-center gap-2 rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-stone-950 transition-colors hover:bg-amber-400">
+                <a href="#visi" onClick={jump("visi")} className="group inline-flex items-center gap-2 rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-ink transition-colors hover:bg-amber-400">
                   Baca Visi & Gagasan
                   <ArrowDown className="h-4 w-4 transition-transform group-hover:translate-y-0.5" />
                 </a>

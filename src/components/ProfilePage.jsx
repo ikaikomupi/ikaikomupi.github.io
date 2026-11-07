@@ -44,7 +44,7 @@ export default function ProfilePage() {
 
   if (loading) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-stone-50 pt-20">
+      <div className="flex min-h-screen items-center justify-center bg-stone-950 pt-20">
         <div className="h-8 w-8 animate-spin rounded-full border-2 border-amber-500 border-t-transparent" />
       </div>
     );
@@ -52,11 +52,11 @@ export default function ProfilePage() {
 
   if (!person) {
     return (
-      <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-stone-50 pt-20">
+      <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-stone-950 pt-20">
         <p className="text-stone-500">Alumni tidak ditemukan.</p>
         <button
           onClick={() => navigate("/directory")}
-          className="rounded-lg bg-amber-500 px-5 py-2.5 text-sm font-semibold text-stone-950"
+          className="rounded-lg bg-amber-500 px-5 py-2.5 text-sm font-semibold text-ink"
         >
           Kembali ke Direktori
         </button>
@@ -68,12 +68,12 @@ export default function ProfilePage() {
     AVATAR_COLORS[Number(person.id) % AVATAR_COLORS.length];
 
   return (
-    <div className="min-h-screen bg-stone-50 pt-20">
+    <div className="min-h-screen bg-stone-950 pt-20">
       {/* Back button */}
       <div className="mx-auto max-w-3xl px-6 pt-8">
         <button
           onClick={() => navigate(-1)}
-          className="mb-6 flex items-center gap-2 text-sm text-stone-500 hover:text-amber-600"
+          className="mb-6 flex items-center gap-2 text-sm text-stone-500 hover:text-amber-400"
         >
           <ArrowLeft className="h-4 w-4" />
           Kembali
@@ -91,7 +91,7 @@ export default function ProfilePage() {
             />
           ) : (
             <div
-              className={`flex h-24 w-24 items-center justify-center rounded-full text-2xl font-bold text-white ring-4 ring-amber-500/30 ${avatarColor}`}
+              className={`flex h-24 w-24 items-center justify-center rounded-full text-2xl font-bold text-[#fff] ring-4 ring-amber-500/30 ${avatarColor}`}
             >
               {getInitials(person.nama)}
             </div>
@@ -99,10 +99,10 @@ export default function ProfilePage() {
 
           <div>
             <h1 className="text-2xl font-extrabold text-white">{person.nama}</h1>
-            <p className="mt-1 text-stone-400">{person.role}</p>
+            <p className="mt-1 text-stone-500">{person.role}</p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-4 text-sm text-stone-400">
+          <div className="flex flex-wrap justify-center gap-4 text-sm text-stone-500">
             <span className="flex items-center gap-1.5">
               <Building2 className="h-4 w-4 text-amber-500" />
               {person.perusahaan}
@@ -120,7 +120,7 @@ export default function ProfilePage() {
                 href={`https://wa.me/${person.whatsapp}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 rounded-xl bg-amber-500 px-5 py-2.5 text-sm font-semibold text-stone-950 hover:bg-amber-400"
+                className="flex items-center gap-2 rounded-xl bg-amber-500 px-5 py-2.5 text-sm font-semibold text-ink hover:bg-amber-400"
               >
                 <MessageCircle className="h-4 w-4" />
                 Hubungi via WA
@@ -165,27 +165,27 @@ export default function ProfilePage() {
       <div className="mx-auto max-w-3xl space-y-6 px-6 py-10">
         {/* Bio */}
         {person.bio && (
-          <section className="rounded-2xl border border-stone-200 bg-white p-7">
-            <h2 className="mb-3 text-sm font-semibold uppercase tracking-widest text-stone-400">
+          <section className="rounded-2xl border border-white/8 bg-stone-900 p-7">
+            <h2 className="mb-3 text-sm font-semibold uppercase tracking-widest text-stone-500">
               Tentang
             </h2>
-            <p className="leading-relaxed text-stone-700">{person.bio}</p>
+            <p className="leading-relaxed text-stone-300">{person.bio}</p>
           </section>
         )}
 
         {/* Career */}
-        <section className="rounded-2xl border border-stone-200 bg-white p-7">
-          <h2 className="mb-4 text-sm font-semibold uppercase tracking-widest text-stone-400">
+        <section className="rounded-2xl border border-white/8 bg-stone-900 p-7">
+          <h2 className="mb-4 text-sm font-semibold uppercase tracking-widest text-stone-500">
             Karir
           </h2>
           <div className="flex items-start gap-4">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-50">
-              <Briefcase className="h-5 w-5 text-amber-600" />
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-500/10">
+              <Briefcase className="h-5 w-5 text-amber-400" />
             </div>
             <div>
-              <p className="font-semibold text-stone-900">{person.role}</p>
+              <p className="font-semibold text-stone-100">{person.role}</p>
               <p className="text-sm text-stone-500">{person.perusahaan}</p>
-              <span className="mt-1 inline-block rounded-full bg-amber-50 px-3 py-0.5 text-xs font-medium text-amber-700">
+              <span className="mt-1 inline-block rounded-full bg-amber-500/10 px-3 py-0.5 text-xs font-medium text-amber-400">
                 {person.industri}
               </span>
             </div>
@@ -193,16 +193,16 @@ export default function ProfilePage() {
         </section>
 
         {/* Education */}
-        <section className="rounded-2xl border border-stone-200 bg-white p-7">
-          <h2 className="mb-4 text-sm font-semibold uppercase tracking-widest text-stone-400">
+        <section className="rounded-2xl border border-white/8 bg-stone-900 p-7">
+          <h2 className="mb-4 text-sm font-semibold uppercase tracking-widest text-stone-500">
             Pendidikan
           </h2>
           <div className="flex items-start gap-4">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-stone-50">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-stone-950">
               <GraduationCap className="h-5 w-5 text-stone-500" />
             </div>
             <div>
-              <p className="font-semibold text-stone-900">
+              <p className="font-semibold text-stone-100">
                 Ilmu Komunikasi — Universitas Pendidikan Indonesia
               </p>
               <p className="text-sm text-stone-500">Lulus 2022</p>

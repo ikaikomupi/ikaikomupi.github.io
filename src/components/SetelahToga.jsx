@@ -115,7 +115,7 @@ export default function SetelahToga() {
               onClick={() => setAktifKategori(k)}
               className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
                 aktifKategori === k
-                  ? "bg-amber-500 text-stone-950"
+                  ? "bg-amber-500 text-ink"
                   : "bg-stone-800 text-stone-400 hover:bg-stone-700 hover:text-white"
               }`}
             >

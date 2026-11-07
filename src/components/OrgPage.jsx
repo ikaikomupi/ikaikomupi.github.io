@@ -113,7 +113,7 @@ export default function OrgPage() {
   return (
     <div className="min-h-screen bg-stone-950">
       {/* Header */}
-      <div className="relative overflow-hidden px-6 pb-20 pt-36 text-center">
+      <div data-theme="dark" className="relative overflow-hidden px-6 pb-20 pt-36 text-center">
         <div
           className="pointer-events-none absolute inset-0 scale-105 bg-cover bg-center"
           style={{

@@ -116,7 +116,7 @@ export default function PostPage() {
           <p className="mb-4 text-sm text-stone-400">Baca artikel lainnya</p>
           <Link
             to="/setelah-toga"
-            className="inline-flex items-center gap-2 rounded-lg bg-amber-500 px-5 py-2.5 text-sm font-semibold text-stone-950 transition-opacity hover:opacity-90"
+            className="inline-flex items-center gap-2 rounded-lg bg-amber-500 px-5 py-2.5 text-sm font-semibold text-ink transition-opacity hover:opacity-90"
           >
             Kembali ke Setelah Toga
             <ArrowLeft className="h-4 w-4 rotate-180" />

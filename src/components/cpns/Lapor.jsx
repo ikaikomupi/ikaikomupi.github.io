@@ -174,7 +174,7 @@ export default function Lapor() {
             <button
               type="submit"
               disabled={!CPNS_FORM_URL || status === "kirim"}
-              className="block rounded-lg bg-amber-500 px-5 py-2.5 text-sm font-semibold text-stone-950 transition-colors hover:bg-amber-400 disabled:cursor-not-allowed disabled:opacity-40"
+              className="block rounded-lg bg-amber-500 px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-amber-400 disabled:cursor-not-allowed disabled:opacity-40"
             >
               {status === "kirim" ? "Mengirim…" : "Kirim laporan"}
             </button>

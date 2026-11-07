@@ -4,7 +4,7 @@ import { PROVINSI, PETA_W, PETA_H } from "../../data/petaProvinsi";
 export function Peta({ data }) {
   const [hover, setHover] = useState(null);
   const max = Math.max(1, ...Object.values(data));
-  const warna = (v) => (v ? `rgba(245,158,11,${(0.22 + Math.sqrt(v / max) * 0.78).toFixed(2)})` : "#292524");
+  const warna = (v) => (v ? `rgba(245,158,11,${(0.22 + Math.sqrt(v / max) * 0.78).toFixed(2)})` : "var(--color-stone-700)");
   return (
     <div>
       <svg viewBox={`0 0 ${PETA_W} ${PETA_H}`} className="w-full" role="img" aria-label="Peta sebaran kursi per provinsi">
@@ -12,8 +12,7 @@ export function Peta({ data }) {
           <path
             key={p.nama}
             d={p.d}
-            fill={warna(data[p.nama])}
-            stroke="#0c0a09"
+            style={{ fill: warna(data[p.nama]), stroke: "var(--color-stone-950)" }}
             strokeWidth="0.8"
             onMouseEnter={() => setHover(p.nama)}
             onMouseLeave={() => setHover(null)}
@@ -71,7 +70,7 @@ export function Scatter({ data }) {
     <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label="Sebaran nilai SKD dan SKB peserta">
       {[0, 25, 50, 75, 100].map((t) => (
         <g key={t}>
-          <line x1={P.l} x2={W - P.r} y1={y(t)} y2={y(t)} stroke="rgba(255,255,255,0.06)" />
+          <line x1={P.l} x2={W - P.r} y1={y(t)} y2={y(t)} style={{ stroke: "var(--color-white)" }} strokeOpacity="0.08" />
           <text x={P.l - 6} y={y(t) + 4} textAnchor="end" fontSize="10" fill="#78716c">{t}</text>
         </g>
       ))}
