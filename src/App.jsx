@@ -43,7 +43,7 @@ function Layout() {
           <Route path="/setelah-toga/:slug" element={<PostPage />} />
           <Route path="/karir" element={<KarirPage />} />
           <Route path="/ad-art" element={<AdArtPage />} />
-          <Route path="/cpns" element={<CpnsPage />} />
+          <Route path="/cpns/*" element={<CpnsPage />} />
         </Routes>
       </Suspense>
     </>

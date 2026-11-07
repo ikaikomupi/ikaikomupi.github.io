@@ -78,7 +78,13 @@ ROUTES
   /organisasi        - Organization info
   /calon-ketua       - Cecep's candidacy page
   /register          - Register form
-  /cpns              - KOMpas ASN (dashboard formasi CPNS, prototipe)
+  /cpns              - KOMpas ASN: ringkasan formasi CPNS (prototipe)
+  /cpns/rekomendasi  - Rekomendasi formasi dari skor tryout
+  /cpns/lapor        - Form lapor hasil seleksi alumni
+  /cpns/skb          - Persiapan SKB
+  /cpns/metodologi   - Definisi, cara hitung, sumber data
+
+  Update data CPNS: lihat docs/cpns-data.md, lalu jalankan npm run cpns:cek
   /profile/:id       - Alumni profile
 
 

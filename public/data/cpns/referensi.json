@@ -1,0 +1,7 @@
+{
+ "catatan": "Info tambahan per instansi dan provinsi untuk pertimbangan selain persaingan. Kosongkan field yang belum ada datanya; jangan isi tebakan.",
+ "instansi": {
+  "Pemprov Jawa Barat": { "tukin": null, "aturan_pindah": null, "sumber": null }
+ },
+ "provinsi": {}
+}
