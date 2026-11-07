@@ -1,1 +1,0 @@
-import{j as r}from"./index-Bpfl_xn-.js";import{I as t}from"./info-CqckWV6m.js";function a({children:e}){return r.jsxs("div",{className:"mb-8 flex items-start gap-3 rounded-2xl border border-amber-500/25 bg-amber-500/5 p-4 text-sm text-amber-200/90",children:[r.jsx(t,{className:"mt-0.5 h-4 w-4 shrink-0 text-amber-400"}),r.jsx("p",{children:e})]})}export{a as C};
