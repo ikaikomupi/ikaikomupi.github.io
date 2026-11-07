@@ -1,3 +1,4 @@
+import ContohBanner from "./ContohBanner";
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { fetchPostBySlug } from "../lib/sheets";
@@ -58,6 +59,7 @@ export default function PostPage() {
   return (
     <div className="min-h-screen bg-stone-950 pt-16">
       <div className="mx-auto max-w-2xl px-6 py-12">
+        {post.contoh && <ContohBanner>Ini artikel contoh dari tim IKA, belum tulisan alumni yang dipublikasikan.</ContohBanner>}
         {/* Back */}
         <Link
           to="/setelah-toga"

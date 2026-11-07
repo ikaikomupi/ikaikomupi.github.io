@@ -7,6 +7,7 @@ function ScrollToTop() {
   return null;
 }
 import Navbar from "./components/Navbar";
+import { catatHalaman } from "./lib/analytics";
 
 const LandingPage = lazy(() => import("./components/LandingPage"));
 const Directory = lazy(() => import("./components/Directory"));
@@ -21,10 +22,14 @@ const PostPage = lazy(() => import("./components/PostPage"));
 const KarirPage = lazy(() => import("./components/KarirPage"));
 const AdArtPage = lazy(() => import("./components/AdArtPage"));
 const CpnsPage = lazy(() => import("./components/CpnsPage"));
+const NotFound = lazy(() => import("./components/NotFound"));
 
 function Layout() {
   const { pathname } = useLocation();
   const isAdmin = pathname.startsWith("/admin");
+  useEffect(() => {
+    if (!isAdmin) catatHalaman(pathname);
+  }, [pathname, isAdmin]);
   return (
     <>
       <ScrollToTop />
@@ -44,6 +49,7 @@ function Layout() {
           <Route path="/karir" element={<KarirPage />} />
           <Route path="/ad-art" element={<AdArtPage />} />
           <Route path="/cpns/*" element={<CpnsPage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
     </>

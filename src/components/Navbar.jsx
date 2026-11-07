@@ -11,6 +11,7 @@ const links = [
   { to: "/events", label: "Event" },
   { to: "/setelah-toga", label: "Setelah Toga", startsWith: true },
   { to: "/karir", label: "Karir" },
+  { to: "/cpns", label: "KOMpas ASN", startsWith: true },
   { to: "/register", label: "Daftar" },
 ];
 
@@ -33,7 +34,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop links */}
-        <div className="hidden items-center gap-1 sm:flex">
+        <div className="hidden items-center gap-1 lg:flex">
           {links.map(({ to, label, startsWith: sw }) => (
             <Link
               key={to}
@@ -51,7 +52,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile: tema + hamburger */}
-        <div className="flex items-center gap-1 sm:hidden">
+        <div className="flex items-center gap-1 lg:hidden">
         <TemaToggle />
         <button
           className="flex h-9 w-9 items-center justify-center rounded-lg text-stone-400 hover:bg-white/5 hover:text-white"
@@ -65,7 +66,7 @@ export default function Navbar() {
 
       {/* Mobile drawer */}
       {open && (
-        <div className="border-t border-white/8 bg-stone-950 px-6 pb-4 sm:hidden">
+        <div className="border-t border-white/8 bg-stone-950 px-6 pb-4 lg:hidden">
           {links.map(({ to, label, startsWith: sw }) => (
             <Link
               key={to}

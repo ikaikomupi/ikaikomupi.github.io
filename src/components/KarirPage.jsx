@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Briefcase, MapPin, MessageCircle, Clock, User } from "lucide-react";
+import ContohBanner from "./ContohBanner";
 
 const DUMMY_LOWONGAN = [
   {
@@ -195,6 +196,8 @@ export default function KarirPage() {
             </button>
           ))}
         </div>
+
+        <ContohBanner>Fitur lowongan belum aktif. Kartu di bawah ini contoh tampilan.</ContohBanner>
 
         {/* List */}
         {filtered.length === 0 ? (

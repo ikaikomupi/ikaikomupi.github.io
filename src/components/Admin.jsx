@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
 import { fetchEvents, fetchPosts, fetchAlumni } from "../lib/sheets";
-import { addEvent, addPost } from "../lib/admin";
+import { addEvent, addPost, getAdminKey, setAdminKey } from "../lib/admin";
 import {
   Calendar, BookOpen, Users, LogOut, Plus, X,
   ExternalLink, MapPin, Clock, Check, Loader,
   User, Briefcase, Building2,
 } from "lucide-react";
 
-const PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD || "aiku2018";
 const SHEET_URL = "https://docs.google.com/spreadsheets/d/1mFUEZRRmr6cnmQ7Cbqo5WePQb9cuzKgTx7c6MIhw07w";
 
 function toSlug(str) {
@@ -22,8 +21,9 @@ function PasswordGate({ onAuth }) {
 
   function submit(e) {
     e.preventDefault();
-    if (pw === PASSWORD) { onAuth(); }
-    else { setError(true); setPw(""); }
+    if (!pw.trim()) { setError(true); return; }
+    setAdminKey(pw.trim());
+    onAuth();
   }
 
   return (
@@ -42,10 +42,13 @@ function PasswordGate({ onAuth }) {
             value={pw}
             autoFocus
             onChange={(e) => { setPw(e.target.value); setError(false); }}
-            placeholder="Password"
+            placeholder="Kunci admin"
             className={`w-full rounded-xl border bg-stone-900 px-4 py-3 text-sm text-stone-100 placeholder-stone-600 outline-none transition focus:border-amber-500/50 focus:ring-1 focus:ring-amber-500/20 ${error ? "border-red-500/50" : "border-white/8"}`}
           />
-          {error && <p className="text-xs text-red-400">Password salah.</p>}
+          {error && <p className="text-xs text-red-400">Isi kunci admin dulu.</p>}
+          <p className="text-xs leading-relaxed text-stone-500">
+            Kunci dicek oleh server waktu kamu menyimpan event atau artikel. Kalau kuncinya salah, data tidak akan masuk ke sheet.
+          </p>
           <button type="submit" className="w-full rounded-xl bg-amber-500 py-3 text-sm font-semibold text-ink hover:bg-amber-400 transition-colors">
             Masuk
           </button>
@@ -497,12 +500,10 @@ function AdminPanel({ onLogout }) {
 // ─── Export ───────────────────────────────────────────────────────────────────
 
 export default function Admin() {
-  const [authed, setAuthed] = useState(
-    () => sessionStorage.getItem("admin_ok") === "1"
-  );
+  const [authed, setAuthed] = useState(() => Boolean(getAdminKey()));
 
-  function login() { sessionStorage.setItem("admin_ok", "1"); setAuthed(true); }
-  function logout() { sessionStorage.removeItem("admin_ok"); setAuthed(false); }
+  function login() { setAuthed(true); }
+  function logout() { setAdminKey(""); setAuthed(false); }
 
   return authed ? <AdminPanel onLogout={logout} /> : <PasswordGate onAuth={login} />;
 }

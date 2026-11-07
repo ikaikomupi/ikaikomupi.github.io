@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { fetchAlumni } from "../lib/sheets";
 import {
   Users,
   GraduationCap,
@@ -14,11 +16,21 @@ import {
 
 // ─── Data ──────────────────────────────────────────────────────────────────────
 
-const stats = [
-  { icon: Users, value: "500+", label: "Alumni Terhubung" },
-  { icon: GraduationCap, value: "10", label: "Angkatan Terhimpun" },
-  { icon: Briefcase, value: "20+", label: "Sektor Industri" },
-];
+// Angka statistik dihitung dari direktori alumni, bukan ditulis manual.
+function useStatistik() {
+  const [d, setD] = useState(null);
+  useEffect(() => {
+    fetchAlumni().then((rows) => {
+      const unik = (k) => new Set(rows.map((r) => (r[k] || "").trim().toLowerCase().replace("govenment", "government")).filter(Boolean)).size;
+      setD({ alumni: rows.length, kota: unik("kota"), sektor: unik("perusahaan") });
+    });
+  }, []);
+  return [
+    { icon: Users, value: d ? d.alumni : "–", label: "Alumni di Direktori" },
+    { icon: GraduationCap, value: d ? d.kota : "–", label: "Kota Domisili" },
+    { icon: Briefcase, value: d ? d.sektor : "–", label: "Sektor Tempat Kerja" },
+  ];
+}
 
 const features = [
   {
@@ -130,7 +142,7 @@ function FeatureCard({ icon: Icon, title, description, to, featured }) {
 
 function SpotlightCard({ name, role, quote, initials }) {
   return (
-    <div className="flex flex-col gap-5 rounded-2xl border border-white/8 bg-stone-900 p-8 shadow-sm">
+    <div className="flex flex-col gap-5 rounded-2xl border border-white/8 bg-stone-950 p-8 shadow-sm">
       <Quote className="h-8 w-8 text-amber-200" />
       <p className="flex-1 text-base leading-relaxed text-stone-500">
         &ldquo;{quote}&rdquo;
@@ -151,6 +163,7 @@ function SpotlightCard({ name, role, quote, initials }) {
 // ─── Main Component ────────────────────────────────────────────────────────────
 
 export default function LandingPage() {
+  const stats = useStatistik();
   return (
     <div className="min-h-screen bg-stone-950 font-sans antialiased">
 
@@ -369,10 +382,10 @@ export default function LandingPage() {
       </section>
 
       {/* ── Alumni Spotlight ──────────────────────────────────────────────── */}
-      <section className="bg-amber-50 px-6 py-20">
+      <section className="bg-stone-900 px-6 py-20">
         <div className="mx-auto max-w-4xl">
           <div className="mb-12 text-center">
-            <h2 className="mb-3 text-3xl font-bold text-stone-900">
+            <h2 className="mb-3 text-3xl font-bold text-stone-100">
               Alumni Bercerita
             </h2>
             <p className="text-base text-stone-500">

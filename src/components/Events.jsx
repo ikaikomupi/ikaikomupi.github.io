@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { fetchEvents } from "../lib/sheets";
+import ContohBanner from "./ContohBanner";
 import { MapPin, Clock, ExternalLink, Calendar } from "lucide-react";
 
 const DUMMY_EVENTS = [
@@ -11,6 +13,7 @@ const DUMMY_EVENTS = [
     lokasi: "Gedung FPIPS Lantai 5",
     deskripsi: "Alumni gathering dalam rangka penyambutan kepengurusan baru IKA IKOM UPI. Mari hadir dan saling terhubung kembali!",
     link_daftar: null,
+    contoh: true,
   },
 ];
 
@@ -129,10 +132,17 @@ export default function Events() {
   const [filter, setFilter] = useState("Semua");
   const [tab, setTab] = useState("upcoming");
 
+  const [events, setEvents] = useState(null);
+  useEffect(() => {
+    fetchEvents().then((data) => setEvents(data.every((e) => e.contoh) ? DUMMY_EVENTS : data));
+  }, []);
+  const semua = events || [];
+  const isContoh = semua.length > 0 && semua.every((e) => e.contoh);
+
   const today = new Date(new Date().toDateString());
 
-  const upcoming = DUMMY_EVENTS.filter((e) => new Date(e.tanggal) >= today);
-  const past = DUMMY_EVENTS.filter((e) => new Date(e.tanggal) < today);
+  const upcoming = semua.filter((e) => new Date(e.tanggal) >= today);
+  const past = semua.filter((e) => new Date(e.tanggal) < today);
 
   const base = tab === "upcoming" ? upcoming : past;
 
@@ -203,8 +213,12 @@ export default function Events() {
           ))}
         </div>
 
+        {isContoh && <ContohBanner>Belum ada event yang dipublikasikan. Kartu di bawah ini contoh tampilan.</ContohBanner>}
+
         {/* List */}
-        {filtered.length === 0 ? (
+        {events === null ? (
+          <p className="py-20 text-center text-sm text-stone-500">Memuat event…</p>
+        ) : filtered.length === 0 ? (
           <div className="py-20 text-center">
             <Calendar className="mx-auto mb-4 h-12 w-12 text-stone-700" />
             <p className="text-stone-500">

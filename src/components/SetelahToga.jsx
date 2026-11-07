@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { fetchPosts } from "../lib/sheets";
+import ContohBanner from "./ContohBanner";
 import { Calendar, User, BookOpen, ChevronRight } from "lucide-react";
 
 const KATEGORI = ["Semua", "Karir", "Tips Hidup", "Cerita Alumni", "Networking"];
@@ -125,6 +126,9 @@ export default function SetelahToga() {
         </div>
 
         {/* Grid */}
+        {!loading && posts.length > 0 && posts.every((p) => p.contoh) && (
+          <ContohBanner>Belum ada tulisan yang dipublikasikan. Artikel di bawah ini contoh tampilan dari tim IKA.</ContohBanner>
+        )}
         {loading ? (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[1, 2, 3].map((i) => (

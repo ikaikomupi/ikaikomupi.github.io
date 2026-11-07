@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Check, ChevronRight, ChevronLeft, PartyPopper } from "lucide-react";
-import { submitRegistration } from "../lib/form";
+import { submitRegistration, kecilkanFoto, FOTO_UPLOAD_AKTIF } from "../lib/form";
 import { INDUSTRIES, KOTA } from "../data/alumni";
 
 const STEPS = ["Data Diri", "Pekerjaan", "Kontak & Sosial"];
@@ -164,13 +164,40 @@ export default function RegisterForm() {
                 )}
               </Field>
 
-              <Field label="URL Foto Profil">
+              <Field label="Foto Profil">
+                {FOTO_UPLOAD_AKTIF && (
+                  <div className="flex items-center gap-3">
+                    {form.foto_base64 && <img src={form.foto_base64} alt="Pratinjau foto" className="h-14 w-14 rounded-full object-cover" />}
+                    <label className="cursor-pointer rounded-xl border border-white/10 px-4 py-2.5 text-sm text-stone-300 hover:bg-white/5">
+                      {form.foto_base64 ? "Ganti foto" : "Pilih foto dari galeri"}
+                      <input
+                        type="file"
+                        accept="image/*"
+                        className="sr-only"
+                        onChange={async (e) => {
+                          const f = e.target.files?.[0];
+                          if (!f) return;
+                          try {
+                            const data = await kecilkanFoto(f);
+                            setForm((s) => ({ ...s, foto_base64: data }));
+                          } catch {
+                            setErrors((er) => ({ ...er, foto: "Foto tidak bisa dibaca. Coba file lain." }));
+                          }
+                        }}
+                      />
+                    </label>
+                  </div>
+                )}
                 <input
                   className={inputCls}
-                  placeholder="https://..."
+                  placeholder={FOTO_UPLOAD_AKTIF ? "atau tempel link foto: https://..." : "Link foto: https://..."}
                   value={form.foto_url}
                   onChange={set("foto_url")}
                 />
+                {!FOTO_UPLOAD_AKTIF && (
+                  <p className="text-xs text-stone-500">Opsional. Belum punya link? Kosongkan saja, inisial namamu akan dipakai sebagai avatar.</p>
+                )}
+                {errors.foto && <p className="text-xs text-red-500">{errors.foto}</p>}
               </Field>
 
               <Field label="Domisili Saat Ini" required>
@@ -253,6 +280,10 @@ export default function RegisterForm() {
           {/* Step 2 — Kontak */}
           {step === 2 && (
             <div className="flex flex-col gap-5">
+              <p className="rounded-xl bg-stone-950 px-4 py-3 text-xs leading-relaxed text-stone-400">
+                Nomor WA dan email cuma dipakai pengurus IKA untuk menghubungi kamu, dan tidak ditampilkan di website.
+                LinkedIn dan Instagram akan tampil di profilmu.
+              </p>
               <Field label="Nomor WhatsApp" required>
                 <input
                   className={inputCls}

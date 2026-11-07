@@ -113,19 +113,8 @@ export default function ProfilePage() {
             </span>
           </div>
 
-          {/* Contact buttons */}
+          {/* Contact buttons: hanya kanal publik. WA & email tidak ditampilkan demi privasi. */}
           <div className="flex flex-wrap justify-center gap-3">
-            {person.whatsapp && (
-              <a
-                href={`https://wa.me/${person.whatsapp}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 rounded-xl bg-amber-500 px-5 py-2.5 text-sm font-semibold text-ink hover:bg-amber-400"
-              >
-                <MessageCircle className="h-4 w-4" />
-                Hubungi via WA
-              </a>
-            )}
             {person.linkedin && (
               <a
                 href={person.linkedin}
@@ -148,16 +137,8 @@ export default function ProfilePage() {
                 Instagram
               </a>
             )}
-            {person.email && (
-              <a
-                href={`mailto:${person.email}`}
-                className="flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-5 py-2.5 text-sm font-semibold text-stone-300 hover:bg-white/10"
-              >
-                <Mail className="h-4 w-4" />
-                Email
-              </a>
-            )}
           </div>
+          <p className="text-xs text-stone-500">Butuh nomor WA? Minta dikenalkan lewat pengurus IKA.</p>
         </div>
       </div>
 

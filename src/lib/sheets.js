@@ -1,6 +1,9 @@
 import { alumni as mockAlumni } from "../data/alumni.js";
 
-const SHEET_ID = "1mFUEZRRmr6cnmQ7Cbqo5WePQb9cuzKgTx7c6MIhw07w";
+// Data contoh ditandai supaya halaman bisa menampilkan label "contoh".
+const tandaiContoh = (rows) => rows.map((r) => ({ ...r, contoh: true }));
+
+export const SHEET_ID = "1mFUEZRRmr6cnmQ7Cbqo5WePQb9cuzKgTx7c6MIhw07w";
 const TAB_NAME = "1";
 const BLOG_TAB = "setelah-toga";
 const EVENTS_TAB = "events";
@@ -55,7 +58,7 @@ export async function fetchPosts() {
     const res = await fetch(url);
     if (!res.ok) throw new Error();
     const data = await res.json();
-    if (!Array.isArray(data) || data.length === 0) return mockPosts;
+    if (!Array.isArray(data) || data.length === 0) return tandaiContoh(mockPosts);
     return data.map((row) => ({
       slug: row.slug || "",
       judul: row.judul || "",
@@ -67,7 +70,7 @@ export async function fetchPosts() {
       foto_url: row.foto_url || null,
     }));
   } catch {
-    return mockPosts;
+    return tandaiContoh(mockPosts);
   }
 }
 
@@ -135,7 +138,7 @@ export async function fetchEvents() {
     const res = await fetch(url);
     if (!res.ok) throw new Error();
     const data = await res.json();
-    if (!Array.isArray(data) || data.length === 0) return mockEvents;
+    if (!Array.isArray(data) || data.length === 0) return tandaiContoh(mockEvents);
     return data.map((row, i) => ({
       id: row.id || String(i + 1),
       judul: row.judul || "",
@@ -148,7 +151,7 @@ export async function fetchEvents() {
       foto_url: row.foto_url || null,
     }));
   } catch {
-    return mockEvents;
+    return tandaiContoh(mockEvents);
   }
 }
 
@@ -242,8 +245,7 @@ export async function fetchAlumni() {
       bio: row.bio || "",
       linkedin: row.linkedin || null,
       instagram: row.instagram || null,
-      whatsapp: row.whatsapp || null,
-      email: row.email || null,
+      // Nomor WA & email sengaja tidak dibaca: sheet ini publik, kontak pribadi hanya untuk pengurus.
       bergabung_at: row.bergabung_at || "2024-01-01",
     }));
   } catch {

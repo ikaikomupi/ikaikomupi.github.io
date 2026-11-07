@@ -48,6 +48,13 @@ DEPLOY (GitHub Pages)
     git push origin main   (repo pribadi, cadangan)
 
 
+CATATAN PENTING (perlu tindakan di Google Apps Script)
+------------------------------------------------------
+  docs/keamanan-admin.md  - pasang ADMIN_KEY supaya hanya pengurus bisa tambah event/artikel
+  docs/foto-upload.md     - aktifkan upload foto di form Daftar
+  docs/cpns-data.md       - format data & form Lapor Hasil KOMpas ASN
+  src/lib/analytics.js    - isi GOATCOUNTER_CODE untuk mengaktifkan statistik pengunjung
+
 PROJECT STRUCTURE
 ------------------
   src/
