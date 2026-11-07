@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { fetchAlumni } from "../lib/sheets";
 import {
   Users,
   GraduationCap,
@@ -16,21 +14,11 @@ import {
 
 // ─── Data ──────────────────────────────────────────────────────────────────────
 
-// Angka statistik dihitung dari direktori alumni, bukan ditulis manual.
-function useStatistik() {
-  const [d, setD] = useState(null);
-  useEffect(() => {
-    fetchAlumni().then((rows) => {
-      const unik = (k) => new Set(rows.map((r) => (r[k] || "").trim().toLowerCase().replace("govenment", "government")).filter(Boolean)).size;
-      setD({ alumni: rows.length, kota: unik("kota"), sektor: unik("perusahaan") });
-    });
-  }, []);
-  return [
-    { icon: Users, value: d ? d.alumni : "–", label: "Alumni di Direktori" },
-    { icon: GraduationCap, value: d ? d.kota : "–", label: "Kota Domisili" },
-    { icon: Briefcase, value: d ? d.sektor : "–", label: "Sektor Tempat Kerja" },
-  ];
-}
+const stats = [
+  { icon: Users, value: "500+", label: "Alumni Terhubung" },
+  { icon: GraduationCap, value: "10", label: "Angkatan Terhimpun" },
+  { icon: Briefcase, value: "20+", label: "Sektor Industri" },
+];
 
 const features = [
   {
@@ -163,7 +151,6 @@ function SpotlightCard({ name, role, quote, initials }) {
 // ─── Main Component ────────────────────────────────────────────────────────────
 
 export default function LandingPage() {
-  const stats = useStatistik();
   return (
     <div className="min-h-screen bg-stone-950 font-sans antialiased">
 
