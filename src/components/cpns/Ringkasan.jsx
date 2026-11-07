@@ -4,6 +4,7 @@ import { Lightbulb, Search, MapPin, Building2, Landmark, Target, TrendingDown, M
 import { useCpnsData, persaingan, riwayat, rentang, teksRentang, tahunTerbaru, JENIS_FORMASI, fmtRasio, namaProvinsi, temuan, } from "../../lib/cpns";
 import { Section, Badge, Stat, Pilih, Peringatan, Memuat, PilihKategori, Pill } from "./ui";
 import { Peta, Batang, Scatter, PESERTA_CONTOH } from "./charts";
+import RekapInstansi from "./RekapInstansi";
 
 const JAWA = new Set(["DKI Jakarta", "Jawa Barat", "Jawa Tengah", "DI Yogyakarta", "Jawa Timur", "Banten"]);
 
@@ -197,6 +198,8 @@ export default function Ringkasan() {
           </div>
         </div>
       </Section>
+
+      <RekapInstansi />
 
       <Section
         icon={Search}
