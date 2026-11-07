@@ -72,7 +72,7 @@ export default function Skb() {
                 {j.skb.map((m) => <li key={m}>{m}</li>)}
               </ul>
               {j.latihan && (
-                <Link to="/cpns/latihan" className="mt-3 inline-block text-sm font-medium text-amber-400 hover:text-amber-300">Latihan soal {j.latihan} →</Link>
+                <Link to="/cpns/belajar" className="mt-3 inline-block text-sm font-medium text-amber-400 hover:text-amber-300">Belajar & latihan soal {j.latihan} →</Link>
               )}
               {(j.pembina || j.jenjang) && (
                 <p className="mt-3 text-xs text-stone-500">

@@ -14,7 +14,8 @@
    ],
    "kunci": 2,
    "pembahasan": "Alinea keempat memuat tujuan negara (melindungi, memajukan kesejahteraan umum, mencerdaskan kehidupan bangsa, ikut melaksanakan ketertiban dunia) dan rumusan dasar negara Pancasila.",
-   "id": "q1"
+   "id": "q1",
+   "bab": "twk-uud"
   },
   {
    "bagian": "TWK",
@@ -29,7 +30,8 @@
    ],
    "kunci": 2,
    "pembahasan": "Pasal 1 ayat (3): \"Negara Indonesia adalah negara hukum.\" Ayat (1) tentang negara kesatuan, ayat (2) tentang kedaulatan rakyat.",
-   "id": "q2"
+   "id": "q2",
+   "bab": "twk-uud"
   },
   {
    "bagian": "TWK",
@@ -44,7 +46,8 @@
    ],
    "kunci": 1,
    "pembahasan": "HAM diatur dalam Bab XA, Pasal 28A sampai 28J.",
-   "id": "q3"
+   "id": "q3",
+   "bab": "twk-uud"
   },
   {
    "bagian": "TWK",
@@ -59,7 +62,8 @@
    ],
    "kunci": 1,
    "pembahasan": "Pasal 27 ayat (3): setiap warga negara berhak dan wajib ikut serta dalam upaya pembelaan negara.",
-   "id": "q4"
+   "id": "q4",
+   "bab": "twk-nkri"
   },
   {
    "bagian": "TWK",
@@ -74,7 +78,8 @@
    ],
    "kunci": 1,
    "pembahasan": "Sumpah Pemuda adalah hasil Kongres Pemuda II di Batavia, 27–28 Oktober 1928.",
-   "id": "q5"
+   "id": "q5",
+   "bab": "twk-sejarah"
   },
   {
    "bagian": "TWK",
@@ -89,7 +94,8 @@
    ],
    "kunci": 1,
    "pembahasan": "Bhinneka Tunggal Ika berasal dari kitab Sutasoma karya Mpu Tantular pada masa Majapahit.",
-   "id": "q6"
+   "id": "q6",
+   "bab": "twk-sejarah"
   },
   {
    "bagian": "TWK",
@@ -104,7 +110,8 @@
    ],
    "kunci": 1,
    "pembahasan": "Sila ketiga, Persatuan Indonesia, menekankan kepentingan bangsa dan negara di atas kepentingan pribadi atau golongan.",
-   "id": "q7"
+   "id": "q7",
+   "bab": "twk-pancasila"
   },
   {
    "bagian": "TWK",
@@ -119,7 +126,8 @@
    ],
    "kunci": 1,
    "pembahasan": "Deklarasi Djuanda (13 Desember 1957) menyatakan perairan di sekitar dan di antara pulau-pulau Indonesia sebagai wilayah Indonesia, dasar konsep negara kepulauan.",
-   "id": "q8"
+   "id": "q8",
+   "bab": "twk-nkri"
   },
   {
    "bagian": "TWK",
@@ -134,7 +142,8 @@
    ],
    "kunci": 2,
    "pembahasan": "Hadiah dari pihak yang berurusan dengan jabatan termasuk gratifikasi. Sikap berintegritas: menolak, atau melaporkan ke KPK/UPG instansi bila tidak dapat ditolak.",
-   "id": "q9"
+   "id": "q9",
+   "bab": "twk-integritas"
   },
   {
    "bagian": "TIU",
@@ -149,7 +158,8 @@
    ],
    "kunci": 2,
    "pembahasan": "Pola: dikali 2 lalu ditambah 1. 47 × 2 + 1 = 95.",
-   "id": "q10"
+   "id": "q10",
+   "bab": "tiu-numerik"
   },
   {
    "bagian": "TIU",
@@ -164,7 +174,8 @@
    ],
    "kunci": 2,
    "pembahasan": "Tiap suku adalah jumlah dua suku sebelumnya: 11 + 18 = 29.",
-   "id": "q11"
+   "id": "q11",
+   "bab": "tiu-numerik"
   },
   {
    "bagian": "TIU",
@@ -179,7 +190,8 @@
    ],
    "kunci": 2,
    "pembahasan": "15% × 240 = 36, 25% × 160 = 40. Jumlahnya 76.",
-   "id": "q12"
+   "id": "q12",
+   "bab": "tiu-numerik"
   },
   {
    "bagian": "TIU",
@@ -194,7 +206,8 @@
    ],
    "kunci": 2,
    "pembahasan": "100.000 × 1,2 = 120.000. Lalu 120.000 × 0,8 = 96.000.",
-   "id": "q13"
+   "id": "q13",
+   "bab": "tiu-numerik"
   },
   {
    "bagian": "TIU",
@@ -209,7 +222,8 @@
    ],
    "kunci": 1,
    "pembahasan": "Laju bersama 1/6 + 1/3 = 1/2 pekerjaan per hari, jadi selesai dalam 2 hari.",
-   "id": "q14"
+   "id": "q14",
+   "bab": "tiu-numerik"
   },
   {
    "bagian": "TIU",
@@ -224,7 +238,8 @@
    ],
    "kunci": 2,
    "pembahasan": "Waktu = jarak ÷ kecepatan = 150 ÷ 60 = 2,5 jam = 2 jam 30 menit.",
-   "id": "q15"
+   "id": "q15",
+   "bab": "tiu-numerik"
   },
   {
    "bagian": "TIU",
@@ -239,7 +254,8 @@
    ],
    "kunci": 1,
    "pembahasan": "Peserta pelatihan yang merupakan pegawai humas pasti mahir menulis, jadi sebagian peserta pelatihan mahir menulis.",
-   "id": "q16"
+   "id": "q16",
+   "bab": "tiu-logika"
   },
   {
    "bagian": "TIU",
@@ -254,7 +270,8 @@
    ],
    "kunci": 2,
    "pembahasan": "Pena adalah alat kerja penulis; kuas adalah alat kerja pelukis.",
-   "id": "q17"
+   "id": "q17",
+   "bab": "tiu-verbal"
   },
   {
    "bagian": "TIU",
@@ -269,7 +286,8 @@
    ],
    "kunci": 1,
    "pembahasan": "Fana berarti tidak kekal. Lawannya abadi.",
-   "id": "q18"
+   "id": "q18",
+   "bab": "tiu-verbal"
   },
   {
    "bagian": "TKP",
@@ -290,7 +308,8 @@
     3
    ],
    "pembahasan": "Pelayanan publik yang baik: tetap tenang, berempati, dan mengambil tanggung jawab menyelesaikan masalah meski bukan kesalahan sendiri.",
-   "id": "q19"
+   "id": "q19",
+   "bab": "tkp-pelayanan"
   },
   {
    "bagian": "TKP",
@@ -311,7 +330,8 @@
     3
    ],
    "pembahasan": "Membangun jejaring kerja berarti proaktif menjalin hubungan dan kerja sama.",
-   "id": "q20"
+   "id": "q20",
+   "bab": "tkp-jejaring"
   },
   {
    "bagian": "TKP",
@@ -332,7 +352,8 @@
     2
    ],
    "pembahasan": "Integritas: menolak memalsukan data walau ada tekanan sosial, dengan cara yang tetap menjaga hubungan baik.",
-   "id": "q21"
+   "id": "q21",
+   "bab": "tkp-profesional"
   },
   {
    "bagian": "TKP",
@@ -353,7 +374,8 @@
     3
    ],
    "pembahasan": "Adaptif terhadap teknologi: berinisiatif belajar tanpa menunggu.",
-   "id": "q22"
+   "id": "q22",
+   "bab": "tkp-profesional"
   },
   {
    "bagian": "TKP",
@@ -374,7 +396,8 @@
     1
    ],
    "pembahasan": "Sikap anti radikalisme: menolak ujaran kebencian dan aktif menjaga kerukunan dengan cara yang santun.",
-   "id": "q23"
+   "id": "q23",
+   "bab": "tkp-antiradikal"
   },
   {
    "bagian": "TKP",
@@ -395,7 +418,8 @@
     3
    ],
    "pembahasan": "Profesionalisme: bertanggung jawab atas tugas dan mengelola prioritas.",
-   "id": "q24"
+   "id": "q24",
+   "bab": "tkp-profesional"
   },
   {
    "bagian": "SKB",
@@ -411,7 +435,8 @@
    "kunci": 1,
    "pembahasan": "Definisi ini dikenal dari buku Effective Public Relations karya Cutlip, Center, dan Broom.",
    "jabatan": "Pranata Humas",
-   "id": "q25"
+   "id": "q25",
+   "bab": "humas-dasar"
   },
   {
    "bagian": "SKB",
@@ -427,7 +452,8 @@
    "kunci": 1,
    "pembahasan": "Fact finding/defining the problem → planning and programming → taking action and communicating → evaluating the program.",
    "jabatan": "Pranata Humas",
-   "id": "q26"
+   "id": "q26",
+   "bab": "humas-dasar"
   },
   {
    "bagian": "SKB",
@@ -443,7 +469,8 @@
    "kunci": 3,
    "pembahasan": "Two-way symmetric: dialog dua arah yang seimbang, organisasi juga bersedia berubah. Two-way asymmetric dua arah tapi tujuannya membujuk publik.",
    "jabatan": "Pranata Humas",
-   "id": "q27"
+   "id": "q27",
+   "bab": "humas-dasar"
   },
   {
    "bagian": "SKB",
@@ -459,7 +486,8 @@
    "kunci": 1,
    "pembahasan": "Piramida terbalik: informasi terpenting (5W+1H) di awal, detail pendukung menyusul.",
    "jabatan": "Pranata Humas",
-   "id": "q28"
+   "id": "q28",
+   "bab": "humas-media"
   },
   {
    "bagian": "SKB",
@@ -475,7 +503,8 @@
    "kunci": 1,
    "pembahasan": "Agenda setting dikemukakan McCombs dan Shaw: media tidak menentukan apa yang dipikirkan publik, tapi apa yang dipikirkan.",
    "jabatan": "Pranata Humas",
-   "id": "q29"
+   "id": "q29",
+   "bab": "humas-teori"
   },
   {
    "bagian": "SKB",
@@ -491,7 +520,8 @@
    "kunci": 2,
    "pembahasan": "Model Harold Lasswell (1948).",
    "jabatan": "Pranata Humas",
-   "id": "q30"
+   "id": "q30",
+   "bab": "humas-teori"
   },
   {
    "bagian": "SKB",
@@ -507,7 +537,8 @@
    "kunci": 1,
    "pembahasan": "Manajemen isu bersifat proaktif: memantau, menganalisis, dan merespons isu sebelum menjadi krisis.",
    "jabatan": "Pranata Humas",
-   "id": "q31"
+   "id": "q31",
+   "bab": "humas-isu"
   },
   {
    "bagian": "SKB",
@@ -523,7 +554,8 @@
    "kunci": 1,
    "pembahasan": "Hak jawab dijamin UU No. 40 Tahun 1999 tentang Pers. Klarifikasi berbasis data menjaga kredibilitas instansi.",
    "jabatan": "Pranata Humas",
-   "id": "q32"
+   "id": "q32",
+   "bab": "humas-dasar"
   },
   {
    "bagian": "SKB",
@@ -539,7 +571,8 @@
    "kunci": 1,
    "pembahasan": "Komunikasi ke bawah mengalir dari atasan ke bawahan: instruksi, kebijakan, umpan balik kinerja.",
    "jabatan": "Pranata Humas",
-   "id": "q33"
+   "id": "q33",
+   "bab": "humas-organisasi"
   },
   {
    "bagian": "SKB",
@@ -555,7 +588,8 @@
    "kunci": 1,
    "pembahasan": "Audit komunikasi mengevaluasi apakah sistem, pesan, dan saluran komunikasi organisasi berjalan efektif.",
    "jabatan": "Pranata Humas",
-   "id": "q34"
+   "id": "q34",
+   "bab": "humas-riset"
   },
   {
    "bagian": "SKB",
@@ -571,7 +605,8 @@
    "kunci": 1,
    "pembahasan": "Media baru bersifat interaktif, digital, dan memungkinkan pengguna ikut memproduksi konten.",
    "jabatan": "Pranata Humas",
-   "id": "q35"
+   "id": "q35",
+   "bab": "humas-media"
   },
   {
    "bagian": "SKB",
@@ -587,7 +622,8 @@
    "kunci": 1,
    "pembahasan": "Urutan umum: penyusunan agenda → formulasi → adopsi → implementasi → evaluasi.",
    "jabatan": "Analis Kebijakan",
-   "id": "q36"
+   "id": "q36",
+   "bab": "ak-siklus"
   },
   {
    "bagian": "SKB",
@@ -603,7 +639,8 @@
    "kunci": 1,
    "pembahasan": "Policy brief ditujukan bagi pengambil keputusan yang sibuk: singkat, berbasis bukti, berorientasi rekomendasi.",
    "jabatan": "Analis Kebijakan",
-   "id": "q37"
+   "id": "q37",
+   "bab": "ak-analisis"
   },
   {
    "bagian": "SKB",
@@ -619,7 +656,8 @@
    "kunci": 2,
    "pembahasan": "Kelompok ini adalah pemain kunci, jadi perlu dilibatkan secara intensif.",
    "jabatan": "Analis Kebijakan",
-   "id": "q38"
+   "id": "q38",
+   "bab": "ak-analisis"
   },
   {
    "bagian": "SKB",
@@ -635,7 +673,8 @@
    "kunci": 1,
    "pembahasan": "Ex-ante dilakukan sebelum kebijakan diterapkan untuk menilai alternatif. Ex-post dilakukan sesudahnya.",
    "jabatan": "Analis Kebijakan",
-   "id": "q39"
+   "id": "q39",
+   "bab": "ak-siklus"
   },
   {
    "bagian": "SKB",
@@ -651,7 +690,8 @@
    "kunci": 1,
    "pembahasan": "Cost–benefit analysis menilai alternatif dengan membandingkan manfaat dan biaya yang dinyatakan dalam nilai yang sebanding.",
    "jabatan": "Analis Kebijakan",
-   "id": "q40"
+   "id": "q40",
+   "bab": "ak-analisis"
   },
   {
    "bagian": "SKB",
@@ -667,7 +707,8 @@
    "kunci": 1,
    "pembahasan": "UU No. 43 Tahun 2009 tentang Kearsipan.",
    "jabatan": "Arsiparis",
-   "id": "q41"
+   "id": "q41",
+   "bab": "arsip-konsep"
   },
   {
    "bagian": "SKB",
@@ -683,7 +724,8 @@
    "kunci": 1,
    "pembahasan": "Itu definisi arsip dinamis menurut UU No. 43 Tahun 2009.",
    "jabatan": "Arsiparis",
-   "id": "q42"
+   "id": "q42",
+   "bab": "arsip-konsep"
   },
   {
    "bagian": "SKB",
@@ -699,7 +741,8 @@
    "kunci": 1,
    "pembahasan": "JRA menjadi dasar penyusutan: pemindahan, pemusnahan, dan penyerahan arsip statis.",
    "jabatan": "Arsiparis",
-   "id": "q43"
+   "id": "q43",
+   "bab": "arsip-kelola"
   },
   {
    "bagian": "SKB",
@@ -715,7 +758,8 @@
    "kunci": 1,
    "pembahasan": "Arsip statis yang sudah diserahkan dikelola oleh lembaga kearsipan.",
    "jabatan": "Arsiparis",
-   "id": "q44"
+   "id": "q44",
+   "bab": "arsip-kelola"
   },
   {
    "bagian": "SKB",
@@ -731,7 +775,8 @@
    "kunci": 2,
    "pembahasan": "Definisi arsip vital menurut UU No. 43 Tahun 2009.",
    "jabatan": "Arsiparis",
-   "id": "q45"
+   "id": "q45",
+   "bab": "arsip-konsep"
   },
   {
    "bagian": "SKB",
@@ -747,7 +792,8 @@
    "kunci": 3,
    "pembahasan": "Urusan absolut: politik luar negeri, pertahanan, keamanan, yustisi, moneter dan fiskal nasional, agama. Pendidikan termasuk urusan konkuren wajib.",
    "jabatan": "Fasilitator Pemerintahan",
-   "id": "q46"
+   "id": "q46",
+   "bab": "fasil-pemda"
   },
   {
    "bagian": "SKB",
@@ -763,7 +809,8 @@
    "kunci": 1,
    "pembahasan": "Pendidikan, kesehatan, pekerjaan umum, perumahan, ketenteraman, dan sosial termasuk urusan wajib pelayanan dasar.",
    "jabatan": "Fasilitator Pemerintahan",
-   "id": "q47"
+   "id": "q47",
+   "bab": "fasil-pemda"
   },
   {
    "bagian": "SKB",
@@ -779,7 +826,8 @@
    "kunci": 4,
    "pembahasan": "Kecamatan adalah perangkat daerah kabupaten/kota, bukan provinsi.",
    "jabatan": "Fasilitator Pemerintahan",
-   "id": "q48"
+   "id": "q48",
+   "bab": "fasil-pemda"
   },
   {
    "bagian": "SKB",
@@ -795,7 +843,8 @@
    "kunci": 1,
    "pembahasan": "Presiden adalah kepala negara sekaligus kepala pemerintahan dan tidak bertanggung jawab kepada parlemen.",
    "jabatan": "Fasilitator Pemerintahan",
-   "id": "q49"
+   "id": "q49",
+   "bab": "fasil-pemda"
   },
   {
    "bagian": "SKB",
@@ -811,7 +860,8 @@
    "kunci": 1,
    "pembahasan": "UU No. 40 Tahun 1999 tentang Pers. UU No. 32 Tahun 2002 mengatur penyiaran.",
    "jabatan": "Pranata Siaran",
-   "id": "q50"
+   "id": "q50",
+   "bab": "siaran-regulasi"
   },
   {
    "bagian": "SKB",
@@ -827,7 +877,8 @@
    "kunci": 1,
    "pembahasan": "P3SPS ditetapkan oleh KPI sebagai pedoman isi siaran.",
    "jabatan": "Pranata Siaran",
-   "id": "q51"
+   "id": "q51",
+   "bab": "siaran-regulasi"
   },
   {
    "bagian": "SKB",
@@ -843,7 +894,8 @@
    "kunci": 0,
    "pembahasan": "Lembaga Penyiaran Publik nasional: TVRI dan RRI.",
    "jabatan": "Pranata Siaran",
-   "id": "q52"
+   "id": "q52",
+   "bab": "siaran-regulasi"
   },
   {
    "bagian": "SKB",
@@ -859,7 +911,355 @@
    "kunci": 2,
    "pembahasan": "Pasal 7 Kode Etik Jurnalistik: wartawan memiliki hak tolak untuk melindungi narasumber yang tidak bersedia diketahui identitasnya.",
    "jabatan": "Pranata Siaran",
-   "id": "q53"
+   "id": "q53",
+   "bab": "siaran-regulasi"
+  },
+  {
+   "bagian": "TWK",
+   "materi": "Pancasila",
+   "soal": "Istilah Pancasila sebagai dasar negara diusulkan dalam pidato tanggal 1 Juni 1945 oleh …",
+   "opsi": [
+    "Mr. Muhammad Yamin",
+    "Mr. Soepomo",
+    "Ir. Soekarno",
+    "Drs. Mohammad Hatta",
+    "Ki Hajar Dewantara"
+   ],
+   "kunci": 2,
+   "pembahasan": "Soekarno menyampaikan gagasan Pancasila dalam sidang BPUPKI 1 Juni 1945.",
+   "bab": "twk-pancasila",
+   "id": "q54"
+  },
+  {
+   "bagian": "TWK",
+   "materi": "Wawasan nusantara",
+   "soal": "Konvensi internasional yang mengakui Indonesia sebagai negara kepulauan adalah …",
+   "opsi": [
+    "Konferensi Meja Bundar 1949",
+    "UNCLOS 1982",
+    "Konferensi Asia Afrika 1955",
+    "Deklarasi Bangkok 1967",
+    "Perjanjian Linggarjati 1947"
+   ],
+   "kunci": 1,
+   "pembahasan": "UNCLOS 1982 (Konvensi Hukum Laut PBB) mengakui konsep negara kepulauan yang dirintis Deklarasi Djuanda.",
+   "bab": "twk-nkri",
+   "id": "q55"
+  },
+  {
+   "bagian": "TWK",
+   "materi": "Nilai dasar ASN",
+   "soal": "Dalam nilai dasar ASN BerAKHLAK, sikap cepat menyesuaikan diri menghadapi perubahan termasuk nilai …",
+   "opsi": [
+    "Akuntabel",
+    "Harmonis",
+    "Adaptif",
+    "Loyal",
+    "Kolaboratif"
+   ],
+   "kunci": 2,
+   "pembahasan": "Adaptif: cepat menyesuaikan diri menghadapi perubahan, terus berinovasi, dan bertindak proaktif.",
+   "bab": "twk-integritas",
+   "id": "q56"
+  },
+  {
+   "bagian": "TIU",
+   "materi": "Sinonim",
+   "soal": "Sinonim kata KONKLUSI adalah …",
+   "opsi": [
+    "Pendahuluan",
+    "Kesimpulan",
+    "Pertanyaan",
+    "Hipotesis",
+    "Perdebatan"
+   ],
+   "kunci": 1,
+   "pembahasan": "Konklusi berarti kesimpulan.",
+   "bab": "tiu-verbal",
+   "id": "q57"
+  },
+  {
+   "bagian": "TIU",
+   "materi": "Logika",
+   "soal": "Jika hujan, jalan basah. Jalan tidak basah. Kesimpulan yang tepat …",
+   "opsi": [
+    "Hujan",
+    "Tidak hujan",
+    "Jalan licin",
+    "Mungkin hujan",
+    "Tidak dapat disimpulkan"
+   ],
+   "kunci": 1,
+   "pembahasan": "Modus tollens: jika p maka q, q salah, maka p salah. Jadi tidak hujan.",
+   "bab": "tiu-logika",
+   "id": "q58"
+  },
+  {
+   "bagian": "TIU",
+   "materi": "Analitis",
+   "soal": "Andi lebih tinggi dari Budi. Citra lebih pendek dari Budi. Dedi lebih tinggi dari Andi. Siapa yang paling pendek?",
+   "opsi": [
+    "Andi",
+    "Budi",
+    "Citra",
+    "Dedi",
+    "Tidak dapat ditentukan"
+   ],
+   "kunci": 2,
+   "pembahasan": "Urutan dari tertinggi: Dedi, Andi, Budi, Citra.",
+   "bab": "tiu-logika",
+   "id": "q59"
+  },
+  {
+   "bagian": "TKP",
+   "materi": "Pelayanan publik",
+   "soal": "Seorang warga lansia kesulitan mengisi formulir daring di kantor layanan. Saya …",
+   "opsi": [
+    "Mengarahkannya membaca panduan di dinding",
+    "Memintanya datang lagi bersama keluarga",
+    "Membantu mengisi sambil menjelaskan langkahnya",
+    "Memintanya antre di loket lain",
+    "Memberi nomor layanan bantuan"
+   ],
+   "skor": [
+    2,
+    2,
+    5,
+    1,
+    3
+   ],
+   "pembahasan": "Pelayanan terbaik: membantu langsung sambil memberdayakan warga.",
+   "bab": "tkp-pelayanan",
+   "id": "q60"
+  },
+  {
+   "bagian": "TKP",
+   "materi": "Pelayanan publik",
+   "soal": "Saya diminta melayani tamu dari kelompok yang pernah mengkritik instansi dengan keras. Saya …",
+   "opsi": [
+    "Menolak melayani",
+    "Melayani seadanya",
+    "Melayani secara profesional dan mencatat masukannya",
+    "Meminta rekan lain yang melayani",
+    "Melayani sambil membantah kritiknya"
+   ],
+   "skor": [
+    1,
+    2,
+    5,
+    2,
+    1
+   ],
+   "pembahasan": "Pelayanan publik tidak membeda-bedakan, dan kritik adalah masukan.",
+   "bab": "tkp-pelayanan",
+   "id": "q61"
+  },
+  {
+   "bagian": "TKP",
+   "materi": "Sosial budaya",
+   "soal": "Rekan kerja dari daerah lain punya kebiasaan yang kurang saya pahami. Saya …",
+   "opsi": [
+    "Menghindarinya",
+    "Menjadikannya bahan candaan",
+    "Bertanya dengan sopan dan menghargai perbedaan",
+    "Membiarkan saja",
+    "Meminta rekan itu menyesuaikan diri"
+   ],
+   "skor": [
+    1,
+    1,
+    5,
+    3,
+    2
+   ],
+   "pembahasan": "Menghargai keberagaman dan berusaha memahami adalah sikap yang dinilai tertinggi.",
+   "bab": "tkp-jejaring",
+   "id": "q62"
+  },
+  {
+   "bagian": "TKP",
+   "materi": "Profesionalisme",
+   "soal": "Saya menemukan kesalahan data dalam laporan yang sudah saya kirim ke atasan. Saya …",
+   "opsi": [
+    "Menunggu atasan menyadarinya",
+    "Memperbaikinya diam-diam di laporan berikutnya",
+    "Segera memberi tahu atasan dan mengirim versi perbaikan",
+    "Menyalahkan sistem",
+    "Meminta rekan memeriksa dulu"
+   ],
+   "skor": [
+    1,
+    2,
+    5,
+    1,
+    3
+   ],
+   "pembahasan": "Profesional berarti jujur atas kesalahan sendiri dan segera memperbaikinya.",
+   "bab": "tkp-profesional",
+   "id": "q63"
+  },
+  {
+   "bagian": "TKP",
+   "materi": "Teknologi",
+   "soal": "Kantor mewajibkan rapat daring, tetapi koneksi internet di rumah saya sering putus. Saya …",
+   "opsi": [
+    "Tidak ikut rapat",
+    "Ikut sebisanya tanpa usaha lain",
+    "Mencari koneksi cadangan dan memberi tahu panitia bila ada kendala",
+    "Meminta rapat diganti tatap muka",
+    "Meminta notulen dari rekan"
+   ],
+   "skor": [
+    1,
+    2,
+    5,
+    2,
+    3
+   ],
+   "pembahasan": "Adaptif terhadap teknologi: mencari solusi, bukan menghindar.",
+   "bab": "tkp-profesional",
+   "id": "q64"
+  },
+  {
+   "bagian": "TKP",
+   "materi": "Anti radikalisme",
+   "soal": "Teman mengajak ikut kajian yang mengajarkan bahwa Pancasila bertentangan dengan agama. Saya …",
+   "opsi": [
+    "Ikut karena penasaran",
+    "Ikut lalu menyebarkan materinya",
+    "Menolak, menjelaskan bahwa Pancasila menjamin kebebasan beragama, dan melapor bila mengarah ke kekerasan",
+    "Diam saja",
+    "Menolak tanpa penjelasan"
+   ],
+   "skor": [
+    2,
+    1,
+    5,
+    2,
+    3
+   ],
+   "pembahasan": "Setia pada Pancasila dan aktif mencegah paham radikal dengan cara yang santun.",
+   "bab": "tkp-antiradikal",
+   "id": "q65"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "Manajemen isu",
+   "soal": "Tahap krisis menurut Fink ketika tanda-tanda peringatan mulai muncul disebut …",
+   "opsi": [
+    "Akut",
+    "Kronis",
+    "Prodromal",
+    "Resolusi",
+    "Pascakrisis"
+   ],
+   "kunci": 2,
+   "pembahasan": "Fink: prodromal, akut, kronis, resolusi. Prodromal adalah tahap peringatan dini.",
+   "bab": "humas-isu",
+   "jabatan": "Pranata Humas",
+   "id": "q66"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "Teori komunikasi",
+   "soal": "Teori spiral keheningan (spiral of silence) dikemukakan oleh …",
+   "opsi": [
+    "George Gerbner",
+    "Elisabeth Noelle-Neumann",
+    "Elihu Katz",
+    "Marshall McLuhan",
+    "Leon Festinger"
+   ],
+   "kunci": 1,
+   "pembahasan": "Noelle-Neumann: orang cenderung diam bila merasa pendapatnya minoritas.",
+   "bab": "humas-teori",
+   "jabatan": "Pranata Humas",
+   "id": "q67"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "Komunikasi interpersonal",
+   "soal": "Dalam Jendela Johari, area yang diketahui orang lain tetapi tidak diketahui diri sendiri disebut …",
+   "opsi": [
+    "Open area",
+    "Hidden area",
+    "Blind area",
+    "Unknown area",
+    "Public area"
+   ],
+   "kunci": 2,
+   "pembahasan": "Blind area: orang lain tahu, diri sendiri tidak.",
+   "bab": "humas-organisasi",
+   "jabatan": "Pranata Humas",
+   "id": "q68"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "Publisitas",
+   "soal": "Keunggulan publisitas dibandingkan iklan adalah …",
+   "opsi": [
+    "Isinya sepenuhnya dikendalikan organisasi",
+    "Kredibilitas lebih tinggi karena tampil sebagai berita",
+    "Jadwal tayang bisa dipesan",
+    "Ukurannya bisa ditentukan",
+    "Selalu muncul di halaman depan"
+   ],
+   "kunci": 1,
+   "pembahasan": "Publisitas tidak berbayar dan disampaikan media sebagai berita, sehingga lebih dipercaya, meski isinya tidak bisa dikendalikan penuh.",
+   "bab": "humas-media",
+   "jabatan": "Pranata Humas",
+   "id": "q69"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "Audit komunikasi",
+   "soal": "Evaluasi program humas yang mengukur perubahan sikap atau perilaku publik disebut …",
+   "opsi": [
+    "Output",
+    "Outtake",
+    "Outcome",
+    "Input",
+    "Throughput"
+   ],
+   "kunci": 2,
+   "pembahasan": "Output: apa yang dihasilkan. Outtake: apa yang diterima khalayak. Outcome: perubahan sikap/perilaku.",
+   "bab": "humas-riset",
+   "jabatan": "Pranata Humas",
+   "id": "q70"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "Model komunikasi",
+   "soal": "Model komunikasi Source–Message–Channel–Receiver (SMCR) dikemukakan oleh …",
+   "opsi": [
+    "Harold Lasswell",
+    "David Berlo",
+    "Wilbur Schramm",
+    "Shannon dan Weaver",
+    "Theodore Newcomb"
+   ],
+   "kunci": 1,
+   "pembahasan": "Model SMCR dikemukakan David Berlo (1960).",
+   "bab": "humas-teori",
+   "jabatan": "Pranata Humas",
+   "id": "q71"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "Model komunikasi",
+   "soal": "Konsep gangguan (noise) dalam proses komunikasi diperkenalkan dalam model …",
+   "opsi": [
+    "Lasswell",
+    "Shannon dan Weaver",
+    "Berlo",
+    "Aristoteles",
+    "Newcomb"
+   ],
+   "kunci": 1,
+   "pembahasan": "Model matematis Shannon dan Weaver memperkenalkan sumber gangguan (noise source).",
+   "bab": "humas-teori",
+   "jabatan": "Pranata Humas",
+   "id": "q72"
   }
  ]
 }

@@ -6,8 +6,8 @@ import { JABATAN, SUMBER_MATERI_SKB } from "../../data/cpnsJabatan";
 import { Section, Memuat, Pill, Peringatan } from "./ui";
 
 // Skala SKD resmi: TWK 30 soal (maks 150), TIU 35 soal (maks 175), TKP 45 soal (maks 225).
-const MAKS = { TWK: 150, TIU: 175, TKP: 225 };
-const DETIK_PER_SOAL = 55; // 100 menit untuk 110 soal SKD
+export const MAKS = { TWK: 150, TIU: 175, TKP: 225 };
+export const DETIK_PER_SOAL = 55; // 100 menit untuk 110 soal SKD
 const KEY = "kompas-latihan";
 
 function useBankSoal() {
@@ -57,7 +57,7 @@ function acakSoal(q) {
     ...(q.skor ? { skor: urut.map((k) => q.skor[k]) } : { kunci: urut.indexOf(q.kunci) }),
   };
 }
-const siapkan = (soal) => {
+export const siapkan = (soal) => {
   const bagian = [...new Set(soal.map((q) => q.bagian))];
   return bagian.flatMap((b) => acak(soal.filter((q) => q.bagian === b))).map(acakSoal);
 };
@@ -69,12 +69,12 @@ const median = (v) => {
   return s.length ? (s.length % 2 ? s[m] : Math.round((s[m - 1] + s[m]) / 2)) : null;
 };
 
-function nilaiSoal(q, jawab) {
+export function nilaiSoal(q, jawab) {
   if (jawab == null) return 0;
   return q.bagian === "TKP" ? q.skor[jawab] : jawab === q.kunci ? 5 : 0;
 }
 
-function Kuis({ judul, soal, mode, onSelesai, onBatal }) {
+export function Kuis({ judul, soal, mode, onSelesai, onBatal }) {
   const [i, setI] = useState(0);
   const [jawab, setJawab] = useState({});
   const [sisa, setSisa] = useState(soal.length * DETIK_PER_SOAL);
@@ -161,7 +161,7 @@ function Kuis({ judul, soal, mode, onSelesai, onBatal }) {
   );
 }
 
-function Pembahasan({ soal, jawab }) {
+export function Pembahasan({ soal, jawab }) {
   return (
     <ol className="space-y-3">
       {soal.map((q, k) => {
@@ -191,14 +191,23 @@ function Pembahasan({ soal, jawab }) {
   );
 }
 
-function HasilSkd({ soal, jawab, formasi }) {
+export function hitungSkd(soal, jawab) {
   const bagian = ["TWK", "TIU", "TKP"].map((b) => {
     const qs = soal.filter((q) => q.bagian === b);
     const dapat = qs.reduce((s, q) => s + nilaiSoal(q, jawab[q.id]), 0);
-    return { b, dapat, maksLatihan: qs.length * 5, perkiraan: Math.round((dapat / (qs.length * 5)) * MAKS[b]) };
+    return { b, dapat, maksLatihan: qs.length * 5, perkiraan: qs.length ? Math.round((dapat / (qs.length * 5)) * MAKS[b]) : 0 };
   });
   const n = Object.fromEntries(bagian.map((x) => [x.b.toLowerCase(), x.perkiraan]));
-  const total = n.twk + n.tiu + n.tkp;
+  return { bagian, n, total: n.twk + n.tiu + n.tkp };
+}
+
+export function hitungBenar(soal, jawab) {
+  const benar = soal.filter((q) => jawab[q.id] === q.kunci).length;
+  return { benar, nilai: soal.length ? Math.round((benar / soal.length) * 100) : 0 };
+}
+
+export function HasilSkd({ soal, jawab, formasi }) {
+  const { bagian, n, total } = hitungSkd(soal, jawab);
   const ambang = lolosAmbang("Umum", n);
 
   const th = formasi.length ? tahunTerbaru(formasi) : null;
@@ -209,8 +218,6 @@ function HasilSkd({ soal, jawab, formasi }) {
     { label: "Jakarta", rows: jkt },
     { label: "Luar Jakarta", rows: luar },
   ].map((g) => ({ ...g, med: median(g.rows.map((f) => f.skd_min)), tembus: g.rows.filter((f) => total >= f.skd_min).length }));
-
-  useEffect(() => simpanRiwayat("SKD", total), [total]);
 
   return (
     <div className="space-y-4">
@@ -256,10 +263,8 @@ function HasilSkd({ soal, jawab, formasi }) {
   );
 }
 
-function HasilSkb({ soal, jawab, jabatan }) {
-  const benar = soal.filter((q) => jawab[q.id] === q.kunci).length;
-  const nilai = Math.round((benar / soal.length) * 100);
-  useEffect(() => simpanRiwayat(`SKB:${jabatan}`, nilai), [nilai, jabatan]);
+export function HasilSkb({ soal, jawab, jabatan }) {
+  const { benar, nilai } = hitungBenar(soal, jawab);
   return (
     <div className="grid gap-3 sm:grid-cols-[200px_1fr]">
       <div className="rounded-2xl border border-amber-500/30 bg-amber-500/5 p-5">

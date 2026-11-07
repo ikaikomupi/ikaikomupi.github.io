@@ -1,0 +1,398 @@
+{
+ "catatan": "Materi ringkas disusun tim KOMpas ASN berdasarkan kisi-kisi SKD dan Materi Pokok SKB CPNS 2024 (Surat Menteri PANRB B/5457/M.SM.01.00/2024). Perlu ditinjau pengurus sebelum dianggap final.",
+ "modul": [
+  {
+   "id": "twk",
+   "judul": "Tes Wawasan Kebangsaan (TWK)",
+   "jenis": "SKD",
+   "bagian": "TWK",
+   "deskripsi": "30 soal di SKD, nilai benar 5, salah 0. Ambang batas 65 dari 150.",
+   "bab": [
+    {
+     "id": "twk-pancasila",
+     "judul": "Pancasila",
+     "materi": [
+      "Istilah Pancasila sebagai dasar negara diusulkan Ir. Soekarno dalam pidato di sidang BPUPKI tanggal 1 Juni 1945, yang kini diperingati sebagai Hari Lahir Pancasila.",
+      "Panitia Sembilan menyusun Piagam Jakarta (22 Juni 1945). Rumusan sila pertama kemudian diubah, dan rumusan final Pancasila tercantum dalam Pembukaan UUD 1945 yang disahkan PPKI pada 18 Agustus 1945.",
+      "Pancasila berkedudukan sebagai dasar negara, ideologi negara, dan pandangan hidup bangsa. UU No. 12 Tahun 2011 menegaskan Pancasila sebagai sumber segala sumber hukum negara.",
+      "Soal TWK tentang Pancasila biasanya meminta contoh perilaku yang sesuai tiap sila: toleransi beragama (sila 1), menghargai martabat manusia (sila 2), mengutamakan kepentingan bangsa (sila 3), musyawarah (sila 4), dan keadilan sosial (sila 5)."
+     ],
+     "poin": [
+      "1 Juni 1945: pidato Soekarno tentang Pancasila",
+      "18 Agustus 1945: Pembukaan UUD 1945 disahkan PPKI",
+      "Sumber segala sumber hukum: UU No. 12 Tahun 2011"
+     ]
+    },
+    {
+     "id": "twk-uud",
+     "judul": "UUD 1945 dan lembaga negara",
+     "materi": [
+      "UUD 1945 disahkan PPKI pada 18 Agustus 1945 dan diamandemen empat kali pada 1999–2002.",
+      "Pembukaan UUD 1945 terdiri dari empat alinea. Alinea keempat memuat tujuan negara dan rumusan dasar negara Pancasila.",
+      "Pasal 1: ayat (1) negara kesatuan berbentuk republik, ayat (2) kedaulatan di tangan rakyat dan dilaksanakan menurut UUD, ayat (3) Indonesia adalah negara hukum.",
+      "Hak asasi manusia diatur dalam Bab XA (Pasal 28A–28J). Pasal 27 mengatur persamaan di depan hukum, hak atas pekerjaan, dan bela negara. Pasal 31 mengatur pendidikan.",
+      "Lembaga negara utama: MPR, DPR, DPD, Presiden, Mahkamah Agung, Mahkamah Konstitusi, Komisi Yudisial, dan BPK."
+     ],
+     "poin": [
+      "Amandemen 4 kali (1999–2002)",
+      "HAM: Bab XA, Pasal 28A–28J",
+      "Pasal 1 ayat (3): negara hukum"
+     ]
+    },
+    {
+     "id": "twk-nkri",
+     "judul": "NKRI, wawasan nusantara, dan bela negara",
+     "materi": [
+      "Wawasan nusantara adalah cara pandang bangsa Indonesia tentang diri dan lingkungannya yang mengutamakan persatuan dan kesatuan wilayah.",
+      "Deklarasi Djuanda (13 Desember 1957) menyatakan perairan di sekitar dan di antara pulau-pulau Indonesia sebagai wilayah Indonesia. Konsep negara kepulauan ini diakui dunia melalui UNCLOS 1982.",
+      "Bela negara adalah hak sekaligus kewajiban setiap warga negara (Pasal 27 ayat 3 dan Pasal 30 UUD 1945). Bentuknya tidak hanya militer: bekerja jujur, menjaga persatuan, dan menaati hukum juga termasuk."
+     ],
+     "poin": [
+      "Deklarasi Djuanda 1957",
+      "UNCLOS 1982: negara kepulauan",
+      "Bela negara: Pasal 27 ayat (3), Pasal 30"
+     ]
+    },
+    {
+     "id": "twk-sejarah",
+     "judul": "Bhinneka Tunggal Ika dan sejarah pergerakan",
+     "materi": [
+      "Semboyan Bhinneka Tunggal Ika berasal dari kitab Sutasoma karya Mpu Tantular pada masa Majapahit.",
+      "Budi Utomo berdiri 20 Mei 1908, diperingati sebagai Hari Kebangkitan Nasional.",
+      "Sumpah Pemuda diikrarkan dalam Kongres Pemuda II, 28 Oktober 1928.",
+      "BPUPKI bertugas menyelidiki persiapan kemerdekaan dan menyusun dasar negara serta rancangan UUD. PPKI mengesahkan UUD 1945 serta memilih presiden dan wakil presiden pada 18 Agustus 1945."
+     ],
+     "poin": [
+      "Sutasoma, Mpu Tantular",
+      "Budi Utomo: 20 Mei 1908",
+      "Sumpah Pemuda: Kongres Pemuda II, 1928"
+     ]
+    },
+    {
+     "id": "twk-integritas",
+     "judul": "Integritas dan nilai dasar ASN",
+     "materi": [
+      "Integritas berarti jujur, konsisten antara kata dan perbuatan, dan menolak penyalahgunaan wewenang.",
+      "Gratifikasi yang berhubungan dengan jabatan wajib ditolak. Kalau tidak bisa ditolak, laporkan ke KPK atau unit pengendali gratifikasi instansi paling lambat 30 hari kerja.",
+      "Nilai dasar ASN adalah BerAKHLAK: Berorientasi Pelayanan, Akuntabel, Kompeten, Harmonis, Loyal, Adaptif, dan Kolaboratif."
+     ],
+     "poin": [
+      "Gratifikasi: tolak atau lapor maks. 30 hari kerja",
+      "BerAKHLAK: 7 nilai dasar ASN"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tiu",
+   "judul": "Tes Intelegensia Umum (TIU)",
+   "jenis": "SKD",
+   "bagian": "TIU",
+   "deskripsi": "35 soal di SKD, nilai benar 5, salah 0. Ambang batas 80 dari 175.",
+   "bab": [
+    {
+     "id": "tiu-verbal",
+     "judul": "Kemampuan verbal",
+     "materi": [
+      "Analogi: cari hubungan pasangan pertama (alat–pelaku, sebab–akibat, bagian–keseluruhan, bahan–hasil), lalu terapkan ke pasangan kedua.",
+      "Sinonim dan antonim: perhatikan makna kata dalam konteks resmi KBBI, bukan bahasa sehari-hari.",
+      "Tips: eliminasi pilihan yang hubungannya terbalik atau hanya mirip secara kategori."
+     ],
+     "poin": [
+      "Tentukan jenis hubungan sebelum melihat pilihan",
+      "Waspadai pilihan dengan hubungan terbalik"
+     ]
+    },
+    {
+     "id": "tiu-numerik",
+     "judul": "Kemampuan numerik",
+     "materi": [
+      "Deret: cek selisih, rasio, pola Fibonacci (jumlah dua suku sebelumnya), pola bertingkat, dan pola selang-seling.",
+      "Persen bertingkat tidak bisa dijumlahkan langsung: naik 20% lalu turun 20% berarti dikali 1,2 lalu 0,8, hasilnya 0,96.",
+      "Jarak = kecepatan × waktu. Kerja bersama: jumlahkan laju per hari (1/t), lalu waktu bersama = 1 ÷ jumlah laju."
+     ],
+     "poin": [
+      "Cek selisih dulu, lalu rasio",
+      "Persen bertingkat: kalikan faktornya",
+      "Kerja bersama: jumlahkan 1/t"
+     ]
+    },
+    {
+     "id": "tiu-logika",
+     "judul": "Penalaran logis dan analitis",
+     "materi": [
+      "Silogisme: dari 'semua A adalah B' dan 'sebagian C adalah A', kesimpulannya 'sebagian C adalah B'.",
+      "Modus ponens: jika p maka q; p benar, maka q. Modus tollens: jika p maka q; q salah, maka p salah.",
+      "Soal analitis (urutan, posisi, jadwal): tulis informasi dalam bentuk simbol atau garis, lalu uji setiap pilihan."
+     ],
+     "poin": [
+      "Modus tollens: q salah → p salah",
+      "Gambar urutan di kertas buram"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tkp",
+   "judul": "Tes Karakteristik Pribadi (TKP)",
+   "jenis": "SKD",
+   "bagian": "TKP",
+   "deskripsi": "45 soal di SKD, setiap pilihan bernilai 1–5 (tidak ada nilai 0). Ambang batas 166 dari 225.",
+   "bab": [
+    {
+     "id": "tkp-pelayanan",
+     "judul": "Pelayanan publik",
+     "materi": [
+      "Pilihan bernilai tertinggi biasanya: mengutamakan kepentingan masyarakat, tetap ramah dan tenang, dan mengambil tanggung jawab menyelesaikan masalah.",
+      "Hindari pilihan yang melempar masalah ke pihak lain, menunda tanpa kejelasan, atau membalas emosi pelanggan."
+     ],
+     "poin": [
+      "Empati + solusi nyata",
+      "Jangan lempar tanggung jawab"
+     ]
+    },
+    {
+     "id": "tkp-jejaring",
+     "judul": "Jejaring kerja dan sosial budaya",
+     "materi": [
+      "Sikap ideal: proaktif membangun hubungan, mau bekerja sama lintas unit, dan menghargai perbedaan latar belakang.",
+      "Pilihan pasif ('menunggu diajak') atau eksklusif ('hanya dengan yang dikenal') biasanya bernilai rendah."
+     ],
+     "poin": [
+      "Proaktif, bukan menunggu",
+      "Hargai perbedaan"
+     ]
+    },
+    {
+     "id": "tkp-profesional",
+     "judul": "Profesionalisme dan teknologi",
+     "materi": [
+      "Profesional berarti bertanggung jawab atas tugas, jujur atas kesalahan sendiri, dan mampu mengatur prioritas.",
+      "Terhadap teknologi baru, pilihan terbaik adalah berinisiatif belajar dan membantu rekan, bukan menolak atau menunggu."
+     ],
+     "poin": [
+      "Akui dan perbaiki kesalahan segera",
+      "Belajar teknologi tanpa menunggu disuruh"
+     ]
+    },
+    {
+     "id": "tkp-antiradikal",
+     "judul": "Anti radikalisme",
+     "materi": [
+      "Sikap yang dinilai tinggi: setia pada Pancasila, menolak ujaran kebencian dan kekerasan, serta mengingatkan atau melapor dengan cara yang santun.",
+      "Pilihan yang ikut menyebarkan konten provokatif atau membalas dengan cara yang sama bernilai paling rendah."
+     ],
+     "poin": [
+      "Tolak dengan santun dan beri penjelasan",
+      "Laporkan bila mengarah ke kekerasan"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "skb-humas",
+   "judul": "SKB Pranata Humas Ahli Pertama",
+   "jenis": "SKB",
+   "jabatan": "Pranata Humas",
+   "deskripsi": "Jabatan primer untuk lulusan Ilmu Komunikasi. Bab disusun mengikuti materi pokok resmi.",
+   "bab": [
+    {
+     "id": "humas-dasar",
+     "judul": "Ruang lingkup dan etika humas",
+     "materi": [
+      "Cutlip, Center, dan Broom mendefinisikan humas sebagai fungsi manajemen yang membangun dan mempertahankan hubungan saling menguntungkan antara organisasi dan publiknya.",
+      "Empat model humas Grunig dan Hunt: press agentry (publisitas satu arah), public information (informasi akurat satu arah), two-way asymmetric (dua arah untuk membujuk), dan two-way symmetric (dialog dua arah untuk saling pengertian).",
+      "Proses humas empat langkah: penelitian (fact finding), perencanaan, komunikasi/aksi, dan evaluasi.",
+      "Etika kehumasan menuntut kejujuran dan akurasi, tidak menyebarkan informasi menyesatkan, menjaga kerahasiaan yang sah, dan menghindari konflik kepentingan."
+     ],
+     "poin": [
+      "Two-way symmetric = dialog seimbang",
+      "Proses: riset → rencana → aksi → evaluasi"
+     ]
+    },
+    {
+     "id": "humas-teori",
+     "judul": "Teori dan model komunikasi",
+     "materi": [
+      "Model komunikasi: Lasswell (who says what in which channel to whom with what effect), Shannon–Weaver (memperkenalkan gangguan/noise), Schramm (bidang pengalaman), dan Berlo (Source–Message–Channel–Receiver).",
+      "Teori efek media: agenda setting (McCombs dan Shaw), uses and gratifications (khalayak aktif memilih media), spiral of silence (Noelle-Neumann), kultivasi (Gerbner), dan framing."
+     ],
+     "poin": [
+      "Noise: Shannon–Weaver",
+      "SMCR: Berlo",
+      "Spiral of silence: Noelle-Neumann"
+     ]
+    },
+    {
+     "id": "humas-media",
+     "judul": "Media, publisitas, dan penulisan kehumasan",
+     "materi": [
+      "Media baru bersifat digital dan interaktif, dan pengguna bisa ikut memproduksi konten.",
+      "Publisitas tidak berbayar dan tampil sebagai berita, sehingga kredibilitasnya lebih tinggi daripada iklan, tetapi isinya tidak sepenuhnya bisa dikendalikan.",
+      "Siaran pers memakai struktur piramida terbalik: informasi terpenting (5W+1H) di paragraf awal.",
+      "Kegiatan humas antara lain konferensi pers, media visit, siaran pers, acara khusus, dan pengelolaan media sosial resmi."
+     ],
+     "poin": [
+      "Piramida terbalik",
+      "Publisitas: gratis tapi tak terkendali"
+     ]
+    },
+    {
+     "id": "humas-isu",
+     "judul": "Manajemen isu, krisis, dan komunikasi",
+     "materi": [
+      "Manajemen isu bersifat proaktif: memantau, menganalisis, dan merespons isu sebelum menjadi krisis.",
+      "Tahapan krisis menurut Fink: prodromal (tanda peringatan), akut (krisis meledak), kronis (dampak berkepanjangan), dan resolusi.",
+      "Prinsip komunikasi krisis: cepat, satu suara melalui juru bicara, jujur, dan berbasis data.",
+      "Manajemen komunikasi mencakup riset, penetapan tujuan, khalayak sasaran, pesan, saluran, dan evaluasi."
+     ],
+     "poin": [
+      "Krisis Fink: prodromal–akut–kronis–resolusi",
+      "Satu suara lewat juru bicara"
+     ]
+    },
+    {
+     "id": "humas-organisasi",
+     "judul": "Komunikasi organisasi dan interpersonal",
+     "materi": [
+      "Arus komunikasi organisasi: ke bawah (instruksi atasan), ke atas (laporan dan masukan), horizontal (antarrekan setingkat), diagonal (lintas unit dan jenjang), serta informal (grapevine).",
+      "Jendela Johari (Luft dan Ingham) membagi diri menjadi area terbuka, buta (diketahui orang lain tapi tidak oleh diri sendiri), tersembunyi, dan tidak dikenal.",
+      "Komunikasi interpersonal yang efektif ditandai keterbukaan, empati, sikap mendukung, dan mendengarkan aktif."
+     ],
+     "poin": [
+      "Downward = dari atasan",
+      "Blind area = orang lain tahu, diri tidak"
+     ]
+    },
+    {
+     "id": "humas-riset",
+     "judul": "Riset dan audit komunikasi",
+     "materi": [
+      "Metode riset komunikasi: kuantitatif (survei, analisis isi) dan kualitatif (wawancara mendalam, FGD, observasi).",
+      "Audit komunikasi menilai efektivitas sistem, pesan, dan saluran komunikasi organisasi.",
+      "Evaluasi program humas dibedakan menjadi output (apa yang dihasilkan), outtake (apa yang diterima/dipahami khalayak), dan outcome (perubahan sikap atau perilaku)."
+     ],
+     "poin": [
+      "Outcome = perubahan sikap/perilaku",
+      "Audit = cek efektivitas sistem komunikasi"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "skb-ak",
+   "judul": "SKB Analis Kebijakan Ahli Pertama",
+   "jenis": "SKB",
+   "jabatan": "Analis Kebijakan",
+   "deskripsi": "Jabatan sekunder. Materi resmi menekankan analisis dan kemampuan politis.",
+   "bab": [
+    {
+     "id": "ak-siklus",
+     "judul": "Konsep dan siklus kebijakan publik",
+     "materi": [
+      "Siklus kebijakan umumnya: penyusunan agenda, formulasi, adopsi (legitimasi), implementasi, dan evaluasi.",
+      "Evaluasi ex-ante dilakukan sebelum kebijakan diterapkan untuk menilai alternatif. Evaluasi ex-post dilakukan setelah kebijakan berjalan."
+     ],
+     "poin": [
+      "Agenda → formulasi → adopsi → implementasi → evaluasi"
+     ]
+    },
+    {
+     "id": "ak-analisis",
+     "judul": "Analisis, dokumentasi, dan advokasi kebijakan",
+     "materi": [
+      "Analisis biaya–manfaat membandingkan alternatif kebijakan berdasarkan manfaat dan biaya yang dinyatakan dalam satuan sebanding.",
+      "Policy brief: ringkas, berbasis bukti, dan berisi rekomendasi yang bisa dijalankan.",
+      "Pemetaan pemangku kepentingan dengan matriks kekuatan–kepentingan: kekuatan tinggi dan kepentingan tinggi berarti pemain kunci yang harus dilibatkan secara dekat."
+     ],
+     "poin": [
+      "Policy brief: ringkas + rekomendasi",
+      "Power tinggi + interest tinggi = kelola dekat"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "skb-arsip",
+   "judul": "SKB Arsiparis Ahli Pertama",
+   "jenis": "SKB",
+   "jabatan": "Arsiparis",
+   "deskripsi": "Jabatan sekunder dengan dasar UU No. 43 Tahun 2009 tentang Kearsipan.",
+   "bab": [
+    {
+     "id": "arsip-konsep",
+     "judul": "Konsep dan regulasi kearsipan",
+     "materi": [
+      "Dasar hukum: UU No. 43 Tahun 2009 tentang Kearsipan dan PP No. 28 Tahun 2012 sebagai peraturan pelaksanaannya.",
+      "Arsip dinamis dipakai langsung dalam kegiatan pencipta arsip dan terdiri dari arsip vital, aktif, dan inaktif. Arsip statis memiliki nilai guna kesejarahan dan dikelola lembaga kearsipan.",
+      "Arsip vital adalah arsip yang menjadi syarat dasar kelangsungan operasional pencipta arsip dan tidak dapat diperbarui."
+     ],
+     "poin": [
+      "UU 43/2009, PP 28/2012",
+      "Dinamis: vital, aktif, inaktif"
+     ]
+    },
+    {
+     "id": "arsip-kelola",
+     "judul": "Pengelolaan dan penyusutan arsip",
+     "materi": [
+      "Jadwal Retensi Arsip (JRA) memuat jangka waktu simpan dan keterangan musnah atau permanen.",
+      "Penyusutan meliputi pemindahan arsip inaktif ke unit kearsipan, pemusnahan arsip yang tidak bernilai guna, dan penyerahan arsip statis ke lembaga kearsipan.",
+      "Preservasi menjaga keutuhan fisik dan informasi arsip, termasuk arsip elektronik."
+     ],
+     "poin": [
+      "JRA = dasar penyusutan",
+      "Statis diserahkan ke lembaga kearsipan"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "skb-fasil",
+   "judul": "SKB Fasilitator Pemerintahan",
+   "jenis": "SKB",
+   "jabatan": "Fasilitator Pemerintahan",
+   "deskripsi": "Jabatan sekunder dengan kursi terbanyak di Pemprov Jabar 2024.",
+   "bab": [
+    {
+     "id": "fasil-pemda",
+     "judul": "Pemerintahan daerah",
+     "materi": [
+      "UU No. 23 Tahun 2014 membagi urusan pemerintahan menjadi absolut (politik luar negeri, pertahanan, keamanan, yustisi, moneter dan fiskal nasional, agama), konkuren, dan pemerintahan umum.",
+      "Urusan konkuren wajib dibagi menjadi yang berkaitan dengan pelayanan dasar (pendidikan, kesehatan, pekerjaan umum, perumahan, ketenteraman, sosial) dan yang tidak.",
+      "PP No. 18 Tahun 2016: perangkat daerah provinsi terdiri dari sekretariat daerah, sekretariat DPRD, inspektorat, dinas, dan badan. Kecamatan adalah perangkat daerah kabupaten/kota.",
+      "PP No. 12 Tahun 2017 mengatur pembinaan dan pengawasan penyelenggaraan pemerintahan daerah."
+     ],
+     "poin": [
+      "Urusan absolut: 6 bidang",
+      "Kecamatan: perangkat kab/kota"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "skb-siaran",
+   "judul": "SKB Pranata Siaran Ahli Pertama",
+   "jenis": "SKB",
+   "jabatan": "Pranata Siaran",
+   "deskripsi": "Jabatan sekunder di lembaga penyiaran pemerintah.",
+   "bab": [
+    {
+     "id": "siaran-regulasi",
+     "judul": "Regulasi penyiaran dan pers",
+     "materi": [
+      "Penyiaran diatur UU No. 32 Tahun 2002. Lembaga Penyiaran Publik nasional adalah TVRI dan RRI.",
+      "Komisi Penyiaran Indonesia (KPI) menetapkan Pedoman Perilaku Penyiaran dan Standar Program Siaran (P3SPS).",
+      "Pers diatur UU No. 40 Tahun 1999, termasuk hak jawab dan hak koreksi. Kode Etik Jurnalistik mengatur antara lain hak tolak untuk melindungi narasumber.",
+      "Produksi siaran berjalan dalam tahap praproduksi, produksi, dan pascaproduksi."
+     ],
+     "poin": [
+      "Penyiaran: UU 32/2002",
+      "Pers: UU 40/1999",
+      "P3SPS: KPI"
+     ]
+    }
+   ]
+  }
+ ]
+}
