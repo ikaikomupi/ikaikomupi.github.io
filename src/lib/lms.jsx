@@ -1,5 +1,5 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
-import { supabase, LOGIN_GOOGLE_AKTIF } from "./supabase";
+import { supabase, LOGIN_GOOGLE_AKTIF, SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY } from "./supabase";
 
 // Penyimpanan progres LMS.
 // - Belum login (atau Supabase belum disambungkan): progres disimpan di browser (localStorage).
@@ -27,6 +27,20 @@ const LmsContext = createContext(null);
 export const useLms = () => useContext(LmsContext);
 export const loginTersedia = Boolean(supabase);
 export { LOGIN_GOOGLE_AKTIF };
+
+// Tombol Google muncul otomatis kalau provider Google sudah diaktifkan di dashboard Supabase.
+let cacheGoogle = null;
+export function useGoogleAktif() {
+  const [aktif, setAktif] = useState(LOGIN_GOOGLE_AKTIF);
+  useEffect(() => {
+    if (!supabase || LOGIN_GOOGLE_AKTIF) return;
+    (cacheGoogle ||= fetch(`${SUPABASE_URL}/auth/v1/settings`, { headers: { apikey: SUPABASE_PUBLISHABLE_KEY } })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => Boolean(d?.external?.google))
+      .catch(() => false)).then(setAktif);
+  }, []);
+  return aktif;
+}
 
 export function LmsProvider({ children }) {
   const [user, setUser] = useState(null);

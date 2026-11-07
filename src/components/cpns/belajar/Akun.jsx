@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ChevronLeft, Mail, LogOut, Save, CheckCircle2 } from "lucide-react";
-import { useLms, loginTersedia, LOGIN_GOOGLE_AKTIF } from "../../../lib/lms";
+import { useLms, loginTersedia, useGoogleAktif } from "../../../lib/lms";
 import { Section, Field, inputCls, Memuat } from "../ui";
 
 function FormMasuk() {
@@ -11,6 +11,7 @@ function FormMasuk() {
   const [tahap, setTahap] = useState("email");
   const [pesan, setPesan] = useState("");
   const [sibuk, setSibuk] = useState(false);
+  const googleAktif = useGoogleAktif();
 
   async function kirim(e) {
     e.preventDefault();
@@ -68,7 +69,7 @@ function FormMasuk() {
           </form>
         )}
         {pesan && <p className="text-sm text-rose-400">{pesan}</p>}
-        {LOGIN_GOOGLE_AKTIF && (
+        {googleAktif && (
           <>
             <div className="flex items-center gap-3 text-xs text-stone-600"><span className="h-px flex-1 bg-white/8" />atau<span className="h-px flex-1 bg-white/8" /></div>
             <button type="button" onClick={masukGoogle} className="w-full rounded-lg border border-white/10 py-2.5 text-sm font-medium text-stone-200 hover:bg-white/5">
