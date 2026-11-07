@@ -1,5 +1,6 @@
 import { BookOpen, Brain, MessageSquareQuote, Scale } from "lucide-react";
-import { JABATAN } from "../../data/cpnsJabatan";
+import { Link } from "react-router-dom";
+import { JABATAN, SUMBER_MATERI_SKB } from "../../data/cpnsJabatan";
 import { useLaporanAlumni, MIN_LAPORAN } from "../../lib/cpns";
 import { Section } from "./ui";
 
@@ -58,7 +59,7 @@ export default function Skb() {
         </div>
       </Section>
 
-      <Section icon={BookOpen} title="Materi per jabatan" desc="Gambaran umum materi kompetensi bidang. Kisi-kisi resmi tetap ikut pengumuman instansi.">
+      <Section icon={BookOpen} title="Materi pokok SKB per jabatan" desc="Materi resmi SKB dengan CAT dari KemenPAN-RB. Instansi bisa menambah tes lain di luar CAT." foot={`Sumber: ${SUMBER_MATERI_SKB}.`}>
         <div className="grid gap-3 sm:grid-cols-2">
           {JABATAN.map((j) => (
             <div key={j.id} className="rounded-2xl border border-white/8 bg-stone-900 p-5">
@@ -70,6 +71,9 @@ export default function Skb() {
               <ul className="list-disc space-y-1 pl-5 text-sm text-stone-300">
                 {j.skb.map((m) => <li key={m}>{m}</li>)}
               </ul>
+              {j.latihan && (
+                <Link to="/cpns/latihan" className="mt-3 inline-block text-sm font-medium text-amber-400 hover:text-amber-300">Latihan soal {j.latihan} →</Link>
+              )}
               {(j.pembina || j.jenjang) && (
                 <p className="mt-3 text-xs text-stone-500">
                   {j.jenjang && <>Jenjang: {j.jenjang}. </>}

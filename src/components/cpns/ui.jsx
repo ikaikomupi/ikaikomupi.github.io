@@ -4,6 +4,7 @@ import { AlertTriangle } from "lucide-react";
 export const TABS = [
   { to: "/cpns", label: "Ringkasan", end: true },
   { to: "/cpns/rekomendasi", label: "Rekomendasi" },
+  { to: "/cpns/latihan", label: "Latihan" },
   { to: "/cpns/lapor", label: "Lapor Hasil" },
   { to: "/cpns/skb", label: "Persiapan SKB" },
   { to: "/cpns/metodologi", label: "Metodologi" },

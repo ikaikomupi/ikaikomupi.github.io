@@ -6,6 +6,7 @@ import { CpnsHeader, Memuat } from "./cpns/ui";
 const Ringkasan = lazy(() => import("./cpns/Ringkasan"));
 const Rekomendasi = lazy(() => import("./cpns/Rekomendasi"));
 const Lapor = lazy(() => import("./cpns/Lapor"));
+const Latihan = lazy(() => import("./cpns/Latihan"));
 const Skb = lazy(() => import("./cpns/Skb"));
 const Metodologi = lazy(() => import("./cpns/Metodologi"));
 
@@ -19,6 +20,7 @@ export default function CpnsPage() {
           <Routes>
             <Route index element={<Ringkasan />} />
             <Route path="rekomendasi" element={<Rekomendasi />} />
+            <Route path="latihan" element={<Latihan />} />
             <Route path="lapor" element={<Lapor />} />
             <Route path="skb" element={<Skb />} />
             <Route path="metodologi" element={<Metodologi />} />
