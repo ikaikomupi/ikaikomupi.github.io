@@ -38,7 +38,7 @@ function FormMasuk() {
   }
 
   return (
-    <Section icon={Mail} title="Masuk ke KOMpas ASN" desc="Tanpa kata sandi. Kami kirim kode 6 digit ke email kamu. Akun baru otomatis dibuat saat pertama kali masuk.">
+    <Section icon={Mail} title="Masuk ke KOMpas ASN" desc="Tanpa kata sandi. Kami kirim link masuk ke email kamu. Akun baru otomatis dibuat saat pertama kali masuk.">
       <div className="max-w-md space-y-4 rounded-2xl border border-white/8 bg-stone-900 p-5">
         {tahap === "email" ? (
           <form onSubmit={kirim} className="space-y-3">
@@ -46,16 +46,20 @@ function FormMasuk() {
               <input type="email" required autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} className={inputCls} placeholder="nama@email.com" />
             </Field>
             <button disabled={sibuk} className="w-full rounded-lg bg-amber-500 py-2.5 text-sm font-semibold text-ink hover:bg-amber-400 disabled:opacity-50">
-              {sibuk ? "Mengirim…" : "Kirim kode"}
+              {sibuk ? "Mengirim…" : "Kirim link masuk"}
             </button>
           </form>
         ) : (
           <form onSubmit={verifikasi} className="space-y-3">
-            <p className="text-sm text-stone-400">Kode dikirim ke <strong className="text-stone-200">{email}</strong>. Cek juga folder spam.</p>
-            <Field label="Kode 6 digit">
-              <input inputMode="numeric" autoComplete="one-time-code" required maxLength={6} value={kode} onChange={(e) => setKode(e.target.value.replace(/\D/g, ""))} className={`${inputCls} text-center text-lg tracking-[0.4em] tabular-nums`} />
+            <p className="text-sm text-stone-400">
+              Email dikirim ke <strong className="text-stone-200">{email}</strong>. Buka email itu lalu klik link masuk, sebaiknya di browser ini.
+              Cek juga folder spam.
+            </p>
+            <p className="text-xs text-stone-500">Kalau emailnya berisi kode angka, masukkan di sini:</p>
+            <Field label="Kode dari email">
+              <input inputMode="numeric" autoComplete="one-time-code" required maxLength={8} value={kode} onChange={(e) => setKode(e.target.value.replace(/\D/g, ""))} className={`${inputCls} text-center text-lg tracking-[0.4em] tabular-nums`} />
             </Field>
-            <button disabled={sibuk || kode.length !== 6} className="w-full rounded-lg bg-amber-500 py-2.5 text-sm font-semibold text-ink hover:bg-amber-400 disabled:opacity-50">
+            <button disabled={sibuk || kode.length < 6} className="w-full rounded-lg bg-amber-500 py-2.5 text-sm font-semibold text-ink hover:bg-amber-400 disabled:opacity-50">
               {sibuk ? "Memeriksa…" : "Masuk"}
             </button>
             <button type="button" onClick={() => { setTahap("email"); setKode(""); }} className="w-full text-sm text-stone-500 hover:text-stone-300">

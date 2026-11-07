@@ -4,6 +4,13 @@ Tanpa langkah ini LMS tetap jalan, tapi progres hanya tersimpan di browser masin
 
 Project: `uymrybcwguwyeqrojnyw` (https://supabase.com/dashboard/project/uymrybcwguwyeqrojnyw)
 
+## Status (8 Nov 2026)
+
+Sudah: CLI terhubung, database + RLS terpasang (2 migration), pengaturan auth (site URL, redirect URL, kode 6 digit) terpasang, publishable key dipasang di `src/lib/supabase.js`.
+Belum: login Google atau SMTP sendiri (langkah 4). Template email kode 6 digit baru bisa dipasang setelah SMTP aktif: buka komentar blok template di `supabase/config.toml`, lalu `supabase config push --remote=uymrybcwguwyeqrojnyw`. Sampai saat itu email berisi link masuk.
+
+Catatan CLI: jalankan perintah yang mengubah project dengan `--remote` dan `--yes`, dan `supabase login` harus dari aplikasi Terminal (butuh terminal interaktif).
+
 ## 1. Login CLI dengan akun pemilik project
 
 CLI di laptop ini sekarang login dengan akun yang **tidak punya akses** ke project di atas (error 403).
