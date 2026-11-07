@@ -27,7 +27,7 @@ function Kartu({ f, info, referensi }) {
 
       <ul className="mt-3 space-y-1.5 text-sm text-stone-300">
         <li>
-          Skormu <strong className="tabular-nums">{info.total}</strong>, skor terendah yang lolos ke SKB {teksRentang(info.r)}.
+          Skormu <strong className="tabular-nums">{info.total}</strong>, SKD pemenang di formasi ini {teksRentang(info.r)}.
           {info.r.n === 1 && <span className="text-stone-500"> Baru 1 tahun data, jadi rentangnya belum bisa dihitung.</span>}
         </li>
         <li>
@@ -35,10 +35,13 @@ function Kartu({ f, info, referensi }) {
           {info.p.nilai < 1 && <span className="text-emerald-400"> (kursinya lebih banyak dari pesaing)</span>}
           {info.persentil != null && <span className="text-stone-500">, lebih longgar dari {info.persentil}% formasi lain di daftar ini</span>}.
         </li>
-        <li>Kuota {f.kuota} kursi di seleksi {f.tahun}.</li>
+        <li>Kuota {f.kuota} kursi di seleksi {f.tahun}.{f.skd_min_pemenang != null && <> SKD pemenang terendah: <strong className="tabular-nums">{f.skd_min_pemenang}</strong>.</>}</li>
+        {f.peserta_ikom != null && (
+          <li>Lulusan Ilmu Komunikasi di formasi ini: {f.peserta_ikom} ikut SKB, {f.pemenang_ikom} menang.</li>
+        )}
         {infoKosong(f) && <li className="text-emerald-300">{infoKosong(f)}: kursinya nggak terisi karena peserta gugur atau nggak ada pesaing.</li>}
         {f.nilai_akhir_median != null && <li>Median nilai akhir pemenang: <strong className="tabular-nums">{f.nilai_akhir_median.toLocaleString("id-ID")}</strong>.</li>}
-        {f.gagal_psikotes != null && f.peserta_skb > 0 && <li>{Math.round((f.gagal_psikotes / f.peserta_skb) * 100)}% peserta SKB di sini gugur psikotes.</li>}
+        {f.gagal_psikotes > 0 && f.peserta_skb > 0 && <li className="text-rose-300">{Math.round((f.gagal_psikotes / f.peserta_skb) * 100)}% peserta yang hadir SKB di sini gugur (TMS-1, biasanya psikotes).</li>}
       </ul>
 
       <div className="mt-4 grid gap-3 border-t border-white/6 pt-4 text-xs text-stone-400 sm:grid-cols-3">
@@ -123,8 +126,8 @@ export default function Rekomendasi() {
   return (
     <>
       <Peringatan>
-        Rekomendasi ini memakai data contoh selama hasil scrape belum masuk. Labelnya cuma soal peluang <strong>lolos ke tahap SKB</strong>,
-        belum lolos akhir. Cara hitungnya ada di <Link to="/cpns/metodologi" className="underline">Metodologi</Link>.
+        Rekomendasi memakai data asli CPNS 2024 (14 instansi pusat dan Pemprov Jabar). Labelnya soal peluang <strong>lolos ke tahap SKB</strong>,
+        belum lolos akhir. Karena baru ada data satu tahun, formasi tahun depan bisa berbeda. Cara hitungnya ada di <Link to="/cpns/metodologi" className="underline">Metodologi</Link>.
       </Peringatan>
 
       <Section icon={UserRound} title="Profil kamu" desc="Jurusan dikunci ke S-1 Ilmu Komunikasi. Data ini nggak disimpan ke mana pun.">

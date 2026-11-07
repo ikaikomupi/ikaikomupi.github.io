@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { Timer, PlayCircle, BookOpen, CheckCircle2, XCircle, RotateCcw, ChevronLeft, ChevronRight, Flag } from "lucide-react";
-import { useCpnsData, tahunTerbaru, lolosAmbang, AMBANG } from "../../lib/cpns";
+import { useCpnsData, lolosAmbang, AMBANG, useJson } from "../../lib/cpns";
 import { JABATAN, SUMBER_MATERI_SKB } from "../../data/cpnsJabatan";
 import { Section, Memuat, Pill, Peringatan } from "./ui";
 
@@ -210,14 +210,15 @@ export function HasilSkd({ soal, jawab, formasi }) {
   const { bagian, n, total } = hitungSkd(soal, jawab);
   const ambang = lolosAmbang("Umum", n);
 
-  const th = formasi.length ? tahunTerbaru(formasi) : null;
-  const pembanding = formasi.filter((f) => f.tahun === th && f.skd_min != null && f.jenis_formasi === "Umum" && f.kategori !== "S-2 ke atas");
-  const jkt = pembanding.filter((f) => f.provinsi === "DKI Jakarta");
-  const luar = pembanding.filter((f) => f.provinsi && f.provinsi !== "DKI Jakarta");
-  const baris = [
-    { label: "Jakarta", rows: jkt },
-    { label: "Luar Jakarta", rows: luar },
-  ].map((g) => ({ ...g, med: median(g.rows.map((f) => f.skd_min)), tembus: g.rows.filter((f) => total >= f.skd_min).length }));
+  const target = useJson("/data/cpns/target-2024.json").data;
+  const LABEL = { "Pusat (Jakarta)": "Pusat Jakarta", "Daerah - Jawa": "Daerah di Jawa", "Daerah - Luar Jawa": "Luar Jawa" };
+  const baris = (target?.per_wilayah || []).filter((w) => LABEL[w.nama] && ["Primer", "Sekunder"].includes(w.kategori));
+  const status = (w) =>
+    total >= w.skd_rata_pemenang
+      ? { t: "Aman", cls: "text-emerald-400" }
+      : total >= w.skd_min_pemenang
+      ? { t: "Di zona menang", cls: "text-amber-400" }
+      : { t: "Di bawah pemenang terendah", cls: "text-rose-400" };
 
   return (
     <div className="space-y-4">
@@ -238,23 +239,32 @@ export function HasilSkd({ soal, jawab, formasi }) {
       <p className={`text-sm ${ambang.ok ? "text-emerald-400" : "text-rose-400"}`}>{ambang.ok ? "Perkiraanmu lolos ambang batas formasi umum." : ambang.alasan}</p>
 
       <div className="rounded-2xl border border-white/8 bg-stone-900 p-5">
-        <h3 className="mb-1 font-semibold text-stone-100">Dibandingkan skor terendah ke SKB, seleksi {th ?? "–"}</h3>
-        <p className="mb-4 text-sm text-stone-500">Formasi umum untuk S-1 Ilmu Komunikasi. Di Jakarta biasanya butuh skor lebih tinggi.</p>
-        <div className="grid gap-3 sm:grid-cols-2">
-          {baris.map((g) => (
-            <div key={g.label} className="rounded-xl bg-stone-950 p-4">
-              <p className="text-sm font-semibold text-stone-200">{g.label}</p>
-              {g.rows.length ? (
-                <>
-                  <p className="mt-1 text-sm text-stone-400">Median skor min. ke SKB: <strong className="tabular-nums text-stone-100">{g.med}</strong></p>
-                  <p className="text-sm text-stone-400">Skormu tembus <strong className="tabular-nums text-stone-100">{g.tembus}</strong> dari {g.rows.length} formasi</p>
-                </>
-              ) : (
-                <p className="mt-1 text-sm text-stone-500">Belum ada data.</p>
-              )}
-            </div>
-          ))}
-        </div>
+        <h3 className="mb-1 font-semibold text-stone-100">Dibandingkan pemenang CPNS 2024</h3>
+        <p className="mb-4 text-sm text-stone-500">Formasi yang menerima Ilmu Komunikasi. Target aman = rata-rata SKD pemenang, minimum = SKD pemenang terendah.</p>
+        {baris.length ? (
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-[480px] text-left text-sm">
+              <thead className="text-xs text-stone-500">
+                <tr><th className="py-2 font-medium">Kategori · wilayah</th><th className="py-2 text-right font-medium">Minimum</th><th className="py-2 text-right font-medium">Target aman</th><th className="py-2 text-right font-medium">Skormu</th></tr>
+              </thead>
+              <tbody className="divide-y divide-white/5">
+                {baris.map((w) => {
+                  const st = status(w);
+                  return (
+                    <tr key={w.kategori + w.nama}>
+                      <td className="py-2 text-stone-300">{w.kategori === "Primer" ? "Humas" : "Sekunder"} · {LABEL[w.nama]}</td>
+                      <td className="py-2 text-right tabular-nums text-stone-400">{w.skd_min_pemenang}</td>
+                      <td className="py-2 text-right tabular-nums text-stone-200">{w.skd_rata_pemenang}</td>
+                      <td className={`py-2 text-right text-xs font-semibold ${st.cls}`}>{st.t}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        ) : (
+          <p className="text-sm text-stone-500">Memuat data pembanding…</p>
+        )}
         <p className="mt-3 text-sm text-stone-400">
           Lihat formasi mana aja yang cocok di <Link to="/cpns/rekomendasi" className="font-medium text-amber-400 hover:text-amber-300">Rekomendasi →</Link>
         </p>

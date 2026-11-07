@@ -1,5 +1,16 @@
 # Format data KOMpas ASN (`/cpns`)
 
+## Cara cepat: impor file analisis tim IKA
+
+```
+python3 -I scripts/cpns/impor-analisis.py ~/Downloads/Analisis_Formasi_IKOM_CPNS2024.xlsx
+npm run cpns:cek
+```
+
+Skrip ini menulis `formasi.json`, `target-2024.json` (target SKD per K/L dan wilayah), dan `sebaran-2024.json`
+(pasangan nilai SKD–SKB tanpa identitas). Nomor peserta tidak pernah ditulis ke file website.
+Baris Pemprov Jawa Barat yang sudah ada dipertahankan.
+
 Hasil scrape cukup ditaruh di `public/data/cpns/formasi.json`, lalu cek dengan:
 
 ```
@@ -30,8 +41,10 @@ Kalau lolos cek, commit dan push. Website otomatis memakai data baru.
 | `kategori` | ya | `Primer` (humas), `Sekunder` (campuran: protokol, fasilitator, semua jurusan), `S-2 ke atas` (dosen, widyaiswara, peneliti) |
 | `pendidikan` | ya | `S-1` atau `S-2`. Jabatan terampil/D-III tidak dimasukkan |
 | `jurusan` | ya | Array nama jurusan persis seperti di lampiran formasi |
-| `jenis_formasi` | ya | `Umum`, `Cumlaude`, `Disabilitas`, atau `Putra/Putri Papua` |
+| `jenis_formasi` | ya | `Umum`, `Cumlaude`, `Disabilitas`, `Putra/Putri Papua`, atau `Putra/Putri Kalimantan` |
 | `kuota` | ya | Jumlah kursi |
+| `wilayah` | tidak | `Pusat (Jakarta)`, `Daerah - Jawa`, `Daerah - Luar Jawa`, atau `Nasional` |
+| `kawasan` | tidak | Jawa, Sumatera, Kalimantan, Sulawesi, Bali–Nusa Tenggara, Maluku–Papua (dipakai kalau provinsi tidak diketahui) |
 | `pelamar` | tidak* | Jumlah pelamar |
 | `peserta` | tidak* | Jumlah peserta hadir SKD |
 | `lolos_pg` | tidak* | Jumlah peserta lolos ambang batas SKD |
@@ -40,7 +53,9 @@ Kalau lolos cek, commit dan push. Website otomatis memakai data baru.
 | `peserta_skb` | tidak | Jumlah peserta SKB |
 | `gagal_psikotes` | tidak | Jumlah peserta SKB yang gugur psikotes |
 | `nilai_akhir_median` | tidak | Median nilai akhir pemenang |
-| `sumber` | ya | Sumber data (nama dokumen / situs) |
+| `skd_min_pemenang`, `skd_median_pemenang` | tidak | SKD pemenang terendah / median (patokan rekomendasi) |
+| `peserta_ikom`, `pemenang_ikom` | tidak | Peserta SKB dan pemenang berpendidikan Ilmu Komunikasi |
+| `sumber` | ya* | Sumber data. Boleh ditulis sekali di bagian atas file (`"sumber": ...`) |
 
 \* Minimal satu dari `pelamar`, `peserta`, `lolos_pg` harus ada. Persaingan dihitung dari yang paling akurat: `lolos_pg` → `peserta` → `pelamar`.
 

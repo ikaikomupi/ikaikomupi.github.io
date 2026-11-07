@@ -9,10 +9,10 @@ const ENUM = {
   jenis_instansi: ["Pusat", "Daerah"],
   kategori: ["Primer", "Sekunder", "S-2 ke atas"],
   pendidikan: ["S-1", "S-2"],
-  jenis_formasi: ["Umum", "Cumlaude", "Disabilitas", "Putra/Putri Papua"],
+  jenis_formasi: ["Umum", "Cumlaude", "Disabilitas", "Putra/Putri Papua", "Putra/Putri Kalimantan"],
 };
-const WAJIB = ["id", "asli", "tahun", "instansi", "jenis_instansi", "jabatan", "kategori", "pendidikan", "jurusan", "jenis_formasi", "kuota", "sumber"];
-const ANGKA = ["tahun", "kuota", "pelamar", "peserta", "lolos_pg", "skd_min", "kursi_terisi", "peserta_skb", "gagal_psikotes", "nilai_akhir_median"];
+const WAJIB = ["id", "asli", "tahun", "instansi", "jenis_instansi", "jabatan", "kategori", "pendidikan", "jurusan", "jenis_formasi", "kuota"];
+const ANGKA = ["tahun", "kuota", "pelamar", "peserta", "lolos_pg", "skd_min", "skd_max", "skd_min_pemenang", "skd_median_pemenang", "skb_min_pemenang", "nilai_akhir_min", "nilai_akhir_median", "kursi_terisi", "peserta_skb", "gagal_psikotes", "peserta_ikom", "pemenang_ikom"];
 
 const err = [], warn = [];
 if (!Array.isArray(data.formasi)) err.push("Field `formasi` harus array.");
@@ -23,6 +23,7 @@ const ids = new Set();
   WAJIB.forEach((k) => (f[k] === undefined || f[k] === "") && err.push(`${at}: field wajib \`${k}\` kosong`));
   ANGKA.forEach((k) => f[k] != null && typeof f[k] !== "number" && err.push(`${at}: \`${k}\` harus angka, bukan ${JSON.stringify(f[k])}`));
   Object.entries(ENUM).forEach(([k, v]) => f[k] != null && !v.includes(f[k]) && err.push(`${at}: \`${k}\` = ${JSON.stringify(f[k])}, harus salah satu dari ${v.join(" / ")}`));
+  if (!f.sumber && !data.sumber) err.push(`${at}: isi \`sumber\` di baris ini atau di bagian atas file`);
   if (ids.has(f.id)) err.push(`${at}: id dobel`);
   ids.add(f.id);
   if (f.pelamar == null && f.peserta == null && f.lolos_pg == null) err.push(`${at}: isi minimal salah satu dari pelamar / peserta / lolos_pg`);

@@ -5,7 +5,7 @@ import { Section } from "./ui";
 const SUMBER = [
   { judul: "Data formasi", sumber: "SSCASN (sscasn.bkn.go.id)", isi: "Instansi, unit, jabatan, jenis formasi, lokasi, kuota, dan daftar jurusan yang diterima.", status: "Scraping" },
   { judul: "Pelamar, peserta, dan yang lolos ambang", sumber: "SSCASN + rekap SKD instansi", isi: "Dasar hitung persaingan per kursi.", status: "Scraping" },
-  { judul: "Hasil SKD & SKB", sumber: "Pengumuman tiap instansi (PDF)", isi: "Skor terendah ke SKB, nilai akhir pemenang, kursi terisi, peserta gugur psikotes. Diunduh manual.", status: "Manual" },
+  { judul: "Hasil SKD & SKB 2024", sumber: "PDF Hasil Integrasi SKD-SKB 14 instansi pusat (SSCASN/BKN) + rekap Pemprov Jabar", isi: "942 formasi yang menerima Ilmu Komunikasi, 7.579 peserta SKB: kursi, kosong, gugur TMS-1, SKD/SKB/nilai akhir pemenang. Dianalisis tim IKA.", status: "Sudah masuk" },
   { judul: "Laporan alumni", sumber: "Form Lapor Hasil di KOMpas ASN", isi: "Formasi yang dipilih, skor, hasil, dan tips dari alumni Ikom UPI.", status: "Form" },
 ];
 
@@ -29,9 +29,12 @@ export default function Metodologi() {
           <Def istilah="Persaingan per kursi">
             Jumlah pesaing dibagi kuota. Dasar hitungnya dipilih dari yang paling akurat yang tersedia: peserta lolos ambang batas, lalu peserta hadir SKD, lalu pelamar. Nilai di bawah 1 berarti kursinya lebih banyak dari pesaing.
           </Def>
-          <Def istilah="Skor min. ke SKB">Skor SKD terendah yang masih lolos ke tahap SKB di formasi itu. Ini bukan syarat lolos akhir.</Def>
+          <Def istilah="SKD min. ke SKB">Skor SKD terendah yang masih lolos ke tahap SKB di formasi itu. Ini bukan syarat lolos akhir.</Def>
+          <Def istilah="SKD pemenang">SKD milik peserta yang dinyatakan lulus akhir (P/L). Dipakai sebagai patokan rekomendasi: median SKD pemenang per formasi, atau SKD pemenang terendah kalau median tidak tersedia.</Def>
+          <Def istilah="Target SKD per instansi">Batas minimum = SKD pemenang terendah di instansi dan kategori itu. Target aman = rata-rata SKD pemenang.</Def>
+          <Def istilah="Lulusan Ilmu Komunikasi per formasi">Jumlah peserta SKB dan pemenang yang pendidikannya tertulis Ilmu Komunikasi. Dihitung dari data per peserta, lalu hanya angka gabungannya yang ditampilkan.</Def>
           <Def istilah="Rentang skor">
-            Skor min. ke SKB dari semua tahun yang ada datanya untuk formasi yang sama (instansi, unit, jabatan, dan jenis formasi sama).
+            Patokan SKD pemenang dari semua tahun yang ada datanya untuk formasi yang sama (instansi, unit, jabatan, dan jenis formasi sama). Saat ini baru ada data 2024.
           </Def>
           <Def istilah="Kursi kosong">Kuota dikurangi kursi yang terisi setelah pengumuman akhir. Kursi bisa kosong karena tidak ada pelamar atau semua peserta gugur, misalnya di psikotes.</Def>
           <Def istilah="Nilai akhir">Integrasi SKD 40% dan SKB 60%.</Def>
@@ -45,9 +48,9 @@ export default function Metodologi() {
             <strong className="text-stone-100">1. Ambang batas.</strong> Skor dicek ke ambang SKD tiap jenis formasi.{" "}
             {Object.entries(AMBANG).map(([k, a]) => `${k}: ${a.label}${a.cek ? " (sementara)" : ""}`).join(" · ")}.
           </p>
-          <p><strong className="text-stone-100">2. Rentang.</strong> Untuk tiap formasi seleksi terbaru, dihitung rentang skor min. ke SKB dari tahun-tahun sebelumnya.</p>
+          <p><strong className="text-stone-100">2. Rentang.</strong> Untuk tiap formasi seleksi terbaru, diambil patokan SKD pemenangnya (rentang kalau ada data beberapa tahun).</p>
           <div>
-            <p><strong className="text-stone-100">3. Label peluang ke SKB.</strong></p>
+            <p><strong className="text-stone-100">3. Label peluang dibanding SKD pemenang.</strong></p>
             <ul className="mt-1 list-disc space-y-1 pl-5 text-stone-400">
               <li>Data ≥ 2 tahun. Aman: skor ≥ batas atas + {MARGIN.amanMulti}. Realistis: skor ≥ median. Spekulatif: skor ≥ batas bawah − {MARGIN.spekMulti}.</li>
               <li>Data 1 tahun (lebih tidak pasti, jadi marginnya lebih lebar). Aman: skor ≥ nilai + {MARGIN.amanSatu}. Realistis: skor ≥ nilai. Spekulatif: skor ≥ nilai − {MARGIN.spekSatu}.</li>

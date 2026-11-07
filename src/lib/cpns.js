@@ -23,6 +23,7 @@ export const AMBANG = {
   Cumlaude: { total: 311, tiuMin: 85, label: "Total ≥ 311 dengan TIU ≥ 85", cek: true },
   Disabilitas: { total: 286, tiuMin: 60, label: "Total ≥ 286 dengan TIU ≥ 60", cek: true },
   "Putra/Putri Papua": { total: 286, tiuMin: 60, label: "Total ≥ 286 dengan TIU ≥ 60", cek: true },
+  "Putra/Putri Kalimantan": { per: { twk: 65, tiu: 80, tkp: 166 }, label: "TWK 65 · TIU 80 · TKP 166", cek: true },
 };
 export const JENIS_FORMASI = Object.keys(AMBANG);
 
@@ -81,7 +82,7 @@ export const formatTanggal = (iso) =>
 // Nilai di bawah 1 artinya kursinya lebih banyak dari pesaingnya.
 export const persaingan = (f) => {
   const [n, basis] =
-    f.lolos_pg != null ? [f.lolos_pg, "lolos ambang"] : f.peserta != null ? [f.peserta, "peserta"] : [f.pelamar, "pelamar"];
+    f.lolos_pg != null ? [f.lolos_pg, "lolos ambang"] : f.peserta != null ? [f.peserta, "peserta SKB"] : [f.pelamar, "pelamar"];
   return { nilai: n / f.kuota, basis };
 };
 
@@ -89,7 +90,10 @@ export const fmtRasio = (v) =>
   v < 10 ? v.toLocaleString("id-ID", { maximumFractionDigits: 2 }) : Math.round(v).toLocaleString("id-ID");
 
 export const BELUM_TERPETAKAN = "Belum terpetakan";
-export const namaProvinsi = (f) => f.provinsi || BELUM_TERPETAKAN;
+export const namaProvinsi = (f) => f.provinsi || (f.kawasan ? `${f.kawasan} (regional)` : BELUM_TERPETAKAN);
+// Pusat (Jakarta) / Daerah - Jawa / Daerah - Luar Jawa / Nasional. Data lama tanpa field wilayah diturunkan dari provinsi.
+export const wilayahOf = (f) =>
+  f.wilayah || (f.provinsi === "DKI Jakarta" ? "Pusat (Jakarta)" : f.provinsi ? (regionOf(f.provinsi) === "Jawa" ? "Daerah - Jawa" : "Daerah - Luar Jawa") : null);
 
 // Formasi dianggap "sama" antar tahun kalau instansi, unit, jabatan, dan jenis formasinya sama.
 export const kunci = (f) => [f.instansi, f.unit || "", f.jabatan, f.jenis_formasi].join("|").toLowerCase();
@@ -99,8 +103,10 @@ export function riwayat(semua, f) {
   return semua.filter((x) => kunci(x) === k).sort((a, b) => a.tahun - b.tahun);
 }
 
+// Patokan SKD per formasi: median SKD pemenang → SKD pemenang terendah → SKD terendah yang masuk SKB.
+export const patokanSkd = (h) => h.skd_median_pemenang ?? h.skd_min_pemenang ?? h.skd_min;
 export function rentang(hist) {
-  const v = hist.map((h) => h.skd_min).filter((x) => x != null).sort((a, b) => a - b);
+  const v = hist.map(patokanSkd).filter((x) => x != null).sort((a, b) => a - b);
   if (!v.length) return null;
   const mid = Math.floor(v.length / 2);
   const median = v.length % 2 ? v[mid] : Math.round((v[mid - 1] + v[mid]) / 2);
@@ -161,6 +167,7 @@ export const REGION = {
   "Maluku–Papua": ["Maluku", "Maluku Utara", "Papua", "Papua Barat"],
 };
 export const regionOf = (prov) => Object.keys(REGION).find((r) => REGION[r].includes(prov)) || null;
+const kawasanOf = (f) => (f.kawasan ? f.kawasan.replace("-", "–") : regionOf(f.provinsi));
 
 const pct = (a, b) => (b ? Math.round((a / b) * 100) : 0);
 const med = (v) => {
@@ -187,48 +194,85 @@ export function temuan(rows) {
   const out = [];
   const adaIsi = rows.filter((f) => f.kursi_terisi != null);
   if (adaIsi.length >= 5) {
-    const reg = kosongPer(adaIsi, (f) => regionOf(f.provinsi)).sort((a, b) => b.kosongPct - a.kosongPct);
+    const reg = kosongPer(adaIsi, kawasanOf).sort((a, b) => b.kosongPct - a.kosongPct);
     const jawa = reg.find((r) => r.k === "Jawa");
-    const sepi = reg.filter((r) => r.k !== "Jawa" && r.kosongPct >= 30);
+    const sepi = reg.filter((r) => r.k !== "Jawa" && r.kosongPct >= 20);
     if (sepi.length) {
       out.push({
         judul: "Luar Jawa banyak kursi kosong",
         isi: `${sepi.map((r) => `${r.k}: ${r.kursi} kursi, ${r.kosongPct}% kosong`).join(" · ")}${jawa ? `. Bandingkan Jawa: ${jawa.kosongPct}% kosong` : ""}.`,
-        saran: "Kalau siap ditempatkan di luar Jawa, peluangmu jauh lebih besar. Banyak kursi di sana kosong karena nggak ada pelamar yang memenuhi syarat.",
-      });
-    }
-    const pusat = adaIsi.filter((f) => f.jenis_instansi === "Pusat");
-    const kantorPusat = kosongPer(pusat.filter((f) => f.provinsi === "DKI Jakarta"), () => "x")[0];
-    const balai = kosongPer(pusat.filter((f) => f.provinsi && f.provinsi !== "DKI Jakarta"), () => "x")[0];
-    if (kantorPusat && balai && balai.kosongPct - kantorPusat.kosongPct >= 15) {
-      out.push({
-        judul: "Kantor pusat ketat, unit daerah longgar",
-        isi: `Di K/L, unit di Jakarta ${kantorPusat.kosongPct}% kosong${kantorPusat.nilai ? ` dengan median nilai akhir pemenang ${kantorPusat.nilai.toFixed(1)}` : ""}. Unit/balai di daerah ${balai.kosongPct}% kosong${balai.nilai ? ` dengan median ${balai.nilai.toFixed(1)}` : ""}.`,
-        saran: "Kalau incaranmu kementerian, lirik balai atau kantor wilayahnya di daerah. Nilai yang dibutuhkan biasanya lebih rendah.",
+        saran: "Kalau siap ditempatkan di luar Jawa, peluangmu jauh lebih besar. Banyak kursi di sana kosong karena pesertanya sedikit atau gugur.",
       });
     }
   }
-  const adaPsi = rows.filter((f) => f.gagal_psikotes != null && f.peserta_skb);
-  if (adaPsi.length >= 3) {
-    const gagal = adaPsi.reduce((s, f) => s + f.gagal_psikotes, 0);
-    const ikut = adaPsi.reduce((s, f) => s + f.peserta_skb, 0);
-    if (pct(gagal, ikut) >= 20) {
-      out.push({
-        judul: "Psikotes jadi penyaring besar",
-        isi: `${pct(gagal, ikut)}% peserta SKB di formasi yang ada datanya gugur di psikotes.`,
-        saran: "Latih psikotes sejak awal. Di banyak unit, SKD dan SKB pas-pasan pun cukup asal lolos psikotes.",
-      });
-    }
+
+  const medianPer = (w) => med(rows.filter((f) => wilayahOf(f) === w).map((f) => f.skd_median_pemenang ?? f.skd_min_pemenang));
+  const mPusat = medianPer("Pusat (Jakarta)");
+  const mJawa = medianPer("Daerah - Jawa");
+  const mLuar = medianPer("Daerah - Luar Jawa");
+  const atas = Math.max(mPusat ?? 0, mJawa ?? 0);
+  if (mLuar && atas && atas - mLuar >= 8) {
+    out.push({
+      judul: "Jawa dan Jakarta butuh SKD lebih tinggi",
+      isi: `Median SKD pemenang per formasi: ${[mJawa && `daerah Jawa ${Math.round(mJawa)}`, mPusat && `pusat Jakarta ${Math.round(mPusat)}`, `luar Jawa ${Math.round(mLuar)}`].filter(Boolean).join(", ")}.`,
+      saran: `Mau tetap di Jawa atau Jakarta? Targetkan SKD sekitar ${Math.round(atas)} ke atas. Di luar Jawa, sekitar ${Math.round(mLuar)} sudah sering cukup.`,
+    });
   }
+
+  const perInstansi = {};
+  rows.filter((f) => f.gagal_psikotes != null && f.peserta_skb).forEach((f) => {
+    const x = (perInstansi[f.instansi] ||= { hadir: 0, gugur: 0 });
+    x.hadir += f.peserta_skb;
+    x.gugur += f.gagal_psikotes;
+  });
+  const gugurTinggi = Object.entries(perInstansi)
+    .filter(([, v]) => v.hadir >= 20 && pct(v.gugur, v.hadir) >= 25)
+    .sort((a, b) => pct(b[1].gugur, b[1].hadir) - pct(a[1].gugur, a[1].hadir));
+  if (gugurTinggi.length) {
+    out.push({
+      judul: "Banyak yang gugur di tahap SKB",
+      isi: gugurTinggi.map(([k, v]) => `${k}: ${pct(v.gugur, v.hadir)}% peserta yang hadir gugur (TMS-1)`).join(" · ") + ".",
+      saran: "Gugur TMS-1 biasanya karena tidak lolos tes tambahan seperti psikotes. Di instansi ini, persiapan psikotes sama pentingnya dengan SKD.",
+    });
+  }
+
+  const adaIkom = rows.filter((f) => f.pemenang_ikom != null && f.kursi_terisi);
+  const menang = adaIkom.reduce((s, f) => s + f.pemenang_ikom, 0);
+  const terisi = adaIkom.reduce((s, f) => s + f.kursi_terisi, 0);
+  if (terisi >= 10) {
+    const ikut = adaIkom.reduce((s, f) => s + (f.peserta_ikom || 0), 0);
+    out.push({
+      judul: "Lulusan Ilmu Komunikasi bersaing dengan jurusan lain",
+      isi: `Lulusan S-1/S-2 Ilmu Komunikasi memenangkan ${menang} dari ${terisi} kursi terisi (${pct(menang, terisi)}%), dari ${ikut} peserta SKB berlatar Ilmu Komunikasi.`,
+      saran: "Banyak formasi juga menerima jurusan lain. Bandingkan dengan jumlah pemenang Ilkom di tiap formasi sebelum memilih.",
+    });
+  }
+
   const satuKursi = rows.filter((f) => f.kuota === 1).length;
   if (rows.length >= 5 && pct(satuKursi, rows.length) >= 40) {
     out.push({
       judul: "Banyak formasi cuma 1 kursi",
       isi: `${pct(satuKursi, rows.length)}% formasi di daftar ini cuma membuka 1 kursi.`,
-      saran: "Di formasi 1 kursi, satu pesaing bernilai tinggi bisa langsung menentukan. Cek juga riwayat skornya sebelum memilih.",
+      saran: "Di formasi 1 kursi, satu pesaing bernilai tinggi bisa langsung menentukan. Dan karena bobot SKB 60%, peraih SKD tertinggi pun sering kalah.",
     });
   }
   return out;
+}
+
+// ---------- Data tambahan: target SKD & sebaran nilai ----------
+const cacheJson = {};
+export function useJson(path) {
+  const [s, setS] = useState({ loading: true, data: null });
+  useEffect(() => {
+    let alive = true;
+    (cacheJson[path] ||= fetch(path).then((r) => (r.ok ? r.json() : null)).catch(() => null)).then(
+      (d) => alive && setS({ loading: false, data: d })
+    );
+    return () => {
+      alive = false;
+    };
+  }, [path]);
+  return s;
 }
 
 export const infoKosong = (f) =>
