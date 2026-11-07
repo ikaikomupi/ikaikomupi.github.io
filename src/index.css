@@ -15,18 +15,18 @@
 }
 :root[data-theme="light"] {
   color-scheme: light;
-  --color-stone-950: oklch(98.5% 0.001 106.423);
-  --color-stone-900: oklch(100% 0 0);
-  --color-stone-800: oklch(97% 0.001 106.424);
-  --color-stone-700: oklch(92.3% 0.003 48.717);
-  --color-stone-600: oklch(55.3% 0.013 58.071);
-  --color-stone-500: oklch(48% 0.012 65);
-  --color-stone-400: oklch(37.4% 0.01 67.558);
-  --color-stone-300: oklch(26.8% 0.007 34.298);
-  --color-stone-200: oklch(21.6% 0.006 56.043);
-  --color-stone-100: oklch(14.7% 0.004 49.25);
-  --color-stone-50: oklch(14.7% 0.004 49.25);
-  --color-white: oklch(14.7% 0.004 49.25);
+  --color-stone-950: oklch(95.6% 0.008 85);
+  --color-stone-900: oklch(98.2% 0.005 85);
+  --color-stone-800: oklch(92.6% 0.009 80);
+  --color-stone-700: oklch(88.5% 0.01 75);
+  --color-stone-600: oklch(56% 0.012 65);
+  --color-stone-500: oklch(50% 0.013 60);
+  --color-stone-400: oklch(42% 0.013 58);
+  --color-stone-300: oklch(33% 0.012 55);
+  --color-stone-200: oklch(28% 0.011 55);
+  --color-stone-100: oklch(24% 0.01 55);
+  --color-stone-50: oklch(24% 0.01 55);
+  --color-white: oklch(30% 0.012 55);
   --color-amber-200: oklch(47.3% 0.137 46.201);
   --color-amber-300: oklch(47.3% 0.137 46.201);
   --color-amber-400: oklch(55.5% 0.163 48.998);
