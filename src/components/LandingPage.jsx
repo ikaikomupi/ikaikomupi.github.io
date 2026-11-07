@@ -168,13 +168,13 @@ export default function LandingPage() {
         <div className="sorot-hero pointer-events-none absolute inset-0" />
 
         {/* Dark gradient overlays for depth */}
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-stone-950/60 via-stone-950/20 to-stone-950/80" />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-stone-950/50 via-transparent to-stone-950/50" />
+        <div className="veil-hero pointer-events-none absolute inset-0 bg-gradient-to-b from-stone-950/60 via-stone-950/20 to-stone-950/80" />
+        <div className="veil-hero pointer-events-none absolute inset-0 bg-gradient-to-r from-stone-950/50 via-transparent to-stone-950/50" />
 
         {/* Warm amber tint layer */}
-        <div className="pointer-events-none absolute inset-0 bg-amber-950/20 mix-blend-multiply" />
+        <div className="veil-hero pointer-events-none absolute inset-0 bg-amber-950/20 mix-blend-multiply" />
 
-        <div className="relative mx-auto max-w-3xl">
+        <div className="panel-hero relative mx-auto w-full min-w-0 max-w-3xl">
           <span className="mb-6 inline-block rounded-full bg-amber-500/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-amber-400 ring-1 ring-amber-500/30">
             IKA IKOM UPI
           </span>
@@ -185,7 +185,7 @@ export default function LandingPage() {
             <span className="text-amber-400">Membangun Kolaborasi.</span>
           </h1>
 
-          <div className="mb-8 flex items-center justify-center gap-2">
+          <div className="mb-8 flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
             <span className="text-xl font-black text-amber-400">#</span>
             <span className="text-sm font-bold uppercase tracking-[0.18em] text-stone-300 sm:text-base">
               Terhubung
@@ -339,9 +339,9 @@ export default function LandingPage() {
           }}
         />
         <div className="sorot-hero pointer-events-none absolute inset-0" />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/30 to-stone-950/60" />
+        <div className="veil-hero pointer-events-none absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/30 to-stone-950/60" />
 
-        <div className="relative mx-auto max-w-3xl text-center">
+        <div className="panel-hero relative mx-auto max-w-3xl text-center">
           <span className="mb-6 inline-block text-xs font-bold uppercase tracking-[0.25em] text-amber-400">
             Kabar Karir IKA IKOM
           </span>

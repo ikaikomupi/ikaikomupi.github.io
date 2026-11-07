@@ -67,8 +67,9 @@
   --color-purple-400: oklch(71.4% 0.203 305.504);
   --color-red-400: oklch(70.4% 0.191 22.216);
 }
-/* Foto hero: digelapkan di mode gelap; di mode terang tampil cerah dengan sorotan krem di tengah
-   supaya teks gelap tetap terbaca. Tingkat redup tiap foto diatur lewat --redup dan --jenuh. */
+/* Foto hero. Mode gelap: foto diredupkan + lapisan gelap (.veil-hero).
+   Mode terang: foto tampil jernih tanpa lapisan, teks diletakkan di panel krem buram (.panel-hero),
+   dan bagian bawah foto memudar ke warna latar (.sorot-hero). */
 .foto-hero {
   filter: brightness(var(--redup, 0.3)) saturate(var(--jenuh, 0.5));
 }
@@ -76,12 +77,28 @@
   display: none;
 }
 :root[data-theme="light"] .foto-hero {
-  filter: brightness(1.04) saturate(0.75);
+  filter: none;
+}
+:root[data-theme="light"] .veil-hero {
+  display: none;
 }
 :root[data-theme="light"] .sorot-hero {
   display: block;
-  background:
-    radial-gradient(ellipse 60% 55% at 50% 50%, color-mix(in oklab, var(--color-stone-950) 90%, transparent) 0%, color-mix(in oklab, var(--color-stone-950) 55%, transparent) 70%, color-mix(in oklab, var(--color-stone-950) 35%, transparent) 100%);
+  background: linear-gradient(to bottom, transparent 70%, var(--color-stone-950) 100%);
+}
+:root[data-theme="light"] .panel-hero {
+  background: color-mix(in oklab, var(--color-stone-900) 84%, transparent);
+  -webkit-backdrop-filter: blur(12px) saturate(1.1);
+  backdrop-filter: blur(12px) saturate(1.1);
+  border: 1px solid color-mix(in oklab, var(--color-white) 8%, transparent);
+  border-radius: 1.5rem;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 20px 50px -20px rgb(0 0 0 / 0.35);
+}
+@media (min-width: 640px) {
+  :root[data-theme="light"] .panel-hero {
+    padding: 2.75rem 3rem;
+  }
 }
 
 body {

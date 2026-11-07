@@ -123,8 +123,8 @@ export default function OrgPage() {
           }}
         />
         <div className="sorot-hero pointer-events-none absolute inset-0" />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-stone-950/70 via-stone-950/10 to-stone-950" />
-        <div className="relative">
+        <div className="veil-hero pointer-events-none absolute inset-0 bg-gradient-to-b from-stone-950/70 via-stone-950/10 to-stone-950" />
+        <div className="panel-hero relative mx-auto max-w-2xl">
           <span className="mb-4 inline-block rounded-full bg-amber-500/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-amber-400 ring-1 ring-amber-500/30">
             IKA IKOM UPI
           </span>
