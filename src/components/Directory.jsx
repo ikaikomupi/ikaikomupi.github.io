@@ -78,15 +78,17 @@ export default function Directory() {
   return (
     <div className="min-h-screen bg-stone-950">
       {/* Header */}
-      <div data-theme="dark" className="relative overflow-hidden bg-stone-950 px-6 pb-20 pt-36 text-center">
+      <div className="relative overflow-hidden bg-stone-950 px-6 pb-20 pt-36 text-center">
         {/* Cinematic background */}
         <div
-          className="pointer-events-none absolute inset-0 scale-105 bg-cover bg-center"
+          className="foto-hero pointer-events-none absolute inset-0 scale-105 bg-cover bg-center"
           style={{
             backgroundImage: "url('/directory-bg.jpg')",
-            filter: "brightness(0.28) saturate(0.5)",
+            "--redup": 0.28,
+            "--jenuh": 0.5,
           }}
         />
+        <div className="sorot-hero pointer-events-none absolute inset-0" />
         {/* Gradient overlays */}
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-stone-950/70 via-stone-950/10 to-stone-950/80" />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-stone-950/60 via-transparent to-stone-950/60" />

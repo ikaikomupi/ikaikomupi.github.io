@@ -155,15 +155,17 @@ export default function LandingPage() {
     <div className="min-h-screen bg-stone-950 font-sans antialiased">
 
       {/* ── Hero ──────────────────────────────────────────────────────────── */}
-      <section data-theme="dark" className="relative flex h-screen items-center justify-center overflow-hidden bg-stone-950 px-6 text-center">
+      <section className="relative flex h-screen items-center justify-center overflow-hidden bg-stone-950 px-6 text-center">
         {/* Cinematic background image */}
         <div
-          className="pointer-events-none absolute inset-0 scale-105 bg-cover bg-center"
+          className="foto-hero pointer-events-none absolute inset-0 scale-105 bg-cover bg-center"
           style={{
             backgroundImage: "url('/hero-bg.jpg')",
-            filter: "brightness(0.35) saturate(0.6)",
+            "--redup": 0.35,
+            "--jenuh": 0.6,
           }}
         />
+        <div className="sorot-hero pointer-events-none absolute inset-0" />
 
         {/* Dark gradient overlays for depth */}
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-stone-950/60 via-stone-950/20 to-stone-950/80" />
@@ -326,15 +328,17 @@ export default function LandingPage() {
       </section>
 
       {/* ── Titip Loker ───────────────────────────────────────────────────── */}
-      <section data-theme="dark" className="relative overflow-hidden bg-stone-900 px-6 py-24">
+      <section className="relative overflow-hidden bg-stone-900 px-6 py-24">
         {/* Background image with dark overlay */}
         <div
-          className="pointer-events-none absolute inset-0 bg-cover bg-center"
+          className="foto-hero pointer-events-none absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: "url('/group-bg.jpg')",
-            filter: "brightness(0.2) saturate(0.5)",
+            "--redup": 0.2,
+            "--jenuh": 0.5,
           }}
         />
+        <div className="sorot-hero pointer-events-none absolute inset-0" />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/30 to-stone-950/60" />
 
         <div className="relative mx-auto max-w-3xl text-center">
