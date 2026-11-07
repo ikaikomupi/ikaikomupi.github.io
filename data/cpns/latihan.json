@@ -1,0 +1,865 @@
+{
+ "catatan": "Soal latihan karya tim KOMpas ASN, bukan soal resmi. Topik SKB mengikuti Materi Pokok SKB CPNS 2024 (Surat Menteri PANRB B/5457/M.SM.01.00/2024). TKP: skor 1–5 per pilihan.",
+ "soal": [
+  {
+   "bagian": "TWK",
+   "materi": "UUD 1945",
+   "soal": "Pembukaan UUD 1945 alinea keempat memuat …",
+   "opsi": [
+    "Pernyataan kemerdekaan sebagai hak segala bangsa",
+    "Perjuangan pergerakan kemerdekaan Indonesia",
+    "Tujuan negara dan dasar negara Pancasila",
+    "Pengakuan atas rahmat Tuhan Yang Maha Esa",
+    "Bentuk negara kesatuan"
+   ],
+   "kunci": 2,
+   "pembahasan": "Alinea keempat memuat tujuan negara (melindungi, memajukan kesejahteraan umum, mencerdaskan kehidupan bangsa, ikut melaksanakan ketertiban dunia) dan rumusan dasar negara Pancasila.",
+   "id": "q1"
+  },
+  {
+   "bagian": "TWK",
+   "materi": "UUD 1945",
+   "soal": "Bunyi Pasal 1 ayat (3) UUD 1945 adalah …",
+   "opsi": [
+    "Negara Indonesia ialah negara kesatuan yang berbentuk republik",
+    "Kedaulatan berada di tangan rakyat",
+    "Negara Indonesia adalah negara hukum",
+    "Presiden memegang kekuasaan pemerintahan",
+    "Bendera negara ialah Sang Merah Putih"
+   ],
+   "kunci": 2,
+   "pembahasan": "Pasal 1 ayat (3): \"Negara Indonesia adalah negara hukum.\" Ayat (1) tentang negara kesatuan, ayat (2) tentang kedaulatan rakyat.",
+   "id": "q2"
+  },
+  {
+   "bagian": "TWK",
+   "materi": "UUD 1945",
+   "soal": "Ketentuan hak asasi manusia dalam UUD 1945 hasil amandemen diatur dalam …",
+   "opsi": [
+    "Bab X",
+    "Bab XA",
+    "Bab XI",
+    "Bab XII",
+    "Bab XIV"
+   ],
+   "kunci": 1,
+   "pembahasan": "HAM diatur dalam Bab XA, Pasal 28A sampai 28J.",
+   "id": "q3"
+  },
+  {
+   "bagian": "TWK",
+   "materi": "Bela negara",
+   "soal": "Hak dan kewajiban warga negara untuk ikut serta dalam upaya pembelaan negara diatur dalam UUD 1945 Pasal …",
+   "opsi": [
+    "27 ayat (1)",
+    "27 ayat (3)",
+    "28 ayat (1)",
+    "30 ayat (2)",
+    "31 ayat (1)"
+   ],
+   "kunci": 1,
+   "pembahasan": "Pasal 27 ayat (3): setiap warga negara berhak dan wajib ikut serta dalam upaya pembelaan negara.",
+   "id": "q4"
+  },
+  {
+   "bagian": "TWK",
+   "materi": "Sejarah",
+   "soal": "Sumpah Pemuda diikrarkan pada tanggal 28 Oktober 1928 dalam …",
+   "opsi": [
+    "Kongres Pemuda I",
+    "Kongres Pemuda II",
+    "Kongres Pemuda III",
+    "Sidang BPUPKI",
+    "Sidang PPKI"
+   ],
+   "kunci": 1,
+   "pembahasan": "Sumpah Pemuda adalah hasil Kongres Pemuda II di Batavia, 27–28 Oktober 1928.",
+   "id": "q5"
+  },
+  {
+   "bagian": "TWK",
+   "materi": "Pancasila",
+   "soal": "Semboyan Bhinneka Tunggal Ika diambil dari kitab …",
+   "opsi": [
+    "Negarakertagama karya Mpu Prapanca",
+    "Sutasoma karya Mpu Tantular",
+    "Arjunawiwaha karya Mpu Kanwa",
+    "Pararaton",
+    "Bharatayudha karya Mpu Sedah"
+   ],
+   "kunci": 1,
+   "pembahasan": "Bhinneka Tunggal Ika berasal dari kitab Sutasoma karya Mpu Tantular pada masa Majapahit.",
+   "id": "q6"
+  },
+  {
+   "bagian": "TWK",
+   "materi": "Pancasila",
+   "soal": "Contoh perilaku yang paling mencerminkan sila ketiga Pancasila adalah …",
+   "opsi": [
+    "Menghormati teman yang sedang beribadah",
+    "Mengutamakan kepentingan bangsa di atas kepentingan golongan",
+    "Mengambil keputusan dengan musyawarah",
+    "Membantu korban bencana tanpa membedakan suku",
+    "Bersikap adil kepada sesama"
+   ],
+   "kunci": 1,
+   "pembahasan": "Sila ketiga, Persatuan Indonesia, menekankan kepentingan bangsa dan negara di atas kepentingan pribadi atau golongan.",
+   "id": "q7"
+  },
+  {
+   "bagian": "TWK",
+   "materi": "Wawasan nusantara",
+   "soal": "Deklarasi Djuanda tahun 1957 penting bagi Indonesia karena …",
+   "opsi": [
+    "Menetapkan Pancasila sebagai dasar negara",
+    "Menyatakan laut di antara pulau-pulau sebagai bagian wilayah Indonesia",
+    "Membentuk Gerakan Non-Blok",
+    "Mengakhiri konfrontasi dengan Malaysia",
+    "Menetapkan bahasa Indonesia sebagai bahasa negara"
+   ],
+   "kunci": 1,
+   "pembahasan": "Deklarasi Djuanda (13 Desember 1957) menyatakan perairan di sekitar dan di antara pulau-pulau Indonesia sebagai wilayah Indonesia, dasar konsep negara kepulauan.",
+   "id": "q8"
+  },
+  {
+   "bagian": "TWK",
+   "materi": "Integritas",
+   "soal": "Seorang ASN menerima bingkisan dari pihak yang sedang mengurus izin di unitnya. Sikap yang paling tepat adalah …",
+   "opsi": [
+    "Menerima karena nilainya kecil",
+    "Menerima lalu membagikan ke rekan kerja",
+    "Menolak, dan bila tidak bisa ditolak, melaporkannya sebagai gratifikasi",
+    "Menerima setelah izinnya selesai",
+    "Mengembalikan setelah satu bulan"
+   ],
+   "kunci": 2,
+   "pembahasan": "Hadiah dari pihak yang berurusan dengan jabatan termasuk gratifikasi. Sikap berintegritas: menolak, atau melaporkan ke KPK/UPG instansi bila tidak dapat ditolak.",
+   "id": "q9"
+  },
+  {
+   "bagian": "TIU",
+   "materi": "Deret angka",
+   "soal": "2, 5, 11, 23, 47, …",
+   "opsi": [
+    "90",
+    "94",
+    "95",
+    "96",
+    "99"
+   ],
+   "kunci": 2,
+   "pembahasan": "Pola: dikali 2 lalu ditambah 1. 47 × 2 + 1 = 95.",
+   "id": "q10"
+  },
+  {
+   "bagian": "TIU",
+   "materi": "Deret angka",
+   "soal": "3, 4, 7, 11, 18, …",
+   "opsi": [
+    "25",
+    "27",
+    "29",
+    "31",
+    "36"
+   ],
+   "kunci": 2,
+   "pembahasan": "Tiap suku adalah jumlah dua suku sebelumnya: 11 + 18 = 29.",
+   "id": "q11"
+  },
+  {
+   "bagian": "TIU",
+   "materi": "Aritmetika",
+   "soal": "15% dari 240 ditambah 25% dari 160 adalah …",
+   "opsi": [
+    "66",
+    "72",
+    "76",
+    "80",
+    "84"
+   ],
+   "kunci": 2,
+   "pembahasan": "15% × 240 = 36, 25% × 160 = 40. Jumlahnya 76.",
+   "id": "q12"
+  },
+  {
+   "bagian": "TIU",
+   "materi": "Aritmetika",
+   "soal": "Harga sebuah barang naik 20%, lalu turun 20% dari harga barunya. Jika harga awal Rp100.000, harga akhirnya …",
+   "opsi": [
+    "Rp100.000",
+    "Rp98.000",
+    "Rp96.000",
+    "Rp94.000",
+    "Rp92.000"
+   ],
+   "kunci": 2,
+   "pembahasan": "100.000 × 1,2 = 120.000. Lalu 120.000 × 0,8 = 96.000.",
+   "id": "q13"
+  },
+  {
+   "bagian": "TIU",
+   "materi": "Soal cerita",
+   "soal": "A dapat menyelesaikan pekerjaan dalam 6 hari, B dalam 3 hari. Jika bekerja bersama, pekerjaan selesai dalam …",
+   "opsi": [
+    "1,5 hari",
+    "2 hari",
+    "2,5 hari",
+    "3 hari",
+    "4,5 hari"
+   ],
+   "kunci": 1,
+   "pembahasan": "Laju bersama 1/6 + 1/3 = 1/2 pekerjaan per hari, jadi selesai dalam 2 hari.",
+   "id": "q14"
+  },
+  {
+   "bagian": "TIU",
+   "materi": "Soal cerita",
+   "soal": "Mobil melaju dengan kecepatan rata-rata 60 km/jam menempuh jarak 150 km. Waktu tempuhnya …",
+   "opsi": [
+    "2 jam",
+    "2 jam 15 menit",
+    "2 jam 30 menit",
+    "2 jam 45 menit",
+    "3 jam"
+   ],
+   "kunci": 2,
+   "pembahasan": "Waktu = jarak ÷ kecepatan = 150 ÷ 60 = 2,5 jam = 2 jam 30 menit.",
+   "id": "q15"
+  },
+  {
+   "bagian": "TIU",
+   "materi": "Silogisme",
+   "soal": "Semua pegawai humas mahir menulis. Sebagian peserta pelatihan adalah pegawai humas. Kesimpulan yang tepat …",
+   "opsi": [
+    "Semua peserta pelatihan mahir menulis",
+    "Sebagian peserta pelatihan mahir menulis",
+    "Semua yang mahir menulis adalah pegawai humas",
+    "Tidak ada peserta pelatihan yang mahir menulis",
+    "Sebagian pegawai humas bukan peserta pelatihan"
+   ],
+   "kunci": 1,
+   "pembahasan": "Peserta pelatihan yang merupakan pegawai humas pasti mahir menulis, jadi sebagian peserta pelatihan mahir menulis.",
+   "id": "q16"
+  },
+  {
+   "bagian": "TIU",
+   "materi": "Analogi",
+   "soal": "PENA : PENULIS = KUAS : …",
+   "opsi": [
+    "Kanvas",
+    "Cat",
+    "Pelukis",
+    "Lukisan",
+    "Galeri"
+   ],
+   "kunci": 2,
+   "pembahasan": "Pena adalah alat kerja penulis; kuas adalah alat kerja pelukis.",
+   "id": "q17"
+  },
+  {
+   "bagian": "TIU",
+   "materi": "Verbal",
+   "soal": "Lawan kata FANA adalah …",
+   "opsi": [
+    "Sementara",
+    "Abadi",
+    "Rapuh",
+    "Hampa",
+    "Nyata"
+   ],
+   "kunci": 1,
+   "pembahasan": "Fana berarti tidak kekal. Lawannya abadi.",
+   "id": "q18"
+  },
+  {
+   "bagian": "TKP",
+   "materi": "Pelayanan publik",
+   "soal": "Seorang warga marah di loket karena berkasnya belum selesai, padahal kesalahan ada di bagian lain. Yang saya lakukan …",
+   "opsi": [
+    "Meminta warga menunggu tanpa penjelasan",
+    "Menjelaskan bahwa itu bukan kesalahan saya",
+    "Meminta warga datang lagi besok",
+    "Mendengarkan, meminta maaf atas ketidaknyamanan, lalu menelusuri berkasnya ke bagian terkait",
+    "Menyampaikan keluhan warga ke atasan"
+   ],
+   "skor": [
+    1,
+    2,
+    2,
+    5,
+    3
+   ],
+   "pembahasan": "Pelayanan publik yang baik: tetap tenang, berempati, dan mengambil tanggung jawab menyelesaikan masalah meski bukan kesalahan sendiri.",
+   "id": "q19"
+  },
+  {
+   "bagian": "TKP",
+   "materi": "Jejaring kerja",
+   "soal": "Saya ditempatkan di tim baru yang anggotanya belum saya kenal. Yang saya lakukan …",
+   "opsi": [
+    "Menunggu anggota lain menyapa lebih dulu",
+    "Fokus bekerja sendiri",
+    "Berkenalan dan aktif menawarkan bantuan dalam pekerjaan tim",
+    "Berkenalan hanya dengan yang satu angkatan",
+    "Mengikuti kegiatan tim bila diajak"
+   ],
+   "skor": [
+    1,
+    2,
+    5,
+    2,
+    3
+   ],
+   "pembahasan": "Membangun jejaring kerja berarti proaktif menjalin hubungan dan kerja sama.",
+   "id": "q20"
+  },
+  {
+   "bagian": "TKP",
+   "materi": "Integritas",
+   "soal": "Rekan kerja meminta saya menandatangani daftar hadir rapat yang tidak saya ikuti. Saya …",
+   "opsi": [
+    "Menandatangani supaya tidak merusak hubungan",
+    "Menandatangani tapi tidak mengulanginya",
+    "Menolak dengan sopan dan menjelaskan alasannya",
+    "Menolak lalu menghindari rekan tersebut",
+    "Meminta pendapat rekan lain dulu"
+   ],
+   "skor": [
+    1,
+    1,
+    5,
+    3,
+    2
+   ],
+   "pembahasan": "Integritas: menolak memalsukan data walau ada tekanan sosial, dengan cara yang tetap menjaga hubungan baik.",
+   "id": "q21"
+  },
+  {
+   "bagian": "TKP",
+   "materi": "Adaptasi teknologi",
+   "soal": "Instansi mulai memakai aplikasi persuratan baru yang belum saya kuasai. Saya …",
+   "opsi": [
+    "Tetap memakai cara lama selama masih bisa",
+    "Menunggu pelatihan resmi",
+    "Mempelajari panduannya dan bertanya pada yang sudah bisa",
+    "Meminta rekan mengerjakan bagian saya",
+    "Mencoba bila sempat"
+   ],
+   "skor": [
+    1,
+    2,
+    5,
+    1,
+    3
+   ],
+   "pembahasan": "Adaptif terhadap teknologi: berinisiatif belajar tanpa menunggu.",
+   "id": "q22"
+  },
+  {
+   "bagian": "TKP",
+   "materi": "Anti radikalisme",
+   "soal": "Di grup percakapan kantor beredar pesan yang menghasut kebencian terhadap kelompok agama tertentu. Saya …",
+   "opsi": [
+    "Mengabaikan karena bukan urusan saya",
+    "Ikut meneruskan karena isinya ramai dibahas",
+    "Mengingatkan dengan santun bahwa pesan itu tidak pantas dan berpotensi memecah belah",
+    "Keluar dari grup",
+    "Membalas dengan pesan yang sama kerasnya"
+   ],
+   "skor": [
+    2,
+    1,
+    5,
+    2,
+    1
+   ],
+   "pembahasan": "Sikap anti radikalisme: menolak ujaran kebencian dan aktif menjaga kerukunan dengan cara yang santun.",
+   "id": "q23"
+  },
+  {
+   "bagian": "TKP",
+   "materi": "Profesionalisme",
+   "soal": "Atasan memberi tugas mendadak dengan tenggat besok pagi, padahal saya sudah punya rencana pribadi malam ini. Saya …",
+   "opsi": [
+    "Menolak karena di luar jam kerja",
+    "Mengerjakan seadanya",
+    "Menyusun prioritas, menyelesaikan tugas dengan baik, dan menyesuaikan rencana pribadi",
+    "Meminta rekan menggantikan",
+    "Mengerjakan sebagian lalu menjelaskan ke atasan"
+   ],
+   "skor": [
+    1,
+    2,
+    5,
+    2,
+    3
+   ],
+   "pembahasan": "Profesionalisme: bertanggung jawab atas tugas dan mengelola prioritas.",
+   "id": "q24"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "Ruang lingkup humas",
+   "soal": "Humas sebagai fungsi manajemen yang membangun dan mempertahankan hubungan saling menguntungkan antara organisasi dan publiknya adalah definisi dari …",
+   "opsi": [
+    "Edward Bernays",
+    "Cutlip, Center, dan Broom",
+    "Ivy Lee",
+    "Harold Lasswell",
+    "James Grunig"
+   ],
+   "kunci": 1,
+   "pembahasan": "Definisi ini dikenal dari buku Effective Public Relations karya Cutlip, Center, dan Broom.",
+   "jabatan": "Pranata Humas",
+   "id": "q25"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "Kegiatan-kegiatan humas",
+   "soal": "Urutan empat langkah proses humas menurut Cutlip dan Center adalah …",
+   "opsi": [
+    "Perencanaan, penelitian, komunikasi, evaluasi",
+    "Penelitian (pencarian fakta), perencanaan, komunikasi/aksi, evaluasi",
+    "Komunikasi, perencanaan, evaluasi, penelitian",
+    "Penelitian, komunikasi, perencanaan, evaluasi",
+    "Perencanaan, aksi, penelitian, evaluasi"
+   ],
+   "kunci": 1,
+   "pembahasan": "Fact finding/defining the problem → planning and programming → taking action and communicating → evaluating the program.",
+   "jabatan": "Pranata Humas",
+   "id": "q26"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "Ruang lingkup humas",
+   "soal": "Model humas Grunig dan Hunt yang memakai komunikasi dua arah untuk mencapai saling pengertian antara organisasi dan publik adalah …",
+   "opsi": [
+    "Press agentry",
+    "Public information",
+    "Two-way asymmetric",
+    "Two-way symmetric",
+    "Publicity model"
+   ],
+   "kunci": 3,
+   "pembahasan": "Two-way symmetric: dialog dua arah yang seimbang, organisasi juga bersedia berubah. Two-way asymmetric dua arah tapi tujuannya membujuk publik.",
+   "jabatan": "Pranata Humas",
+   "id": "q27"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "Penulisan kehumasan",
+   "soal": "Struktur penulisan siaran pers yang menempatkan informasi terpenting di paragraf awal disebut …",
+   "opsi": [
+    "Piramida tegak",
+    "Piramida terbalik",
+    "Kronologis",
+    "Feature",
+    "Jam pasir"
+   ],
+   "kunci": 1,
+   "pembahasan": "Piramida terbalik: informasi terpenting (5W+1H) di awal, detail pendukung menyusul.",
+   "jabatan": "Pranata Humas",
+   "id": "q28"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "Teori komunikasi",
+   "soal": "Teori yang menyatakan media massa memengaruhi isu apa yang dianggap penting oleh publik adalah …",
+   "opsi": [
+    "Uses and gratifications",
+    "Agenda setting",
+    "Spiral of silence",
+    "Kultivasi",
+    "Jarum hipodermik"
+   ],
+   "kunci": 1,
+   "pembahasan": "Agenda setting dikemukakan McCombs dan Shaw: media tidak menentukan apa yang dipikirkan publik, tapi apa yang dipikirkan.",
+   "jabatan": "Pranata Humas",
+   "id": "q29"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "Model komunikasi",
+   "soal": "\"Who says what in which channel to whom with what effect\" adalah model komunikasi …",
+   "opsi": [
+    "Shannon dan Weaver",
+    "Schramm",
+    "Lasswell",
+    "Berlo (SMCR)",
+    "Aristoteles"
+   ],
+   "kunci": 2,
+   "pembahasan": "Model Harold Lasswell (1948).",
+   "jabatan": "Pranata Humas",
+   "id": "q30"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "Manajemen isu",
+   "soal": "Tujuan utama manajemen isu dalam kehumasan adalah …",
+   "opsi": [
+    "Menutup informasi negatif dari media",
+    "Mengidentifikasi isu sejak dini dan menyiapkan respons sebelum berkembang menjadi krisis",
+    "Meningkatkan jumlah siaran pers",
+    "Mengganti juru bicara organisasi",
+    "Menyerahkan penanganan isu kepada media"
+   ],
+   "kunci": 1,
+   "pembahasan": "Manajemen isu bersifat proaktif: memantau, menganalisis, dan merespons isu sebelum menjadi krisis.",
+   "jabatan": "Pranata Humas",
+   "id": "q31"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "Etika kehumasan",
+   "soal": "Sebuah media memberitakan informasi keliru tentang instansi Anda. Langkah humas yang paling tepat adalah …",
+   "opsi": [
+    "Meminta media menghapus semua berita tentang instansi",
+    "Menyampaikan klarifikasi berbasis data melalui kanal resmi dan menggunakan hak jawab",
+    "Membalas lewat akun media sosial pribadi",
+    "Mengabaikan karena akan reda sendiri",
+    "Melaporkan wartawannya ke polisi"
+   ],
+   "kunci": 1,
+   "pembahasan": "Hak jawab dijamin UU No. 40 Tahun 1999 tentang Pers. Klarifikasi berbasis data menjaga kredibilitas instansi.",
+   "jabatan": "Pranata Humas",
+   "id": "q32"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "Komunikasi organisasi",
+   "soal": "Arus informasi berupa instruksi dari pimpinan kepada staf disebut komunikasi …",
+   "opsi": [
+    "Ke atas (upward)",
+    "Ke bawah (downward)",
+    "Horizontal",
+    "Diagonal",
+    "Grapevine"
+   ],
+   "kunci": 1,
+   "pembahasan": "Komunikasi ke bawah mengalir dari atasan ke bawahan: instruksi, kebijakan, umpan balik kinerja.",
+   "jabatan": "Pranata Humas",
+   "id": "q33"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "Audit komunikasi",
+   "soal": "Tujuan audit komunikasi dalam organisasi adalah …",
+   "opsi": [
+    "Memeriksa laporan keuangan unit humas",
+    "Menilai efektivitas sistem dan saluran komunikasi organisasi",
+    "Menghitung jumlah berita yang terbit",
+    "Menentukan juru bicara",
+    "Mengaudit kinerja pegawai satu per satu"
+   ],
+   "kunci": 1,
+   "pembahasan": "Audit komunikasi mengevaluasi apakah sistem, pesan, dan saluran komunikasi organisasi berjalan efektif.",
+   "jabatan": "Pranata Humas",
+   "id": "q34"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "Media baru",
+   "soal": "Karakteristik utama media baru dibandingkan media massa konvensional adalah …",
+   "opsi": [
+    "Komunikasi satu arah",
+    "Interaktivitas dan pengguna bisa menjadi produsen konten",
+    "Jangkauan terbatas",
+    "Tidak memerlukan internet",
+    "Isi seragam untuk semua khalayak"
+   ],
+   "kunci": 1,
+   "pembahasan": "Media baru bersifat interaktif, digital, dan memungkinkan pengguna ikut memproduksi konten.",
+   "jabatan": "Pranata Humas",
+   "id": "q35"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "Konsep dan studi kebijakan publik",
+   "soal": "Dalam siklus kebijakan publik, tahap setelah formulasi kebijakan adalah …",
+   "opsi": [
+    "Penyusunan agenda",
+    "Adopsi/legitimasi kebijakan",
+    "Evaluasi kebijakan",
+    "Identifikasi masalah",
+    "Terminasi"
+   ],
+   "kunci": 1,
+   "pembahasan": "Urutan umum: penyusunan agenda → formulasi → adopsi → implementasi → evaluasi.",
+   "jabatan": "Analis Kebijakan",
+   "id": "q36"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "Dokumentasi saran kebijakan",
+   "soal": "Ciri policy brief yang baik adalah …",
+   "opsi": [
+    "Panjang dan memuat semua data mentah",
+    "Ringkas, berbasis bukti, dan memuat rekomendasi yang bisa dijalankan",
+    "Ditulis dengan istilah teknis sebanyak mungkin",
+    "Hanya berisi latar belakang masalah",
+    "Tidak memuat rekomendasi"
+   ],
+   "kunci": 1,
+   "pembahasan": "Policy brief ditujukan bagi pengambil keputusan yang sibuk: singkat, berbasis bukti, berorientasi rekomendasi.",
+   "jabatan": "Analis Kebijakan",
+   "id": "q37"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "Pemetaan stakeholder",
+   "soal": "Dalam matriks kekuatan–kepentingan, pemangku kepentingan dengan kekuatan tinggi dan kepentingan tinggi sebaiknya …",
+   "opsi": [
+    "Dipantau saja",
+    "Diberi informasi secukupnya",
+    "Dilibatkan dan dikelola secara dekat",
+    "Dijaga agar tetap puas tanpa dilibatkan",
+    "Diabaikan"
+   ],
+   "kunci": 2,
+   "pembahasan": "Kelompok ini adalah pemain kunci, jadi perlu dilibatkan secara intensif.",
+   "jabatan": "Analis Kebijakan",
+   "id": "q38"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "Metodologi riset kebijakan",
+   "soal": "Evaluasi kebijakan ex-ante dilakukan …",
+   "opsi": [
+    "Setelah kebijakan selesai dilaksanakan",
+    "Sebelum kebijakan diterapkan",
+    "Di tengah pelaksanaan",
+    "Hanya oleh lembaga legislatif",
+    "Hanya untuk kebijakan anggaran"
+   ],
+   "kunci": 1,
+   "pembahasan": "Ex-ante dilakukan sebelum kebijakan diterapkan untuk menilai alternatif. Ex-post dilakukan sesudahnya.",
+   "jabatan": "Analis Kebijakan",
+   "id": "q39"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "Analisis kebijakan publik",
+   "soal": "Analisis biaya–manfaat digunakan untuk …",
+   "opsi": [
+    "Menentukan siapa pejabat pelaksana",
+    "Membandingkan alternatif kebijakan berdasarkan nilai manfaat dan biayanya",
+    "Menyusun jadwal rapat",
+    "Mengukur kepuasan pegawai",
+    "Menentukan anggaran tahunan instansi"
+   ],
+   "kunci": 1,
+   "pembahasan": "Cost–benefit analysis menilai alternatif dengan membandingkan manfaat dan biaya yang dinyatakan dalam nilai yang sebanding.",
+   "jabatan": "Analis Kebijakan",
+   "id": "q40"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "Peraturan di bidang kearsipan",
+   "soal": "Undang-undang yang mengatur kearsipan di Indonesia adalah …",
+   "opsi": [
+    "UU No. 14 Tahun 2008",
+    "UU No. 43 Tahun 2009",
+    "UU No. 25 Tahun 2009",
+    "UU No. 5 Tahun 2014",
+    "UU No. 30 Tahun 2014"
+   ],
+   "kunci": 1,
+   "pembahasan": "UU No. 43 Tahun 2009 tentang Kearsipan.",
+   "jabatan": "Arsiparis",
+   "id": "q41"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "Arsip dinamis",
+   "soal": "Arsip yang digunakan secara langsung dalam kegiatan pencipta arsip dan disimpan selama jangka waktu tertentu disebut arsip …",
+   "opsi": [
+    "Statis",
+    "Dinamis",
+    "Vital",
+    "Terjaga",
+    "Permanen"
+   ],
+   "kunci": 1,
+   "pembahasan": "Itu definisi arsip dinamis menurut UU No. 43 Tahun 2009.",
+   "jabatan": "Arsiparis",
+   "id": "q42"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "Penyusutan arsip",
+   "soal": "Daftar yang berisi jangka waktu penyimpanan arsip beserta keterangan musnah atau permanen disebut …",
+   "opsi": [
+    "Klasifikasi arsip",
+    "Jadwal Retensi Arsip (JRA)",
+    "Daftar Pencarian Arsip",
+    "Tata naskah dinas",
+    "Indeks arsip"
+   ],
+   "kunci": 1,
+   "pembahasan": "JRA menjadi dasar penyusutan: pemindahan, pemusnahan, dan penyerahan arsip statis.",
+   "jabatan": "Arsiparis",
+   "id": "q43"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "Arsip statis",
+   "soal": "Arsip statis dikelola oleh …",
+   "opsi": [
+    "Unit pengolah di setiap instansi",
+    "Lembaga kearsipan seperti ANRI dan lembaga kearsipan daerah",
+    "Pejabat pengelola informasi",
+    "Bagian umum instansi",
+    "Perpustakaan nasional"
+   ],
+   "kunci": 1,
+   "pembahasan": "Arsip statis yang sudah diserahkan dikelola oleh lembaga kearsipan.",
+   "jabatan": "Arsiparis",
+   "id": "q44"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "Konsep dasar kearsipan",
+   "soal": "Arsip yang keberadaannya menjadi syarat dasar kelangsungan operasional pencipta arsip dan tidak dapat diperbarui disebut arsip …",
+   "opsi": [
+    "Aktif",
+    "Inaktif",
+    "Vital",
+    "Terjaga",
+    "Statis"
+   ],
+   "kunci": 2,
+   "pembahasan": "Definisi arsip vital menurut UU No. 43 Tahun 2009.",
+   "jabatan": "Arsiparis",
+   "id": "q45"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "UU No. 23 Tahun 2014",
+   "soal": "Berikut yang BUKAN termasuk urusan pemerintahan absolut menurut UU No. 23 Tahun 2014 adalah …",
+   "opsi": [
+    "Politik luar negeri",
+    "Pertahanan",
+    "Yustisi",
+    "Pendidikan",
+    "Agama"
+   ],
+   "kunci": 3,
+   "pembahasan": "Urusan absolut: politik luar negeri, pertahanan, keamanan, yustisi, moneter dan fiskal nasional, agama. Pendidikan termasuk urusan konkuren wajib.",
+   "jabatan": "Fasilitator Pemerintahan",
+   "id": "q46"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "UU No. 23 Tahun 2014",
+   "soal": "Urusan pemerintahan bidang pendidikan termasuk ke dalam urusan …",
+   "opsi": [
+    "Absolut",
+    "Konkuren wajib yang berkaitan dengan pelayanan dasar",
+    "Konkuren wajib yang tidak berkaitan dengan pelayanan dasar",
+    "Konkuren pilihan",
+    "Pemerintahan umum"
+   ],
+   "kunci": 1,
+   "pembahasan": "Pendidikan, kesehatan, pekerjaan umum, perumahan, ketenteraman, dan sosial termasuk urusan wajib pelayanan dasar.",
+   "jabatan": "Fasilitator Pemerintahan",
+   "id": "q47"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "PP No. 18 Tahun 2016",
+   "soal": "Berikut yang BUKAN perangkat daerah provinsi menurut PP No. 18 Tahun 2016 adalah …",
+   "opsi": [
+    "Sekretariat daerah",
+    "Sekretariat DPRD",
+    "Inspektorat",
+    "Dinas",
+    "Kecamatan"
+   ],
+   "kunci": 4,
+   "pembahasan": "Kecamatan adalah perangkat daerah kabupaten/kota, bukan provinsi.",
+   "jabatan": "Fasilitator Pemerintahan",
+   "id": "q48"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "Sistem pemerintahan",
+   "soal": "Sistem pemerintahan yang dianut Indonesia berdasarkan UUD 1945 adalah …",
+   "opsi": [
+    "Parlementer",
+    "Presidensial",
+    "Semi-presidensial",
+    "Monarki konstitusional",
+    "Federal"
+   ],
+   "kunci": 1,
+   "pembahasan": "Presiden adalah kepala negara sekaligus kepala pemerintahan dan tidak bertanggung jawab kepada parlemen.",
+   "jabatan": "Fasilitator Pemerintahan",
+   "id": "q49"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "Peraturan pers",
+   "soal": "Undang-undang yang mengatur tentang pers di Indonesia adalah …",
+   "opsi": [
+    "UU No. 32 Tahun 2002",
+    "UU No. 40 Tahun 1999",
+    "UU No. 11 Tahun 2008",
+    "UU No. 14 Tahun 2008",
+    "UU No. 36 Tahun 1999"
+   ],
+   "kunci": 1,
+   "pembahasan": "UU No. 40 Tahun 1999 tentang Pers. UU No. 32 Tahun 2002 mengatur penyiaran.",
+   "jabatan": "Pranata Siaran",
+   "id": "q50"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "P3SPS",
+   "soal": "Pedoman Perilaku Penyiaran dan Standar Program Siaran (P3SPS) ditetapkan oleh …",
+   "opsi": [
+    "Dewan Pers",
+    "Komisi Penyiaran Indonesia",
+    "Kementerian Komunikasi dan Digital",
+    "LPP TVRI",
+    "Lembaga Sensor Film"
+   ],
+   "kunci": 1,
+   "pembahasan": "P3SPS ditetapkan oleh KPI sebagai pedoman isi siaran.",
+   "jabatan": "Pranata Siaran",
+   "id": "q51"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "Lembaga Penyiaran Publik",
+   "soal": "Lembaga Penyiaran Publik di tingkat nasional adalah …",
+   "opsi": [
+    "TVRI dan RRI",
+    "TVRI dan Metro TV",
+    "RRI dan Antara",
+    "Kompas TV dan RRI",
+    "TVRI dan Antara"
+   ],
+   "kunci": 0,
+   "pembahasan": "Lembaga Penyiaran Publik nasional: TVRI dan RRI.",
+   "jabatan": "Pranata Siaran",
+   "id": "q52"
+  },
+  {
+   "bagian": "SKB",
+   "materi": "Kode Etik Jurnalistik",
+   "soal": "Wartawan menghormati narasumber yang tidak bersedia diketahui identitasnya. Ini berkaitan dengan …",
+   "opsi": [
+    "Hak jawab",
+    "Hak koreksi",
+    "Hak tolak",
+    "Embargo",
+    "Off the record"
+   ],
+   "kunci": 2,
+   "pembahasan": "Pasal 7 Kode Etik Jurnalistik: wartawan memiliki hak tolak untuk melindungi narasumber yang tidak bersedia diketahui identitasnya.",
+   "jabatan": "Pranata Siaran",
+   "id": "q53"
+  }
+ ]
+}
