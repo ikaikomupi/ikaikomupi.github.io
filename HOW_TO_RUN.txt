@@ -39,14 +39,13 @@ PREVIEW PRODUCTION BUILD LOCALLY
   Opens at: http://localhost:4173
 
 
-DEPLOY TO NETLIFY (ikom2018.netlify.app)
------------------------------------------
-  1. Make sure you're logged in:
-       npx netlify-cli@latest login
+DEPLOY (GitHub Pages)
+---------------------
+  Otomatis lewat .github/workflows/deploy.yml setiap push ke branch main.
 
-  2. Build and deploy to production:
-       npm run build
-       npx netlify-cli@latest deploy --dir=dist --prod --site 0ae50dee-8cec-4e68-9d64-354e68e9e398
+  Website utama: https://ikaikomupi.github.io  (remote "org")
+    git push org main
+    git push origin main   (repo pribadi, cadangan)
 
 
 PROJECT STRUCTURE
@@ -79,6 +78,7 @@ ROUTES
   /organisasi        - Organization info
   /calon-ketua       - Cecep's candidacy page
   /register          - Register form
+  /cpns              - KOMpas ASN (dashboard formasi CPNS, prototipe)
   /profile/:id       - Alumni profile
 
 
@@ -89,5 +89,5 @@ TECH STACK
   - Tailwind CSS 4
   - React Router v7
   - Lucide React (icons)
-  - Netlify (hosting)
+  - GitHub Pages (hosting)
   - GitHub: https://github.com/rafishalahudin/ikomupi2018

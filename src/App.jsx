@@ -20,6 +20,7 @@ const SetelahToga = lazy(() => import("./components/SetelahToga"));
 const PostPage = lazy(() => import("./components/PostPage"));
 const KarirPage = lazy(() => import("./components/KarirPage"));
 const AdArtPage = lazy(() => import("./components/AdArtPage"));
+const CpnsPage = lazy(() => import("./components/CpnsPage"));
 
 function Layout() {
   const { pathname } = useLocation();
@@ -42,6 +43,7 @@ function Layout() {
           <Route path="/setelah-toga/:slug" element={<PostPage />} />
           <Route path="/karir" element={<KarirPage />} />
           <Route path="/ad-art" element={<AdArtPage />} />
+          <Route path="/cpns" element={<CpnsPage />} />
         </Routes>
       </Suspense>
     </>
