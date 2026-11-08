@@ -15,6 +15,7 @@ const Akun = lazy(() => import("./cpns/belajar/Akun"));
 const Peringkat = lazy(() => import("./cpns/belajar/Peringkat"));
 const Pengurus = lazy(() => import("./cpns/belajar/Pengurus"));
 const Skb = lazy(() => import("./cpns/Skb"));
+const Gaji = lazy(() => import("./cpns/Gaji"));
 const Metodologi = lazy(() => import("./cpns/Metodologi"));
 
 export default function CpnsPage() {
@@ -38,6 +39,7 @@ export default function CpnsPage() {
             <Route path="latihan" element={<Navigate to="/cpns/belajar" replace />} />
             <Route path="lapor" element={<Lapor />} />
             <Route path="skb" element={<Skb />} />
+            <Route path="gaji" element={<Gaji />} />
             <Route path="metodologi" element={<Metodologi />} />
             <Route path="*" element={<Navigate to="/cpns" replace />} />
           </Routes>

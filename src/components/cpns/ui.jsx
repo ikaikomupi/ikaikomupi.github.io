@@ -7,6 +7,7 @@ export const TABS = [
   { to: "/cpns/belajar", label: "Belajar" },
   { to: "/cpns/lapor", label: "Lapor Hasil" },
   { to: "/cpns/skb", label: "Persiapan SKB" },
+  { to: "/cpns/gaji", label: "Gaji & Tukin" },
   { to: "/cpns/metodologi", label: "Metodologi" },
 ];
 
