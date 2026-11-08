@@ -1,0 +1,1210 @@
+{
+ "disusun": "2026-11-08",
+ "instansi": [
+  {
+   "nama": "Badan Pemeriksa Keuangan (BPK)",
+   "jenis": "Lembaga",
+   "tabel": "BPK",
+   "cpnsPelaksana": 7792380,
+   "cpnsJF": 8504380,
+   "pnsPelaksana": 9676120,
+   "pnsJF": 10566120,
+   "dasar": "Terverifikasi: Perpres 188/2014"
+  },
+  {
+   "nama": "Kementerian Pekerjaan Umum",
+   "jenis": "Kementerian",
+   "tabel": "T5",
+   "cpnsPelaksana": 6549180,
+   "cpnsJF": 7565180,
+   "pnsPelaksana": 8122120,
+   "pnsJF": 9392120,
+   "dasar": "Terverifikasi nominal: Perpres 35/2024 (PUPR)"
+  },
+  {
+   "nama": "Kementerian Perumahan dan Kawasan Permukiman",
+   "jenis": "Kementerian",
+   "tabel": "T5",
+   "cpnsPelaksana": 6549180,
+   "cpnsJF": 7565180,
+   "pnsPelaksana": 8122120,
+   "pnsJF": 9392120,
+   "dasar": "Tabel sama dengan eks-PUPR (Beritasatu); Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Kementerian PPN/Bappenas",
+   "jenis": "Kementerian",
+   "tabel": "T5",
+   "cpnsPelaksana": 6549180,
+   "cpnsJF": 7565180,
+   "pnsPelaksana": 8122120,
+   "pnsJF": 9392120,
+   "dasar": "Agregator; tier cocok dengan rekap @vindikasi"
+  },
+  {
+   "nama": "Kementerian PANRB",
+   "jenis": "Kementerian",
+   "tabel": "T5",
+   "cpnsPelaksana": 6549180,
+   "cpnsJF": 7565180,
+   "pnsPelaksana": 8122120,
+   "pnsJF": 9392120,
+   "dasar": "Agregator; tier cocok dengan rekap @vindikasi"
+  },
+  {
+   "nama": "Kementerian Sekretariat Negara",
+   "jenis": "Kementerian",
+   "tabel": "T5",
+   "cpnsPelaksana": 6549180,
+   "cpnsJF": 7565180,
+   "pnsPelaksana": 8122120,
+   "pnsJF": 9392120,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Badan Pengawasan Keuangan dan Pembangunan (BPKP)",
+   "jenis": "Lembaga",
+   "tabel": "T5",
+   "cpnsPelaksana": 6549180,
+   "cpnsJF": 7565180,
+   "pnsPelaksana": 8122120,
+   "pnsJF": 9392120,
+   "dasar": "Kelas 1 Rp2.575.000–kelas 17 Rp41.550.000 (detikFinance)"
+  },
+  {
+   "nama": "Badan Intelijen Negara (BIN)",
+   "jenis": "Lembaga",
+   "tabel": "T5",
+   "cpnsPelaksana": 6549180,
+   "cpnsJF": 7565180,
+   "pnsPelaksana": 8122120,
+   "pnsJF": 9392120,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Sekretariat Jenderal DPR RI",
+   "jenis": "Setjen lembaga",
+   "tabel": "T5",
+   "cpnsPelaksana": 6549180,
+   "cpnsJF": 7565180,
+   "pnsPelaksana": 8122120,
+   "pnsJF": 9392120,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Kementerian Dalam Negeri",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator; tier cocok dengan rekap @vindikasi"
+  },
+  {
+   "nama": "Kementerian Luar Negeri",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator; tier cocok dengan rekap @vindikasi"
+  },
+  {
+   "nama": "Kementerian Hukum",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator; tier cocok dengan rekap @vindikasi"
+  },
+  {
+   "nama": "Kementerian Hak Asasi Manusia",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator; tier cocok dengan rekap @vindikasi"
+  },
+  {
+   "nama": "Kementerian Imigrasi dan Pemasyarakatan",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Kementerian Pendidikan Dasar dan Menengah",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Terverifikasi: Perpres 18/2025"
+  },
+  {
+   "nama": "Kementerian Pendidikan Tinggi, Sains, dan Teknologi",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Terverifikasi: Perpres 19/2025"
+  },
+  {
+   "nama": "Kementerian Kebudayaan",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Kementerian Kesehatan",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator; tier cocok dengan rekap @vindikasi"
+  },
+  {
+   "nama": "Kementerian Sosial",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator; tier cocok dengan rekap @vindikasi"
+  },
+  {
+   "nama": "Kementerian Ketenagakerjaan",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator; tier cocok dengan rekap @vindikasi"
+  },
+  {
+   "nama": "Kementerian Perindustrian",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator; tier cocok dengan rekap @vindikasi"
+  },
+  {
+   "nama": "Kementerian Perdagangan",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator; tier cocok dengan rekap @vindikasi"
+  },
+  {
+   "nama": "Kementerian ESDM",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator; tier cocok dengan rekap @vindikasi"
+  },
+  {
+   "nama": "Kementerian Perhubungan",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator; tier cocok dengan rekap @vindikasi"
+  },
+  {
+   "nama": "Kementerian Komunikasi dan Digital",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator; tier cocok dengan rekap @vindikasi"
+  },
+  {
+   "nama": "Kementerian Pertanian",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator; tier cocok dengan rekap @vindikasi"
+  },
+  {
+   "nama": "Kementerian Kehutanan",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Kementerian Kelautan dan Perikanan",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Kementerian Desa dan Pembangunan Daerah Tertinggal",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Kementerian Transmigrasi",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Kementerian ATR/BPN",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Terverifikasi: Perpres 6/2024"
+  },
+  {
+   "nama": "Kementerian BUMN",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Kementerian Koperasi",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator; tier cocok dengan rekap @vindikasi"
+  },
+  {
+   "nama": "Kementerian UMKM",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator; tier cocok dengan rekap @vindikasi"
+  },
+  {
+   "nama": "Kementerian Pariwisata",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Kementerian Ekonomi Kreatif",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Kementerian Pemberdayaan Perempuan dan Perlindungan Anak",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Kementerian Pelindungan Pekerja Migran Indonesia",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Kementerian Lingkungan Hidup/BPLH",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Kementerian Kependudukan dan Pembangunan Keluarga/BKKBN",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Kementerian Investasi dan Hilirisasi/BKPM",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Kemenko Politik dan Keamanan",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Kemenko Hukum, HAM, Imigrasi, dan Pemasyarakatan",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Kemenko Perekonomian",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Kemenko Pembangunan Manusia dan Kebudayaan",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Kemenko Pangan",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Kemenko Infrastruktur dan Pembangunan Kewilayahan",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Kemenko Pemberdayaan Masyarakat",
+   "jenis": "Kementerian",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Badan Kepegawaian Negara (BKN)",
+   "jenis": "Lembaga",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Lembaga Administrasi Negara (LAN)",
+   "jenis": "Lembaga",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Badan Pusat Statistik (BPS)",
+   "jenis": "Lembaga",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Badan Riset dan Inovasi Nasional (BRIN)",
+   "jenis": "Lembaga",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "BMKG",
+   "jenis": "Lembaga",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Badan Nasional Penanggulangan Bencana (BNPB)",
+   "jenis": "Lembaga",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Basarnas",
+   "jenis": "Lembaga",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Badan Narkotika Nasional (BNN)",
+   "jenis": "Lembaga",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Badan Siber dan Sandi Negara (BSSN)",
+   "jenis": "Lembaga",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Badan POM",
+   "jenis": "Lembaga",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Badan Pangan Nasional",
+   "jenis": "Lembaga",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Badan Gizi Nasional",
+   "jenis": "Lembaga",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Badan Karantina Indonesia",
+   "jenis": "Lembaga",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Badan Standardisasi Nasional",
+   "jenis": "Lembaga",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Bapeten",
+   "jenis": "Lembaga",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Arsip Nasional RI (ANRI)",
+   "jenis": "Lembaga",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Perpustakaan Nasional",
+   "jenis": "Lembaga",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "LKPP",
+   "jenis": "Lembaga",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Kejaksaan RI",
+   "jenis": "Lembaga",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Komisi Pemberantasan Korupsi (KPK)",
+   "jenis": "Lembaga",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Kepaniteraan dan Setjen Mahkamah Konstitusi",
+   "jenis": "Lembaga",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Sekretariat Jenderal Komisi Yudisial",
+   "jenis": "Lembaga",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Setjen Dewan Ketahanan Nasional",
+   "jenis": "Lembaga",
+   "tabel": "T4",
+   "cpnsPelaksana": 5618740,
+   "cpnsJF": 6162100,
+   "pnsPelaksana": 6959070,
+   "pnsJF": 7638270,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Kementerian Pertahanan",
+   "jenis": "Kementerian",
+   "tabel": "T3",
+   "cpnsPelaksana": 4828380,
+   "cpnsJF": 5141180,
+   "pnsPelaksana": 5971120,
+   "pnsJF": 6362120,
+   "dasar": "Agregator; tier cocok dengan rekap @vindikasi"
+  },
+  {
+   "nama": "Kementerian Agama",
+   "jenis": "Kementerian",
+   "tabel": "T3",
+   "cpnsPelaksana": 4828380,
+   "cpnsJF": 5141180,
+   "pnsPelaksana": 5971120,
+   "pnsJF": 6362120,
+   "dasar": "Agregator; tier cocok dengan rekap @vindikasi (guru/dosen bersertifikat: tukin dikurangi tunjangan profesi)"
+  },
+  {
+   "nama": "Kementerian Pemuda dan Olahraga",
+   "jenis": "Kementerian",
+   "tabel": "T3",
+   "cpnsPelaksana": 4828380,
+   "cpnsJF": 5141180,
+   "pnsPelaksana": 5971120,
+   "pnsJF": 6362120,
+   "dasar": "Agregator; tier cocok dengan rekap @vindikasi"
+  },
+  {
+   "nama": "Badan Informasi Geospasial",
+   "jenis": "Lembaga",
+   "tabel": "T3",
+   "cpnsPelaksana": 4828380,
+   "cpnsJF": 5141180,
+   "pnsPelaksana": 5971120,
+   "pnsJF": 6362120,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Badan Nasional Penanggulangan Terorisme (BNPT)",
+   "jenis": "Lembaga",
+   "tabel": "T3",
+   "cpnsPelaksana": 4828380,
+   "cpnsJF": 5141180,
+   "pnsPelaksana": 5971120,
+   "pnsJF": 6362120,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Badan Penyelenggara Jaminan Produk Halal",
+   "jenis": "Lembaga",
+   "tabel": "T3",
+   "cpnsPelaksana": 4828380,
+   "cpnsJF": 5141180,
+   "pnsPelaksana": 5971120,
+   "pnsJF": 6362120,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Badan Nasional Pengelola Perbatasan",
+   "jenis": "Lembaga",
+   "tabel": "T3",
+   "cpnsPelaksana": 4828380,
+   "cpnsJF": 5141180,
+   "pnsPelaksana": 5971120,
+   "pnsJF": 6362120,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Lembaga Ketahanan Nasional",
+   "jenis": "Lembaga",
+   "tabel": "T3",
+   "cpnsPelaksana": 4828380,
+   "cpnsJF": 5141180,
+   "pnsPelaksana": 5971120,
+   "pnsJF": 6362120,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Kepolisian Negara RI (PNS Polri)",
+   "jenis": "Lembaga",
+   "tabel": "T3",
+   "cpnsPelaksana": 4828380,
+   "cpnsJF": 5141180,
+   "pnsPelaksana": 5971120,
+   "pnsJF": 6362120,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "TNI (PNS)",
+   "jenis": "Lembaga",
+   "tabel": "T3",
+   "cpnsPelaksana": 4828380,
+   "cpnsJF": 5141180,
+   "pnsPelaksana": 5971120,
+   "pnsJF": 6362120,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Setjen MPR",
+   "jenis": "Setjen lembaga",
+   "tabel": "T3",
+   "cpnsPelaksana": 4828380,
+   "cpnsJF": 5141180,
+   "pnsPelaksana": 5971120,
+   "pnsJF": 6362120,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Setjen Komisi Pemilihan Umum",
+   "jenis": "Setjen lembaga",
+   "tabel": "T3",
+   "cpnsPelaksana": 4828380,
+   "cpnsJF": 5141180,
+   "pnsPelaksana": 5971120,
+   "pnsJF": 6362120,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Setjen Bawaslu",
+   "jenis": "Setjen lembaga",
+   "tabel": "T3",
+   "cpnsPelaksana": 4828380,
+   "cpnsJF": 5141180,
+   "pnsPelaksana": 5971120,
+   "pnsJF": 6362120,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Setjen Komnas HAM",
+   "jenis": "Setjen lembaga",
+   "tabel": "T3",
+   "cpnsPelaksana": 4828380,
+   "cpnsJF": 5141180,
+   "pnsPelaksana": 5971120,
+   "pnsJF": 6362120,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Setjen Ombudsman RI",
+   "jenis": "Setjen lembaga",
+   "tabel": "T3",
+   "cpnsPelaksana": 4828380,
+   "cpnsJF": 5141180,
+   "pnsPelaksana": 5971120,
+   "pnsJF": 6362120,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Badan Keamanan Laut (Bakamla)",
+   "jenis": "Lembaga",
+   "tabel": "T2",
+   "cpnsPelaksana": 4578780,
+   "cpnsJF": 4827580,
+   "pnsPelaksana": 5659120,
+   "pnsJF": 5970120,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "LPP Radio Republik Indonesia (RRI)",
+   "jenis": "Lembaga",
+   "tabel": "T2",
+   "cpnsPelaksana": 4578780,
+   "cpnsJF": 4827580,
+   "pnsPelaksana": 5659120,
+   "pnsJF": 5970120,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "LPP Televisi Republik Indonesia (TVRI)",
+   "jenis": "Lembaga",
+   "tabel": "T2",
+   "cpnsPelaksana": 4578780,
+   "cpnsJF": 4827580,
+   "pnsPelaksana": 5659120,
+   "pnsJF": 5970120,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Setjen Dewan Perwakilan Daerah",
+   "jenis": "Setjen lembaga",
+   "tabel": "T2",
+   "cpnsPelaksana": 4578780,
+   "cpnsJF": 4827580,
+   "pnsPelaksana": 5659120,
+   "pnsJF": 5970120,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  },
+  {
+   "nama": "Setjen Lembaga Perlindungan Saksi dan Korban",
+   "jenis": "Setjen lembaga",
+   "tabel": "T2",
+   "cpnsPelaksana": 4578780,
+   "cpnsJF": 4827580,
+   "pnsPelaksana": 5659120,
+   "pnsJF": 5970120,
+   "dasar": "Agregator formasi-cpns.web.id (cek Perpres instansi)"
+  }
+ ],
+ "kemenkeu": [
+  {
+   "peringkat": 27,
+   "tukin": 46950000,
+   "cpns": 40045980,
+   "pns": 49993120
+  },
+  {
+   "peringkat": 26,
+   "tukin": 41550000,
+   "cpns": 35725980,
+   "pns": 44593120
+  },
+  {
+   "peringkat": 25,
+   "tukin": 36770000,
+   "cpns": 31901980,
+   "pns": 39813120
+  },
+  {
+   "peringkat": 24,
+   "tukin": 32540000,
+   "cpns": 28517980,
+   "pns": 35583120
+  },
+  {
+   "peringkat": 23,
+   "tukin": 24100000,
+   "cpns": 21765980,
+   "pns": 27143120
+  },
+  {
+   "peringkat": 22,
+   "tukin": 21330000,
+   "cpns": 19549980,
+   "pns": 24373120
+  },
+  {
+   "peringkat": 21,
+   "tukin": 18880000,
+   "cpns": 17589980,
+   "pns": 21923120
+  },
+  {
+   "peringkat": 20,
+   "tukin": 16700000,
+   "cpns": 15845980,
+   "pns": 19743120
+  },
+  {
+   "peringkat": 19,
+   "tukin": 13670000,
+   "cpns": 13421980,
+   "pns": 16713120
+  },
+  {
+   "peringkat": 18,
+   "tukin": 12370000,
+   "cpns": 12381980,
+   "pns": 15413120
+  },
+  {
+   "peringkat": 17,
+   "tukin": 10947000,
+   "cpns": 11243580,
+   "pns": 13990120
+  },
+  {
+   "peringkat": 16,
+   "tukin": 8458000,
+   "cpns": 9252380,
+   "pns": 11501120
+  },
+  {
+   "peringkat": 15,
+   "tukin": 7474000,
+   "cpns": 8465180,
+   "pns": 10517120
+  },
+  {
+   "peringkat": 14,
+   "tukin": 6349000,
+   "cpns": 7565180,
+   "pns": 9392120
+  },
+  {
+   "peringkat": 13,
+   "tukin": 5079000,
+   "cpns": 6549180,
+   "pns": 8122120
+  },
+  {
+   "peringkat": 12,
+   "tukin": 4837000,
+   "cpns": 6355580,
+   "pns": 7880120
+  },
+  {
+   "peringkat": 11,
+   "tukin": 4607000,
+   "cpns": 6171580,
+   "pns": 7650120
+  },
+  {
+   "peringkat": 10,
+   "tukin": 4388000,
+   "cpns": 5996380,
+   "pns": 7431120
+  },
+  {
+   "peringkat": 9,
+   "tukin": 4179000,
+   "cpns": 5829180,
+   "pns": 7222120
+  },
+  {
+   "peringkat": 8,
+   "tukin": 3980000,
+   "cpns": 5669980,
+   "pns": 7023120
+  },
+  {
+   "peringkat": 7,
+   "tukin": 3864000,
+   "cpns": 5577180,
+   "pns": 6907120
+  },
+  {
+   "peringkat": 6,
+   "tukin": 3611000,
+   "cpns": 5374780,
+   "pns": 6654120
+  },
+  {
+   "peringkat": 5,
+   "tukin": 3375000,
+   "cpns": 5185980,
+   "pns": 6418120
+  },
+  {
+   "peringkat": 4,
+   "tukin": 3154000,
+   "cpns": 5009180,
+   "pns": 6197120
+  },
+  {
+   "peringkat": 3,
+   "tukin": 2948000,
+   "cpns": 4844380,
+   "pns": 5991120
+  },
+  {
+   "peringkat": 2,
+   "tukin": 2755000,
+   "cpns": 4689980,
+   "pns": 5798120
+  },
+  {
+   "peringkat": 1,
+   "tukin": 2575000,
+   "cpns": 4545980,
+   "pns": 5618120
+  }
+ ],
+ "djp": [
+  {
+   "peringkat": 12,
+   "jabatan": "Pelaksana Lainnya",
+   "tukin": 11306488,
+   "cpns": 11531170,
+   "pns": 14349608
+  },
+  {
+   "peringkat": 11,
+   "jabatan": "Pelaksana Lainnya",
+   "tukin": 10768862,
+   "cpns": 11101070,
+   "pns": 13811982
+  },
+  {
+   "peringkat": 10,
+   "jabatan": "Pelaksana Lainnya",
+   "tukin": 10256950,
+   "cpns": 10691540,
+   "pns": 13300070
+  },
+  {
+   "peringkat": 9,
+   "jabatan": "Pelaksana Lainnya",
+   "tukin": 9768412,
+   "cpns": 10300710,
+   "pns": 12811532
+  },
+  {
+   "peringkat": 8,
+   "jabatan": "Pelaksana Lainnya",
+   "tukin": 8457500,
+   "cpns": 9251980,
+   "pns": 11500620
+  },
+  {
+   "peringkat": 7,
+   "jabatan": "Pelaksana Lainnya",
+   "tukin": 8211000,
+   "cpns": 9054780,
+   "pns": 11254120
+  },
+  {
+   "peringkat": 6,
+   "jabatan": "Pelaksana",
+   "tukin": 7673375,
+   "cpns": 8624680,
+   "pns": 10716495
+  },
+  {
+   "peringkat": 5,
+   "jabatan": "Pelaksana",
+   "tukin": 7171875,
+   "cpns": 8223480,
+   "pns": 10214995
+  },
+  {
+   "peringkat": 4,
+   "jabatan": "Pelaksana",
+   "tukin": 5361800,
+   "cpns": 6775420,
+   "pns": 8404920
+  }
+ ],
+ "sumber": [
+  {
+   "label": "Perpres 156/2014 Tukin Kemenkeu (JDIH BKN)",
+   "url": "https://jdih.bkn.go.id/common/dokumen/PERPRES%20NOMOR%20156%20TAHUN%202014%20-%20TUNJANGAN%20KINERJA%20PEGAWAI%20DI%20LINGKUNGAN%20KEMENTERIAN%20KEUANGAN.pdf"
+  },
+  {
+   "label": "Perpres 37/2015 Tukin DJP (peraturan.go.id)",
+   "url": "https://peraturan.go.id/files/ps37-2015.pdf"
+  },
+  {
+   "label": "Perpres 188/2014 Tukin BPK (JDIH Jabar)",
+   "url": "https://jdih.jabarprov.go.id/page/eksekusi_download/1/Perpres_188_2014.pdf"
+  },
+  {
+   "label": "Tukin PUPR Perpres 35/2024 (WageIndicator)",
+   "url": "https://wageindicator.org/id-id/bekerja-di-indonesia/gaji/tukin-pns-pupr/"
+  },
+  {
+   "label": "Tukin ATR/BPN Perpres 6/2024 (TribunJatim)",
+   "url": "https://jatim.tribunnews.com/news/560034/daftar-gaji-pegawai-kementerian-atrbpn-2026-lengkap-dengan-tukin-dari-kelas-jabatan-1-hingga-17"
+  },
+  {
+   "label": "Tukin Kemendikdasmen & Kemdiktisaintek Perpres 18 & 19/2025 (TribunJatim)",
+   "url": "https://jatim.tribunnews.com/news/552673/daftar-tunjangan-kinerja-pegawai-kemendikdasmen-dan-kemdiktisaintek-2026-tertinggi-rp332-juta"
+  },
+  {
+   "label": "Tempo: Prabowo teken Perpres tukin 3 kementerian",
+   "url": "https://www.tempo.co/politik/prabowo-teken-perpres-tunjangan-kinerja-di-3-kementerian-1231080"
+  },
+  {
+   "label": "Perpres 122/2015 Tukin BPS",
+   "url": "https://peraturan.bpk.go.id/Download/34806/Perpres%20Nomor%20122%20Tahun%202015.pdf"
+  },
+  {
+   "label": "Agregator 127 K/L: formasi-cpns.web.id/tukin",
+   "url": "https://formasi-cpns.web.id/tukin"
+  },
+  {
+   "label": "Rekap tier tukin 22 kementerian (@vindikasi di X)",
+   "url": "https://x.com/vindikasi/status/2056885168414286242"
+  },
+  {
+   "label": "Beritasatu: Perbandingan Tunjangan PNS 2026",
+   "url": "https://www.beritasatu.com/nasional/2958401/perbandingan-tunjangan-pns-2026-di-kementerian-dan-lembaga"
+  },
+  {
+   "label": "Katadata: Gaji PNS 2026 masih PP 5/2024 (28 Juli 2026)",
+   "url": "https://katadata.co.id/lifestyle/varia/6a68295f4716d/daftar-gaji-pns-2026-dan-tunjangan-lengkap-setiap-golongan"
+  },
+  {
+   "label": "PerBKN 10/2022: tukin CPNS 80%",
+   "url": "https://www.bkn.go.id/wp-content/uploads/2023/02/PerBKN-Nomor-10-Tahun-2022.pdf"
+  },
+  {
+   "label": "Peraturan LKPP 1/2024: tukin CPNS 80%",
+   "url": "https://peraturan.go.id/files/peraturan-lkpp-no-1-tahun-2024.pdf"
+  },
+  {
+   "label": "Kelas jabatan JF Ahli Pertama = 8 (Permenpora 7/2024)",
+   "url": "https://peraturan.bpk.go.id/Download/360047/permenpora-no-7-tahun-2024.pdf"
+  },
+  {
+   "label": "Kelas jabatan pelaksana S1 = 7 (Kemenkes)",
+   "url": "https://ropeg.kemkes.go.id/osdm/pengumuman/Surat_Perubahan_Nomenklatur_Jabatan_Pelaksana_Bagi_PNS_dan_Pemetaan_Kebutuhan_PPPK_(Tayang).pdf"
+  }
+ ]
+}
