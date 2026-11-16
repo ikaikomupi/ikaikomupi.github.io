@@ -23,7 +23,7 @@ export default function TemaToggle({ className = "", terang = false }) {
       aria-label={keGelap ? "Ganti ke mode gelap" : "Ganti ke mode terang"}
       title={keGelap ? "Mode gelap" : "Mode terang"}
       className={`flex h-9 w-9 items-center justify-center rounded-lg transition-colors ${
-        terang ? "text-[#4a4540] hover:bg-[#f3efe8] hover:text-[#1f1d1a]" : "text-stone-400 hover:bg-white/5 hover:text-stone-100"
+        terang ? "text-ika-muted hover:bg-ika-surface hover:text-ika-ink" : "text-stone-400 hover:bg-white/5 hover:text-stone-100"
       } ${className}`}
     >
       {keGelap ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}

@@ -1,4 +1,5 @@
 import { muatFontItalic } from "../lib/fontItalic";
+import { PERIODE, pembina, inti, bidang } from "../data/pengurus";
 import { useState } from "react";
 import {
   ScrollText,
@@ -338,25 +339,16 @@ const gbho = [
   },
 ];
 
+const ikonInti = { "Ketua Umum": Crown, "Wakil Ketua": UserCog, Sekretaris: PenLine, Bendahara: Wallet };
+const ikonBidang = { A: Users, B: Briefcase, C: Network };
 const struktur = {
   pembina: {
     label: "Dewan Pembina / Penasihat",
     desc: "Alumni senior & tokoh — arahan strategis, bukan kerja harian",
-    ketua: "Haidar Abdurrahman",
-    anggota: ["Feggy Nurdiansyah", "M. Endriski Agraenzopati H", "Alwan Husni Ramdhani"],
+    ...pembina,
   },
-  inti: [
-    { jabatan: "Ketua Umum", nama: "Cecep Abdurrohman Malik Ibrohim", icon: Crown },
-    { jabatan: "Wakil Ketua", nama: "Rizqi Abdul Azis", icon: UserCog },
-    { jabatan: "Sekretaris", nama: "Alanis Rani Rayhana", icon: PenLine },
-    { jabatan: "Bendahara", nama: "Den Reza Alfian Farid", icon: Wallet },
-  ],
-  bidang: [
-    { nama: "Program & Acara", anggota: ["Fathia Islamiyatul S", "Reva Girvan"], icon: Users },
-    { nama: "Pengembangan Profesional & Karir", anggota: ["Wanda Putri R", "Dinda DNA", "Renanda Dwina P", "Fachira Anjani", "Gesha Fadhilah R"], icon: Briefcase },
-    { nama: "Hubungan Alumni & Antar-Angkatan", anggota: ["Rizki Dwi P", "Regine Deanaendra"], icon: Network },
-    { nama: "Komunikasi & Media", anggota: ["Rafi Shalahudin", "Marcellodiansyah"], icon: Megaphone },
-  ],
+  inti: inti.map((m) => ({ ...m, icon: ikonInti[m.jabatan] })),
+  bidang: bidang.map((b) => ({ nama: b.nama, koordinator: b.koordinator, anggota: b.anggota, icon: ikonBidang[b.kode] })),
   pic: "1 koordinator per angkatan — jembatan ke pengurus inti & penjaga data angkatannya.",
 };
 
@@ -550,7 +542,7 @@ function StrukturDoc() {
       {/* Koordinator Bidang */}
       <div>
         <p className="mb-3 text-center text-[11px] font-semibold uppercase tracking-[0.2em] text-amber-500">Koordinator Bidang</p>
-        <div className="grid gap-3 sm:grid-cols-2">
+        <div className="grid gap-3 lg:grid-cols-3">
           {struktur.bidang.map((b, i) => (
             <div key={i} className="rounded-xl border border-white/8 bg-white/[0.02] p-4">
               <div className="flex items-center gap-3">
@@ -560,6 +552,7 @@ function StrukturDoc() {
                 <h4 className="font-display text-base text-[#f5efe6]">{b.nama}</h4>
               </div>
               <div className="mt-2 flex flex-wrap gap-1.5 pl-11">
+                <span className="rounded-full bg-amber-500/15 px-2.5 py-0.5 text-xs font-semibold text-amber-300 ring-1 ring-amber-500/30">Koordinator: {b.koordinator}</span>
                 {b.anggota.map((a) => (
                   <span key={a} className="rounded-full bg-white/5 px-2.5 py-0.5 text-xs font-medium text-stone-300 ring-1 ring-white/10">{a}</span>
                 ))}
@@ -774,7 +767,7 @@ export default function AdArtPage() {
             {tab === "struktur" && (
               <>
                 <h2 className="mb-2 font-display text-3xl font-semibold text-[#f5efe6]">Struktur Organisasi</h2>
-                <p className="mb-8 text-sm text-stone-500">Rencana susunan kepengurusan IKA IKOM UPI periode mendatang.</p>
+                <p className="mb-8 text-sm text-stone-500">Susunan kepengurusan IKA IKOM UPI periode {PERIODE}.</p>
                 <StrukturDoc />
               </>
             )}

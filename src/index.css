@@ -4,7 +4,45 @@
   --font-display: "Fraunces", Georgia, "Times New Roman", serif;
   --font-body: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
   --color-ink: #0c0a09;
+  /* Palet IKA (navbar & beranda). Nilai di sini = mode gelap; mode terang di bawah. */
+  --color-ika-bg: #15120f;
+  --color-ika-surface: #211c18;
+  --color-ika-ink: #f4efe7;
+  --color-ika-muted: #aaa298;
+  --color-ika-line: #3a332d;
+  --color-ika-merah: #e2474e;
+  --color-ika-oranye: #ef7a3c;
+  --color-ika-kuning: #f5c331;
+  --color-ika-emas: #d2ac5a;
 }
+:root[data-theme="light"] {
+  --color-ika-bg: #ffffff;
+  --color-ika-surface: #f4f1ec;
+  --color-ika-ink: #1f1d1a;
+  --color-ika-muted: #5f5850;
+  --color-ika-line: #e5dfd5;
+  --color-ika-merah: #b5272d;
+  --color-ika-oranye: #e0601f;
+  --color-ika-kuning: #f0b90b;
+  --color-ika-emas: #b8913a;
+}
+:root[data-theme="light"] [data-theme="dark"] {
+  --color-ika-bg: #15120f;
+  --color-ika-surface: #211c18;
+  --color-ika-ink: #f4efe7;
+  --color-ika-muted: #aaa298;
+  --color-ika-line: #3a332d;
+  --color-ika-merah: #e2474e;
+  --color-ika-oranye: #ef7a3c;
+  --color-ika-kuning: #f5c331;
+  --color-ika-emas: #d2ac5a;
+}
+/* Logo: putih di mode gelap, berwarna di mode terang. */
+.logo-warna { display: none; }
+:root[data-theme="light"] .logo-warna { display: block; }
+:root[data-theme="light"] .logo-putih { display: none; }
+:root[data-theme="light"] [data-theme="dark"] .logo-warna { display: none; }
+:root[data-theme="light"] [data-theme="dark"] .logo-putih { display: block; }
 /* ---------- Tema terang/gelap ----------
    Desain dasarnya gelap. Mode terang membalik skala stone dan menggelapkan teks aksen
    lewat CSS variable Tailwind, jadi class yang sudah ada tetap dipakai apa adanya.
@@ -123,3 +161,15 @@ body {
   50% { opacity: 0.35; transform: scale(0.82); }
 }
 .onair-dot { animation: onair-pulse 1.6s ease-in-out infinite; }
+
+/* Gelembung chat di hero beranda muncul berurutan sekali saat halaman dibuka. */
+@keyframes gelembung-muncul {
+  from { opacity: 0; transform: translateY(10px) scale(0.92); }
+  to { opacity: 1; transform: none; }
+}
+.gelembung {
+  animation: gelembung-muncul 0.5s cubic-bezier(0.2, 0.8, 0.2, 1.2) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .gelembung { animation: none; }
+}
