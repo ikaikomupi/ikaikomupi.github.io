@@ -1,104 +1,188 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import TemaToggle from "./TemaToggle";
 
-const links = [
-  { to: "/", label: "Beranda" },
-  { to: "/directory", label: "Direktori" },
-  // { to: "/organisasi", label: "Organisasi" },
-  // { to: "/calon-ketua", label: "Calon Ketua" },
-  { to: "/events", label: "Event" },
+// Navbar gaya Chevening: latar putih di dua tema, logo + garis emas + nama 3 baris,
+// menu dikelompokkan dengan dropdown, menu aktif ditandai huruf tebal.
+// Warna ditulis hex (bukan stone-*/white) karena mode terang membalik skala stone.
+const menu = [
+  {
+    label: "Tentang Kami",
+    items: [
+      { to: "/organisasi", label: "Organisasi", desc: "Struktur dan kepengurusan" },
+      { to: "/ad-art", label: "AD/ART", desc: "Anggaran Dasar & Rumah Tangga" },
+    ],
+  },
+  { to: "/directory", label: "Alumni Kami" },
+  {
+    label: "Program",
+    items: [
+      { to: "/events", label: "Event & Agenda", desc: "Kalender kegiatan alumni" },
+      { to: "/karir", label: "Karir", desc: "Lowongan dari jejaring alumni" },
+      { to: "/cpns", label: "KOMpas ASN", desc: "Belajar & tryout CPNS", startsWith: true },
+      { to: "/ttd", label: "TTD Online", desc: "Tanda tangan dokumen PDF", startsWith: true },
+    ],
+  },
   { to: "/setelah-toga", label: "Setelah Toga", startsWith: true },
-  { to: "/karir", label: "Karir" },
-  { to: "/cpns", label: "KOMpas ASN", startsWith: true },
 ];
 const CTA = { to: "/register", label: "Daftar" };
-const aktif = (pathname, { to, startsWith: sw }) => (sw ? pathname.startsWith(to) : pathname === to);
+
+const cocok = (pathname, { to, startsWith: sw }) => (sw ? pathname.startsWith(to) : pathname === to);
+const grupAktif = (pathname, m) => (m.items ? m.items.some((i) => cocok(pathname, i)) : cocok(pathname, m));
+
+const TEKS = "text-[#1f1d1a]";
+const REDUP = "text-[#4a4540] hover:text-[#1f1d1a]";
+
+function Logo() {
+  return (
+    <Link to="/" aria-label="IKA IKOM UPI, ke beranda" className="flex shrink-0 items-center gap-3">
+      <img src="/logo-upi.png" alt="" width="40" height="40" className="h-10 w-10 object-contain" />
+      <span className="h-10 w-px bg-[#b8913a]" aria-hidden="true" />
+      <span className={`flex flex-col text-[12.5px] font-light leading-[1.15] tracking-[0.01em] ${TEKS} sm:text-[13.5px]`}>
+        <span>IKA Ilmu Komunikasi</span>
+        <span>Universitas Pendidikan</span>
+        <span>Indonesia</span>
+      </span>
+    </Link>
+  );
+}
+
+function Dropdown({ m, pathname }) {
+  const [buka, setBuka] = useState(false);
+  const ref = useRef(null);
+  const on = grupAktif(pathname, m);
+
+  useEffect(() => setBuka(false), [pathname]);
+  useEffect(() => {
+    if (!buka) return;
+    const luar = (e) => !ref.current?.contains(e.target) && setBuka(false);
+    const esc = (e) => e.key === "Escape" && setBuka(false);
+    document.addEventListener("pointerdown", luar);
+    document.addEventListener("keydown", esc);
+    return () => {
+      document.removeEventListener("pointerdown", luar);
+      document.removeEventListener("keydown", esc);
+    };
+  }, [buka]);
+
+  return (
+    <div ref={ref} className="relative" onMouseEnter={() => setBuka(true)} onMouseLeave={() => setBuka(false)}>
+      <button
+        type="button"
+        aria-expanded={buka}
+        aria-haspopup="true"
+        onClick={() => setBuka((v) => !v)}
+        className={`flex items-center gap-1.5 px-3.5 py-2 text-[15px] transition-colors ${on ? `font-semibold ${TEKS}` : REDUP}`}
+      >
+        {m.label}
+        <ChevronDown className={`h-4 w-4 stroke-[1.5] transition-transform ${buka ? "rotate-180" : ""}`} />
+      </button>
+      {buka && (
+        <div className="absolute left-1/2 top-full z-10 w-72 -translate-x-1/2 pt-2">
+          <div className="overflow-hidden rounded-lg border border-[#e7e2d9] bg-[#fff] py-2 shadow-[0_12px_32px_-8px_rgba(28,25,23,0.25)]">
+            {m.items.map((i) => {
+              const ia = cocok(pathname, i);
+              return (
+                <Link
+                  key={i.to}
+                  to={i.to}
+                  aria-current={ia ? "page" : undefined}
+                  className={`block border-l-2 px-4 py-2.5 transition-colors hover:bg-[#f7f4ee] ${ia ? "border-[#b8913a] bg-[#faf7f1]" : "border-transparent"}`}
+                >
+                  <span className={`block text-sm ${ia ? "font-semibold" : "font-medium"} ${TEKS}`}>{i.label}</span>
+                  <span className="block text-xs text-[#7a736b]">{i.desc}</span>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const { pathname } = useLocation();
+  useEffect(() => setOpen(false), [pathname]);
 
   return (
-    <nav className="fixed top-0 z-50 w-full border-b border-white/8 bg-stone-950/90 backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-3.5">
-        {/* Logo */}
-        <Link to="/" className="flex items-center gap-2.5">
-          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#fff] p-1 ring-1 ring-white/10">
-            <img src="/logo-upi.png" alt="IKA IKOM UPI" className="h-full w-auto" />
-          </div>
-          <div className="flex flex-col leading-tight">
-            <span className="text-xs font-bold tracking-widest text-stone-200">IKA ILMU KOMUNIKASI</span>
-            <span className="text-[10px] font-semibold tracking-widest text-amber-400">UNIVERSITAS PENDIDIKAN INDONESIA</span>
-          </div>
-        </Link>
+    <nav className="fixed top-0 z-50 w-full border-b border-[#ece7de] bg-[#fff] shadow-[0_6px_18px_-12px_rgba(28,25,23,0.35)]">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-6 px-4 sm:px-6">
+        <Logo />
 
-        {/* Desktop links */}
+        {/* Desktop */}
         <div className="hidden items-center lg:flex">
-          {links.map((l) => {
-            const on = aktif(pathname, l);
-            return (
+          {menu.map((m) =>
+            m.items ? (
+              <Dropdown key={m.label} m={m} pathname={pathname} />
+            ) : (
               <Link
-                key={l.to}
-                to={l.to}
-                aria-current={on ? "page" : undefined}
-                className={`relative px-3 py-2 text-sm font-medium transition-colors ${
-                  on ? "text-stone-100" : "text-stone-400 hover:text-stone-100"
-                }`}
+                key={m.to}
+                to={m.to}
+                aria-current={cocok(pathname, m) ? "page" : undefined}
+                className={`px-3.5 py-2 text-[15px] transition-colors ${cocok(pathname, m) ? `font-semibold ${TEKS}` : REDUP}`}
               >
-                {l.label}
-                <span
-                  className={`absolute inset-x-3 -bottom-[15px] h-0.5 rounded-full bg-amber-500 transition-opacity ${on ? "opacity-100" : "opacity-0"}`}
-                />
+                {m.label}
               </Link>
-            );
-          })}
-          <span className="mx-3 h-5 w-px bg-white/10" aria-hidden="true" />
-          <TemaToggle />
+            )
+          )}
+          <span className="mx-2 h-6 w-px bg-[#e7e2d9]" aria-hidden="true" />
+          <TemaToggle terang />
           <Link
             to={CTA.to}
-            className={`ml-2 rounded-lg px-4 py-2 text-sm font-semibold transition-colors ${
-              aktif(pathname, CTA) ? "bg-amber-400 text-ink" : "bg-amber-500 text-ink hover:bg-amber-400"
-            }`}
+            className="ml-2 rounded-md bg-amber-500 px-4 py-2 text-sm font-semibold text-ink transition-colors hover:bg-amber-400"
           >
             {CTA.label}
           </Link>
         </div>
 
-        {/* Mobile: tema + hamburger */}
+        {/* Mobile */}
         <div className="flex items-center gap-1 lg:hidden">
-        <TemaToggle />
-        <button
-          className="flex h-9 w-9 items-center justify-center rounded-lg text-stone-400 hover:bg-white/5 hover:text-white"
-          onClick={() => setOpen((v) => !v)}
-          aria-label="Toggle menu"
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+          <TemaToggle terang />
+          <button
+            className="flex h-9 w-9 items-center justify-center rounded-md text-[#4a4540] hover:bg-[#f3efe8] hover:text-[#1f1d1a]"
+            onClick={() => setOpen((v) => !v)}
+            aria-label={open ? "Tutup menu" : "Buka menu"}
+            aria-expanded={open}
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
         </div>
       </div>
 
-      {/* Mobile drawer */}
       {open && (
-        <div className="border-t border-white/8 bg-stone-950 px-6 pb-5 pt-2 lg:hidden">
-          {links.map((l) => (
-            <Link
-              key={l.to}
-              to={l.to}
-              onClick={() => setOpen(false)}
-              aria-current={aktif(pathname, l) ? "page" : undefined}
-              className={`block rounded-lg px-4 py-3 text-sm font-medium transition-colors ${
-                aktif(pathname, l) ? "bg-amber-500/10 text-amber-400" : "text-stone-400 hover:text-stone-100"
-              }`}
-            >
-              {l.label}
-            </Link>
-          ))}
+        <div className="max-h-[calc(100vh-4rem)] overflow-y-auto border-t border-[#ece7de] bg-[#fff] px-4 pb-5 pt-2 lg:hidden">
+          {menu.map((m) =>
+            m.items ? (
+              <div key={m.label} className="py-2">
+                <p className="px-3 pb-1 pt-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#b8913a]">{m.label}</p>
+                {m.items.map((i) => (
+                  <Link
+                    key={i.to}
+                    to={i.to}
+                    aria-current={cocok(pathname, i) ? "page" : undefined}
+                    className={`block rounded-md px-3 py-2.5 text-[15px] ${cocok(pathname, i) ? `bg-[#faf7f1] font-semibold ${TEKS}` : "text-[#4a4540]"}`}
+                  >
+                    {i.label}
+                  </Link>
+                ))}
+              </div>
+            ) : (
+              <Link
+                key={m.to}
+                to={m.to}
+                aria-current={cocok(pathname, m) ? "page" : undefined}
+                className={`block rounded-md px-3 py-3 text-[15px] ${cocok(pathname, m) ? `bg-[#faf7f1] font-semibold ${TEKS}` : "text-[#4a4540]"}`}
+              >
+                {m.label}
+              </Link>
+            )
+          )}
           <Link
             to={CTA.to}
-            onClick={() => setOpen(false)}
-            className="mt-3 block rounded-lg bg-amber-500 px-4 py-3 text-center text-sm font-semibold text-ink hover:bg-amber-400"
+            className="mt-3 block rounded-md bg-amber-500 px-4 py-3 text-center text-sm font-semibold text-ink hover:bg-amber-400"
           >
             {CTA.label} ke jejaring alumni
           </Link>
