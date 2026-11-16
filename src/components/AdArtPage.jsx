@@ -11,7 +11,6 @@ import {
   PenLine,
   Wallet,
   Users,
-  Megaphone,
   Briefcase,
   Info,
   ClipboardList,
@@ -355,26 +354,32 @@ const struktur = {
 const sop = [
   {
     bidang: "Program & Acara",
+    kode: "A",
+    tugasPokok: ["Merancang dan menyelenggarakan kegiatan silaturahmi serta acara resmi organisasi.", "Menyusun kalender kegiatan tahunan bersama Pengurus Inti.", "Mengelola kepanitiaan, kebutuhan acara, dan laporan pertanggungjawaban kegiatan bersama Bendahara."],
+    rencana: [["Menyusun kalender kegiatan dan standar operasional penyelenggaraan acara.", "Menyelenggarakan minimal 1 (satu) acara silaturahmi lintas angkatan."], ["Menjalankan agenda silaturahmi rutin tahunan (reuni, gathering, atau halal bihalal).", "Menyelenggarakan kegiatan bersama Program Studi dan mahasiswa aktif, serta aksi sosial."], ["Mengevaluasi seluruh program acara selama periode kepengurusan.", "Menyiapkan penyelenggaraan Musyawarah Besar akhir periode bersama Pengurus Inti."]],
     icon: Users,
     tujuan: "Merencanakan, mengkoordinasikan, dan mengevaluasi seluruh kegiatan IKA IKOM UPI agar terselenggara secara terstruktur dan berdampak.",
     ruangLingkup: "Berlaku untuk semua kegiatan resmi IKA IKOM UPI, mulai dari ideasi hingga pelaporan pasca acara.",
     prosedur: [
       { langkah: "Ideasi & Inisiasi", detail: "Usulkan ide acara disertai latar belakang, tujuan, dan estimasi peserta. Diajukan minimal 8 minggu sebelum tanggal pelaksanaan." },
-      { langkah: "Penyusunan Proposal", detail: "Buat proposal lengkap: rundown, kebutuhan SDM, anggaran, dan rencana komunikasi ke anggota. Koordinasikan dengan Bidang Komunikasi & Media untuk promosi." },
+      { langkah: "Penyusunan Proposal", detail: "Buat proposal lengkap: rundown, kebutuhan SDM, anggaran, dan rencana komunikasi ke anggota. Koordinasikan dengan Bidang Hubungan Alumni & Antar-Angkatan untuk penyebaran informasi ke seluruh angkatan." },
       { langkah: "Persetujuan", detail: "Proposal disetujui oleh Ketua Umum dalam Rapat Pengurus. Jika ada kebutuhan donasi, koordinasikan dengan Bendahara untuk membuka penggalangan dana." },
       { langkah: "Persiapan & Koordinasi", detail: "Tetapkan PIC setiap sub-tugas. Lakukan briefing teknis minimal 3 hari sebelum acara. Konfirmasi kehadiran narasumber/tamu jika ada." },
-      { langkah: "Pelaksanaan", detail: "Jalankan acara sesuai rundown. Dokumentasikan setiap sesi (foto/video) untuk keperluan Bidang Komunikasi & Media." },
-      { langkah: "Evaluasi & Pelaporan", detail: "Kirimkan laporan evaluasi kepada Ketua Umum maksimal 7 hari setelah acara, mencakup capaian, kendala, dan rekomendasi untuk acara berikutnya." },
+      { langkah: "Pelaksanaan", detail: "Jalankan acara sesuai rundown. Dokumentasikan setiap sesi (foto/video) sebagai arsip dan bahan publikasi organisasi." },
+      { langkah: "Evaluasi & Pelaporan", detail: "Kirimkan laporan evaluasi kepada Ketua Umum maksimal 7 hari setelah acara, mencakup capaian, kendala, dan rekomendasi. Laporan pertanggungjawaban keuangan disusun bersama Bendahara." },
     ],
     output: ["Proposal acara", "Rundown & susunan panitia", "Dokumentasi acara", "Laporan evaluasi pasca acara"],
     kpi: [
-      "Minimal 2 acara resmi per tahun",
+      "Minimal 1 acara silaturahmi lintas angkatan per tahun",
       "Tingkat kehadiran ≥ 30% anggota aktif per acara",
       "Laporan evaluasi tersampaikan ≤ 7 hari pasca acara",
     ],
   },
   {
     bidang: "Pengembangan Profesional & Karir",
+    kode: "B",
+    tugasPokok: ["Menyelenggarakan program peningkatan kapasitas profesional anggota.", "Membangun jejaring karir serta penyebaran informasi lowongan antar alumni.", "Menjembatani alumni dengan mahasiswa aktif melalui mentoring dan kuliah tamu."],
+    rencana: [["Memetakan bidang profesi dan sebaran kerja alumni.", "Membuka kanal informasi karir (job board) dan menyelenggarakan sesi berbagi karir perdana."], ["Menjalankan minimal 1 (satu) program pengembangan profesional secara rutin.", "Menyelenggarakan kuliah tamu atau kerja sama dengan Program Studi dan mitra eksternal."], ["Memantapkan program mentoring alumni–mahasiswa yang berkelanjutan.", "Menyusun laporan dampak program serta menyerahkan data mitra dan mentor kepada kepengurusan berikutnya."]],
     icon: Briefcase,
     tujuan: "Memfasilitasi pertumbuhan profesional anggota dan memperluas peluang karir melalui program mentoring, knowledge-sharing, dan job referral.",
     ruangLingkup: "Mencakup seluruh program yang berkaitan dengan kompetensi profesional, karir, dan pengembangan diri anggota IKA IKOM UPI.",
@@ -382,25 +387,29 @@ const sop = [
       { langkah: "Survey Kebutuhan", detail: "Lakukan survey kebutuhan anggota setiap awal tahun untuk memetakan topik yang relevan dan format yang diinginkan (webinar, mentoring 1-on-1, job fair, dll.)." },
       { langkah: "Penyusunan Kalender Program", detail: "Susun kalender program tahunan berdasarkan hasil survey. Tetapkan minimal 2 program utama per tahun dengan jadwal dan PIC masing-masing." },
       { langkah: "Rekrutmen Narasumber & Mentor", detail: "Identifikasi dan hubungi alumni yang relevan sebagai narasumber atau mentor. Berikan brief yang jelas mengenai ekspektasi dan format program." },
-      { langkah: "Koordinasi Teknis", detail: "Koordinasikan penyelenggaraan dengan Bidang Program & Acara untuk kebutuhan logistik, dan Bidang Komunikasi & Media untuk promosi." },
+      { langkah: "Koordinasi Teknis", detail: "Koordinasikan penyelenggaraan dengan Bidang Program & Acara untuk kebutuhan logistik, dan Bidang Hubungan Alumni & Antar-Angkatan untuk penyebaran informasi." },
       { langkah: "Pelaksanaan Program", detail: "Jalankan program sesuai rencana. Pastikan materi/rekaman tersimpan dan dapat diakses ulang oleh anggota yang tidak hadir." },
       { langkah: "Pengelolaan Job Board", detail: "Kumpulkan dan publikasikan informasi lowongan kerja dari jaringan alumni secara berkala melalui kanal resmi. Verifikasi relevansi sebelum dipublikasikan." },
       { langkah: "Evaluasi Dampak", detail: "Ukur manfaat program melalui feedback form pasca kegiatan. Kompilasi hasil dan gunakan sebagai bahan perbaikan program berikutnya." },
     ],
-    output: ["Kalender program tahunan", "Materi & rekaman program", "Job board terupdate", "Laporan feedback & evaluasi"],
+    output: ["Peta profesi & sebaran kerja alumni", "Materi & rekaman program", "Job board terupdate", "Data mitra & mentor", "Laporan feedback & evaluasi"],
     kpi: [
-      "Minimal 2 program pengembangan per tahun",
+      "Minimal 1 program pengembangan profesional berjalan rutin",
       "Minimal 1 info lowongan dipublikasikan per bulan (jika tersedia)",
       "Tingkat kepuasan peserta ≥ 80% berdasarkan feedback form",
     ],
   },
   {
     bidang: "Hubungan Alumni & Antar-Angkatan",
+    kode: "C",
+    tugasPokok: ["Menghimpun dan memutakhirkan basis data anggota.", "Menunjuk dan membina PIC Angkatan sesuai Anggaran Rumah Tangga Pasal 8.", "Menjaga komunikasi dan penyebaran informasi organisasi ke seluruh angkatan."],
+    rencana: [["Membangun basis data anggota aktif dan menunjuk PIC setiap angkatan.", "Membentuk kanal komunikasi resmi lintas angkatan."], ["Memutakhirkan basis data anggota sekurang-kurangnya 1 (satu) kali setahun.", "Menyelenggarakan forum koordinasi PIC Angkatan dan merangkul angkatan yang belum aktif."], ["Mengevaluasi keterwakilan angkatan menjelang Musyawarah Besar.", "Menyerahkan basis data dan akses kanal komunikasi kepada kepengurusan berikutnya."]],
     icon: Network,
     tujuan: "Menjaga keterhubungan seluruh anggota lintas angkatan, memutakhirkan database alumni, dan memastikan anggota baru (wisudawan) terhubung dengan IKA IKOM UPI.",
     ruangLingkup: "Mencakup pengelolaan data anggota, koordinasi PIC angkatan, dan penjangkauan alumni baru.",
     prosedur: [
-      { langkah: "Pemutakhiran Database", detail: "Koordinasikan dengan PIC setiap angkatan untuk memperbarui data anggota (kontak, profesi, domisili) setiap kuartal. Gunakan platform yang ditetapkan organisasi." },
+      { langkah: "Pemutakhiran Database", detail: "Koordinasikan dengan PIC setiap angkatan untuk memperbarui data anggota (kontak, profesi, domisili) sekurang-kurangnya setiap kuartal (minimal 1 kali setahun sesuai SK). Gunakan platform yang ditetapkan organisasi." },
+      { langkah: "Penunjukan PIC Angkatan", detail: "Tunjuk satu PIC untuk setiap angkatan sesuai Anggaran Rumah Tangga Pasal 8, lalu bina perannya sebagai jembatan ke pengurus inti." },
       { langkah: "Koordinasi PIC Angkatan", detail: "Adakan pertemuan rutin dengan seluruh PIC angkatan minimal sekali per semester untuk berbagi informasi dan menyampaikan arahan dari pengurus inti." },
       { langkah: "Penjangkauan Anggota Baru", detail: "Pantau jadwal wisuda Ilmu Komunikasi UPI. Hubungi dan sambut wisudawan baru melalui PIC angkatan atau langsung via kanal resmi dalam 30 hari setelah wisuda." },
       { langkah: "Fasilitasi Komunikasi Lintas Angkatan", detail: "Kelola dan moderasi grup komunikasi resmi IKA IKOM UPI. Pastikan informasi dari pengurus inti tersebar merata ke seluruh anggota." },
@@ -411,26 +420,6 @@ const sop = [
       "Coverage data ≥ 70% total alumni terdaftar",
       "PIC tersedia di setiap angkatan aktif",
       "Anggota baru terjangkau dalam ≤ 30 hari pasca wisuda",
-    ],
-  },
-  {
-    bidang: "Komunikasi & Media",
-    icon: Megaphone,
-    tujuan: "Mengelola identitas digital, komunikasi eksternal, dan konten IKA IKOM UPI agar konsisten, relevan, dan memperkuat citra organisasi.",
-    ruangLingkup: "Mencakup semua kanal komunikasi resmi IKA IKOM UPI: media sosial, website, dan materi komunikasi untuk kegiatan.",
-    prosedur: [
-      { langkah: "Perencanaan Konten", detail: "Susun kalender konten bulanan setiap akhir bulan sebelumnya. Konten mencakup info kegiatan, profil anggota, edukasi, dan konten komunitas. Koordinasikan dengan bidang lain untuk kebutuhan konten mereka." },
-      { langkah: "Produksi Konten", detail: "Buat konten (desain visual, caption, artikel) sesuai panduan identitas visual IKA IKOM UPI. Gunakan tone of voice yang hangat, inklusif, dan profesional." },
-      { langkah: "Review & Persetujuan", detail: "Konten yang menyangkut kebijakan organisasi atau pernyataan resmi wajib disetujui Ketua Umum sebelum dipublikasikan. Konten rutin cukup disetujui koordinator bidang." },
-      { langkah: "Publikasi", detail: "Publikasikan konten sesuai jadwal kalender. Pastikan keseragaman lintas platform (visual, teks, hashtag)." },
-      { langkah: "Monitoring & Respons", detail: "Pantau interaksi di kanal resmi setiap hari. Tanggapi pertanyaan atau komentar publik dalam ≤ 24 jam. Eskalasikan isu sensitif ke Ketua Umum." },
-      { langkah: "Pelaporan Bulanan", detail: "Buat laporan performa konten bulanan (jangkauan, interaksi, pertumbuhan) dan sampaikan ke Ketua Umum sebagai bahan evaluasi strategi komunikasi." },
-    ],
-    output: ["Kalender konten bulanan", "Konten terpublikasi di semua kanal", "Laporan analytics bulanan"],
-    kpi: [
-      "Minimal 4 konten dipublikasikan per bulan",
-      "Respons pertanyaan publik ≤ 24 jam",
-      "Laporan analytics bulanan tersedia setiap awal bulan",
     ],
   },
 ];
@@ -574,6 +563,8 @@ function StrukturDoc() {
   );
 }
 
+const koordinatorDari = (kode) => bidang.find((b) => b.kode === kode)?.koordinator;
+
 function SopDoc() {
   const [open, setOpen] = useState(null);
   return (
@@ -592,8 +583,8 @@ function SopDoc() {
                   <s.icon className="h-4 w-4" />
                 </div>
                 <div>
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-amber-500/70">Standar Operasional Prosedur</p>
-                  <h3 className="font-display text-lg text-[#f5efe6]">{s.bidang}</h3>
+                  <h3 className="font-display text-lg text-[#f5efe6]">Bidang {s.kode}. {s.bidang}</h3>
+                  <p className="text-xs text-stone-400">Koordinator: {koordinatorDari(s.kode)}</p>
                 </div>
               </div>
               <span className={`text-stone-500 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}>▾</span>
@@ -601,6 +592,33 @@ function SopDoc() {
 
             {isOpen && (
               <div className="border-t border-white/8 px-5 pb-6 pt-5 space-y-6">
+                {/* Tugas pokok & rencana per tahun (Lampiran SK) */}
+                <div>
+                  <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-amber-500">Tugas Pokok</p>
+                  <ul className="space-y-1.5">
+                    {s.tugasPokok.map((t) => (
+                      <li key={t} className="flex items-start gap-2 text-sm leading-relaxed text-stone-300">
+                        <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-amber-500/70" />
+                        {t}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-amber-500">Rencana per Tahun</p>
+                  <div className="grid gap-3 md:grid-cols-3">
+                    {s.rencana.map((isi, t) => (
+                      <div key={t} className="rounded-xl border border-white/8 bg-white/[0.03] p-4">
+                        <p className="text-sm font-semibold text-[#f5efe6]">Tahun {["I", "II", "III"][t]}</p>
+                        <p className="text-xs text-stone-500">{2026 + t}–{2027 + t}</p>
+                        <ul className="mt-2 space-y-1.5 text-sm leading-relaxed text-stone-400">
+                          {isi.map((x) => <li key={x}>{x}</li>)}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
                 {/* Tujuan & Ruang Lingkup */}
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div className="rounded-xl bg-amber-500/[0.05] border border-amber-500/15 p-4">
@@ -760,7 +778,7 @@ export default function AdArtPage() {
             {tab === "sop" && (
               <>
                 <h2 className="mb-2 font-display text-3xl font-semibold text-[#f5efe6]">SOP Bidang</h2>
-                <p className="mb-6 text-sm text-stone-500">Standar operasional prosedur tiap bidang kepengurusan IKA IKOM UPI.</p>
+                <p className="mb-6 text-sm text-stone-500">Tugas pokok, rencana kerja, dan prosedur tiap bidang kepengurusan IKA IKOM UPI periode {PERIODE}, sesuai lampiran SK.</p>
                 <SopDoc />
               </>
             )}
@@ -779,8 +797,8 @@ export default function AdArtPage() {
             href="/calon-ketua"
             className="inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-6 py-3 text-sm font-medium text-amber-400 transition-colors hover:bg-amber-500/20"
           >
-            <Crown className="h-4 w-4" />
-            Lihat Laman Calon Ketua
+            <Compass className="h-4 w-4" />
+            Lihat Laman Arah Organisasi {PERIODE}
           </a>
         </div>
 

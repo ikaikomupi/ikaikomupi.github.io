@@ -1167,7 +1167,7 @@ export default function CecepPage() {
               <div className="mt-10 inline-flex flex-col items-center">
                 <span className="h-px w-12 bg-amber-500/40" />
                 <p className="mt-5 font-display text-xl font-medium text-[#f5efe6]">Cecep Abdurrohman Malik Ibrohim</p>
-                <p className="mt-1 text-sm text-amber-400">Calon Ketua IKA IKOM UPI</p>
+                <p className="mt-1 text-sm text-amber-400">Ketua Umum IKA IKOM UPI 2026–2029</p>
               </div>
 
               <div className="mt-12 border-t border-white/8 pt-10">

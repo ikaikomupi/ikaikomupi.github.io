@@ -188,9 +188,9 @@ export default function LandingPage() {
       {/* ── Sambutan Ketua Umum ──────────────────────────────────────────── */}
       <section className="relative overflow-hidden bg-ika-surface px-4 py-20 sm:px-6 sm:py-28">
         <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-[minmax(0,22rem)_1fr] md:gap-16">
-          <div className="relative mx-auto w-full max-w-[22rem]">
-            <Cincin className="absolute -inset-6 h-[calc(100%+3rem)] w-[calc(100%+3rem)]" tebal={10} />
-            <div className="relative aspect-square overflow-hidden rounded-full rounded-br-none">
+          <div className="relative mx-auto aspect-square w-full max-w-[22rem]">
+            <Cincin className="absolute inset-0 h-full w-full" tebal={9} />
+            <div className="absolute inset-[7%] overflow-hidden rounded-full">
               <img
                 src="/img/cecep-800.webp"
                 srcSet="/img/cecep-400.webp 400w, /img/cecep-800.webp 800w"
