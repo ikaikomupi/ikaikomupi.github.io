@@ -27,6 +27,7 @@ export default function Footer() {
             <li><Link to="/tentang" className="hover:text-[#fff]">Tentang IKA IKOM UPI</Link></li>
             <li><Link to="/organisasi" className="hover:text-[#fff]">Susunan pengurus</Link></li>
             <li><Link to="/ad-art" className="hover:text-[#fff]">AD/ART</Link></li>
+            <li><Link to="/publikasi" className="hover:text-[#fff]">Publikasi</Link></li>
             <li><Link to="/directory" className="hover:text-[#fff]">Direktori alumni</Link></li>
           </ul>
         </nav>

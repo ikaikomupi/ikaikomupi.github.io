@@ -16,6 +16,7 @@ const menu = [
       { to: "/tentang", label: "Tentang IKA IKOM UPI", desc: "Visi, tujuan, dan cara kami bekerja" },
       { to: "/organisasi", label: "Organisasi", desc: "Struktur dan kepengurusan" },
       { to: "/ad-art", label: "AD/ART", desc: "Anggaran Dasar & Rumah Tangga" },
+      { to: "/publikasi", label: "Publikasi", desc: "Kajian, rekomendasi, dan laporan" },
     ],
   },
   { to: "/directory", label: "Alumni Kami" },

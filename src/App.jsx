@@ -14,6 +14,7 @@ const Directory = lazy(() => import("./components/Directory"));
 const ProfilePage = lazy(() => import("./components/ProfilePage"));
 const RegisterForm = lazy(() => import("./components/RegisterForm"));
 const TentangPage = lazy(() => import("./components/TentangPage"));
+const PublikasiPage = lazy(() => import("./components/PublikasiPage"));
 const OrgPage = lazy(() => import("./components/OrgPage"));
 const CecepPage = lazy(() => import("./components/CecepPage"));
 const Admin = lazy(() => import("./components/Admin"));
@@ -43,6 +44,7 @@ function Layout() {
           <Route path="/profile/:id" element={<ProfilePage />} />
           <Route path="/register" element={<RegisterForm />} />
           <Route path="/tentang" element={<TentangPage />} />
+          <Route path="/publikasi" element={<PublikasiPage />} />
           <Route path="/organisasi" element={<OrgPage />} />
           <Route path="/calon-ketua" element={<CecepPage />} />
           <Route path="/admin" element={<Admin />} />
