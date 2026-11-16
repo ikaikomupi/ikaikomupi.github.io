@@ -20,7 +20,7 @@
     <script>
       // Foto latar halaman ini mulai diunduh sebelum JavaScript selesai dimuat.
       (function () {
-        var foto = { "/": "hero-bg", "/directory": "directory-bg", "/organisasi": "directory-bg" }[location.pathname.replace(/\/+$/, "") || "/"];
+        var foto = { "/": "hero-bg", "/directory": "directory-bg" }[location.pathname.replace(/\/+$/, "") || "/"];
         if (!foto) return;
         var l = document.createElement("link");
         l.rel = "preload";
