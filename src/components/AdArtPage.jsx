@@ -343,7 +343,7 @@ const struktur = {
     anggota: ["Feggy Nurdiansyah", "M. Endriski Agraenzopati H", "Alwan Husni Ramdhani"],
   },
   inti: [
-    { jabatan: "Ketua Umum", nama: "Cecep Abdurrohman Malik Ibrahim", icon: Crown },
+    { jabatan: "Ketua Umum", nama: "Cecep Abdurrohman Malik Ibrohim", icon: Crown },
     { jabatan: "Wakil Ketua", nama: "Rizqi Abdul Azis", icon: UserCog },
     { jabatan: "Sekretaris", nama: "Alanis Rani Rayhana", icon: PenLine },
     { jabatan: "Bendahara", nama: "Den Reza Alfian Farid", icon: Wallet },

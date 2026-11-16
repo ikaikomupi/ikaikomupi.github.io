@@ -292,7 +292,7 @@ export default function LandingPage() {
               <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-amber-500/40 to-transparent blur-md" />
               <img
                 src="/cecep.jpg"
-                alt="Cecep Abdurrohman Malik Ibrahim"
+                alt="Cecep Abdurrohman Malik Ibrohim"
                 className="relative h-64 w-52 rounded-2xl object-cover object-top ring-1 ring-white/10"
               />
             </div>
@@ -315,7 +315,7 @@ export default function LandingPage() {
                 <div className="h-px flex-1 bg-white/10" />
                 <div className="text-right">
                   <p className="font-semibold text-white">
-                    Cecep Abdurrohman Malik Ibrahim
+                    Cecep Abdurrohman Malik Ibrohim
                   </p>
                   <p className="text-sm text-amber-400">
                     Ketua IKA IKOM UPI

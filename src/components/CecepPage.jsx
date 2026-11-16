@@ -726,7 +726,7 @@ export default function CecepPage() {
               <h1 className="mt-7 font-display text-[3.25rem] font-semibold leading-[0.95] tracking-tight text-[#f5efe6] md:text-[5.5rem]">
                 <span className="block animate-[fadeUp_0.7s_ease-out_0.05s_both]">Cecep</span>
                 <span className="block animate-[fadeUp_0.7s_ease-out_0.12s_both]">Abdurrohman</span>
-                <span className="block animate-[fadeUp_0.7s_ease-out_0.19s_both] italic text-amber-400">Malik Ibrahim</span>
+                <span className="block animate-[fadeUp_0.7s_ease-out_0.19s_both] italic text-amber-400">Malik Ibrohim</span>
               </h1>
               <div className="mt-6 flex animate-[fadeUp_0.7s_ease-out_0.24s_both] flex-wrap items-center gap-2">
                 <span className="text-xl font-black text-amber-400">#</span>
@@ -765,7 +765,7 @@ export default function CecepPage() {
                 <div className="grain relative overflow-hidden rounded-[1.75rem] ring-1 ring-white/10">
                   <img
                     src="/cecep.jpg"
-                    alt="Cecep Abdurrohman Malik Ibrahim"
+                    alt="Cecep Abdurrohman Malik Ibrohim"
                     className="aspect-[4/5] w-full object-cover object-top"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0a0807] via-transparent to-transparent" />
@@ -1153,14 +1153,14 @@ export default function CecepPage() {
             <Reveal>
               <div className="relative mx-auto mb-10 h-24 w-24">
                 <div className="absolute -inset-1 rounded-full bg-amber-500/20 blur-xl" />
-                <img src="/cecep.jpg" alt="Cecep Abdurrohman Malik Ibrahim" className="relative h-24 w-24 rounded-full object-cover object-top ring-1 ring-amber-500/30" />
+                <img src="/cecep.jpg" alt="Cecep Abdurrohman Malik Ibrohim" className="relative h-24 w-24 rounded-full object-cover object-top ring-1 ring-amber-500/30" />
               </div>
               <blockquote className="font-display text-2xl font-light italic leading-relaxed text-[#f5efe6] md:text-4xl md:leading-[1.3]">
                 "Mari kita bangun IKA IKOM UPI bersama — bukan untuk satu angkatan, tapi untuk semua alumni."
               </blockquote>
               <div className="mt-10 inline-flex flex-col items-center">
                 <span className="h-px w-12 bg-amber-500/40" />
-                <p className="mt-5 font-display text-xl font-medium text-[#f5efe6]">Cecep Abdurrohman Malik Ibrahim</p>
+                <p className="mt-5 font-display text-xl font-medium text-[#f5efe6]">Cecep Abdurrohman Malik Ibrohim</p>
                 <p className="mt-1 text-sm text-amber-400">Calon Ketua IKA IKOM UPI</p>
               </div>
 
