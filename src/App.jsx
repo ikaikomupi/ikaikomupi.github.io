@@ -22,6 +22,7 @@ const PostPage = lazy(() => import("./components/PostPage"));
 const KarirPage = lazy(() => import("./components/KarirPage"));
 const AdArtPage = lazy(() => import("./components/AdArtPage"));
 const CpnsPage = lazy(() => import("./components/CpnsPage"));
+const TtdPage = lazy(() => import("./components/TtdPage"));
 const NotFound = lazy(() => import("./components/NotFound"));
 
 function Layout() {
@@ -49,6 +50,7 @@ function Layout() {
           <Route path="/karir" element={<KarirPage />} />
           <Route path="/ad-art" element={<AdArtPage />} />
           <Route path="/cpns/*" element={<CpnsPage />} />
+          <Route path="/ttd/*" element={<TtdPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
