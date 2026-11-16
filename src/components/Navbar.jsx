@@ -13,6 +13,7 @@ const menu = [
   {
     label: "Tentang Kami",
     items: [
+      { to: "/tentang", label: "Tentang IKA IKOM UPI", desc: "Visi, tujuan, dan cara kami bekerja" },
       { to: "/organisasi", label: "Organisasi", desc: "Struktur dan kepengurusan" },
       { to: "/ad-art", label: "AD/ART", desc: "Anggaran Dasar & Rumah Tangga" },
     ],
