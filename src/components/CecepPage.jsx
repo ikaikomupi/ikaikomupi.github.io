@@ -1,3 +1,4 @@
+import { muatFontItalic } from "../lib/fontItalic";
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import {
@@ -37,6 +38,8 @@ import {
   MapPin,
   Monitor,
 } from "lucide-react";
+
+muatFontItalic();
 
 // ─── Data ──────────────────────────────────────────────────────────────────────
 
@@ -764,7 +767,10 @@ export default function CecepPage() {
                 <div className="absolute -inset-2 rounded-[2rem] bg-gradient-to-tr from-amber-500/25 via-transparent to-transparent blur-2xl" />
                 <div className="grain relative overflow-hidden rounded-[1.75rem] ring-1 ring-white/10">
                   <img
-                    src="/cecep.jpg"
+                    src="/img/cecep-800.webp"
+                    srcSet="/img/cecep-400.webp 400w, /img/cecep-800.webp 800w"
+                    sizes="(max-width: 448px) 100vw, 384px"
+                    fetchPriority="high"
                     alt="Cecep Abdurrohman Malik Ibrohim"
                     className="aspect-[4/5] w-full object-cover object-top"
                   />
@@ -1153,7 +1159,7 @@ export default function CecepPage() {
             <Reveal>
               <div className="relative mx-auto mb-10 h-24 w-24">
                 <div className="absolute -inset-1 rounded-full bg-amber-500/20 blur-xl" />
-                <img src="/cecep.jpg" alt="Cecep Abdurrohman Malik Ibrohim" className="relative h-24 w-24 rounded-full object-cover object-top ring-1 ring-amber-500/30" />
+                <img src="/img/cecep-400.webp" loading="lazy" decoding="async" alt="Cecep Abdurrohman Malik Ibrohim" className="relative h-24 w-24 rounded-full object-cover object-top ring-1 ring-amber-500/30" />
               </div>
               <blockquote className="font-display text-2xl font-light italic leading-relaxed text-[#f5efe6] md:text-4xl md:leading-[1.3]">
                 "Mari kita bangun IKA IKOM UPI bersama — bukan untuk satu angkatan, tapi untuk semua alumni."

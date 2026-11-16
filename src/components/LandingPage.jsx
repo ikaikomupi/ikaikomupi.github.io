@@ -11,6 +11,7 @@ import {
   ArrowRight,
   Quote,
 } from "lucide-react";
+import FotoLatar from "./FotoLatar";
 
 // ─── Data ──────────────────────────────────────────────────────────────────────
 
@@ -157,14 +158,7 @@ export default function LandingPage() {
       {/* ── Hero ──────────────────────────────────────────────────────────── */}
       <section className="relative flex h-screen items-center justify-center overflow-hidden bg-stone-950 px-6 text-center">
         {/* Cinematic background image */}
-        <div
-          className="foto-hero pointer-events-none absolute inset-0 scale-105 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/hero-bg.jpg')",
-            "--redup": 0.35,
-            "--jenuh": 0.6,
-          }}
-        />
+        <FotoLatar nama="hero-bg" prioritas className="scale-105" style={{ "--redup": 0.35, "--jenuh": 0.6 }} />
         <div className="sorot-hero pointer-events-none absolute inset-0" />
 
         {/* Dark gradient overlays for depth */}
@@ -291,7 +285,13 @@ export default function LandingPage() {
             <div className="relative shrink-0">
               <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-amber-500/40 to-transparent blur-md" />
               <img
-                src="/cecep.jpg"
+                src="/img/cecep-400.webp"
+                srcSet="/img/cecep-400.webp 400w, /img/cecep-800.webp 800w"
+                sizes="208px"
+                loading="lazy"
+                decoding="async"
+                width="208"
+                height="256"
                 alt="Cecep Abdurrohman Malik Ibrohim"
                 className="relative h-64 w-52 rounded-2xl object-cover object-top ring-1 ring-white/10"
               />
@@ -330,14 +330,7 @@ export default function LandingPage() {
       {/* ── Titip Loker ───────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden bg-stone-900 px-6 py-24">
         {/* Background image with dark overlay */}
-        <div
-          className="foto-hero pointer-events-none absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/group-bg.jpg')",
-            "--redup": 0.2,
-            "--jenuh": 0.5,
-          }}
-        />
+        <FotoLatar nama="group-bg" style={{ "--redup": 0.2, "--jenuh": 0.5 }} />
         <div className="sorot-hero pointer-events-none absolute inset-0" />
         <div className="veil-hero pointer-events-none absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/30 to-stone-950/60" />
 

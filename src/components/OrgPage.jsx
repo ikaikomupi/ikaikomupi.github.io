@@ -1,3 +1,5 @@
+import FotoLatar from "./FotoLatar";
+
 const struktur = {
   ketua: {
     jabatan: "Ketua Angkatan",
@@ -114,14 +116,7 @@ export default function OrgPage() {
     <div className="min-h-screen bg-stone-950">
       {/* Header */}
       <div className="relative overflow-hidden px-6 pb-20 pt-36 text-center">
-        <div
-          className="foto-hero pointer-events-none absolute inset-0 scale-105 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/directory-bg.jpg')",
-            "--redup": 0.2,
-            "--jenuh": 0.4,
-          }}
-        />
+        <FotoLatar nama="directory-bg" prioritas className="scale-105" style={{ "--redup": 0.2, "--jenuh": 0.4 }} />
         <div className="sorot-hero pointer-events-none absolute inset-0" />
         <div className="veil-hero pointer-events-none absolute inset-0 bg-gradient-to-b from-stone-950/70 via-stone-950/10 to-stone-950" />
         <div className="panel-hero relative mx-auto max-w-2xl">

@@ -3,6 +3,7 @@ import { Search, SlidersHorizontal, X } from "lucide-react";
 import AlumniCard from "./AlumniCard";
 import { fetchAlumni } from "../lib/sheets";
 import { INDUSTRIES, KOTA } from "../data/alumni";
+import FotoLatar from "./FotoLatar";
 
 function SkeletonCard() {
   return (
@@ -80,14 +81,7 @@ export default function Directory() {
       {/* Header */}
       <div className="relative overflow-hidden bg-stone-950 px-6 pb-20 pt-36 text-center">
         {/* Cinematic background */}
-        <div
-          className="foto-hero pointer-events-none absolute inset-0 scale-105 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/directory-bg.jpg')",
-            "--redup": 0.28,
-            "--jenuh": 0.5,
-          }}
-        />
+        <FotoLatar nama="directory-bg" prioritas className="scale-105" style={{ "--redup": 0.28, "--jenuh": 0.5 }} />
         <div className="sorot-hero pointer-events-none absolute inset-0" />
         {/* Gradient overlays */}
         <div className="veil-hero pointer-events-none absolute inset-0 bg-gradient-to-b from-stone-950/70 via-stone-950/10 to-stone-950/80" />

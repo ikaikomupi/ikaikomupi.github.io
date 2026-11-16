@@ -1,3 +1,4 @@
+import { muatFontItalic } from "../lib/fontItalic";
 import { useState } from "react";
 import {
   ScrollText,
@@ -17,6 +18,8 @@ import {
   Target,
   FileCheck,
 } from "lucide-react";
+
+muatFontItalic();
 
 // ─── DRAFT CONTENT — disahkan dalam Musyawarah Besar IKA IKOM UPI ───────────────────────
 
