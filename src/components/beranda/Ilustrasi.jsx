@@ -159,3 +159,115 @@ export function IlusSosial({ className = "" }) {
     </svg>
   );
 }
+
+export function IlusDokumen({ className = "" }) {
+  // Tumpukan dokumen dengan cap "SAH" dan pena: AD/ART yang sudah disahkan.
+  return (
+    <svg viewBox="0 0 220 180" className={className} aria-hidden="true">
+      <rect x="62" y="22" width="104" height="134" rx="8" fill={T} opacity="0.12" transform="rotate(8 114 89)" />
+      <rect x="54" y="18" width="104" height="134" rx="8" fill={B} stroke={T} strokeOpacity="0.25" strokeWidth="2" />
+      <rect x="54" y="18" width="104" height="24" rx="8" fill={M} />
+      <rect x="54" y="32" width="104" height="10" fill={M} />
+      {[56, 68, 80, 92, 104].map((y, i) => (
+        <rect key={y} x="68" y={y} width={i % 2 ? 60 : 76} height="5" rx="2.5" fill={T} opacity="0.2" />
+      ))}
+      <g transform="rotate(-14 134 124)">
+        <circle cx="134" cy="124" r="22" fill="none" stroke={O} strokeWidth="4" />
+        <circle cx="134" cy="124" r="15" fill="none" stroke={O} strokeWidth="1.5" strokeDasharray="2 3" />
+        <text x="134" y="129" textAnchor="middle" fontSize="13" fontWeight="800" fill={O} fontFamily="var(--font-body)">SAH</text>
+      </g>
+      <g transform="rotate(38 178 70)">
+        <rect x="172" y="30" width="12" height="70" rx="3" fill={K} />
+        <path d="M172 100l6 14 6-14z" fill={T} />
+        <rect x="172" y="30" width="12" height="10" rx="3" fill={T} />
+      </g>
+      <g fill={K}>
+        <path d="M30 40l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" />
+        <circle cx="36" cy="140" r="4" />
+      </g>
+    </svg>
+  );
+}
+
+export function IlusAturan({ className = "" }) {
+  // Papan klip berisi daftar centang: Anggaran Rumah Tangga.
+  return (
+    <svg viewBox="0 0 200 160" className={className} aria-hidden="true">
+      <rect x="52" y="22" width="96" height="126" rx="10" fill={O} />
+      <rect x="62" y="34" width="76" height="106" rx="5" fill={B} />
+      <rect x="80" y="14" width="40" height="18" rx="6" fill={T} />
+      {[52, 76, 100].map((y, i) => (
+        <g key={y}>
+          <rect x="72" y={y} width="14" height="14" rx="3" fill={i < 2 ? K : "none"} stroke={T} strokeOpacity="0.4" strokeWidth="2" />
+          {i < 2 && <path d={`M75 ${y + 7}l3 3 6-6`} fill="none" stroke={T} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />}
+          <rect x="92" y={y + 4} width={i === 1 ? 30 : 38} height="5" rx="2.5" fill={T} opacity="0.25" />
+        </g>
+      ))}
+      <path d="M160 40l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill={M} />
+      <circle cx="34" cy="120" r="5" fill={K} />
+    </svg>
+  );
+}
+
+export function IlusArah({ className = "" }) {
+  // Jalan berliku menuju bendera: Garis Besar Haluan Organisasi.
+  return (
+    <svg viewBox="0 0 200 160" className={className} aria-hidden="true">
+      <path d="M24 146c40-6 70-22 54-46s30-36 70-54" fill="none" stroke={T} strokeOpacity="0.18" strokeWidth="18" strokeLinecap="round" />
+      <path d="M24 146c40-6 70-22 54-46s30-36 70-54" fill="none" stroke={K} strokeWidth="3" strokeDasharray="6 7" strokeLinecap="round" />
+      <circle cx="24" cy="146" r="7" fill={M} />
+      <circle cx="78" cy="100" r="7" fill={O} />
+      <rect x="146" y="14" width="4" height="40" rx="2" fill={T} />
+      <path d="M150 16h30l-8 9 8 9h-30z" fill={M} />
+      <g fill={O}>
+        <path d="M168 104l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" />
+      </g>
+      <circle cx="36" cy="40" r="5" fill={K} />
+    </svg>
+  );
+}
+
+export function IlusAlur({ className = "" }) {
+  // Kotak-kotak tersambung panah: SOP bidang.
+  return (
+    <svg viewBox="0 0 200 160" className={className} aria-hidden="true">
+      <rect x="18" y="24" width="56" height="40" rx="10" fill={M} />
+      <rect x="126" y="24" width="56" height="40" rx="10" fill={O} />
+      <rect x="72" y="100" width="56" height="40" rx="10" fill={K} />
+      <path d="M76 44h44" stroke={T} strokeWidth="3" strokeLinecap="round" />
+      <path d="M112 38l8 6-8 6" fill="none" stroke={T} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M154 66c0 24-12 40-24 52" fill="none" stroke={T} strokeWidth="3" strokeLinecap="round" />
+      <path d="M128 108l2 10 9-4" fill="none" stroke={T} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+      {[[32, 38], [140, 38], [86, 114]].map(([x, y]) => (
+        <g key={x}>
+          <rect x={x} y={y} width="28" height="4" rx="2" fill={B} opacity="0.85" />
+          <rect x={x} y={y + 8} width="18" height="4" rx="2" fill={B} opacity="0.6" />
+        </g>
+      ))}
+      <path d="M30 120l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill={O} />
+    </svg>
+  );
+}
+
+export function IlusStruktur({ className = "" }) {
+  // Bagan organisasi: satu simpul atas, tiga simpul bawah.
+  const orang = (x, y, w) => (
+    <g transform={`translate(${x} ${y})`}>
+      <circle r="17" fill={w} />
+      <circle cy="-4" r="6" fill={B} />
+      <path d="M-10 10a10 9 0 0 1 20 0z" fill={B} />
+    </g>
+  );
+  return (
+    <svg viewBox="0 0 200 160" className={className} aria-hidden="true">
+      <path d="M100 52v22M40 74h120M40 74v18M100 74v18M160 74v18" fill="none" stroke={T} strokeOpacity="0.35" strokeWidth="3" strokeLinecap="round" />
+      {orang(100, 32, T)}
+      {orang(40, 112, M)}
+      {orang(100, 112, O)}
+      {orang(160, 112, K)}
+      <g fill={K}>
+        <path d="M168 20l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" />
+      </g>
+    </svg>
+  );
+}

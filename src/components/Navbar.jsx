@@ -4,7 +4,7 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import TemaToggle from "./TemaToggle";
 
 // Halaman yang desainnya dikunci gelap: navbar ikut gelap supaya menyatu.
-const HALAMAN_GELAP = ["/ad-art", "/calon-ketua"];
+const HALAMAN_GELAP = ["/calon-ketua"];
 
 // Navbar gaya Chevening: putih + logo berwarna di mode terang, gelap + logo putih di mode gelap, logo + garis emas + nama 3 baris,
 // menu dikelompokkan dengan dropdown, menu aktif ditandai huruf tebal.

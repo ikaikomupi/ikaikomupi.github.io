@@ -1,22 +1,12 @@
 import { muatFontItalic } from "../lib/fontItalic";
 import { PERIODE, pembina, inti, bidang } from "../data/pengurus";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Check, CheckCircle2, ChevronDown, Users, Briefcase, Network } from "lucide-react";
+import Footer from "./Footer";
 import {
-  ScrollText,
-  FileText,
-  Compass,
-  Network,
-  Crown,
-  UserCog,
-  PenLine,
-  Wallet,
-  Users,
-  Briefcase,
-  ClipboardList,
-  CheckCircle2,
-  Target,
-  FileCheck,
-} from "lucide-react";
+  Cincin, IlusDokumen, IlusAturan, IlusArah, IlusAlur, IlusStruktur, IlusKarir, IlusEvent, IlusSosial, IlusDirektori, IlusKompas,
+} from "./beranda/Ilustrasi";
 
 muatFontItalic();
 
@@ -337,19 +327,6 @@ const gbho = [
   },
 ];
 
-const ikonInti = { "Ketua Umum": Crown, "Wakil Ketua": UserCog, Sekretaris: PenLine, Bendahara: Wallet };
-const ikonBidang = { A: Users, B: Briefcase, C: Network };
-const struktur = {
-  pembina: {
-    label: "Dewan Pembina / Penasihat",
-    desc: "Alumni senior & tokoh — arahan strategis, bukan kerja harian",
-    ...pembina,
-  },
-  inti: inti.map((m) => ({ ...m, icon: ikonInti[m.jabatan] })),
-  bidang: bidang.map((b) => ({ nama: b.nama, koordinator: b.koordinator, anggota: b.anggota, icon: ikonBidang[b.kode] })),
-  pic: "1 koordinator per angkatan — jembatan ke pengurus inti & penjaga data angkatannya.",
-};
-
 const sop = [
   {
     bidang: "Program & Acara",
@@ -423,194 +400,181 @@ const sop = [
   },
 ];
 
+// ─── Tampilan ──────────────────────────────────────────────────────────────────
+// Bahasa visual sama dengan beranda: blok warna logo IKOM, balon chat, dan ilustrasi per dokumen.
+// Warna memakai token ika-* sehingga ikut mode terang/gelap.
+
+const jumlahPasal = (d) => d.reduce((n, b) => n + b.pasal.length, 0);
+
 const tabs = [
-  { id: "ad", label: "Anggaran Dasar", icon: ScrollText },
-  { id: "art", label: "Anggaran Rumah Tangga", icon: FileText },
-  { id: "gbho", label: "GBHO", icon: Compass },
-  { id: "sop", label: "SOP Bidang", icon: ClipboardList },
-  { id: "struktur", label: "Struktur Organisasi", icon: Network },
+  { id: "ad", label: "Anggaran Dasar", ringkas: "AD", desc: "Aturan pokok organisasi", Ilus: IlusDokumen, warna: "bg-ika-merah text-[#fff]", meta: `${anggaranDasar.length} bab · ${jumlahPasal(anggaranDasar)} pasal` },
+  { id: "art", label: "Anggaran Rumah Tangga", ringkas: "ART", desc: "Penjabaran teknis dari AD", Ilus: IlusAturan, warna: "bg-ika-oranye text-[#fff]", meta: `${anggaranRumahTangga.length} bab · ${jumlahPasal(anggaranRumahTangga)} pasal` },
+  { id: "gbho", label: "Garis Besar Haluan Organisasi", ringkas: "GBHO", desc: "Arah dan pola program kerja", Ilus: IlusArah, warna: "bg-ika-kuning text-[#1f1d1a]", meta: `${gbho.length} bagian` },
+  { id: "sop", label: "SOP Bidang", ringkas: "SOP", desc: "Tugas & prosedur tiap bidang", Ilus: IlusAlur, warna: "bg-ika-ink text-ika-bg", meta: `${sop.length} bidang` },
+  { id: "struktur", label: "Struktur Organisasi", ringkas: "Struktur", desc: `Susunan pengurus ${PERIODE}`, Ilus: IlusStruktur, warna: "bg-ika-emas text-[#1f1d1a]", meta: "4 unsur organisasi" },
 ];
 
-// ─── Renderers ─────────────────────────────────────────────────────────────────
-
-function LegalDoc({ data }) {
+function LegalDoc({ data, prefix }) {
   return (
-    <div className="space-y-12">
-      {data.map((b) => (
-        <div key={b.bab} className="border-t border-white/8 pt-8">
-          <div className="mb-6 flex items-baseline gap-3">
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-500">{b.bab}</span>
-            <h3 className="font-display text-2xl font-medium text-[#f5efe6] md:text-3xl">{b.judul}</h3>
-          </div>
-          <div className="space-y-6 pl-0 md:pl-6">
-            {b.pasal.map((p) => (
-              <div key={p.no}>
-                <p className="mb-2 font-display text-base italic text-amber-400/90">
-                  {p.no}{p.judul ? ` — ${p.judul}` : ""}
-                </p>
-                {p.ayat.length === 1 ? (
-                  <p className="text-sm leading-relaxed text-stone-300 md:text-base">{p.ayat[0]}</p>
-                ) : (
-                  <ol className="space-y-2">
-                    {p.ayat.map((a, i) => (
-                      <li key={i} className="flex gap-3 text-sm leading-relaxed text-stone-300 md:text-base">
-                        <span className="font-display text-sm text-stone-500">({i + 1})</span>
-                        <span>{a}</span>
-                      </li>
-                    ))}
-                  </ol>
-                )}
+    <div className="grid gap-10 lg:grid-cols-[13rem_1fr] lg:gap-14">
+      {/* Daftar bab (desktop) */}
+      <nav aria-label="Daftar bab" className="hidden lg:block">
+        <ol className="sticky top-36 space-y-1 border-l-2 border-ika-line">
+          {data.map((b) => (
+            <li key={b.bab}>
+              <a href={`#${prefix}-${b.bab.replace(/\s+/g, "-")}`} className="-ml-0.5 block border-l-2 border-transparent py-1.5 pl-4 text-sm text-ika-muted transition-colors hover:border-ika-merah hover:text-ika-ink">
+                <span className="font-semibold">{b.bab.replace("BAB ", "")}.</span> {b.judul}
+              </a>
+            </li>
+          ))}
+        </ol>
+      </nav>
+      <div className="space-y-6">
+        {data.map((b, i) => (
+          <section key={b.bab} id={`${prefix}-${b.bab.replace(/\s+/g, "-")}`} className="scroll-mt-36 overflow-hidden rounded-[2rem] bg-ika-surface">
+            <header className="flex items-center gap-4 px-6 pt-6 sm:px-8 sm:pt-8">
+              <span className={`flex h-12 min-w-12 shrink-0 items-center justify-center rounded-2xl px-3 font-display text-lg font-semibold ${["bg-ika-merah text-[#fff] rounded-bl-md", "bg-ika-oranye text-[#fff] rounded-br-md", "bg-ika-kuning text-[#1f1d1a] rounded-bl-md"][i % 3]}`}>
+                {b.bab.replace("BAB ", "")}
+              </span>
+              <div>
+                <p className="text-xs text-ika-muted">{b.bab}</p>
+                <h3 className="font-display text-xl font-medium leading-snug text-ika-ink sm:text-2xl">{b.judul}</h3>
               </div>
-            ))}
-          </div>
-        </div>
-      ))}
+            </header>
+            <div className="space-y-5 px-6 pb-7 pt-5 sm:px-8 sm:pb-8">
+              {b.pasal.map((p) => (
+                <article key={p.no} className="rounded-2xl bg-ika-bg p-5 ring-1 ring-ika-line">
+                  <p className="text-sm font-semibold text-ika-merah">
+                    {p.no}
+                    {p.judul && <span className="font-normal text-ika-muted"> · {p.judul}</span>}
+                  </p>
+                  {p.ayat.length === 1 ? (
+                    <p className="mt-2 text-[15px] leading-relaxed text-ika-ink/90">{p.ayat[0]}</p>
+                  ) : (
+                    <ol className="mt-2 space-y-2">
+                      {p.ayat.map((a, k) => (
+                        <li key={k} className="flex gap-3 text-[15px] leading-relaxed text-ika-ink/90">
+                          <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-ika-surface text-[11px] font-semibold text-ika-muted">{k + 1}</span>
+                          <span>{a}</span>
+                        </li>
+                      ))}
+                    </ol>
+                  )}
+                </article>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
     </div>
   );
 }
+
+const gayaGbho = [
+  { Ilus: IlusDokumen, warna: "bg-ika-surface" },
+  { Ilus: IlusKompas, warna: "bg-ika-merah text-[#fff]", gelap: true },
+  { Ilus: IlusArah, warna: "bg-ika-surface" },
+  { Ilus: IlusKarir, warna: "bg-ika-kuning text-[#1f1d1a]" },
+  { Ilus: IlusEvent, warna: "bg-ika-surface" },
+  { Ilus: IlusSosial, warna: "bg-ika-oranye text-[#fff]", gelap: true },
+];
 
 function GbhoDoc() {
   return (
-    <div className="space-y-10">
-      {gbho.map((s, i) => (
-        <div key={i} className="border-t border-white/8 pt-8">
-          <div className="mb-5 flex items-baseline gap-3">
-            <span className="font-display text-xl italic text-amber-500/60">{String(i + 1).padStart(2, "0")}</span>
-            <h3 className="font-display text-2xl font-medium text-[#f5efe6] md:text-3xl">{s.judul}</h3>
-          </div>
-          <ul className="space-y-3 pl-0 md:pl-9">
-            {s.isi.map((t, j) => (
-              <li key={j} className="text-sm leading-relaxed text-stone-300 md:text-base">{t}</li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-function StrukturDoc() {
-  return (
-    <div className="space-y-4">
-      {/* Pembina */}
-      <div className="rounded-2xl border border-white/8 bg-white/[0.02] px-6 py-4 text-center">
-        <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-stone-500">Lapisan Penasihat</span>
-        <h3 className="mt-1 font-display text-xl font-medium text-[#f5efe6]">{struktur.pembina.label}</h3>
-        <p className="mt-1 text-sm text-stone-400">{struktur.pembina.desc}</p>
-        <div className="mt-3 flex flex-wrap justify-center gap-2">
-          <span className="rounded-full bg-amber-500/15 px-3 py-1 text-xs font-semibold text-amber-400 ring-1 ring-amber-500/30">
-            Ketua: {struktur.pembina.ketua}
-          </span>
-          {struktur.pembina.anggota.map((a) => (
-            <span key={a} className="rounded-full bg-white/5 px-3 py-1 text-xs text-stone-400 ring-1 ring-white/10">{a}</span>
-          ))}
-        </div>
-      </div>
-
-      <div className="flex justify-center"><div className="h-4 w-px bg-amber-500/30" /></div>
-
-      {/* Pengurus Inti */}
-      <div>
-        <p className="mb-3 text-center text-[11px] font-semibold uppercase tracking-[0.2em] text-amber-500">Pengurus Inti (Harian)</p>
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {struktur.inti.map((m) => (
-            <div key={m.jabatan} className="rounded-xl border border-amber-500/20 bg-amber-500/[0.05] p-4 text-center">
-              <div className="mx-auto mb-2 flex h-9 w-9 items-center justify-center rounded-lg bg-amber-500/15 text-amber-400">
-                <m.icon className="h-4 w-4" />
+    <div className="grid gap-5 md:grid-cols-2">
+      {gbho.map((s, i) => {
+        const g = gayaGbho[i % gayaGbho.length];
+        const lebar = i === 1 || i === 4 || (i === gbho.length - 1 && i % 2 === 1);
+        return (
+          <section key={s.judul} className={`flex flex-col gap-6 rounded-[2rem] p-7 sm:p-8 ${g.warna} ${lebar ? "md:col-span-2 md:flex-row md:items-center" : ""} ${i % 2 ? "rounded-br-lg" : "rounded-bl-lg"}`}>
+            {g.gelap ? (
+              <div className="flex h-28 shrink-0 items-center justify-center rounded-2xl bg-ika-bg p-3 md:h-36 md:w-56">
+                <g.Ilus className="h-full w-full" />
               </div>
-              <p className="text-xs font-semibold uppercase tracking-wider text-amber-400/80">{m.jabatan}</p>
-              <p className="mt-1 font-display text-base text-[#f5efe6]">{m.nama}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="flex justify-center"><div className="h-4 w-px bg-amber-500/30" /></div>
-
-      {/* Koordinator Bidang */}
-      <div>
-        <p className="mb-3 text-center text-[11px] font-semibold uppercase tracking-[0.2em] text-amber-500">Koordinator Bidang</p>
-        <div className="grid gap-3 lg:grid-cols-3">
-          {struktur.bidang.map((b, i) => (
-            <div key={i} className="rounded-xl border border-white/8 bg-white/[0.02] p-4">
-              <div className="flex items-center gap-3">
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-amber-500/10 text-amber-400">
-                  <b.icon className="h-3.5 w-3.5" />
-                </div>
-                <h4 className="font-display text-base text-[#f5efe6]">{b.nama}</h4>
-              </div>
-              <div className="mt-2 flex flex-wrap gap-1.5 pl-11">
-                <span className="rounded-full bg-amber-500/15 px-2.5 py-0.5 text-xs font-semibold text-amber-300 ring-1 ring-amber-500/30">Koordinator: {b.koordinator}</span>
-                {b.anggota.map((a) => (
-                  <span key={a} className="rounded-full bg-white/5 px-2.5 py-0.5 text-xs font-medium text-stone-300 ring-1 ring-white/10">{a}</span>
+            ) : (
+              <g.Ilus className={`h-28 shrink-0 ${lebar ? "md:h-36 md:w-56" : "w-full"}`} />
+            )}
+            <div>
+              <p className={`text-sm ${g.warna.includes("text-") ? "opacity-80" : "text-ika-muted"}`}>Bagian {i + 1}</p>
+              <h3 className={`mt-1 font-display text-2xl font-medium ${g.warna.includes("text-") ? "" : "text-ika-ink"}`}>{s.judul}</h3>
+              <ul className="mt-4 space-y-2.5">
+                {s.isi.map((t) => (
+                  <li key={t} className={`text-[15px] leading-relaxed ${g.warna.includes("text-") ? "opacity-90" : "text-ika-ink/85"}`}>{t}</li>
                 ))}
-              </div>
+              </ul>
             </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="flex justify-center"><div className="h-4 w-px bg-amber-500/30" /></div>
-
-      {/* PIC Angkatan */}
-      <div className="rounded-2xl border border-white/8 bg-white/[0.02] px-6 py-4 text-center">
-        <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-stone-500">Jaringan</span>
-        <h3 className="mt-1 font-display text-xl font-medium text-[#f5efe6]">Perwakilan Angkatan (PIC)</h3>
-        <p className="mt-1 mx-auto max-w-md text-sm text-stone-400">{struktur.pic}</p>
-      </div>
+          </section>
+        );
+      })}
     </div>
   );
 }
+
+const gayaSop = {
+  A: { blok: "bg-ika-merah text-[#fff]", huruf: "text-ika-merah", titik: "bg-ika-merah", Ilus: IlusEvent },
+  B: { blok: "bg-ika-oranye text-[#fff]", huruf: "text-ika-oranye", titik: "bg-ika-oranye", Ilus: IlusKarir },
+  C: { blok: "bg-ika-kuning text-[#1f1d1a]", huruf: "text-ika-ink", titik: "bg-ika-kuning", Ilus: IlusDirektori },
+};
 
 const koordinatorDari = (kode) => bidang.find((b) => b.kode === kode)?.koordinator;
 
 function SopDoc() {
-  const [open, setOpen] = useState(null);
+  const [open, setOpen] = useState(0);
   return (
-    <div className="space-y-6">
+    <div className="space-y-5">
       {sop.map((s, i) => {
+        const g = gayaSop[s.kode];
         const isOpen = open === i;
         return (
-          <div key={i} className="rounded-2xl border border-white/8 bg-white/[0.02] overflow-hidden">
-            {/* Header */}
+          <section key={s.kode} className="overflow-hidden rounded-[2rem] bg-ika-surface">
             <button
               onClick={() => setOpen(isOpen ? null : i)}
-              className="w-full flex items-center justify-between gap-4 p-5 text-left"
+              aria-expanded={isOpen}
+              className="flex w-full items-center gap-5 p-5 text-left sm:p-6"
             >
-              <div className="flex items-center gap-3">
-                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-amber-500/10 text-amber-400">
-                  <s.icon className="h-4 w-4" />
-                </div>
-                <div>
-                  <h3 className="font-display text-lg text-[#f5efe6]">Bidang {s.kode}. {s.bidang}</h3>
-                  <p className="text-xs text-stone-400">Koordinator: {koordinatorDari(s.kode)}</p>
-                </div>
+              <span className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl rounded-bl-md font-display text-2xl font-semibold ${g.blok}`}>{s.kode}</span>
+              <div className="min-w-0 flex-1">
+                <h3 className="font-display text-xl font-medium leading-snug text-ika-ink sm:text-2xl">{s.bidang}</h3>
+                <p className="mt-0.5 text-sm text-ika-muted">Koordinator: {koordinatorDari(s.kode)}</p>
               </div>
-              <span className={`text-stone-500 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}>▾</span>
+              <g.Ilus className="hidden h-16 w-24 shrink-0 sm:block" />
+              <ChevronDown className={`h-5 w-5 shrink-0 text-ika-muted transition-transform ${isOpen ? "rotate-180" : ""}`} />
             </button>
 
             {isOpen && (
-              <div className="border-t border-white/8 px-5 pb-6 pt-5 space-y-6">
-                {/* Tugas pokok & rencana per tahun (Lampiran SK) */}
-                <div>
-                  <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-amber-500">Tugas Pokok</p>
-                  <ul className="space-y-1.5">
-                    {s.tugasPokok.map((t) => (
-                      <li key={t} className="flex items-start gap-2 text-sm leading-relaxed text-stone-300">
-                        <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-amber-500/70" />
-                        {t}
-                      </li>
-                    ))}
-                  </ul>
+              <div className="space-y-8 border-t border-ika-line px-5 pb-7 pt-6 sm:px-8">
+                <div className="grid gap-5 md:grid-cols-[1.2fr_1fr]">
+                  <div>
+                    <h4 className="font-display text-lg text-ika-ink">Tugas pokok</h4>
+                    <ul className="mt-3 space-y-2.5">
+                      {s.tugasPokok.map((t) => (
+                        <li key={t} className="flex gap-3 text-[15px] leading-relaxed text-ika-ink/90">
+                          <span className={`mt-2 h-2 w-2 shrink-0 rounded-full ${g.titik}`} />
+                          {t}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="rounded-2xl rounded-bl-sm bg-ika-bg p-4 ring-1 ring-ika-line">
+                      <p className={`text-xs font-semibold ${g.huruf}`}>Tujuan</p>
+                      <p className="mt-1 text-sm leading-relaxed text-ika-ink/90">{s.tujuan}</p>
+                    </div>
+                    <div className="rounded-2xl rounded-br-sm bg-ika-bg p-4 ring-1 ring-ika-line">
+                      <p className="text-xs font-semibold text-ika-muted">Ruang lingkup</p>
+                      <p className="mt-1 text-sm leading-relaxed text-ika-ink/90">{s.ruangLingkup}</p>
+                    </div>
+                  </div>
                 </div>
+
                 <div>
-                  <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-amber-500">Rencana per Tahun</p>
-                  <div className="grid gap-3 md:grid-cols-3">
+                  <h4 className="font-display text-lg text-ika-ink">Rencana per tahun</h4>
+                  <div className="mt-3 grid gap-3 md:grid-cols-3">
                     {s.rencana.map((isi, t) => (
-                      <div key={t} className="rounded-xl border border-white/8 bg-white/[0.03] p-4">
-                        <p className="text-sm font-semibold text-[#f5efe6]">Tahun {["I", "II", "III"][t]}</p>
-                        <p className="text-xs text-stone-500">{2026 + t}–{2027 + t}</p>
-                        <ul className="mt-2 space-y-1.5 text-sm leading-relaxed text-stone-400">
+                      <div key={t} className="rounded-2xl bg-ika-bg p-5 ring-1 ring-ika-line">
+                        <span className={`inline-block rounded-full px-3 py-0.5 text-xs font-semibold ${g.blok}`}>Tahun {["I", "II", "III"][t]}</span>
+                        <p className="mt-1.5 text-xs text-ika-muted">{2026 + t}–{2027 + t}</p>
+                        <ul className="mt-3 space-y-2 text-sm leading-relaxed text-ika-ink/85">
                           {isi.map((x) => <li key={x}>{x}</li>)}
                         </ul>
                       </div>
@@ -618,62 +582,34 @@ function SopDoc() {
                   </div>
                 </div>
 
-                {/* Tujuan & Ruang Lingkup */}
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <div className="rounded-xl bg-amber-500/[0.05] border border-amber-500/15 p-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Target className="h-3.5 w-3.5 text-amber-400" />
-                      <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-amber-400">Tujuan</span>
-                    </div>
-                    <p className="text-sm leading-relaxed text-stone-300">{s.tujuan}</p>
-                  </div>
-                  <div className="rounded-xl bg-white/[0.03] border border-white/8 p-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <FileCheck className="h-3.5 w-3.5 text-stone-400" />
-                      <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-stone-400">Ruang Lingkup</span>
-                    </div>
-                    <p className="text-sm leading-relaxed text-stone-400">{s.ruangLingkup}</p>
-                  </div>
-                </div>
-
-                {/* Prosedur */}
                 <div>
-                  <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-amber-500">Alur Prosedur</p>
-                  <div className="space-y-2">
+                  <h4 className="font-display text-lg text-ika-ink">Alur prosedur</h4>
+                  <ol className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                     {s.prosedur.map((p, j) => (
-                      <div key={j} className="flex gap-3">
-                        <div className="flex flex-col items-center">
-                          <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-amber-500/15 text-amber-400 text-[11px] font-bold">{j + 1}</div>
-                          {j < s.prosedur.length - 1 && <div className="mt-1 h-full w-px bg-amber-500/15" />}
-                        </div>
-                        <div className="pb-3">
-                          <p className="text-sm font-semibold text-[#f5efe6]">{p.langkah}</p>
-                          <p className="mt-0.5 text-sm leading-relaxed text-stone-400">{p.detail}</p>
-                        </div>
-                      </div>
+                      <li key={p.langkah} className="relative rounded-2xl bg-ika-bg p-5 ring-1 ring-ika-line">
+                        <span className={`absolute -top-3 left-5 flex h-7 w-7 items-center justify-center rounded-full text-xs font-bold ${g.blok}`}>{j + 1}</span>
+                        <p className="mt-1 font-semibold text-ika-ink">{p.langkah}</p>
+                        <p className="mt-1 text-sm leading-relaxed text-ika-muted">{p.detail}</p>
+                      </li>
                     ))}
-                  </div>
+                  </ol>
                 </div>
 
-                {/* Output & KPI */}
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <div>
-                    <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-stone-400">Output / Dokumen</p>
-                    <ul className="space-y-1.5">
-                      {s.output.map((o, k) => (
-                        <li key={k} className="flex items-start gap-2 text-sm text-stone-300">
-                          <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500/50" />
-                          {o}
-                        </li>
+                <div className="grid gap-5 md:grid-cols-2">
+                  <div className="rounded-2xl bg-ika-bg p-5 ring-1 ring-ika-line">
+                    <h4 className="font-display text-lg text-ika-ink">Output & dokumen</h4>
+                    <ul className="mt-3 flex flex-wrap gap-2">
+                      {s.output.map((o) => (
+                        <li key={o} className="rounded-full bg-ika-surface px-3 py-1 text-[13px] text-ika-ink ring-1 ring-ika-line">{o}</li>
                       ))}
                     </ul>
                   </div>
-                  <div>
-                    <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-stone-400">Indikator Kinerja (KPI)</p>
-                    <ul className="space-y-1.5">
-                      {s.kpi.map((k, l) => (
-                        <li key={l} className="flex items-start gap-2 text-sm text-stone-300">
-                          <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-amber-500/60" />
+                  <div className={`rounded-2xl p-5 ${g.blok}`}>
+                    <h4 className="font-display text-lg">Indikator kinerja</h4>
+                    <ul className="mt-3 space-y-2">
+                      {s.kpi.map((k) => (
+                        <li key={k} className="flex items-start gap-2 text-sm leading-relaxed">
+                          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 opacity-80" />
                           {k}
                         </li>
                       ))}
@@ -682,131 +618,205 @@ function SopDoc() {
                 </div>
               </div>
             )}
-          </div>
+          </section>
         );
       })}
     </div>
   );
 }
 
-// ─── Page ────────────────────────────────────────────────────────────────────
+const warnaBidangStruktur = { A: "bg-ika-merah text-[#fff]", B: "bg-ika-oranye text-[#fff]", C: "bg-ika-kuning text-[#1f1d1a]" };
+
+function StrukturDoc() {
+  const [ketua, ...lain] = inti;
+  return (
+    <div className="rounded-[2rem] bg-ika-surface p-6 sm:p-10">
+      <div className="flex flex-col items-center gap-3">
+        <div className="rounded-full border-2 border-ika-ink px-6 py-2.5 text-center font-display text-lg text-ika-ink">Musyawarah Besar</div>
+        <span className="h-6 w-px bg-ika-muted/40" aria-hidden="true" />
+        <div className="grid w-full items-center gap-3 md:grid-cols-[1fr_auto_1fr]">
+          <div className="rounded-2xl rounded-br-md bg-ika-bg px-5 py-4 ring-1 ring-ika-line md:order-3">
+            <p className="text-xs text-ika-muted">Dewan Pembina · arahan strategis</p>
+            <p className="mt-1 font-display text-lg text-ika-ink">{pembina.ketua}</p>
+            <p className="mt-1 text-sm text-ika-muted">{pembina.anggota.join(", ")}</p>
+          </div>
+          <div className="rounded-3xl rounded-bl-md bg-ika-ink px-7 py-4 text-center text-ika-bg md:order-2">
+            <p className="text-xs opacity-75">{ketua.jabatan}</p>
+            <p className="font-display text-xl">{ketua.nama}</p>
+          </div>
+          <div className="rounded-2xl rounded-bl-md bg-ika-bg px-5 py-4 ring-1 ring-ika-line md:order-1">
+            <p className="text-xs text-ika-muted">Pengurus inti</p>
+            <ul className="mt-1 space-y-1">
+              {lain.map((o) => (
+                <li key={o.nama} className="text-sm text-ika-ink">
+                  <span className="text-ika-muted">{o.jabatan}:</span> {o.nama}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <span className="h-6 w-px bg-ika-muted/40" aria-hidden="true" />
+        <div className="grid w-full gap-3 md:grid-cols-3">
+          {bidang.map((b) => (
+            <div key={b.kode} className={`rounded-3xl px-6 py-5 ${warnaBidangStruktur[b.kode]}`}>
+              <p className="text-xs opacity-80">Bidang {b.kode}</p>
+              <p className="mt-1 font-display text-lg leading-snug">{b.nama}</p>
+              <p className="mt-3 text-sm font-semibold">Koordinator: {b.koordinator}</p>
+              <p className="mt-1 text-sm opacity-85">{b.anggota.join(", ")}</p>
+            </div>
+          ))}
+        </div>
+        <span className="h-6 w-px bg-ika-muted/40" aria-hidden="true" />
+        <div className="flex flex-col items-center gap-2">
+          <div className="flex gap-1.5" aria-hidden="true">
+            {Array.from({ length: 10 }, (_, i) => (
+              <span key={i} className={`h-4 w-4 rounded-full ${["bg-ika-merah", "bg-ika-oranye", "bg-ika-kuning"][i % 3]}`} />
+            ))}
+          </div>
+          <p className="text-sm text-ika-muted">PIC Angkatan: satu koordinator di setiap angkatan</p>
+        </div>
+      </div>
+      <div className="mt-8 text-center">
+        <Link to="/organisasi" className="inline-flex items-center justify-center rounded-full bg-ika-merah px-6 py-3 text-[15px] font-semibold text-[#fff] transition hover:brightness-110">
+          Lihat susunan pengurus lengkap
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+// ─── Halaman ───────────────────────────────────────────────────────────────────
 
 export default function AdArtPage() {
   const [tab, setTab] = useState("ad");
+  const aktif = tabs.find((t) => t.id === tab);
 
-  function handleTabClick(id) {
+  function pilih(id) {
     setTab(id);
+    document.getElementById("isi-dokumen")?.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
   return (
-    <div data-theme="dark" className="relative min-h-screen overflow-hidden bg-[#0a0807] font-body text-stone-300 antialiased">
-      {/* Atmosphere */}
-      <div className="pointer-events-none fixed inset-0 z-0">
-        <div className="absolute -top-40 left-1/2 h-[34rem] w-[44rem] -translate-x-1/2 rounded-full blur-[120px]" style={{ background: "rgba(245,158,11,0.08)" }} />
-        <div className="absolute bottom-0 right-0 h-[28rem] w-[28rem] rounded-full blur-[140px]" style={{ background: "rgba(120,53,15,0.15)" }} />
-      </div>
-
-      <div className="relative z-10">
-        {/* Header */}
-        <header className="px-6 pt-28 pb-12 md:pt-36">
-          <div className="mx-auto max-w-4xl text-center">
-            <div className="mx-auto mb-6 flex items-center justify-center gap-3">
-              <span className="h-px w-8 bg-amber-500/40" />
-              <span className="text-[11px] font-semibold uppercase tracking-[0.25em] text-amber-500/90">Dokumen Organisasi · IKA IKOM UPI</span>
-              <span className="h-px w-8 bg-amber-500/40" />
-            </div>
-            <h1 className="font-display text-4xl font-semibold leading-[1.05] tracking-tight text-[#f5efe6] md:text-6xl">
-              AD/ART, GBHO &<br /><span className="italic text-amber-400">Struktur Organisasi</span>
-            </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-stone-400">
-              Pedoman dasar penyelenggaraan Alumni Ilmu Komunikasi UPI — dari aturan pokok hingga arah program kerja.
+    <div className="bg-ika-bg font-body text-ika-ink antialiased">
+      {/* Pembuka */}
+      <header className="relative overflow-hidden">
+        <Cincin className="pointer-events-none absolute -left-40 -top-24 h-[30rem] w-[30rem] opacity-[0.07]" tebal={26} />
+        <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 pb-14 pt-28 sm:px-6 md:pt-36 lg:grid-cols-[1.15fr_1fr]">
+          <div>
+            <p className="inline-flex items-center gap-2 rounded-full bg-ika-surface px-3.5 py-1.5 text-sm text-ika-muted">
+              <span className="h-2 w-2 rounded-full bg-ika-merah" />
+              Dokumen organisasi
             </p>
-
-            {/* Status pengesahan */}
-            <div className="mx-auto mt-8 flex max-w-xl items-start gap-3 rounded-2xl border border-emerald-500/20 bg-emerald-500/[0.06] p-4 text-left">
-              <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
-              <p className="text-xs leading-relaxed text-emerald-100/90">
-                <span className="font-semibold">Telah disahkan</span> dalam Musyawarah Besar IKA IKOM UPI, Bandung, 1 Juni 2026, dan
-                menjadi lampiran Surat Keputusan kepengurusan periode {PERIODE}.
+            <h1 className="mt-6 font-display text-[2.7rem] font-medium leading-[1.02] tracking-[-0.02em] text-ika-ink sm:text-6xl">
+              Aturan main yang kita sepakati bersama.
+            </h1>
+            <p className="mt-6 max-w-lg text-[17px] leading-relaxed text-ika-muted">
+              Anggaran Dasar, Anggaran Rumah Tangga, Garis Besar Haluan Organisasi, SOP bidang, dan struktur organisasi IKA IKOM UPI.
+            </p>
+            <div className="mt-8 inline-flex max-w-lg items-start gap-3 rounded-2xl rounded-bl-sm bg-ika-surface px-4 py-3 ring-1 ring-ika-line">
+              <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#1f9d6b] text-[#fff]">
+                <Check className="h-3.5 w-3.5" strokeWidth={3} />
+              </span>
+              <p className="text-sm leading-relaxed text-ika-ink">
+                <b>Telah disahkan</b> dalam Musyawarah Besar IKA IKOM UPI, Bandung, 1 Juni 2026, dan menjadi lampiran SK kepengurusan
+                periode {PERIODE}.
               </p>
             </div>
           </div>
-        </header>
+          <div className="relative mx-auto w-full max-w-[28rem]">
+            <div className="absolute inset-[8%] rounded-full bg-ika-surface" aria-hidden="true" />
+            <IlusDokumen className="relative w-full" />
+          </div>
+        </div>
+      </header>
 
-        {/* Sticky tab nav */}
-        <nav className="sticky top-16 z-30 border-y border-white/8 bg-[#0a0807]/80 backdrop-blur-xl">
-          <div className="mx-auto flex max-w-4xl gap-1 overflow-x-auto px-6 py-2.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            {tabs.map((t) => (
+      {/* Pilihan dokumen bergambar */}
+      <section className="mx-auto max-w-6xl px-4 pb-6 sm:px-6">
+        <div className="-mx-4 flex snap-x gap-3 overflow-x-auto px-4 pb-2 [scrollbar-width:none] sm:mx-0 sm:grid sm:grid-cols-5 sm:overflow-visible sm:px-0 [&::-webkit-scrollbar]:hidden">
+          {tabs.map((t) => {
+            const on = t.id === tab;
+            return (
               <button
                 key={t.id}
-                onClick={() => handleTabClick(t.id)}
-                className={`flex shrink-0 items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium transition-colors ${
-                  tab === t.id ? "bg-amber-500/15 text-amber-400" : "text-stone-500 hover:text-stone-200"
-                }`}
+                onClick={() => pilih(t.id)}
+                aria-pressed={on}
+                className={`group flex w-44 shrink-0 snap-start flex-col overflow-hidden rounded-[1.75rem] text-left transition sm:w-auto ${on ? `${t.warna} shadow-[0_14px_30px_-14px_rgba(0,0,0,0.5)]` : "bg-ika-surface text-ika-ink hover:-translate-y-0.5"}`}
               >
-                <t.icon className="h-3.5 w-3.5" />
-                {t.label}
+                <div className={`flex h-28 items-center justify-center p-4 ${on ? "bg-ika-bg" : ""}`}>
+                  <t.Ilus className="h-full w-full transition-transform group-hover:scale-105" />
+                </div>
+                <div className="px-4 pb-4 pt-3">
+                  <p className="font-display text-lg font-medium leading-tight">{t.ringkas}</p>
+                  <p className={`mt-0.5 text-xs leading-snug ${on ? "opacity-85" : "text-ika-muted"}`}>{t.desc}</p>
+                </div>
               </button>
-            ))}
-          </div>
-        </nav>
+            );
+          })}
+        </div>
+      </section>
 
-        {/* Content */}
-        <main className="px-6 py-14 md:py-20">
-          <div className="mx-auto max-w-4xl">
-            {tab === "ad" && (
-              <>
-                <h2 className="mb-2 font-display text-3xl font-semibold text-[#f5efe6]">Anggaran Dasar</h2>
-                <p className="mb-4 text-sm text-stone-500">Aturan pokok organisasi IKA IKOM UPI.</p>
-                <LegalDoc data={anggaranDasar} />
-              </>
-            )}
-            {tab === "art" && (
-              <>
-                <h2 className="mb-2 font-display text-3xl font-semibold text-[#f5efe6]">Anggaran Rumah Tangga</h2>
-                <p className="mb-4 text-sm text-stone-500">Penjabaran teknis dari Anggaran Dasar.</p>
-                <LegalDoc data={anggaranRumahTangga} />
-              </>
-            )}
-            {tab === "gbho" && (
-              <>
-                <h2 className="mb-2 font-display text-3xl font-semibold text-[#f5efe6]">Garis Besar Haluan Organisasi</h2>
-                <p className="mb-4 text-sm text-stone-500">Arah dan pola umum program kerja.</p>
-                <GbhoDoc />
-              </>
-            )}
-            {tab === "sop" && (
-              <>
-                <h2 className="mb-2 font-display text-3xl font-semibold text-[#f5efe6]">SOP Bidang</h2>
-                <p className="mb-6 text-sm text-stone-500">Tugas pokok, rencana kerja, dan prosedur tiap bidang kepengurusan IKA IKOM UPI periode {PERIODE}, sesuai lampiran SK.</p>
-                <SopDoc />
-              </>
-            )}
-            {tab === "struktur" && (
-              <>
-                <h2 className="mb-2 font-display text-3xl font-semibold text-[#f5efe6]">Struktur Organisasi</h2>
-                <p className="mb-8 text-sm text-stone-500">Susunan kepengurusan IKA IKOM UPI periode {PERIODE}.</p>
-                <StrukturDoc />
-              </>
-            )}
-          </div>
-        </main>
+      {/* Pilihan ringkas yang menempel saat menggulir */}
+      <nav className="sticky top-16 z-30 border-y border-ika-line bg-ika-bg/90 backdrop-blur-xl">
+        <div className="mx-auto flex max-w-6xl gap-1.5 overflow-x-auto px-4 py-2.5 [scrollbar-width:none] sm:px-6 [&::-webkit-scrollbar]:hidden">
+          {tabs.map((t) => (
+            <button
+              key={t.id}
+              onClick={() => pilih(t.id)}
+              className={`shrink-0 rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${tab === t.id ? t.warna : "text-ika-muted hover:bg-ika-surface hover:text-ika-ink"}`}
+            >
+              {t.ringkas}
+            </button>
+          ))}
+        </div>
+      </nav>
 
-        <div className="px-6 pb-14 flex justify-center">
-          <a
-            href="/calon-ketua"
-            className="inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-6 py-3 text-sm font-medium text-amber-400 transition-colors hover:bg-amber-500/20"
-          >
-            <Compass className="h-4 w-4" />
-            Lihat Laman Arah Organisasi {PERIODE}
-          </a>
+      {/* Isi dokumen */}
+      <main id="isi-dokumen" className="mx-auto max-w-6xl scroll-mt-28 px-4 py-12 sm:px-6 md:py-16">
+        <div className={`relative mb-10 flex flex-col gap-6 overflow-hidden rounded-[2rem] rounded-bl-lg p-7 sm:flex-row sm:items-center sm:p-10 ${aktif.warna}`}>
+          <div className="flex-1">
+            <p className="text-sm opacity-80">{aktif.meta}</p>
+            <h2 className="mt-1 font-display text-3xl font-medium leading-tight sm:text-[2.6rem]">{aktif.label}</h2>
+            <p className="mt-2 max-w-xl text-[16px] opacity-85">
+              {tab === "sop"
+                ? `Tugas pokok, rencana kerja, dan prosedur tiap bidang periode ${PERIODE}, sesuai lampiran SK.`
+                : tab === "struktur"
+                  ? `Unsur organisasi dan susunan kepengurusan periode ${PERIODE}.`
+                  : aktif.desc + "."}
+            </p>
+          </div>
+          <div className="flex h-32 w-full shrink-0 items-center justify-center rounded-2xl bg-ika-bg p-3 sm:h-36 sm:w-56">
+            <aktif.Ilus className="h-full w-full" />
+          </div>
         </div>
 
-        <footer className="border-t border-white/8 px-6 py-7">
-          <p className="text-center text-sm text-stone-600">© 2026 IKOM UPI 2018. All rights reserved.</p>
-        </footer>
-      </div>
+        {tab === "ad" && <LegalDoc data={anggaranDasar} prefix="ad" />}
+        {tab === "art" && <LegalDoc data={anggaranRumahTangga} prefix="art" />}
+        {tab === "gbho" && <GbhoDoc />}
+        {tab === "sop" && <SopDoc />}
+        {tab === "struktur" && <StrukturDoc />}
+      </main>
 
+      {/* Lanjutan */}
+      <section className="mx-auto max-w-6xl px-4 pb-20 sm:px-6">
+        <div className="grid gap-4 md:grid-cols-2">
+          <Link to="/calon-ketua" className="group flex items-center gap-5 rounded-[2rem] rounded-bl-lg bg-ika-surface p-6 transition-colors hover:bg-ika-line/60">
+            <IlusKompas className="h-20 w-24 shrink-0" />
+            <div>
+              <p className="font-display text-xl text-ika-ink">Arah Organisasi {PERIODE}</p>
+              <p className="mt-1 text-sm text-ika-muted">Gagasan dan peta jalan Ketua Umum terpilih.</p>
+            </div>
+          </Link>
+          <Link to="/publikasi" className="group flex items-center gap-5 rounded-[2rem] rounded-br-lg bg-ika-surface p-6 transition-colors hover:bg-ika-line/60">
+            <IlusAturan className="h-20 w-24 shrink-0" />
+            <div>
+              <p className="font-display text-xl text-ika-ink">Publikasi</p>
+              <p className="mt-1 text-sm text-ika-muted">Kajian, rekomendasi, dan laporan resmi IKA.</p>
+            </div>
+          </Link>
+        </div>
+      </section>
+
+      <Footer />
     </div>
   );
 }
