@@ -1171,7 +1171,7 @@ export default function CecepPage() {
               </div>
 
               <div className="mt-12 border-t border-white/8 pt-10">
-                <p className="mb-5 text-sm text-stone-500">Pelajari pedoman dasar organisasi yang diusulkan</p>
+                <p className="mb-5 text-sm text-stone-500">Pelajari pedoman dasar organisasi yang telah disahkan</p>
                 <Link
                   to="/ad-art"
                   className="group inline-flex items-center gap-2.5 rounded-full border border-amber-500/30 bg-amber-500/[0.06] px-6 py-3 text-sm font-semibold text-amber-300 transition-colors hover:bg-amber-500/15"

@@ -12,7 +12,6 @@ import {
   Wallet,
   Users,
   Briefcase,
-  Info,
   ClipboardList,
   CheckCircle2,
   Target,
@@ -21,7 +20,7 @@ import {
 
 muatFontItalic();
 
-// ─── DRAFT CONTENT — disahkan dalam Musyawarah Besar IKA IKOM UPI ───────────────────────
+// ─── ISI DOKUMEN — disahkan dalam Musyawarah Besar IKA IKOM UPI, 1 Juni 2026 ───────────────────────
 
 const anggaranDasar = [
   {
@@ -723,11 +722,12 @@ export default function AdArtPage() {
               Pedoman dasar penyelenggaraan Alumni Ilmu Komunikasi UPI — dari aturan pokok hingga arah program kerja.
             </p>
 
-            {/* Draft notice */}
-            <div className="mx-auto mt-8 flex max-w-xl items-start gap-3 rounded-2xl border border-amber-500/20 bg-amber-500/[0.06] p-4 text-left">
-              <Info className="mt-0.5 h-4 w-4 shrink-0 text-amber-400" />
-              <p className="text-xs leading-relaxed text-amber-200/90">
-                <span className="font-semibold">Dokumen ini masih berupa DRAFT usulan.</span> Seluruh isi akan dibahas, disempurnakan, dan disahkan dalam Musyawarah Besar (Mubes) IKA IKOM UPI.
+            {/* Status pengesahan */}
+            <div className="mx-auto mt-8 flex max-w-xl items-start gap-3 rounded-2xl border border-emerald-500/20 bg-emerald-500/[0.06] p-4 text-left">
+              <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
+              <p className="text-xs leading-relaxed text-emerald-100/90">
+                <span className="font-semibold">Telah disahkan</span> dalam Musyawarah Besar IKA IKOM UPI, Bandung, 1 Juni 2026, dan
+                menjadi lampiran Surat Keputusan kepengurusan periode {PERIODE}.
               </p>
             </div>
           </div>
