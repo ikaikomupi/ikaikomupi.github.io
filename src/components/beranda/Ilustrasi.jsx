@@ -141,3 +141,21 @@ export function IlusToa({ className = "" }) {
     </svg>
   );
 }
+
+export function IlusSosial({ className = "" }) {
+  // Kontribusi sosial: dua tangan menopang hati.
+  return (
+    <svg viewBox="0 0 200 160" className={className} aria-hidden="true">
+      <path d="M100 112c-30-20-46-36-46-54a22 22 0 0 1 46-8 22 22 0 0 1 46 8c0 18-16 34-46 54z" fill={M} />
+      <path d="M88 52a10 10 0 0 1 10-8" fill="none" stroke={B} strokeWidth="4" strokeLinecap="round" opacity="0.7" />
+      <path d="M26 118c14-2 30 4 44 14l26 4c6 1 6 9 0 10H62" fill="none" stroke={T} strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M174 118c-14-2-30 4-44 14l-26 4" fill="none" stroke={T} strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
+      <rect x="10" y="112" width="18" height="34" rx="4" fill={K} />
+      <rect x="172" y="112" width="18" height="34" rx="4" fill={O} />
+      <g fill={K}>
+        <path d="M160 26l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" />
+        <circle cx="38" cy="36" r="4" />
+      </g>
+    </svg>
+  );
+}
