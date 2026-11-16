@@ -1,0 +1,1 @@
+let t=!1;function n(){if(t||typeof document>"u")return;t=!0;const e=document.createElement("link");e.rel="stylesheet",e.href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400..900&display=swap",document.head.appendChild(e)}export{n as m};
