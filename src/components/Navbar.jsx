@@ -36,13 +36,16 @@ const REDUP = "text-[#4a4540] hover:text-[#1f1d1a]";
 
 function Logo() {
   return (
-    <Link to="/" aria-label="IKA IKOM UPI, ke beranda" className="flex shrink-0 items-center gap-3">
-      <img src="/logo-upi.png" alt="" width="40" height="40" className="h-10 w-10 object-contain" />
-      <span className="h-10 w-px bg-[#b8913a]" aria-hidden="true" />
-      <span className={`flex flex-col text-[12.5px] font-light leading-[1.15] tracking-[0.01em] ${TEKS} sm:text-[13.5px]`}>
-        <span>IKA Ilmu Komunikasi</span>
-        <span>Universitas Pendidikan</span>
-        <span>Indonesia</span>
+    <Link to="/" aria-label="IKOM UPI Alumni Association, ke beranda" className="flex min-w-0 shrink items-center gap-2.5 sm:gap-3">
+      <picture>
+        <source type="image/webp" srcSet="/img/logo-ikom.webp" />
+        <img src="/img/logo-ikom.png" alt="" width="65" height="40" className="h-8 w-auto shrink-0 sm:h-10" />
+      </picture>
+      <span className="h-9 w-px shrink-0 bg-[#b8913a] sm:h-10" aria-hidden="true" />
+      <span className={`flex min-w-0 flex-col text-[11.5px] font-light leading-[1.15] tracking-[0.01em] ${TEKS} sm:text-[13.5px]`}>
+        <span>Communication</span>
+        <span>Alumni Association</span>
+        <span className="truncate">Universitas Pendidikan Indonesia</span>
       </span>
     </Link>
   );
@@ -139,8 +142,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile */}
-        <div className="flex items-center gap-1 lg:hidden">
-          <TemaToggle terang />
+        <div className="flex shrink-0 items-center lg:hidden">
           <button
             className="flex h-9 w-9 items-center justify-center rounded-md text-[#4a4540] hover:bg-[#f3efe8] hover:text-[#1f1d1a]"
             onClick={() => setOpen((v) => !v)}
@@ -180,6 +182,10 @@ export default function Navbar() {
               </Link>
             )
           )}
+          <div className="mt-2 flex items-center justify-between border-t border-[#ece7de] px-3 pt-3">
+            <span className="text-sm text-[#4a4540]">Tema tampilan</span>
+            <TemaToggle terang />
+          </div>
           <Link
             to={CTA.to}
             className="mt-3 block rounded-md bg-amber-500 px-4 py-3 text-center text-sm font-semibold text-ink hover:bg-amber-400"

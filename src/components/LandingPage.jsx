@@ -169,6 +169,22 @@ export default function LandingPage() {
         <div className="veil-hero pointer-events-none absolute inset-0 bg-amber-950/20 mix-blend-multiply" />
 
         <div className="panel-hero relative mx-auto w-full min-w-0 max-w-3xl">
+          {/* Logo: versi putih di mode gelap, berwarna di mode terang (panel krem). */}
+          <img
+            src="/img/logo-ikom-putih-240.png"
+            srcSet="/img/logo-ikom-putih-240.png 1x, /img/logo-ikom-putih-480.png 2x"
+            alt="Alumni IKOM Universitas Pendidikan Indonesia"
+            width="160"
+            height="98"
+            className="logo-gelap mx-auto mb-6 h-auto w-32 sm:w-40"
+          />
+          <img
+            src="/img/logo-ikom.webp"
+            alt="Alumni IKOM Universitas Pendidikan Indonesia"
+            width="160"
+            height="98"
+            className="logo-terang mx-auto mb-6 h-auto w-32 sm:w-40"
+          />
           <span className="mb-6 inline-block rounded-full bg-amber-500/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-amber-400 ring-1 ring-amber-500/30">
             IKA IKOM UPI
           </span>

@@ -1,117 +1,95 @@
 import FotoLatar from "./FotoLatar";
 
-const struktur = {
-  ketua: {
-    jabatan: "Ketua Angkatan",
-    nama: "Muhammad Naufal Fadhilah",
-    initials: "MN",
-  },
-  wakil: {
-    jabatan: "Wakil Ketua",
-    nama: "Den Reza Alfian Farid",
-    initials: "DR",
-  },
-  sekretaris: [
-    { jabatan: "Sekretaris", nama: "Alanis Rani Rayhana", initials: "AR" },
-  ],
-  bendahara: [
-    { jabatan: "Bendahara", nama: "Ghifary Azmiy Waliy", initials: "GA" },
-  ],
-  divisi: [
-    {
-      nama: "Acara & Networking",
-      warna: "amber",
-      anggota: [
-        { jabatan: "Koordinator", nama: "Wanda Putri Rachmalita", initials: "WP" },
-        { jabatan: "Anggota", nama: "Mochamad Marcellodiansyah", initials: "MM" },
-        { jabatan: "Anggota", nama: "Reva Girvan Respati", initials: "RG" },
-        { jabatan: "Anggota", nama: "Zaky Naufal Arsyad", initials: "ZN" },
-      ],
-    },
-    {
-      nama: "Humas & Media",
-      warna: "orange",
-      anggota: [
-        { jabatan: "Koordinator", nama: "Novie Herdyanti Putri", initials: "NH" },
-        { jabatan: "Anggota", nama: "Arina Khairani Attamimy", initials: "AK" },
-        { jabatan: "Anggota", nama: "Renanda Dwina Putri", initials: "RD" },
-        { jabatan: "Anggota", nama: "Febbi Anggraeni", initials: "FA" },
-      ],
-    },
-    {
-      nama: "Kreatif & Dokumentasi",
-      warna: "yellow",
-      anggota: [
-        { jabatan: "Koordinator", nama: "Muhammad Rafi Shalahudin", initials: "MR" },
-        { jabatan: "Anggota", nama: "Dinda Dania Nadine Asy Syifa", initials: "DD" },
-        { jabatan: "Anggota", nama: "Yossi Yonida", initials: "YY" },
-        { jabatan: "Anggota", nama: "Daafiq Dahdal Rabbani", initials: "DD" },
-      ],
-    },
-    {
-      nama: "Pengembangan SDM",
-      warna: "stone",
-      anggota: [
-        { jabatan: "Koordinator", nama: "Fathia Islamiyatul Syahida", initials: "FI" },
-        { jabatan: "Anggota", nama: "Nadiyatulkhair", initials: "NA" },
-        { jabatan: "Anggota", nama: "Regine Deanaendra Hasnoro", initials: "RD" },
-        { jabatan: "Anggota", nama: "Savana Maulahela", initials: "SM" },
-      ],
-    },
-    {
-      nama: "Sosial & Wirausaha",
-      warna: "red",
-      anggota: [
-        { jabatan: "Koordinator", nama: "Rizqi Abdul Azis", initials: "RA" },
-        { jabatan: "Anggota", nama: "Anggreini Tampubolon", initials: "AT" },
-        { jabatan: "Anggota", nama: "Indira Kirani Putri", initials: "IK" },
-        { jabatan: "Anggota", nama: "Cecep Abdurrohman Malik I.", initials: "CA" },
-      ],
-    },
-  ],
+// Susunan pengurus IKA IKOM UPI periode 2026–2029
+// (sumber: Surat Permohonan SK Pengurus, Lampiran 1 & 2).
+const PERIODE = "2026–2029";
+
+const pembina = {
+  ketua: "Haidar Abdurrahman",
+  anggota: ["Feggy Nurdiansyah", "M. Endriski Agraenzopati H.", "Alwan Husni Ramdhani"],
 };
 
-const colorMap = {
-  amber: { bg: "bg-amber-500/15", text: "text-amber-400", border: "border-amber-500/30", avatar: "bg-amber-600" },
-  orange: { bg: "bg-orange-500/15", text: "text-orange-400", border: "border-orange-500/30", avatar: "bg-orange-600" },
-  yellow: { bg: "bg-yellow-500/15", text: "text-yellow-400", border: "border-yellow-500/30", avatar: "bg-yellow-600" },
-  stone: { bg: "bg-stone-500/20", text: "text-stone-300", border: "border-stone-500/30", avatar: "bg-stone-500" },
-  red: { bg: "bg-red-500/15", text: "text-red-400", border: "border-red-500/30", avatar: "bg-red-700" },
+const inti = [
+  { jabatan: "Ketua Umum", nama: "Cecep Abdurrohman Malik Ibrohim", utama: true },
+  { jabatan: "Wakil Ketua", nama: "Rizqi Abdul Azis" },
+  { jabatan: "Sekretaris", nama: "Muhammad Rafi Shalahudin" },
+  { jabatan: "Bendahara", nama: "Mochamad Marcellodiansyah" },
+];
+
+const bidang = [
+  {
+    kode: "A",
+    nama: "Program & Acara",
+    warna: "amber",
+    tugas: "Merancang dan menyelenggarakan silaturahmi serta acara resmi, menyusun kalender kegiatan tahunan, dan mengelola kepanitiaan.",
+    koordinator: "Fathia Islamiyatul Syahida",
+    anggota: ["Nisfu Abdillah", "Rizki Dwi Pangestu", "Muhammad Rifqi Putra Yudisha", "Wanda Putri Rachmalita"],
+  },
+  {
+    kode: "B",
+    nama: "Pengembangan Profesional & Karir",
+    warna: "orange",
+    tugas: "Menyelenggarakan peningkatan kapasitas profesional, membangun jejaring karir dan info lowongan, serta menjembatani alumni dengan mahasiswa.",
+    koordinator: "Silkiya Zahra",
+    anggota: ["Den Reza Alfian Farid", "Shabrina Thifla", "Alanis Rani Rayhana"],
+  },
+  {
+    kode: "C",
+    nama: "Hubungan Alumni & Antar-Angkatan",
+    warna: "red",
+    tugas: "Menghimpun dan memutakhirkan basis data anggota, membina PIC Angkatan, dan menjaga komunikasi ke seluruh angkatan.",
+    koordinator: "Ghifari Azmiy W.",
+    anggota: ["Dzikri Abdillah Adzimat Sukmayadi", "Muhammad Naufal Fadhilah", "Diva Alya Rahmanda Suherman", "Aulia Maharani"],
+  },
+];
+
+const warna = {
+  amber: { label: "bg-amber-500/15 text-amber-400 ring-amber-500/30", avatar: "bg-amber-600", garis: "bg-amber-500" },
+  orange: { label: "bg-orange-500/15 text-orange-400 ring-orange-500/30", avatar: "bg-orange-600", garis: "bg-orange-500" },
+  red: { label: "bg-red-500/15 text-red-400 ring-red-500/30", avatar: "bg-red-700", garis: "bg-red-500" },
 };
 
-function Avatar({ initials, cls = "bg-amber-600", size = "md" }) {
+// Inisial dari 2 kata pertama yang bukan singkatan (mis. "M." dilewati kalau ada kata lain).
+function inisial(nama) {
+  const kata = nama.replace(/[^\p{L}\s]/gu, " ").split(/\s+/).filter(Boolean);
+  const penuh = kata.filter((k) => k.length > 1);
+  const pakai = penuh.length >= 2 ? penuh : kata;
+  return (pakai[0][0] + (pakai[1]?.[0] || "")).toUpperCase();
+}
+
+function Avatar({ nama, cls = "bg-stone-600", size = "md" }) {
   const sz = size === "lg" ? "h-16 w-16 text-lg" : size === "sm" ? "h-9 w-9 text-xs" : "h-12 w-12 text-sm";
   return (
-    <div className={`flex shrink-0 items-center justify-center rounded-full font-bold text-white ${sz} ${cls}`}>
-      {initials}
+    <div className={`flex shrink-0 items-center justify-center rounded-full font-bold text-[#fff] ${sz} ${cls}`} aria-hidden="true">
+      {inisial(nama)}
     </div>
   );
 }
 
-function MemberCard({ jabatan, nama, initials, avatarCls = "bg-stone-600", compact = false }) {
-  if (compact) {
-    return (
-      <div className="flex items-center gap-3 rounded-xl bg-white/5 px-4 py-3 ring-1 ring-white/8">
-        <Avatar initials={initials} cls={avatarCls} size="sm" />
-        <div>
-          <p className="text-xs font-medium text-stone-400">{jabatan}</p>
-          <p className="text-sm font-semibold text-white">{nama}</p>
-        </div>
-      </div>
-    );
-  }
+function Orang({ jabatan, nama, avatarCls }) {
   return (
-    <div className="flex flex-col items-center gap-3 text-center">
-      <Avatar initials={initials} cls={avatarCls} />
-      <div>
-        <p className="text-xs font-medium text-stone-400">{jabatan}</p>
-        <p className="font-semibold text-white">{nama}</p>
+    <div className="flex items-center gap-3 rounded-xl bg-white/5 px-4 py-3 ring-1 ring-white/8">
+      <Avatar nama={nama} cls={avatarCls} size="sm" />
+      <div className="min-w-0">
+        {jabatan && <p className="text-xs font-medium text-stone-400">{jabatan}</p>}
+        <p className="text-sm font-semibold text-stone-100">{nama}</p>
       </div>
+    </div>
+  );
+}
+
+function JudulBagian({ no, children }) {
+  return (
+    <div className="mb-6 flex items-center gap-4">
+      <span className="font-display text-sm font-semibold text-amber-400">{no}</span>
+      <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-400">{children}</h2>
+      <div className="h-px flex-1 bg-white/8" />
     </div>
   );
 }
 
 export default function OrgPage() {
+  const [ketua, ...lainnya] = inti;
   return (
     <div className="min-h-screen bg-stone-950">
       {/* Header */}
@@ -121,103 +99,75 @@ export default function OrgPage() {
         <div className="veil-hero pointer-events-none absolute inset-0 bg-gradient-to-b from-stone-950/70 via-stone-950/10 to-stone-950" />
         <div className="panel-hero relative mx-auto max-w-2xl">
           <span className="mb-4 inline-block rounded-full bg-amber-500/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-amber-400 ring-1 ring-amber-500/30">
-            IKA IKOM UPI
+            Periode {PERIODE}
           </span>
-          <h1 className="mb-3 text-3xl font-extrabold text-white md:text-5xl">
-            Struktur Organisasi
-          </h1>
-          <p className="text-stone-400">
-            Kepengurusan IKA IKOM UPI
-          </p>
+          <h1 className="mb-3 text-3xl font-extrabold text-white md:text-5xl">Susunan Pengurus</h1>
+          <p className="text-stone-400">Ikatan Keluarga Alumni Ilmu Komunikasi Universitas Pendidikan Indonesia</p>
         </div>
       </div>
 
-      <div className="mx-auto max-w-5xl px-6 pb-20">
-
-        {/* Ketua & Wakil */}
-        <div className="mb-12 flex flex-col items-center gap-8 sm:flex-row sm:justify-center sm:gap-16">
-          {/* Ketua */}
-          <div className="flex flex-col items-center gap-4">
+      <div className="mx-auto max-w-5xl space-y-16 px-6 pb-20">
+        {/* 1. Pengurus Inti */}
+        <section>
+          <JudulBagian no="01">Pengurus Inti</JudulBagian>
+          <div className="flex flex-col items-center gap-4 pb-8 text-center">
             <div className="relative">
               <div className="absolute -inset-1.5 rounded-full bg-amber-500/30 blur-md" />
-              <Avatar initials={struktur.ketua.initials} cls="bg-amber-600" size="lg" />
+              <Avatar nama={ketua.nama} cls="relative bg-amber-600" size="lg" />
             </div>
-            <div className="text-center">
-              <span className="mb-1 inline-block rounded-full bg-amber-500/15 px-3 py-1 text-xs font-semibold text-amber-400 ring-1 ring-amber-500/30">
-                {struktur.ketua.jabatan}
+            <div>
+              <span className="inline-block rounded-full bg-amber-500/15 px-3 py-1 text-xs font-semibold text-amber-400 ring-1 ring-amber-500/30">
+                {ketua.jabatan}
               </span>
-              <p className="mt-1 font-bold text-white">{struktur.ketua.nama}</p>
+              <p className="mt-2 text-lg font-bold text-stone-100">{ketua.nama}</p>
             </div>
           </div>
-
-          {/* Connector */}
-          <div className="hidden h-px w-16 bg-white/15 sm:block" />
-
-          {/* Wakil */}
-          <div className="flex flex-col items-center gap-4">
-            <Avatar initials={struktur.wakil.initials} cls="bg-stone-600" size="lg" />
-            <div className="text-center">
-              <span className="mb-1 inline-block rounded-full bg-white/8 px-3 py-1 text-xs font-semibold text-stone-400 ring-1 ring-white/10">
-                {struktur.wakil.jabatan}
-              </span>
-              <p className="mt-1 font-bold text-white">{struktur.wakil.nama}</p>
-            </div>
+          <div className="grid gap-3 sm:grid-cols-3">
+            {lainnya.map((o) => (
+              <Orang key={o.nama} {...o} avatarCls="bg-amber-700" />
+            ))}
           </div>
-        </div>
+        </section>
 
-        {/* Sekretaris & Bendahara */}
-        <div className="mb-12 grid gap-4 sm:grid-cols-2">
-          {/* Sekretaris */}
-          <div className="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
-            <h3 className="mb-4 text-xs font-semibold uppercase tracking-widest text-stone-500">
-              Sekretaris
-            </h3>
-            <div className="flex flex-col gap-3">
-              {struktur.sekretaris.map((s) => (
-                <MemberCard key={s.nama} {...s} avatarCls="bg-amber-700" compact />
-              ))}
-            </div>
-          </div>
-
-          {/* Bendahara */}
-          <div className="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
-            <h3 className="mb-4 text-xs font-semibold uppercase tracking-widest text-stone-500">
-              Bendahara
-            </h3>
-            <div className="flex flex-col gap-3">
-              {struktur.bendahara.map((b) => (
-                <MemberCard key={b.nama} {...b} avatarCls="bg-amber-700" compact />
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Divisi */}
-        <div>
-          <h2 className="mb-6 text-center text-xs font-semibold uppercase tracking-widest text-stone-500">
-            Divisi
-          </h2>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {struktur.divisi.map((div) => {
-              const c = colorMap[div.warna];
+        {/* 2. Koordinator Bidang */}
+        <section>
+          <JudulBagian no="02">Koordinator Bidang</JudulBagian>
+          <div className="grid gap-5 lg:grid-cols-3">
+            {bidang.map((b) => {
+              const c = warna[b.warna];
               return (
-                <div
-                  key={div.nama}
-                  className="rounded-2xl bg-white/5 p-6 ring-1 ring-white/10"
-                >
-                  <span className={`mb-4 inline-block rounded-full px-3 py-1 text-xs font-semibold ring-1 ${c.bg} ${c.text} ${c.border}`}>
-                    {div.nama}
+                <div key={b.kode} className="relative flex flex-col overflow-hidden rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
+                  <div className={`absolute inset-x-0 top-0 h-0.5 ${c.garis}`} />
+                  <span className={`mb-3 inline-flex w-fit items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold ring-1 ${c.label}`}>
+                    Bidang {b.kode}
                   </span>
-                  <div className="flex flex-col gap-3">
-                    {div.anggota.map((a) => (
-                      <MemberCard key={a.nama} {...a} avatarCls={c.avatar} compact />
+                  <h3 className="text-base font-semibold leading-snug text-stone-100">{b.nama}</h3>
+                  <p className="mt-2 text-xs leading-relaxed text-stone-400">{b.tugas}</p>
+                  <div className="mt-5 flex flex-col gap-2.5">
+                    <Orang jabatan="Koordinator" nama={b.koordinator} avatarCls={c.avatar} />
+                    {b.anggota.map((n) => (
+                      <Orang key={n} jabatan="Anggota" nama={n} avatarCls="bg-stone-600" />
                     ))}
                   </div>
                 </div>
               );
             })}
           </div>
-        </div>
+        </section>
+
+        {/* 3. Dewan Pembina */}
+        <section>
+          <JudulBagian no="03">Dewan Pembina / Penasihat</JudulBagian>
+          <p className="-mt-2 mb-5 text-sm text-stone-400">
+            Memberikan arahan strategis dan tidak menjalankan kerja operasional harian.
+          </p>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <Orang jabatan="Ketua" nama={pembina.ketua} avatarCls="bg-stone-500" />
+            {pembina.anggota.map((n) => (
+              <Orang key={n} jabatan="Anggota" nama={n} avatarCls="bg-stone-600" />
+            ))}
+          </div>
+        </section>
       </div>
     </div>
   );
