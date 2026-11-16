@@ -135,7 +135,7 @@ export default function Navbar() {
           <TemaToggle terang />
           <Link
             to={CTA.to}
-            className="ml-2 rounded-md bg-amber-500 px-4 py-2 text-sm font-semibold text-ink transition-colors hover:bg-amber-400"
+            className="ml-2 rounded-md bg-[#b5272d] px-4 py-2 text-sm font-semibold text-[#fff] transition-colors hover:bg-[#9a1f25]"
           >
             {CTA.label}
           </Link>
@@ -188,7 +188,7 @@ export default function Navbar() {
           </div>
           <Link
             to={CTA.to}
-            className="mt-3 block rounded-md bg-amber-500 px-4 py-3 text-center text-sm font-semibold text-ink hover:bg-amber-400"
+            className="mt-3 block rounded-md bg-[#b5272d] px-4 py-3 text-center text-sm font-semibold text-[#fff] hover:bg-[#9a1f25]"
           >
             {CTA.label} ke jejaring alumni
           </Link>

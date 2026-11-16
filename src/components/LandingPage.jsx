@@ -1,427 +1,266 @@
 import { Link } from "react-router-dom";
-import {
-  Users,
-  GraduationCap,
-  Briefcase,
-  Search,
-  Calendar,
-  BookOpen,
-  Instagram,
-  Linkedin,
-  ArrowRight,
-  Quote,
-} from "lucide-react";
+import { Instagram } from "lucide-react";
 import FotoLatar from "./FotoLatar";
 
-// ─── Data ──────────────────────────────────────────────────────────────────────
+// Beranda gaya institusi (mengikuti navbar ala Chevening): selalu terang, foto alumni
+// ditampilkan jernih, warna aksen diambil dari logo IKOM (merah, oranye, kuning) + garis emas.
+// Warna ditulis hex karena mode terang situs membalik skala stone-*.
 
 const stats = [
-  { icon: Users, value: "500+", label: "Alumni Terhubung" },
-  { icon: GraduationCap, value: "10", label: "Angkatan Terhimpun" },
-  { icon: Briefcase, value: "20+", label: "Sektor Industri" },
+  { value: "500+", label: "alumni terhubung" },
+  { value: "10", label: "angkatan terhimpun" },
+  { value: "20+", label: "sektor industri" },
 ];
 
-const features = [
-  {
-    icon: Search,
-    title: "Direktori Terintegrasi",
-    description:
-      "Cari dan temukan kontak sesama alumni berdasarkan domisili atau industri.",
-    to: "/directory",
-  },
-  {
-    icon: Calendar,
-    title: "Event & Networking",
-    description:
-      "Update jadwal kumpul angkatan dan reuni agar tidak ada yang ketinggalan.",
-    to: "/events",
-  },
-  {
-    icon: Briefcase,
-    title: "Peluang Karir",
-    description:
-      "Kolaborasi dan referensi pekerjaan antar sesama alumni lintas industri.",
-    to: "/karir",
-  },
-  {
-    icon: BookOpen,
-    title: "Setelah Toga",
-    description:
-      "Cerita, tips, dan pelajaran nyata dari para alumni IKOM UPI tentang hidup setelah wisuda.",
-    to: "/setelah-toga",
-    featured: true,
-  },
+const program = [
+  { to: "/directory", title: "Direktori alumni", desc: "Cari teman seangkatan berdasarkan kota, industri, atau tempat kerja." },
+  { to: "/events", title: "Event & agenda", desc: "Kalender reuni, gathering, webinar, dan kegiatan resmi organisasi." },
+  { to: "/karir", title: "Karir", desc: "Lowongan dan referensi kerja yang dibagikan sesama alumni." },
+  { to: "/cpns", title: "KOMpas ASN", desc: "Modul belajar, kuis, dan tryout untuk persiapan CPNS." },
+  { to: "/setelah-toga", title: "Setelah Toga", desc: "Cerita dan pelajaran nyata alumni tentang hidup setelah wisuda." },
 ];
 
-const spotlights = [
+const cerita = [
   {
     name: "Gesha Fadhilah Ramdhan",
     role: "Alumni IKOM UPI 2020",
     quote:
-      "Jadi alumni IKOM UPI bukan cuma soal gelar — tapi tentang cara berpikir kritis yang dibentuk sejak kelas pertama. Itu yang sampai sekarang paling terasa manfaatnya di dunia kerja.",
-    initials: "GF",
+      "Jadi alumni IKOM UPI bukan cuma soal gelar, tapi tentang cara berpikir kritis yang dibentuk sejak kelas pertama. Itu yang sampai sekarang paling terasa manfaatnya di dunia kerja.",
   },
   {
     name: "Rizki Dwi Pangestu",
     role: "Alumni IKOM UPI 2019",
     quote:
-      "IKOM UPI ngajarin saya bahwa komunikasi itu bukan cuma bicara — tapi tentang memahami. Pelajaran itu yang bikin saya bertahan dan berkembang di industri yang terus berubah.",
-    initials: "RD",
+      "IKOM UPI ngajarin saya bahwa komunikasi itu bukan cuma bicara, tapi memahami. Pelajaran itu yang bikin saya bertahan dan berkembang di industri yang terus berubah.",
   },
   {
     name: "Den Reza Alfian Farid",
     role: "Alumni IKOM UPI",
     quote:
-      "Yang paling berharga dari IKOM bukan hanya ilmunya, tapi orangnya. Angkatan kita penuh orang-orang yang saling menguatkan — dan energi itu masih terasa sampai sekarang.",
-    initials: "DR",
+      "Yang paling berharga dari IKOM bukan hanya ilmunya, tapi orangnya. Angkatan kita penuh orang yang saling menguatkan, dan energi itu masih terasa sampai sekarang.",
   },
 ];
 
-// ─── Sub-components ────────────────────────────────────────────────────────────
+const tombolUtama =
+  "inline-flex items-center justify-center rounded-md bg-[#b5272d] px-6 py-3 text-[15px] font-semibold text-[#fff] transition-colors hover:bg-[#9a1f25] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b5272d]";
+const tombolGaris =
+  "inline-flex items-center justify-center rounded-md border border-[#1f1d1a]/25 px-6 py-3 text-[15px] font-semibold text-[#1f1d1a] transition-colors hover:border-[#1f1d1a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1f1d1a]";
 
-function StatCard({ icon: Icon, value, label }) {
+// Pita tiga warna dari cincin logo IKOM.
+function Pita({ className = "" }) {
   return (
-    <div className="group flex flex-col items-center gap-3 px-3 py-10 text-center sm:px-6 sm:py-12">
-      <Icon className="h-4 w-4 text-amber-500/50" />
-      <p className="text-3xl font-black tabular-nums tracking-tight text-white sm:text-4xl md:text-5xl">
-        {value}
-      </p>
-      <div className="h-px w-8 bg-amber-500/40" />
-      <p className="text-xs font-semibold uppercase tracking-widest text-stone-500">{label}</p>
+    <div className={`flex h-1.5 ${className}`} aria-hidden="true">
+      <span className="flex-[5] bg-[#b5272d]" />
+      <span className="flex-[1] bg-[#e0601f]" />
+      <span className="flex-[5] bg-[#f0b90b]" />
     </div>
   );
 }
 
-function FeatureCard({ icon: Icon, title, description, to, featured }) {
-  if (featured) {
-    return (
-      <Link
-        to={to}
-        className="group relative col-span-full overflow-hidden rounded-2xl border border-white/8 bg-stone-900/70 p-8 backdrop-blur-sm transition-all duration-300 hover:border-amber-500/25 hover:bg-stone-900 hover:shadow-2xl hover:shadow-amber-500/5"
-      >
-        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-amber-500/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-        <div className="flex items-center gap-6">
-          <div className="shrink-0 inline-flex h-14 w-14 items-center justify-center rounded-xl border border-amber-500/20 bg-amber-500/10 text-amber-400 transition-all duration-300 group-hover:border-amber-500/40 group-hover:bg-amber-500/15 group-hover:text-amber-300">
-            <Icon className="h-6 w-6" />
-          </div>
-          <div>
-            <h3 className="mb-1 text-base font-semibold text-stone-100">{title}</h3>
-            <p className="text-sm leading-relaxed text-stone-500">{description}</p>
-          </div>
-          <ArrowRight className="ml-auto shrink-0 h-5 w-5 text-stone-600 transition-colors group-hover:text-amber-400" />
-        </div>
-      </Link>
-    );
-  }
-
+function Judul({ children, className = "" }) {
   return (
-    <Link
-      to={to}
-      className="group relative overflow-hidden rounded-2xl border border-white/8 bg-stone-900/70 p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-amber-500/25 hover:bg-stone-900 hover:shadow-2xl hover:shadow-amber-500/5"
-    >
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-amber-500/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-      <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-amber-500/20 bg-amber-500/10 text-amber-400 transition-all duration-300 group-hover:border-amber-500/40 group-hover:bg-amber-500/15 group-hover:text-amber-300">
-        <Icon className="h-5 w-5" />
-      </div>
-      <h3 className="mb-2 text-base font-semibold text-stone-100">{title}</h3>
-      <p className="text-sm leading-relaxed text-stone-500">{description}</p>
-    </Link>
+    <h2 className={`font-display text-3xl font-normal leading-[1.15] tracking-[-0.01em] text-[#1f1d1a] sm:text-[2.6rem] ${className}`}>
+      {children}
+    </h2>
   );
 }
-
-function SpotlightCard({ name, role, quote, initials }) {
-  return (
-    <div className="flex flex-col gap-5 rounded-2xl border border-white/8 bg-stone-950 p-8 shadow-sm">
-      <Quote className="h-8 w-8 text-amber-200" />
-      <p className="flex-1 text-base leading-relaxed text-stone-500">
-        &ldquo;{quote}&rdquo;
-      </p>
-      <div className="flex items-center gap-3">
-        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-amber-500 text-sm font-bold text-[#fff]">
-          {initials}
-        </div>
-        <div>
-          <p className="text-sm font-semibold text-stone-100">{name}</p>
-          <p className="text-xs text-stone-500">{role}</p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// ─── Main Component ────────────────────────────────────────────────────────────
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-stone-950 font-sans antialiased">
+    <div className="bg-[#fff] font-body text-[#1f1d1a] antialiased">
+      {/* ── Hero: foto alumni + panel judul ─────────────────────────────── */}
+      <section className="relative pt-16">
+        <div className="relative h-[58vh] min-h-[340px] overflow-hidden sm:h-[72vh] sm:min-h-[460px]">
+          <FotoLatar nama="hero-bg" prioritas className="object-[center_78%]" style={{ "--redup": 1, "--jenuh": 1 }} />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1f1d1a]/35 via-transparent to-transparent" />
+        </div>
 
-      {/* ── Hero ──────────────────────────────────────────────────────────── */}
-      <section className="relative flex h-screen items-center justify-center overflow-hidden bg-stone-950 px-6 text-center">
-        {/* Cinematic background image */}
-        <FotoLatar nama="hero-bg" prioritas className="scale-105" style={{ "--redup": 0.35, "--jenuh": 0.6 }} />
-        <div className="sorot-hero pointer-events-none absolute inset-0" />
-
-        {/* Dark gradient overlays for depth */}
-        <div className="veil-hero pointer-events-none absolute inset-0 bg-gradient-to-b from-stone-950/60 via-stone-950/20 to-stone-950/80" />
-        <div className="veil-hero pointer-events-none absolute inset-0 bg-gradient-to-r from-stone-950/50 via-transparent to-stone-950/50" />
-
-        {/* Warm amber tint layer */}
-        <div className="veil-hero pointer-events-none absolute inset-0 bg-amber-950/20 mix-blend-multiply" />
-
-        <div className="panel-hero relative mx-auto w-full min-w-0 max-w-3xl">
-          {/* Logo: versi putih di mode gelap, berwarna di mode terang (panel krem). */}
-          <img
-            src="/img/logo-ikom-putih-240.png"
-            srcSet="/img/logo-ikom-putih-240.png 1x, /img/logo-ikom-putih-480.png 2x"
-            alt="Alumni IKOM Universitas Pendidikan Indonesia"
-            width="160"
-            height="98"
-            className="logo-gelap mx-auto mb-6 h-auto w-32 sm:w-40"
-          />
-          <img
-            src="/img/logo-ikom.webp"
-            alt="Alumni IKOM Universitas Pendidikan Indonesia"
-            width="160"
-            height="98"
-            className="logo-terang mx-auto mb-6 h-auto w-32 sm:w-40"
-          />
-          <span className="mb-6 inline-block rounded-full bg-amber-500/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-amber-400 ring-1 ring-amber-500/30">
-            IKA IKOM UPI
-          </span>
-
-          <h1 className="mb-5 text-4xl font-extrabold leading-tight tracking-tight text-white md:text-6xl">
-            Merajut Koneksi,
-            <br />
-            <span className="text-amber-400">Membangun Kolaborasi.</span>
-          </h1>
-
-          <div className="mb-8 flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
-            <span className="text-xl font-black text-amber-400">#</span>
-            <span className="text-sm font-bold uppercase tracking-[0.18em] text-stone-300 sm:text-base">
-              Terhubung
-            </span>
-            <span className="text-amber-500/50">·</span>
-            <span className="text-sm font-bold uppercase tracking-[0.18em] text-stone-300 sm:text-base">
-              Tumbuh
-            </span>
-            <span className="text-amber-500/50">·</span>
-            <span className="text-sm font-bold uppercase tracking-[0.18em] text-stone-300 sm:text-base">
-              Terdampak
-            </span>
+        <div className="relative mx-auto -mt-28 max-w-6xl px-4 sm:-mt-40 sm:px-6">
+          <div className="max-w-2xl bg-[#fff] px-6 pb-9 pt-8 shadow-[0_18px_50px_-24px_rgba(31,29,26,0.45)] sm:px-10 sm:pb-11 sm:pt-10">
+            <Pita className="-mt-8 mb-8 w-24 sm:-mt-10 sm:mb-10" />
+            <h1 className="font-display text-[2.4rem] font-normal leading-[1.08] tracking-[-0.015em] text-[#1f1d1a] sm:text-6xl">
+              Merajut koneksi, membangun kolaborasi.
+            </h1>
+            <p className="mt-5 max-w-xl text-[17px] leading-relaxed text-[#4a4540]">
+              Ikatan Keluarga Alumni Ilmu Komunikasi Universitas Pendidikan Indonesia. Tempat alumni lintas angkatan
+              tetap terhubung, saling bantu soal karir, dan berkontribusi untuk almamater.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Link to="/register" className={tombolUtama}>Daftar sebagai alumni</Link>
+              <Link to="/directory" className={tombolGaris}>Cari alumni</Link>
+            </div>
           </div>
+        </div>
+      </section>
 
-          <p className="mx-auto mb-10 max-w-xl text-base leading-relaxed text-stone-400 md:text-lg">
-            Wadah resmi jaringan IKA IKOM UPI. Tetap terhubung
-            dengan teman seangkatan, kembangkan karir, dan bangun sinergi
-            bersama.
-          </p>
+      {/* ── Tentang + angka ──────────────────────────────────────────────── */}
+      <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
+        <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
+          <Judul>Terhubung, tumbuh, terdampak.</Judul>
+          <div>
+            <p className="text-[17px] leading-[1.75] text-[#4a4540]">
+              Setelah wisuda, hidup membawa kita ke kota dan profesi yang berbeda. IKA IKOM UPI menjaga supaya jarak tidak
+              memutus cerita: mempertemukan alumni, membuka jalan karir bagi yang baru lulus, dan menghubungkan alumni dengan
+              program studi serta mahasiswa aktif.
+            </p>
+            <dl className="mt-10 grid grid-cols-3 border-t border-[#b8913a]/60">
+              {stats.map((s) => (
+                <div key={s.label} className="pt-5 pr-3">
+                  <dt className="sr-only">{s.label}</dt>
+                  <dd className="font-display text-4xl tabular-nums text-[#b5272d] sm:text-5xl">{s.value}</dd>
+                  <dd className="mt-1 text-sm text-[#6b645c]">{s.label}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </div>
+      </section>
 
-          <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Link
-              to="/directory"
-              className="flex items-center gap-2 rounded-xl bg-amber-500 px-7 py-3.5 text-sm font-semibold text-ink shadow-lg shadow-amber-500/20 transition-all hover:-translate-y-0.5 hover:bg-amber-400 hover:shadow-amber-400/30 active:translate-y-0"
-            >
-              Eksplor Direktori
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link
-              to="/register"
-              className="rounded-xl border border-white/15 bg-white/5 px-7 py-3.5 text-sm font-semibold text-stone-300 backdrop-blur-sm transition-colors hover:bg-white/10 hover:text-white"
-            >
-              Daftar Jejaring
+      {/* ── Program ──────────────────────────────────────────────────────── */}
+      <section className="bg-[#f3f2ef] px-4 py-20 sm:px-6 sm:py-24">
+        <div className="mx-auto max-w-6xl">
+          <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+            <Judul>Program untuk alumni</Judul>
+            <p className="max-w-sm text-[15px] text-[#6b645c]">Semua layanan gratis untuk alumni Ilmu Komunikasi UPI dari angkatan mana pun.</p>
+          </div>
+          <ul className="mt-10 border-t border-[#1f1d1a]/15">
+            {program.map((p) => (
+              <li key={p.to} className="border-b border-[#1f1d1a]/15">
+                <Link
+                  to={p.to}
+                  className="group grid gap-1 py-6 transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#b5272d] sm:grid-cols-[minmax(0,18rem)_1fr_auto] sm:items-baseline sm:gap-8"
+                >
+                  <span className="font-display text-xl text-[#1f1d1a] group-hover:text-[#b5272d] sm:text-2xl">{p.title}</span>
+                  <span className="text-[15px] leading-relaxed text-[#4a4540]">{p.desc}</span>
+                  <span className="hidden text-sm font-semibold text-[#b5272d] sm:block">Buka</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* ── Sambutan Ketua Umum ──────────────────────────────────────────── */}
+      <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
+        <div className="grid items-center gap-10 md:grid-cols-[minmax(0,20rem)_1fr] md:gap-16">
+          <figure className="mx-auto w-full max-w-[20rem]">
+            <img
+              src="/img/cecep-800.webp"
+              srcSet="/img/cecep-400.webp 400w, /img/cecep-800.webp 800w"
+              sizes="(max-width: 768px) 80vw, 320px"
+              loading="lazy"
+              decoding="async"
+              width="320"
+              height="400"
+              alt="Cecep Abdurrohman Malik Ibrohim, Ketua Umum IKA IKOM UPI"
+              className="aspect-[4/5] w-full object-cover object-top"
+            />
+            <Pita />
+          </figure>
+          <div>
+            <p className="text-sm font-semibold text-[#b5272d]">Sambutan Ketua Umum</p>
+            <blockquote className="mt-4 font-display text-2xl leading-[1.4] text-[#1f1d1a] sm:text-[1.9rem]">
+              “Mari kita bangun IKA IKOM UPI bersama, bukan sekadar reuni, tapi wadah nyata yang relevan, inklusif, dan
+              berdampak bagi sesama alumni, almamater, dan masyarakat. Perjalanan kita tidak berhenti di hari wisuda.”
+            </blockquote>
+            <div className="mt-8 border-l-2 border-[#b8913a] pl-4">
+              <p className="font-semibold text-[#1f1d1a]">Cecep Abdurrohman Malik Ibrohim</p>
+              <p className="text-sm text-[#6b645c]">Ketua Umum IKA IKOM UPI, periode 2026–2029</p>
+            </div>
+            <Link to="/organisasi" className="mt-6 inline-block text-[15px] font-semibold text-[#b5272d] underline-offset-4 hover:underline">
+              Lihat susunan pengurus
             </Link>
           </div>
         </div>
       </section>
 
-      {/* ── Stats ─────────────────────────────────────────────────────────── */}
-      <section className="relative border-y border-white/6 bg-stone-950 px-6">
-        {/* Ambient amber radial glow */}
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_80%_at_50%_50%,rgba(245,158,11,0.06),transparent)]" />
-        <div className="relative mx-auto grid max-w-4xl grid-cols-3 divide-x divide-white/8">
-          {stats.map((stat) => (
-            <StatCard key={stat.label} {...stat} />
-          ))}
-        </div>
-      </section>
-
-      {/* ── Features ──────────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-stone-950 px-6 py-24">
-        {/* Dot-grid texture */}
-        <div
-          className="pointer-events-none absolute inset-0 opacity-100"
-          style={{
-            backgroundImage: "radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px)",
-            backgroundSize: "26px 26px",
-          }}
-        />
-        {/* Bottom fade-out over grid */}
-        <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-stone-950 to-transparent" />
-        {/* Amber bloom top-center */}
-        <div
-          className="pointer-events-none absolute -top-32 left-1/2 h-72 w-96 -translate-x-1/2 rounded-full blur-3xl"
-          style={{ background: "rgba(245,158,11,0.07)" }}
-        />
-
-        <div className="relative mx-auto max-w-5xl">
-          <div className="mb-16 text-center">
-            <span className="mb-3 inline-block text-xs font-semibold uppercase tracking-widest text-amber-500">
-              Platform
-            </span>
-            <h2 className="text-3xl font-bold text-stone-100">
-              Jangan Sampai Kita Kehilangan Satu Sama Lain
-            </h2>
-            <p className="mt-3 text-base text-stone-500">
-              Setelah wisuda, kehidupan membawa kita ke arah yang berbeda-beda. Platform ini hadir supaya jarak tidak memutus cerita.
+      {/* ── Alumni bantu alumni ──────────────────────────────────────────── */}
+      <section className="relative overflow-hidden bg-[#b5272d] px-4 py-20 text-[#fff] sm:px-6 sm:py-24">
+        <div className="mx-auto grid max-w-6xl items-end gap-10 md:grid-cols-[1fr_auto]">
+          <div>
+            <h2 className="font-display text-4xl leading-[1.05] sm:text-6xl">Alumni bantu alumni.</h2>
+            <p className="mt-5 max-w-lg text-[17px] leading-relaxed text-[#fff]/85">
+              Dulu ada yang membukakan pintu untuk kita. Sekarang giliran kita. Punya info lowongan di kantor kamu?
+              Titipkan, nanti kami sebarkan ke jejaring alumni.
             </p>
           </div>
-
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {features.map((feature) => (
-              <FeatureCard key={feature.title} {...feature} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Pesan Ketua Angkatan ──────────────────────────────────────────── */}
-      <section className="bg-stone-950 px-6 py-20">
-        <div className="mx-auto max-w-5xl">
-          {/* Section header */}
-          <div className="mb-12 flex items-center gap-4">
-            <div className="h-px flex-1 bg-white/8" />
-            <span className="text-xs font-semibold uppercase tracking-widest text-stone-500">
-              Pesan dari Ketua IKA IKOM UPI
-            </span>
-            <div className="h-px flex-1 bg-white/8" />
-          </div>
-
-          <div className="flex flex-col items-center gap-10 md:flex-row md:items-start md:gap-16">
-            {/* Photo */}
-            <div className="relative shrink-0">
-              <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-amber-500/40 to-transparent blur-md" />
-              <img
-                src="/img/cecep-400.webp"
-                srcSet="/img/cecep-400.webp 400w, /img/cecep-800.webp 800w"
-                sizes="208px"
-                loading="lazy"
-                decoding="async"
-                width="208"
-                height="256"
-                alt="Cecep Abdurrohman Malik Ibrohim"
-                className="relative h-64 w-52 rounded-2xl object-cover object-top ring-1 ring-white/10"
-              />
-            </div>
-
-            {/* Message */}
-            <div className="flex flex-col justify-center">
-              {/* Big opening quote mark */}
-              <span className="mb-4 block font-serif text-7xl leading-none text-amber-500/30 select-none">
-                "
-              </span>
-              <blockquote className="-mt-8 text-lg font-medium leading-relaxed text-stone-200 md:text-xl">
-                Mari kita bangun IKA IKOM UPI bersama — bukan sekadar
-                reuni, tapi wadah nyata yang relevan, inklusif, dan berdampak.
-                Bagi sesama alumni, bagi almamater, dan bagi masyarakat luas.
-                Perjalanan kita tidak berhenti di hari wisuda — ini baru
-                permulaan.
-              </blockquote>
-
-              <div className="mt-8 flex items-center gap-4">
-                <div className="h-px flex-1 bg-white/10" />
-                <div className="text-right">
-                  <p className="font-semibold text-white">
-                    Cecep Abdurrohman Malik Ibrohim
-                  </p>
-                  <p className="text-sm text-amber-400">
-                    Ketua IKA IKOM UPI
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Titip Loker ───────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-stone-900 px-6 py-24">
-        {/* Background image with dark overlay */}
-        <FotoLatar nama="group-bg" style={{ "--redup": 0.2, "--jenuh": 0.5 }} />
-        <div className="sorot-hero pointer-events-none absolute inset-0" />
-        <div className="veil-hero pointer-events-none absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/30 to-stone-950/60" />
-
-        <div className="panel-hero relative mx-auto max-w-3xl text-center">
-          <span className="mb-6 inline-block text-xs font-bold uppercase tracking-[0.25em] text-amber-400">
-            Kabar Karir IKA IKOM
-          </span>
-
-          <h2 className="mb-6 text-5xl font-black uppercase leading-none tracking-tight text-white sm:text-7xl">
-            Alumni
-            <br />
-            <span className="text-amber-400">Bantu</span>
-            <br />
-            Alumni
-          </h2>
-
-          <p className="mx-auto mb-10 max-w-md text-base leading-relaxed text-stone-300">
-            Dulu, ada yang buka pintu buat kita.
-            <br />
-            Sekarang, giliran kita buka pintu buat yang lain.
-          </p>
-
           <a
             href="https://bit.ly/TitipLokerIKAIKOM"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-xl bg-amber-500 px-8 py-3.5 text-sm font-semibold text-ink shadow-lg shadow-amber-500/20 transition-all hover:-translate-y-0.5 hover:bg-amber-400 hover:shadow-amber-400/30 active:translate-y-0"
+            className="inline-flex items-center justify-center rounded-md bg-[#fff] px-6 py-3 text-[15px] font-semibold text-[#b5272d] transition-colors hover:bg-[#fbeaea] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#fff]"
           >
-            Titip Loker Sekarang
-            <ArrowRight className="h-4 w-4" />
+            Titip lowongan kerja
           </a>
         </div>
       </section>
 
-      {/* ── Alumni Spotlight ──────────────────────────────────────────────── */}
-      <section className="bg-stone-900 px-6 py-20">
-        <div className="mx-auto max-w-4xl">
-          <div className="mb-12 text-center">
-            <h2 className="mb-3 text-3xl font-bold text-stone-100">
-              Alumni Bercerita
-            </h2>
-            <p className="text-base text-stone-500">
-              Dengar langsung dari teman-teman yang sudah aktif di komunitas.
-            </p>
-          </div>
-
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {spotlights.map((member) => (
-              <SpotlightCard key={member.name} {...member} />
-            ))}
-          </div>
+      {/* ── Cerita alumni ────────────────────────────────────────────────── */}
+      <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
+        <Judul>Kata alumni</Judul>
+        <div className="mt-12 grid gap-12 md:grid-cols-3 md:gap-10">
+          {cerita.map((c) => (
+            <figure key={c.name} className="border-t-2 border-[#f0b90b] pt-6">
+              <blockquote className="text-[16px] leading-[1.75] text-[#3a3631]">“{c.quote}”</blockquote>
+              <figcaption className="mt-6">
+                <p className="font-semibold text-[#1f1d1a]">{c.name}</p>
+                <p className="text-sm text-[#6b645c]">{c.role}</p>
+              </figcaption>
+            </figure>
+          ))}
         </div>
       </section>
 
-      {/* ── Footer ────────────────────────────────────────────────────────── */}
-      <footer className="bg-stone-950 px-6 py-8">
-        <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 sm:flex-row">
-          <p className="text-sm text-stone-500">
-            © 2026 IKA IKOM UPI. All rights reserved.
-          </p>
-
-          <div className="flex items-center gap-4">
+      {/* ── Footer ───────────────────────────────────────────────────────── */}
+      <footer className="bg-[#1f1d1a] px-4 pb-10 pt-14 text-[#d9d4cc] sm:px-6">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid gap-10 md:grid-cols-[1.2fr_1fr_1fr]">
+            <div>
+              <img
+                src="/img/logo-ikom-putih-240.png"
+                srcSet="/img/logo-ikom-putih-240.png 1x, /img/logo-ikom-putih-480.png 2x"
+                alt="Alumni IKOM Universitas Pendidikan Indonesia"
+                width="140"
+                height="86"
+                loading="lazy"
+                className="h-auto w-32"
+              />
+              <p className="mt-5 max-w-xs text-sm leading-relaxed text-[#a39c92]">
+                Ikatan Keluarga Alumni Ilmu Komunikasi Universitas Pendidikan Indonesia. Berkedudukan di Kota Bandung.
+              </p>
+            </div>
+            <nav aria-label="Tentang kami">
+              <p className="text-sm font-semibold text-[#fff]">Tentang kami</p>
+              <ul className="mt-3 space-y-2 text-sm">
+                <li><Link to="/organisasi" className="hover:text-[#fff]">Susunan pengurus</Link></li>
+                <li><Link to="/ad-art" className="hover:text-[#fff]">AD/ART</Link></li>
+                <li><Link to="/directory" className="hover:text-[#fff]">Direktori alumni</Link></li>
+              </ul>
+            </nav>
+            <nav aria-label="Program">
+              <p className="text-sm font-semibold text-[#fff]">Program</p>
+              <ul className="mt-3 space-y-2 text-sm">
+                <li><Link to="/events" className="hover:text-[#fff]">Event & agenda</Link></li>
+                <li><Link to="/karir" className="hover:text-[#fff]">Karir</Link></li>
+                <li><Link to="/cpns" className="hover:text-[#fff]">KOMpas ASN</Link></li>
+                <li><Link to="/setelah-toga" className="hover:text-[#fff]">Setelah Toga</Link></li>
+              </ul>
+            </nav>
+          </div>
+          <Pita className="mt-12" />
+          <div className="mt-6 flex flex-col items-start justify-between gap-4 text-sm text-[#a39c92] sm:flex-row sm:items-center">
+            <p>© 2026 IKA IKOM UPI</p>
             <a
               href="https://www.instagram.com/ikaikomupi/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Instagram"
-              className="text-stone-600 transition-colors hover:text-amber-500"
+              className="inline-flex items-center gap-2 hover:text-[#fff]"
             >
-              <Instagram className="h-5 w-5" />
+              <Instagram className="h-4 w-4" /> @ikaikomupi
             </a>
           </div>
         </div>
       </footer>
-
     </div>
   );
 }
