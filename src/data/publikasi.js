@@ -1,6 +1,25 @@
 // Daftar publikasi IKA IKOM UPI. File PDF & sampul ada di public/dokumen/.
-// status: "draf" (belum disahkan pengurus) atau "disahkan".
+// status: "usulan" (terbuka untuk didiskusikan), "draf" (belum disahkan pengurus), atau "disahkan".
+// Urutan di array = urutan tampil (terbaru di atas).
 export const publikasi = [
+  {
+    slug: "proposal-kemitraan-ika-ikom-prodi-2026",
+    jenis: "Proposal Kemitraan",
+    judul: "Kolaborasi Alumni × Prodi: Membaca Masalah lewat Data, Menyelesaikannya lewat Manusia",
+    untuk: "Program Studi Ilmu Komunikasi UPI",
+    tanggal: "November 2026",
+    status: "usulan",
+    halaman: 16,
+    bidang: "Pengembangan Profesional & Karir",
+    ringkasan:
+      "Pembagian Humas, Jurnalistik, dan Broadcasting tidak lagi mencerminkan dunia kerja. IKA mengusulkan profil lulusan Data + Relasi Manusia = Problem Solving, dua peminatan dengan produksi konten sebagai bekal wajib, Studio Project dengan klien sungguhan, serta enam bentuk dukungan alumni untuk Prodi.",
+    sorotan: [
+      { angka: "2", ket: "peminatan: Data dan Relasi Manusia" },
+      { angka: "6", ket: "bentuk dukungan nyata dari alumni" },
+      { angka: "60 mnt", ket: "langkah pertama: ngobrol bareng Kaprodi" },
+    ],
+    kutipan: "Tidak cuma kasih saran, ikut turun tangan.",
+  },
   {
     slug: "rekomendasi-ika-mumas-himikasi-2027",
     jenis: "Rekomendasi",

@@ -9,22 +9,25 @@ import { publikasi } from "../data/publikasi";
 const urlPdf = (p) => `/dokumen/${p.slug}.pdf`;
 const urlSampul = (p) => `/dokumen/${p.slug}.webp`;
 
+const STATUS = {
+  usulan: { teks: "Usulan, terbuka untuk didiskusikan", titik: "bg-ika-oranye", kelas: "bg-ika-oranye/15 ring-ika-oranye/50" },
+  draf: { teks: "Draf, menunggu pengesahan pengurus", titik: "bg-ika-kuning", kelas: "bg-ika-kuning/20 ring-ika-kuning/60" },
+  disahkan: { teks: "Disahkan pengurus", titik: "bg-ika-ink", kelas: "bg-ika-surface ring-ika-line" },
+};
+
 function LabelStatus({ status }) {
-  return status === "draf" ? (
-    <span className="inline-flex items-center gap-1.5 rounded-full bg-ika-kuning/20 px-3 py-1 text-xs font-semibold text-ika-ink ring-1 ring-ika-kuning/60">
-      <span className="h-1.5 w-1.5 rounded-full bg-ika-kuning" />
-      Draf, menunggu pengesahan pengurus
-    </span>
-  ) : (
-    <span className="inline-flex items-center gap-1.5 rounded-full bg-ika-surface px-3 py-1 text-xs font-semibold text-ika-ink ring-1 ring-ika-line">
-      Disahkan pengurus
+  const st = STATUS[status];
+  return (
+    <span className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold text-ika-ink ring-1 ${st.kelas}`}>
+      <span className={`h-1.5 w-1.5 rounded-full ${st.titik}`} />
+      {st.teks}
     </span>
   );
 }
 
-function Utama({ p }) {
+function Utama({ p, balik }) {
   return (
-    <article className="grid items-center gap-10 lg:grid-cols-[minmax(0,22rem)_1fr] lg:gap-16">
+    <article className={`grid items-center gap-10 lg:gap-16 ${balik ? "lg:grid-cols-[1fr_minmax(0,22rem)] [&>a]:lg:order-2" : "lg:grid-cols-[minmax(0,22rem)_1fr]"}`}>
       <a href={urlPdf(p)} target="_blank" rel="noopener" className="group relative mx-auto block w-full max-w-[22rem]" aria-label={`Baca ${p.judul}`}>
         <Cincin className="absolute -right-10 -top-10 h-32 w-32 opacity-80" tebal={22} />
         <img
@@ -78,20 +81,7 @@ function Utama({ p }) {
   );
 }
 
-function Kartu({ p }) {
-  return (
-    <a href={urlPdf(p)} target="_blank" rel="noopener" className="group block">
-      <img src={urlSampul(p)} alt="" loading="lazy" className="aspect-[1/1.414] w-full rounded-md object-cover ring-1 ring-ika-line transition-transform group-hover:-translate-y-1" />
-      <p className="mt-4 text-sm text-ika-muted">
-        {p.jenis} · {p.tanggal}
-      </p>
-      <h3 className="mt-1 font-display text-xl leading-snug text-ika-ink group-hover:underline">{p.judul}</h3>
-    </a>
-  );
-}
-
 export default function PublikasiPage() {
-  const [utama, ...lainnya] = publikasi;
   return (
     <div className="bg-ika-bg font-body text-ika-ink antialiased">
       <header className="mx-auto max-w-6xl px-4 pb-12 pt-32 sm:px-6 md:pb-16 md:pt-40">
@@ -102,24 +92,15 @@ export default function PublikasiPage() {
         </p>
       </header>
 
-      <section className="bg-ika-surface">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24">
-          <Utama p={utama} />
-        </div>
-      </section>
-
-      {lainnya.length > 0 && (
-        <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24">
-          <h2 className="font-display text-3xl text-ika-ink">Publikasi lainnya</h2>
-          <div className="mt-10 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-            {lainnya.map((p) => (
-              <Kartu key={p.slug} p={p} />
-            ))}
+      {publikasi.map((p, i) => (
+        <section key={p.slug} className={i % 2 === 0 ? "bg-ika-surface" : "bg-ika-bg"}>
+          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24">
+            <Utama p={p} balik={i % 2 === 1} />
           </div>
         </section>
-      )}
+      ))}
 
-      <section className="mx-auto grid max-w-6xl items-center gap-8 px-4 py-16 sm:px-6 md:grid-cols-[1fr_auto] md:py-20">
+      <section className="mx-auto grid max-w-6xl items-center gap-8 border-t border-ika-line px-4 py-16 sm:px-6 md:grid-cols-[1fr_auto] md:py-20">
         <div>
           <h2 className="font-display text-2xl text-ika-ink sm:text-3xl">Laporan lain menyusul</h2>
           <p className="mt-3 max-w-2xl text-[16px] leading-relaxed text-ika-muted">
